@@ -1,0 +1,17 @@
+SourceURI: https://github.com/ChimeraTK/DeviceAccess
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+License: lgpl3
+
+Section: libs
+Has-packages: dev lib doc
+
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libxml++2.6-dev
+# Removed dependency: mtcadummy-dkms This does not work when building inside pbuilder!
+Dependencies-dev: libboost-dev
+
+Description-dev: Header and cmake files for libmtca4u-deviceaccess. The files you need to compile against libmtca4u-deviceaccess.
+Description-lib: mtca4u-deviceaccess provides a C++ API to access MTCA.4 devices. MTCA4U is a software package which provides divers, a C++ API and tools for hardware monitoring on MicroTCA.4 crates. mtca4u-deviceaccess is the C++ API which provides basic and generic access to the boards.
+Description-doc: The doxygen html documentation for libmtca4u-deviceaccess and some examples.
+
+Conflicts-dev:
+Replaces-dev:
