@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/VirtualLab
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+License: lgpl3
+
+Section: libs
+Has-packages: dev lib
+
+Dependencies: debhelper cmake libmtca4u-deviceaccess-dev libboost-test-dev libboost-system-dev
+Dependencies-dev: libmtca4u-deviceaccess-dev
+
+Description-dev: Header and cmake files for libmtca4u-virtuallab. The files you need to compile against libmtca4u-virtuallab.
+Description-lib: Framework for creating virtual devices connected to modelled hardware components. VirtualLab is part of the ChimeraTK tool kit. 
+#Description-doc: The doxygen html documentation for libmtca4u-virtuallab.
+
+Conflicts-dev:
+Replaces-dev:
