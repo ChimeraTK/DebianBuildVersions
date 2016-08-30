@@ -15,5 +15,3 @@ Description-bin: Config calculators (command line and Qt GUI) for the MTCA4U Mot
 
 Package-name-bin: mtca4u-motordrivercard-configcalculator
 
-Conflicts-dev:
-Replaces-dev:
