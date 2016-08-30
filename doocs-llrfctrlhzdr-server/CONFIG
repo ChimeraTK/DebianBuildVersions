@@ -1,0 +1,8 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrlhzdr.git
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: net
+Has-packages: bin
+Description-bin: Low-level RF control server for the ELBE accelerator at HZDR.
+Dependencies: debhelper cmake libboost-thread-dev dev-doocs-clientlib dev-doocs-serverlib libdoocswrappers-dev dev-llrflibrary libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min
+License: desy_internal
