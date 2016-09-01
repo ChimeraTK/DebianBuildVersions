@@ -5,7 +5,7 @@ License: lgpl3
 Section: libs
 Has-packages: dev lib
 
-Dependencies: debhelper cmake libmtca4u-deviceaccess-dev libboost-test-dev libboost-system-dev
+Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-test-dev libboost-system-dev
 Dependencies-dev: libmtca4u-deviceaccess-dev
 
 Description-dev: Header and cmake files for libmtca4u-virtuallab. The files you need to compile against libmtca4u-virtuallab.

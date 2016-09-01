@@ -5,7 +5,7 @@ License: lgpl3
 Section: libs
 Has-packages: dev lib bin
 
-Dependencies: debhelper cmake libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libboost-thread-dev libqt4-dev
+Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libboost-thread-dev libqt4-dev
 Dependencies-dev: libboost-dev
 Dependencies-bin:
 

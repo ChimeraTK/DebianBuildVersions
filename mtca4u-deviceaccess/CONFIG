@@ -5,7 +5,7 @@ License: lgpl3
 Section: libs
 Has-packages: dev lib doc
 
-Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libxml++2.6-dev
+Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libxml++2.6-dev
 # Removed dependency: mtcadummy-dkms This does not work when building inside pbuilder!
 Dependencies-dev: libboost-dev
 
