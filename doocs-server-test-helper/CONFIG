@@ -1,9 +1,14 @@
 SourceURI: https://github.com/ChimeraTK/DoocsServerTestHelper
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
-Description-dev: Header files for the DOOCS server test helper library.
-Description-lib: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.
+License: desy_internal
+Target-repositories: intern pub
+
 Has-packages: dev lib
+
 Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib
-License: desy_internal
+
+Description-dev: Header files for the DOOCS server test helper library.
+Description-lib: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.
+

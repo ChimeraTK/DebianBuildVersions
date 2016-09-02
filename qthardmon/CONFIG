@@ -1,8 +1,9 @@
 SourceURI: https://github.com/ChimeraTK/QtHardMon
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
-License: lgpl3
-
 Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
 Has-packages: bin
 
 Package-name-bin: qthardmon

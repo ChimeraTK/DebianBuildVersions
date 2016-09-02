@@ -1,8 +1,10 @@
-SourceURI: https://github.com/ChimeraTK/DeviceAccess
+#SourceURI: https://github.com/ChimeraTK/DeviceAccess
+SourceURI: file:///home/mhier/ChimeraTK/sources/DeviceAccess
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
-License: lgpl3
-
 Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
 Has-packages: dev lib doc
 
 Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libxml++2.6-dev

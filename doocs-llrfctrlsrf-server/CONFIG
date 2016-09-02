@@ -1,8 +1,13 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrlsrf.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
+License: desy_internal
+Target-repositories: intern
+
 Has-packages: bin
-Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY SRF structures.
+
 Dependencies: debhelper dev-doocs-clientlib dev-doocs-serverlib libdoocswrappers-dev dev-llrflibrary
 Dependencies-bin: doocs-dirs | doocs-dirs-min
-License: desy_internal
+
+Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY SRF structures.
+

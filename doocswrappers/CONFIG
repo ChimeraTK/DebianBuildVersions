@@ -1,11 +1,17 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/llrfctrllib.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
-Conflicts-dev: dev-doocswrappers
-Replaces-dev: dev-doocswrappers
-Description-dev: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
-Description-lib: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
+License: desy_internal
+Target-repositories: intern
+
 Has-packages: dev lib
+
 Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libboost-system-dev
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libboost-system-dev
-License: desy_internal
+
+Replaces-dev: dev-doocswrappers
+Conflicts-dev: dev-doocswrappers
+
+Description-dev: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
+Description-lib: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
+

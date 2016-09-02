@@ -2,14 +2,16 @@ SourceURI: file:///home/mhier/ChimeraTK/sources/LLRFLibrary
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal
+Target-repositories: intern
 
 Has-packages: dev lib
 
-Description-dev: Header and cmake files for the MTCA4U Low Level Radio Frequency Library. The files you need to compile against the MTCA4U LLRFLibrary.
-Description-lib: Low Level Radio Frequency (LLRF) control library. Developed at DSESY for the  FLASH/XFEL project.
+Dependencies: debhelper cmake
+Dependencies-dev:
 
 Replaces-dev: dev-llrflibrary
 Conflicts-dev: dev-llrflibrary
 
-Dependencies: debhelper cmake
-Dependencies-dev:
+Description-dev: Header and cmake files for the MTCA4U Low Level Radio Frequency Library. The files you need to compile against the MTCA4U LLRFLibrary.
+Description-lib: Low Level Radio Frequency (LLRF) control library. Developed at DSESY for the  FLASH/XFEL project.
+
