@@ -1,5 +1,4 @@
-#SourceURI: https://github.com/ChimeraTK/DeviceAccess
-SourceURI: file:///home/mhier/ChimeraTK/sources/DeviceAccess
+SourceURI: https://github.com/ChimeraTK/DeviceAccess
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: lgpl3
