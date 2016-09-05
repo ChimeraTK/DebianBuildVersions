@@ -7,7 +7,7 @@ Target-repositories: intern pub
 Has-packages: dev lib bin
 
 Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libboost-thread-dev libqt4-dev
-Dependencies-dev: libboost-dev
+Dependencies-dev: libboost-dev libmtca4u-deviceaccess-dev
 
 Package-name-bin: mtca4u-motordrivercard-configcalculator
 
