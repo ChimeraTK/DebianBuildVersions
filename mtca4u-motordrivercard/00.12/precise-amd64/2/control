@@ -1,0 +1,41 @@
+Source: libmtca4u-motordrivercard
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20120115ubuntu3), cmake (= 2.8.7-0ubuntu4), doxygen (= 1.7.6.1-2ubuntu1), libmtca4u-deviceaccess-dev (= 00.16precise1.00), libboost-dev (= 1.48.0.2), libboost-system-dev (= 1.48.0.2), libboost-test-dev (= 1.48.0.2), libboost-thread-dev (= 1.48.0.2), libqt4-dev (= 4:4.8.1-0ubuntu4)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/MotorDriverCard
+
+Package: libmtca4u-motordrivercard-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: dev-mtca4u-motordrivercard
+Replaces: dev-mtca4u-motordrivercard
+Recommends: 
+Suggests: 
+Enhances: 
+Depends: libmtca4u-motordrivercard00-12-precise2, libboost-dev (= 1.48.0.2), libmtca4u-deviceaccess-dev (>= 00.16precise1), libmtca4u-deviceaccess-dev (<< 00.16precise2)
+Description: Header and cmake files for MTCA4U MotorDriverCard. The files you need to compile against MTCA4U MotorDriverCard.
+
+Package: libmtca4u-motordrivercard00-12-precise2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: mtca4u-motordrivercard-configcalculator
+Enhances: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MTCA4U MotorDriverCard provides a C++ API for the DFMC-MD22 motor driver card, based on the MTCA4U tool kit.
+
+Package: mtca4u-motordrivercard-configcalculator
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: libmtca4u-motordrivercard00-12-precise2
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Config calculators (command line and Qt GUI) for the MTCA4U MotorDriverCard.
+
