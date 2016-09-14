@@ -6,8 +6,9 @@ Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: debhelper cmake libboost-thread-dev dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev dev-llrflibrary libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev libhdf5-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min
 
 Description-bin: Low-level RF control server for the ELBE accelerator at HZDR.
 
+Disable-tests: yes
