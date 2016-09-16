@@ -6,8 +6,11 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-llrfctrl-server
+Conflicts-bin: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
 
 Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY SRF structures.
 

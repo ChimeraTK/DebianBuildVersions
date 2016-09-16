@@ -6,8 +6,11 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev libhdf5-serial-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-llrfctrl-server
+Conflicts-bin: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
 
 Description-bin: Low-level RF control server for the ELBE accelerator at HZDR.
 
