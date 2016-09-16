@@ -1,4 +1,5 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrlsrf.git
+#SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrlsrf.git
+SourceURI: file:///home/mhier/DoocsServers/sources/llrfctrlsrf
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
 License: desy_internal
@@ -6,7 +7,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev doocs-watchdog-server
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev liblua5.2-dev doocs-watchdog-server
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-llrfctrl-server
