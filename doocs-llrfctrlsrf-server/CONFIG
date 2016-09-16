@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: debhelper dev-doocs-clientlib dev-doocs-serverlib libdoocswrappers-dev dev-llrflibrary doocs-watchdog-server
+Dependencies: debhelper dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocswrappers-dev dev-llrflibrary doocs-watchdog-server
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-llrfctrl-server
