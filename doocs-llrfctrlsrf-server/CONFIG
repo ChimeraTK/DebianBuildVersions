@@ -4,9 +4,9 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: bin
+Has-packages: doocs-bin
 
-Dependencies: debhelper dev-doocs-clientlib dev-doocs-serverlib libdoocswrappers-dev dev-llrflibrary
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min
 
 Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY SRF structures.
