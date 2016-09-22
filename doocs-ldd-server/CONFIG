@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake doocs-watchdog-server libqt4-dev
+Dependencies: debhelper cmake libboost-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server libqt4-dev
 Dependencies-bin: doocs-watchdog-server
 
 Provides-bin: doocs-ldd-server
