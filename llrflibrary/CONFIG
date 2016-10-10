@@ -1,4 +1,4 @@
-SourceURI: file:///home/mhier/ChimeraTK/sources/LLRFLibrary
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/llrflibrary.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal
