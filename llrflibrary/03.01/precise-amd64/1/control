@@ -4,7 +4,7 @@ Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Build-Depends: debhelper (= 9.20120115ubuntu3), cmake (= 2.8.7-0ubuntu4)
 Standards-Version: 3.8.3
 Section: libs
-Homepage: file:///home/mhier/ChimeraTK/sources/LLRFLibrary
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/rf/llrflibrary.git
 
 Package: libllrflibrary-dev
 Section: libdevel
