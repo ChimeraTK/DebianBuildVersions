@@ -15,3 +15,4 @@ Conflicts-dev: dev-doocswrappers
 Description-dev: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
 Description-lib: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
 
+Install-additional-pattern-dev: usr/share/DOOCSwrappers/*
