@@ -1,0 +1,18 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mo_gpsdo.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+#Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib libdoocsllrfwrapper-dev libllrflibrary-dev libdoocs-server-test-helper-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-watchdog-server
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-gpsdo-server
+Conflicts-bin: doocs-gpsdo-server
+
+Description-bin: Doocs server for the GPS Disciplined Oscillator of the XFEL Master Oscillator.
+
+#Disable-tests: yes
