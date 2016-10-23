@@ -7,7 +7,7 @@ Target-repositories: intern pub
 Has-packages: dev lib doc
 
 Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libxml++2.6-dev
-Dependencies-dev: libboost-dev
+Dependencies-dev: libboost-dev libboost-system-dev
 
 Recommends-dev: libmtca4u-deviceaccess-doc
 Enhances-doc: libmtca4u-deviceaccess-dev
