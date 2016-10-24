@@ -15,7 +15,7 @@ Recommends: libmtca4u-deviceaccess-doc
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libmtca4u-deviceaccess00-17-xenial1, libboost-dev (= 1.58.0.1ubuntu1)
+Depends: libmtca4u-deviceaccess00-17-xenial1, libboost-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1)
 Description: Header and cmake files for libmtca4u-deviceaccess. The files you need to compile against libmtca4u-deviceaccess.
 
 Package: libmtca4u-deviceaccess00-17-xenial1
