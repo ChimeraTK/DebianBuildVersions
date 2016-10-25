@@ -1,0 +1,18 @@
+#SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mopll1300
+SourceURI: file:///home/killenb/doocs-mopll1300-server
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+#Has-packages: doocs-bin
+
+Dependencies: debhelper doocs-chimeratk-deviceaccess-server01-01 doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-mopll1300-server
+Conflicts-bin: doocs-mopll1300-server
+
+Description-bin: Configuration for the XFEL MO 1.3 GHz sythesizer, based on the ChimeraTK DeviceAccess server
+
+#Disable-tests: yes
