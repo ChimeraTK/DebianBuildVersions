@@ -5,7 +5,7 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-#Has-packages: doocs-bin
+Has-packages: doocs-bin
 
 Dependencies: debhelper doocs-chimeratk-deviceaccess-server01-01 doocs-watchdog-server
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
