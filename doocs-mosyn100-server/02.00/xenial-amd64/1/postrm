@@ -1,0 +1,15 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-mosyn100-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   # check if this server is already in the watchdog
+   INWD=`grep "/server/mosyn100_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete mosyn100_server || true
+   fi
+   /export/doocs/server/doocs stop mosyn100_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   rm -rf /export/doocs/server/mosyn100_server
+fi
