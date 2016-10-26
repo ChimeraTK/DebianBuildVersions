@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mopll1300
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mopll1300.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
