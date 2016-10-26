@@ -1,0 +1,17 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mosyn100.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: debhelper doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-chimeratk-deviceaccess-server
+
+Provides-bin: doocs-mosyn100-server
+Conflicts-bin: doocs-mosyn100-server
+
+Description-bin: Configuration for the XFEL MO 100 MHz sythesizer, based on the ChimeraTK DeviceAccess server
+
+#Disable-tests: yes

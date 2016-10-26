@@ -1,0 +1,95 @@
+#!/bin/sh
+# post install script for the Debian GNU/Linux doocs-mosyn100-server package
+# Manually adapted by killenb to fit the special needs of the Doocsk ChimeraTK DeviceAccess Server
+# This package does not contain the executable, but a symlink to this server.
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+########## make the /export/<nodename> linl ######################
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/mosyn100_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/mosyn100_server/RPC_LIBNO`
+export RPC_LIBNO
+else
+  echo 2>&1 "File: /export/doocs/server/mosyn100_server/RPC_LIBNO is missing"
+  exit 1
+fi
+
+## Note: The old config stuff has been removed. The server is written with the current style.
+
+if [ ! -f /export/doocs/server/mosyn100_server/mosyn100_server.conf  ] ; then
+   if [ -f /export/doocs/server/mosyn100_server/mosyn100_CONF.TEMPLATE ] ; then
+      cat /export/doocs/server/mosyn100_server/mosyn100_CONF.TEMPLATE | \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
+       /export/doocs/server/mosyn100_server/mosyn100_server.conf
+      chown doocsadm.doocsadm /export/doocs/server/mosyn100_server/mosyn100_server.conf
+   else
+       echo "!!! no mosyn100 template !!! "
+   fi
+fi
+
+###
+### watchdog template 
+###
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/mosyn100_server/g" | \
+      sed -e "s/SERVERNAME/MOSYN100/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.mosyn100
+fi 
+
+###
+### ens
+###
+echo "add server to ens "
+echo "RPC_LIBNO = $RPC_LIBNO"
+
+# Note: copying around executables is not the idea of debian packages in the first place.
+# The section has been removed because the 'executable' is a symlink. No
+# point in copying this around.
+
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/mosyn100_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/mosyn100_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add mosyn100_server || true
+fi
+
+#
+# kill the server if there is a valid PID file and 
+# a AUTORESTART flag in the server dir
+if [ -f /export/doocs/server/mosyn100_server/mosyn100_server.PID -a \
+   -f /export/doocs/server/mosyn100_server/AUTORESTART ] ; then
+   SPID=`cat /export/doocs/server/mosyn100_server/mosyn100_server.PID`
+   if [ -d /proc/${SPID} ] ; then
+      kill ${SPID} || true
+   else
+      echo "mosyn100_server: postinstall remove not valid PID file"
+      rm /export/doocs/server/mosyn100_server/mosyn100_server.PID
+   fi
+fi
+
