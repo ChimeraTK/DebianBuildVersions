@@ -6,9 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev
 
-Dependencies: doxygen cmake
-Dependencies-dev: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev
-
+Dependencies: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev
 Replaces-dev: dev-doocs-daction
 Conflicts-dev: dev-doocs-daction
 
