@@ -4,7 +4,7 @@ Section: libs
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: dev
+Has-packages: dev lib
 
 Dependencies: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev
 Dependencies-dev: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev
