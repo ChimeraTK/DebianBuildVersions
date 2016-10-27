@@ -11,7 +11,5 @@ Dependencies-dev: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-d
 Replaces-dev: dev-doocs-daction
 Conflicts-dev: dev-doocs-daction
 
-Description: DAction library.
+Description-lib: DAction library.
 Description-dev: Header and cmake files for the DAction Library. 
-
-Install-additional-pattern-dev: usr/share/DAction/*
