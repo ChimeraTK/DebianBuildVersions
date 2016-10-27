@@ -6,11 +6,13 @@ Target-repositories: intern
 
 Has-packages: dev
 
+Dependencies: doxygen cmake
 Dependencies-dev: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev
 
 Replaces-dev: dev-doocs-daction
 Conflicts-dev: dev-doocs-daction
 
-Description-dev: Header, documentation and cmake files for the DAction Library. 
+Description: DAction library.
+Description-dev: Header and cmake files for the DAction Library. 
 
 Install-additional-pattern-dev: usr/share/DAction/*
