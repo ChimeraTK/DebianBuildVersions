@@ -13,3 +13,5 @@ Conflicts-dev: dev-doocs-daction
 
 Description-lib: DAction library.
 Description-dev: Header and cmake files for the DAction Library. 
+
+Install-additional-pattern-dev: usr/share/doc/*
