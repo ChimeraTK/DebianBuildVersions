@@ -46,7 +46,7 @@ EX_end
    sed -e "s/bam.conf/bam_server.conf/g"  > \
    /export/doocs/server/bam_server/bam_server.conf.new
    mv /export/doocs/server/bam_server/bam_server.conf.new /export/doocs/server/bam_server/bam_server.conf
-   chown doocsadm.doocsadm /export/doocs/server/bam_server/bam_server.conf
+   chown doocsadm:doocsadm /export/doocs/server/bam_server/bam_server.conf
    rm /export/doocs/server/bam_server/RPC_NUMBER.conf
 fi
 
@@ -55,7 +55,7 @@ if [ ! -f /export/doocs/server/bam_server/bam_server.conf  ] ; then
       cat /export/doocs/server/bam_server/bam_CONF.TEMPLATE | \
        sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
        /export/doocs/server/bam_server/bam_server.conf
-      chown doocsadm.doocsadm /export/doocs/server/bam_server/bam_server.conf
+      chown doocsadm:doocsadm /export/doocs/server/bam_server/bam_server.conf
    else
        echo "!!! no bam template !!! "
    fi
