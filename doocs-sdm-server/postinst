@@ -1,0 +1,116 @@
+#!/bin/sh
+# post install script for the Debian GNU/Linux doocs-ldd-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+########## make the /export/<nodename> linl ######################
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/bam_motor_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/bam_motor_server/RPC_LIBNO`
+export RPC_LIBNO
+else
+  echo 2>&1 "File: /export/doocs/server/bam_motor_server/RPC_LIBNO is missing"
+  exit 1
+fi
+
+#
+# check of old style conf file and then add SVR.RPC_NUMBER to con
+#
+if [ -f /export/doocs/server/bam_motor_server/bam_motor.conf  ] ; then      # old style
+   mv /export/doocs/server/bam_motor_server/bam_motor.conf /export/doocs/server/bam_motor_server/bam_motor_server.conf
+   echo "SVR.RPC_NUMBER:        $RPC_LIBNO" > /export/doocs/server/bam_motor_server/RPC_NUMBER.conf
+ex /export/doocs/server/bam_motor_server/bam_motor_server.conf $<< EX_end > /dev/null
+g/SVR.HOST_NAME
+:r /export/doocs/server/bam_motor_server/RPC_NUMBER.conf
+wq
+EX_end
+   cat /export/doocs/server/bam_motor_server/bam_motor_server.conf | \
+   sed -e "s/bam_motor.conf/bam_motor_server.conf/g"  > \
+   /export/doocs/server/bam_motor_server/bam_motor_server.conf.new
+   mv /export/doocs/server/bam_motor_server/bam_motor_server.conf.new /export/doocs/server/bam_motor_server/bam_motor_server.conf
+   chown doocsadm:doocsadm /export/doocs/server/bam_motor_server/bam_motor_server.conf
+   rm /export/doocs/server/bam_motor_server/RPC_NUMBER.conf
+fi
+
+if [ ! -f /export/doocs/server/bam_motor_server/bam_motor_server.conf  ] ; then
+   if [ -f /export/doocs/server/bam_motor_server/bam_motor_CONF.TEMPLATE ] ; then
+      cat /export/doocs/server/bam_motor_server/bam_motor_CONF.TEMPLATE | \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
+       /export/doocs/server/bam_motor_server/bam_motor_server.conf
+      chown doocsadm:doocsadm /export/doocs/server/bam_motor_server/bam_motor_server.conf
+   else
+       echo "!!! no bam_motor template !!! "
+   fi
+fi
+
+###
+### watchdog template 
+###
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/bam_motor_server/g" | \
+      sed -e "s/SERVERNAME/BAM_MOTOR/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam_motor
+fi 
+
+###
+### ens
+###
+echo "add server to ens "
+echo "RPC_LIBNO = $RPC_LIBNO"
+
+#
+# move the running server to old
+if [ -f /export/doocs/server/bam_motor_server/bam_motor_server ] ; then
+   if [ -f /export/doocs/server/bam_motor_server/bam_motor_server.OLD ] ; then
+      rm /export/doocs/server/bam_motor_server/bam_motor_server.OLD
+   fi
+   mv /export/doocs/server/bam_motor_server/bam_motor_server /export/doocs/server/bam_motor_server/bam_motor_server.OLD
+fi
+# 
+# install the new server
+cp -a /export/doocs/server/bam_motor_server/bam_motor_server.dist \
+/export/doocs/server/bam_motor_server/bam_motor_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/bam_motor_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add bam_motor_server || true
+fi
+
+#
+# kill the server if there is a valid PID file and 
+# a AUTORESTART flag in the server dir
+if [ -f /export/doocs/server/bam_motor_server/bam_motor_server.PID -a \
+   -f /export/doocs/server/bam_motor_server/AUTORESTART ] ; then
+   SPID=`cat /export/doocs/server/bam_motor_server/bam_motor_server.PID`
+   if [ -d /proc/${SPID} ] ; then
+      kill ${SPID} || true
+   else
+      echo "bam_motor_server: postinstall remove not valid PID file"
+      rm /export/doocs/server/bam_motor_server/bam_motor_server.PID
+   fi
+fi
+
