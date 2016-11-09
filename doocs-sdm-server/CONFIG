@@ -1,0 +1,18 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/sdm.git/
+Maintainer: Michele Viti <michele.viti@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: debhelper cmake libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libmtca4u-deviceaccess-dev dev-doocs-csalib dev-doocs-devmodlib
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-sdm-server
+Conflicts-bin: doocs-sdm-server
+
+Description-bin: DOOCS server for Special Diagnostic Module
+
+Disable-tests: yes 
