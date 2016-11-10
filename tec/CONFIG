@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake mtca4u-deviceaccess
+Dependencies: debhelper cmake libmtca4u-deviceaccess
 Dependencies-dev:
 
 
