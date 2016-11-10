@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libmtca4u-deviceaccess-dev dev-doocs-csalib dev-doocs-devmodlib
+Dependencies: debhelper cmake libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libmtca4u-deviceaccess-dev dev-doocs-csalib dev-doocs-devmodlib libtec-dev
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
