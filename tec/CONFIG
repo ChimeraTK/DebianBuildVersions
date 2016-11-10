@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/common/tec.git
+Maintainer: Pawel Predki <pawel.predki@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake mtca4u-deviceaccess
+Dependencies-dev:
+
+
+
+Description-dev: Header and cmake files for TEC controller base communication library 
+Description-lib: TEC controller base communication library. Developed at DESY for the  FLASH/XFEL project.
