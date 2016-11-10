@@ -92,7 +92,7 @@ cp -a /export/doocs/server/sdm_server/sdm_server.dist \
    /export/doocs/server/sdm_server/sdm_server
 
 # change owership
-chown -R doocsadm:doocsadm /export/doocs/server/ 
+chown -R doocsadm:doocsadm /export/doocs/server/sdm_server
 
 #
 # check if this server is already in the watchdog

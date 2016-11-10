@@ -46,7 +46,6 @@ EX_end
    sed -e "s/bam_motor.conf/bam_motor_server.conf/g"  > \
    /export/doocs/server/bam_motor_server/bam_motor_server.conf.new
    mv /export/doocs/server/bam_motor_server/bam_motor_server.conf.new /export/doocs/server/bam_motor_server/bam_motor_server.conf
-   chown doocsadm:doocsadm /export/doocs/server/bam_motor_server/bam_motor_server.conf
    rm /export/doocs/server/bam_motor_server/RPC_NUMBER.conf
 fi
 
@@ -55,7 +54,6 @@ if [ ! -f /export/doocs/server/bam_motor_server/bam_motor_server.conf  ] ; then
       cat /export/doocs/server/bam_motor_server/bam_motor_CONF.TEMPLATE | \
        sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
        /export/doocs/server/bam_motor_server/bam_motor_server.conf
-      chown doocsadm:doocsadm /export/doocs/server/bam_motor_server/bam_motor_server.conf
    else
        echo "!!! no bam_motor template !!! "
    fi
@@ -91,6 +89,9 @@ fi
 # install the new server
 cp -a /export/doocs/server/bam_motor_server/bam_motor_server.dist \
 /export/doocs/server/bam_motor_server/bam_motor_server
+
+# change owership
+chown -R doocsadm:doocsadm /export/doocs/server/bam_motor_server
 
 #
 # check if this server is already in the watchdog
