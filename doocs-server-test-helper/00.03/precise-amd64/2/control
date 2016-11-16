@@ -1,0 +1,32 @@
+Source: libdoocs-server-test-helper
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper (= 9.20120115ubuntu3), cmake (= 2.8.7-0ubuntu4), doxygen (= 1.7.6.1-2ubuntu1), dev-doocs-clientlib (= 18.10.10-precise1), dev-doocs-serverlib (= 18.10.10-precise1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DoocsServerTestHelper
+
+Package: libdoocs-server-test-helper-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdoocs-server-test-helper00-03-precise2, dev-doocs-clientlib (= 18.10.10-precise1), dev-doocs-serverlib (= 18.10.10-precise1)
+Description: Header files for the DOOCS server test helper library.
+
+Package: libdoocs-server-test-helper00-03-precise2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.
+
