@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_psm.git
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libssl-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-psm-ctrl-server
+Conflicts-bin: doocs-psm-ctrl-server
+
+Description-bin: DESY FLASH/XFEL controls package. DOOCS PSM control server.
