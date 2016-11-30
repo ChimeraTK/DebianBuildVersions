@@ -10,6 +10,7 @@ Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-psm-ctrl-server
+Replaces-bin: doocs-psm-ctrl-server
 Conflicts-bin: doocs-psm-ctrl-server
 
 Description-bin: DESY FLASH/XFEL controls package. DOOCS PSM control server.
