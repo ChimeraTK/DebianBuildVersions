@@ -1,0 +1,20 @@
+Source: doocs-ulog-ctrl-server
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), dev-doocs-clientlib (= 18.10.10-xenial1), dev-doocs-serverlib (= 18.10.10-xenial1), libdaction-dev (= 02.04xenial1.00), doocs-watchdog-server (= 18.10.10-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_ulog.git
+
+Package: doocs-ulog-ctrl-server00-01-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-ulog-ctrl-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-ulog-ctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+
