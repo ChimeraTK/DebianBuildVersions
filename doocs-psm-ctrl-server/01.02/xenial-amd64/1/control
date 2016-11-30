@@ -10,7 +10,7 @@ Package: doocs-psm-ctrl-server01-02-xenial1
 Section: net
 Architecture: amd64
 Conflicts: doocs-psm-ctrl-server
-Replaces: 
+Replaces: doocs-psm-ctrl-server
 Recommends: 
 Suggests: 
 Enhances: 
