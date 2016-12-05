@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/common/libBAM.git
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/diagnostics/libBAM.git/
 Maintainer: Michele Viti <michele.viti@desy.de>
 Section: libs
 License: desy_internal
