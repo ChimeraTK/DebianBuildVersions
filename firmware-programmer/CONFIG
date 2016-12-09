@@ -1,7 +1,7 @@
 SourceURI: https://github.com/ChimeraTK/FirmwareProgrammer
 Maintainer: Piotr Perek <piotr.perek@desy.de>
 Section: utils
-License: gpl3
+License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
