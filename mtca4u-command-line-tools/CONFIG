@@ -6,6 +6,10 @@ Target-repositories: intern pub
 
 Has-packages: bin extra
 
+#Turn off that the buildversion is added to the package name. It only has
+#the epoch in the name.
+package-name-contains-buildversion: 0
+
 Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev libboost-system-dev libboost-filesystem-dev
 
 #We use the extra package to define the unversioned package with the symlink
