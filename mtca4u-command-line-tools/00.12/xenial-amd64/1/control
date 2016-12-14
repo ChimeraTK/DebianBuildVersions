@@ -1,0 +1,32 @@
+Source: mtca4u-command-line-tools
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libmtca4u-deviceaccess-dev (= 00.18xenial1.00), libboost-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/CommandLineTools
+
+Package: mtca4u-command-line-tools00-12
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: MTCA4U command line executable with version number in the executable and package name. Like this you can have multiple versions installed and declare dependencies in scripts which use it.
+
+Package: mtca4u-command-line-tools
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, mtca4u-command-line-tools00-12
+Description: MTCA4U command line tools to read and write from the command line using device aliasses and register names.
+
