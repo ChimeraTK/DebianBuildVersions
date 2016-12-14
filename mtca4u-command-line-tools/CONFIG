@@ -15,7 +15,7 @@ Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev li
 #We use the extra package to define the unversioned package with the symlink
 #to the versioned package
 Package-name-extra: mtca4u-command-line-tools
-Depends-extra:  #Package-name-bin#
+Dependencies-extra:  #Package-name-bin#
 
 Install-pattern-bin: usr/bin/mtca4u-*
 Install-pattern-extra: usr/bin/mtca4u
