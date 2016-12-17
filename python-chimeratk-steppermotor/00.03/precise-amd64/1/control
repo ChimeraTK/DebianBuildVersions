@@ -1,0 +1,20 @@
+Source: python-chimeratk-steppermotor
+Priority: extra
+Maintainer: Geogin Varghese <geogin.varghese@desy.de>
+Build-Depends: debhelper (= 9.20120115ubuntu3), cmake (= 2.8.7-0ubuntu4), libmtca4u-motordrivercard-dev (= 00.12precise5.02), libboost-python-dev (= 1.48.0.2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/MotorDriverCard-PythonBindings
+
+Package: python-chimeratk-steppermotor
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python2.7
+Description: This package provides python bindings for the ChimeraTK MotorDriverCard library
+
