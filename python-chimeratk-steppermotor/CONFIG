@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: python
 
-Dependencies: debhelper cmake libmtca4u-motordrivercard-dev libboost-python-dev
+Dependencies: debhelper cmake libmtca4u-motordrivercard-dev libboost-python-dev python
 Dependencies-python: python2.7
 
 Description-python: This package provides python bindings for the ChimeraTK MotorDriverCard library
