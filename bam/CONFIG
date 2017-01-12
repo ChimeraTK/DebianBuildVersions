@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/diagnostics/libBAM.git/
+Maintainer: Michele Viti <michele.viti@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libmtca4u-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
+Dependencies-dev: libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libmtca4u-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
+
+
+
+Description-dev: Development package for BAM related systems library 
+Description-lib:  BAM related systems library. Developed at DESY for the FLASH/XFEL project.
