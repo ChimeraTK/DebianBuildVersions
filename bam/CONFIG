@@ -11,5 +11,5 @@ Dependencies-dev: libboost-dev libboost-test-dev libboost-system-dev libboost-fi
 
 
 
-Description-dev: Header and cmake files for BAM related systems library 
+Description-dev: Development package for BAM related systems library 
 Description-lib:  BAM related systems library. Developed at DESY for the FLASH/XFEL project.
