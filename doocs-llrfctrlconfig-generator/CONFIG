@@ -1,0 +1,15 @@
+SourceURI: /home/mhier/DoocsServers/sources/llrfConfigGenerator
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: debhelper cmake
+
+Provides-extra: doocs-llrfctrlconfig-generator
+Conflicts-extra: doocs-llrfctrlconfig-generator
+
+Description-extra: DESY FLASH/XFEL controls package. Configuration generator for the DOOCS low-level RF control servers.
+
