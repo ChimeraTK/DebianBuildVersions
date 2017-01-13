@@ -10,6 +10,7 @@ Dependencies: debhelper cmake
 
 Provides-extra: doocs-llrfctrlconfig-generator
 Conflicts-extra: doocs-llrfctrlconfig-generator
+Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
 Description-extra: DESY FLASH/XFEL controls package. Configuration generator for the DOOCS low-level RF control servers.
 
