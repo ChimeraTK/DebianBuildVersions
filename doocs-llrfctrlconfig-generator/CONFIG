@@ -7,6 +7,7 @@ Target-repositories: intern
 Has-packages: extra
 
 Dependencies: debhelper cmake
+Dependencies-extra: subversion
 
 Provides-extra: doocs-llrfctrlconfig-generator
 Conflicts-extra: doocs-llrfctrlconfig-generator
