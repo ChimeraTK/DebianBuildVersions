@@ -12,5 +12,5 @@ Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrf
 Provides-bin: doocs-llrfctrl-server
 Conflicts-bin: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
 
-Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY SRF structures.
+Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY multi-cavity systems (i.e. with vector sum).
 
