@@ -57,10 +57,6 @@ fi
 cp -a /export/doocs/server/llrfCtrl_server/llrfCtrl_server.dist /export/doocs/server/llrfCtrl_server/llrfCtrl_server
 
 #
-# change ownership of the server directory and all files in it
-chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_server
-
-#
 # check if this server is already in the watchdog
 INWD=`grep "/server/llrfCtrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 if [ -z "${INWD}" ] ; then
@@ -74,6 +70,10 @@ fi
 #
 # generate and/or update configuration files
 /usr/share/llrfConfigGenerator/generateConfigForCurrentHost.sh
+
+#
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_server
 
 #
 # start the server
