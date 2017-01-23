@@ -1,0 +1,20 @@
+Source: doocs-sdm-server
+Priority: extra
+Maintainer: Michele Viti <michele.viti@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), libboost-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 18.10.10-xenial1), dev-doocs-serverlib (= 18.10.10-xenial1), doocs-watchdog-server (= 18.10.10-xenial1), libmtca4u-deviceaccess-dev (= 00.18xenial1.00), libmtca4u-motordrivercard-dev (= 00.12xenial5.03), dev-doocs-csalib (= 0.0.39-xenial1), dev-doocs-devmodlib (= 0.0.48-xenial1), libtec-dev (= 01.01xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/sdm.git/
+
+Package: doocs-sdm-server01-02-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-sdm-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-sdm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for Special Diagnostic Module
+
