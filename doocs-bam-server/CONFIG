@@ -11,6 +11,7 @@ Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server
+Recommends-bin: llrfuni-dkms
 
 Description-bin: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
 
