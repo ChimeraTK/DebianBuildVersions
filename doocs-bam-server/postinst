@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # post install script for the Debian GNU/Linux doocs-bam-server package
 
 set -e
@@ -19,7 +19,44 @@ esac
 ########## make the /export/<nodename> linl ######################
 NODENAME=`uname -n`
 UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+POS=`expr index $UNODENAME CPU`
+echo $POS
+UFACILITY_NAME=${UNODENAME:0:POS-1}
+echo $UFACILITY_NAME
+FACILITY_NAME=${NODENAME:0:POS-1}
+DOOCS_FACILITY_NAME=$UFACILITY_NAME.SDIAG
+XTIMER_SERVER=${UNODENAME:POS+2}
 
+if [ "$FACILITY_NAME"==xfel ]; then
+	GID_OPERATOR=514
+	GIT_EXPERT=514
+elif [ "$FACILITY_NAME"==flash ];  then
+	GID_OPERATOR=422
+	GIT_EXPERT=414
+fi
+
+echo 'sono qui 2'
+
+if [ NODENAME=xfelcpusd47i1 ] ; then
+	LOCATION=47.I1
+	LINK_SERVER=XFEL.SYNC/LINK_LOCK/AMC6.CONTROLLER/
+	MLO_SERVER=XFEL.SYNC/MLO.LASER_LOCK/XTIN.MLO1.CONTROLLER/
+	TOROID_SERVER=XFEL.DIAG/TOROID/TORA.46.I1
+	TOROID_DATA_THREESHOLD=0.010
+	SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+	SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+	MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+	MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+	MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+	DELTAT_MOTOR_SIGN='1    1    1'
+	DELTAT_SIGN='0.001    0.001    0'
+	MODULATION_SIGN='-1.0    -1.0    -1.0'
+	ARRIVAL_TIME_OFFSET=0
+	START_ARRAY_VALUE_ACCURACY=10
+	N_SAMPLE_ACCURACY=200
+	FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+	
 #
 # RPC_LIBNO
 # 
@@ -34,25 +71,29 @@ fi
 #
 # check of old style conf file and then add SVR.RPC_NUMBER to con
 #
-if [ -f /export/doocs/server/bam_server/bam.conf  ] ; then      # old style
-   mv /export/doocs/server/bam_server/bam.conf /export/doocs/server/bam_server/bam_server.conf
-   echo "SVR.RPC_NUMBER:        $RPC_LIBNO" > /export/doocs/server/bam_server/RPC_NUMBER.conf
-ex /export/doocs/server/bam_server/bam_server.conf $<< EX_end > /dev/null
-g/SVR.HOST_NAME
-:r /export/doocs/server/bam_server/RPC_NUMBER.conf
-wq
-EX_end
-   cat /export/doocs/server/bam_server/bam_server.conf | \
-   sed -e "s/bam.conf/bam_server.conf/g"  > \
-   /export/doocs/server/bam_server/bam_server.conf.new
-   mv /export/doocs/server/bam_server/bam_server.conf.new /export/doocs/server/bam_server/bam_server.conf
-   rm /export/doocs/server/bam_server/RPC_NUMBER.conf
-fi
+#if [ -f /export/doocs/server/bam_server/bam.conf  ] ; then      # old style
+#   mv /export/doocs/server/bam_server/bam.conf /export/doocs/server/bam_server/bam_server.conf
+#   echo "SVR.RPC_NUMBER:        $RPC_LIBNO" > /export/doocs/server/bam_server/RPC_NUMBER.conf
+#ex /export/doocs/server/bam_server/bam_server.conf $<< EX_end > /dev/null
+#g/SVR.HOST_NAME
+#:r /export/doocs/server/bam_server/RPC_NUMBER.conf
+#wq
+#EX_end
+#   cat /export/doocs/server/bam_server/bam_server.conf | \
+#   sed -e "s/bam.conf/bam_server.conf/g"  > \
+#   /export/doocs/server/bam_server/bam_server.conf.new
+#   mv /export/doocs/server/bam_server/bam_server.conf.new /export/doocs/server/bam_server/bam_server.conf
+#   rm /export/doocs/server/bam_server/RPC_NUMBER.conf
+#fi
 
 if [ ! -f /export/doocs/server/bam_server/bam_server.conf  ] ; then
    if [ -f /export/doocs/server/bam_server/bam_CONF.TEMPLATE ] ; then
       cat /export/doocs/server/bam_server/bam_CONF.TEMPLATE | \
-       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
+       sed -e "s/LOCATION/$LOCATION/g" | sed -e "s/LINK_SERVER/$LINK_SERVER/g"| \
+       sed -e "s/MLO_SERVER/$MLO_SERVER/g"| sed -e "s/TOROID_SERVER/$TOROID_SERVER/g"| \
+       sed -e "s/GID_OPERATOR/$GID_OPERATOR/g"| sed -e "s//$/g"| \
+       sed -e "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g"| sed -e "s/FACILITY_NAME/$FACILITY_NAME/g"| \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \      
        /export/doocs/server/bam_server/bam_server.conf
    else
        echo "!!! no bam template !!! "
