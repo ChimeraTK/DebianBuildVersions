@@ -11,7 +11,7 @@ Section: net
 Architecture: amd64
 Conflicts: doocs-bam-server
 Replaces: 
-Recommends: llrfuni-dkms
+Recommends: pcieuni-dkms
 Suggests: 
 Enhances: 
 Provides: doocs-bam-server
