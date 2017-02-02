@@ -91,7 +91,7 @@ if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     elif  [ "$NODENAME" == "xfelcpusd51i1" ] ; then
 	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_server/sdm.dmap
 	mv /export/doocs/server/sdm_server/sdm_server.conf /export/doocs/server/sdm_server/sdm_server.conf.temp
-	cat /export/doocs/server/sdm_server/sdm_server.conf.temp | sed -e "/LOCATION.OPTICAL_SWITCH/I, +21 d" > \
+	cat /export/doocs/server/sdm_server/sdm_server.conf.temp | sed -e "/LOCATION.OPTICAL_SWITCH/I, +22 d" > \
 								       /export/doocs/server/sdm_server/sdm_server.conf
 	rm /export/doocs/server/sdm_server/sdm_server.conf.temp
     fi
