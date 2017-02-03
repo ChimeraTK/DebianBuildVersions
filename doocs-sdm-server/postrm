@@ -1,13 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 # post remove script for the Debian GNU/Linux doocs-sdm-server package
 
-if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+NODENAME=`uname -n`
+
+if [ "purge" == "$1" -o "remove" == "$1" ] ; then
+    /export/doocs/server/doocs stop sdm_server || true
     # check if this server is already in the watchdog
     INWD=`grep "/server/sdm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+    echo $INWD
     if [ -n "${INWD}" ] ; then
 	/export/doocs/server/doocs delete sdm_server || true
     fi
-    /export/doocs/server/doocs stop sdm_server || true
 fi
 
 if [ "purge" = "$1" ] ; then
@@ -15,16 +18,16 @@ if [ "purge" = "$1" ] ; then
 fi
 
 if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
-    if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+    if [ "purge" == "$1" -o "remove" == "$1" ] ; then
+	/export/doocs/server/doocs stop sdm_eod_server || true
 	# check if this server is already in the watchdog
 	INWD=`grep "/server/sdm_eod_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 	if [ -n "${INWD}" ] ; then
 	    /export/doocs/server/doocs delete sdm_eod_server || true
 	fi
-	/export/doocs/server/doocs stop sdm_eod_server || true
     fi
 
-    if [ "purge" = "$1" ] ; then
+    if [ "purge" == "$1" ] ; then
 	rm -rf /export/doocs/server/sdm_eod_server
     fi
 fi
