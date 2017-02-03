@@ -77,8 +77,8 @@ if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
 	cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
 	    sed "s/LOCATION/$LOCATION/g" | \
-	    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \ 
-	sed "s/NODENAME/$UNODENAME/g" | \
+	    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
+	    sed "s/NODENAME/$UNODENAME/g" | \
 	    sed "s/DEVICE_NAME/$DEVICE_NAME/g" | \
 	    sed "s/RPCNO/$RPCNO/g"| \
 	    sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
