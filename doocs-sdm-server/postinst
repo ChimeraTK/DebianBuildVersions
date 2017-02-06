@@ -167,6 +167,10 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	fi
 	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_eod_server/sdm.dmap
     fi
+
+    # change owership
+    chown -R doocsadm:doocsadm /export/doocs/server/sdm_eod_server
+    
     if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
 	cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
 	    sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
@@ -183,9 +187,6 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	    /export/doocs/server/doocs add sdm_eod_server || true
 	fi
     fi
-
-    # change owership
-    chown -R doocsadm:doocsadm /export/doocs/server/sdm_eod_server
 
     #
     # kill the server if there is a valid PID file and 
