@@ -4,7 +4,6 @@
 NODENAME=`uname -n`
 
 if [ "purge" == "$1" -o "remove" == "$1" ] ; then
-    /export/doocs/server/doocs stop sdm_server || true
     # check if this server is already in the watchdog
     INWD=`grep "/server/sdm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
     echo $INWD
@@ -20,7 +19,6 @@ fi
 
 if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
     if [ "purge" == "$1" -o "remove" == "$1" ] ; then
-	/export/doocs/server/doocs stop sdm_eod_server || true
 	# check if this server is already in the watchdog
 	INWD=`grep "/server/sdm_eod_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 	if [ -n "${INWD}" ] ; then
