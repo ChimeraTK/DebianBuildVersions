@@ -91,7 +91,7 @@ if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     elif  [ "$NODENAME" == "xfelcpusd51i1" ] ; then
 	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_server/sdm.dmap
 	mv /export/doocs/server/sdm_server/sdm_server.conf /export/doocs/server/sdm_server/sdm_server.conf.temp
-	cat /export/doocs/server/sdm_server/sdm_server.conf.temp | sed -e "/LOCATION.OPTICAL_SWITCH/I, +22 d" > \
+	cat /export/doocs/server/sdm_server/sdm_server.conf.temp | sed -e "/${LOCATION}.OPTICAL_SWITCH/I, +22 d" > \
 								       /export/doocs/server/sdm_server/sdm_server.conf
 	rm /export/doocs/server/sdm_server/sdm_server.conf.temp
     fi
@@ -152,16 +152,16 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	if [ ! -f /export/doocs/server/sdm_eod_server/sdm_eod_server.conf  ] ; then
 	    if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
 		cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
-		    sed -e "/LOCATION.OPTICAL_SWITCH/I, +21 d" | \
+		    sed "/LOCATION.OPTICAL_SWITCH/I, +22 d" | \
 		    sed "s/LOCATION/$LOCATIONEOD/g" | \
-		    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \ 
-		sed "s/NODENAME/$UNODENAME/g" | \
+		    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
+		    sed "s/NODENAME/$UNODENAME/g" | \
 		    sed "s/DEVICE_NAME/EOD/g" | \
 		    sed "s/RPCNO/$RPCNOEOD/g"| \
 		    sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
 		    sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
 		    sed "s/nodename/$NODENAME/g" | \
-		    sed "s/sdm_server/sdm_eod_server/g"    
+		    sed "s/sdm_server/sdm_eod_server/g" > \
 		/export/doocs/server/sdm_eod_server/sdm_eod_server.conf
 	    fi
 	fi
