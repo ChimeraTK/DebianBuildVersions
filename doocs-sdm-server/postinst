@@ -96,7 +96,11 @@ if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
 	rm /export/doocs/server/sdm_server/sdm_server.conf.temp
     fi
 fi
+
+echo "done till here"
+
 if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+    echo "creating WD entry"
     cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
 	sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
 	sed -e "s/servername/sdm_server/g" | \
