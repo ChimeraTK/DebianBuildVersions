@@ -15,6 +15,7 @@ fi
 
 if [ "purge" = "$1" ] ; then
     rm -rf /export/doocs/server/sdm_server
+    rm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
 fi
 
 if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
@@ -29,5 +30,6 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 
     if [ "purge" == "$1" ] ; then
 	rm -rf /export/doocs/server/sdm_eod_server
+	rm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
     fi
 fi

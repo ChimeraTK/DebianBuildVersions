@@ -97,26 +97,6 @@ if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     fi
 fi
 
-echo "done till here"
-
-if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
-    echo "creating WD entry"
-    cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
-	sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-	sed -e "s/servername/sdm_server/g" | \
-	sed -e "s/SERVERNAME/SDM/g" | \
-	sed -e "s/SERVERLIBNO/$RPCNOBAM/g" > \
-	    /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
-    chown -R doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
-    #
-    # check if this server is already in the watchdog
-    INWD=`grep "/server/sdm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-
-    if [ -z "${INWD}" ] ; then
-	/export/doocs/server/doocs add sdm_server || true
-    fi
-fi
-
 #
 # move the running server to old
 if [ -f /export/doocs/server/sdm_server/sdm_server ] ; then
@@ -132,6 +112,23 @@ cp -a /export/doocs/server/sdm_server/sdm_server.dist \
 
 # change owership
 chown -R doocsadm:doocsadm /export/doocs/server/sdm_server
+
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+    cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+	sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+	sed -e "s/servername/sdm_server/g" | \
+	sed -e "s/SERVERNAME/SDM/g" | \
+	sed -e "s/SERVERLIBNO/$RPCNOBAM/g" > \
+	    /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
+    chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
+    #
+    # check if this server is already in the watchdog
+    INWD=`grep "/server/sdm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+    if [ -z "${INWD}" ] ; then
+      /export/doocs/server/doocs add sdm_server || true
+    fi
+fi
 
 #
 # kill the server if there is a valid PID file and 
@@ -170,6 +167,10 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	fi
 	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_eod_server/sdm.dmap
     fi
+
+    # change owership
+    chown -R doocsadm:doocsadm /export/doocs/server/sdm_eod_server
+    
     if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
 	cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
 	    sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
@@ -177,7 +178,7 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	    sed -e "s/SERVERNAME/SDM_EOD/g" | \
 	    sed -e "s/SERVERLIBNO/$RPCNOEOD/g" > \
 		/export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
-	chown -R doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
+	chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
 	#
 	# check if this server is already in the watchdog
 	INWD=`grep "/server/sdm_eod_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
@@ -186,9 +187,6 @@ if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
 	    /export/doocs/server/doocs add sdm_eod_server || true
 	fi
     fi
-
-    # change owership
-    chown -R doocsadm:doocsadm /export/doocs/server/sdm_eod_server
 
     #
     # kill the server if there is a valid PID file and 
