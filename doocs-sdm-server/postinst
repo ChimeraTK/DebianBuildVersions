@@ -107,7 +107,7 @@ if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; th
 	sed -e "s/SERVERNAME/SDM/g" | \
 	sed -e "s/SERVERLIBNO/$RPCNOBAM/g" > \
 	    /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
-    chown -R doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
+    chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
     #
     # check if this server is already in the watchdog
     INWD=`grep "/server/sdm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
