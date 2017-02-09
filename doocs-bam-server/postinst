@@ -32,6 +32,7 @@ if [ "$FACILITY_NAME" == "xfel" ] ; then
     if [ ! -f /export/doocs/server/bam_server/bam_motor.conf ] ; then
 	echo 'MOTOR_DEVICE MD220 0 motorConfig_2xlimes60_optimal_bam.xml ""' >  /export/doocs/server/bam_server/bam_motor.conf
 	echo 'MOTOR_DEVICE MD220 1 motorConfig_2xlimes60_optimal_bam.xml ""' >> /export/doocs/server/bam_server/bam_motor.conf
+	echo '"" "" 0 "" ""' >> /export/doocs/server/bam_server/bam_motor.conf
 	echo 'MOTOR_DEVICE MD221 1 motorConfig_2xlimes60_optimal_bam.xml ""' >> /export/doocs/server/bam_server/bam_motor.conf
     fi
 elif [ "$FACILITY_NAME" == "flash" ] ;  then
