@@ -182,7 +182,7 @@ if [ ! -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam  ] ; then
 	    sed -e "s/SERVERNAME/BAM/g" | \
 	    sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
 		/export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam
-	chown -R doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam
+	chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam
     fi
 fi 
 
