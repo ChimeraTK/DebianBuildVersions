@@ -1,0 +1,20 @@
+Source: qthardmon
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20131227ubuntu1), cmake (= 2.8.12.2-0ubuntu3), doxygen (= 1.8.6-2), libmtca4u-deviceaccess-dev (= 00.20trusty1.00), libqt4-dev (= 4:4.8.5+git192-g085f851+dfsg-2ubuntu4), libboost-system-dev (= 1.54.0.1ubuntu1), libboost-filesystem-dev (= 1.54.0.1ubuntu1), libqwt-dev (= 6.0.0-1.2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/QtHardMon
+
+Package: qthardmon
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: MTCA4U QtHardMon provides a GUI to access MTCA.4 devices. MTCA4U is a software package which provides divers, a C++ API and tools for hardware monitoring on MicroTCA.4 crates. QtHardMon is a GUI which provides access to the registers on the board (display and modify). It also includes simple plotting functionality.
+

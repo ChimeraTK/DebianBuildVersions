@@ -1,0 +1,32 @@
+Source: python-mtca4upy
+Priority: extra
+Maintainer: Geogin Varghese <geogin.varghese@desy.de>
+Build-Depends: debhelper (= 9.20131227ubuntu1), cmake (= 2.8.12.2-0ubuntu3), libmtca4u-deviceaccess-dev (= 00.20trusty1.00), python-numpy (= 1:1.8.1-1ubuntu1), libboost-python-dev (= 1.54.0.1ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-PythonBindings
+
+Package: python-mtca4upy
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python2.7, python-numpy
+Description: This package provides python bindings to the mtca4u deviceaccess library
+
+Package: python-mtca4upy-dev
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-mtca4upy
+Description: This package provides utility methods. The methods are provided as include files with this package
+
