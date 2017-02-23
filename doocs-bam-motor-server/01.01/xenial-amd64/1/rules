@@ -4,7 +4,7 @@ export DH_VERBOSE=1
 
 # default action
 %:
-	dh $@ 
+	dh $@ --parallel
 
 # disable tests
 override_dh_auto_test:
