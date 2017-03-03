@@ -1,0 +1,16 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/common/tc4eqfct.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libdaction-dev
+Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libdaction-dev
+
+Description-lib: DOOCS EqFct for the 4 channel temperature controller FMC (TC4). A library to be included in other DOOCS servers.
+Description-dev: Header and cmake files for the TC4 EqFct library.
+
+#FIXME: There is no documentation yet. Install it with the lib (to document the DOOCS interface/properties) or the dev (to document the library interface)?
+#Install-additional-pattern-dev: usr/share/doc/*
