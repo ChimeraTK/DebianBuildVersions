@@ -207,14 +207,21 @@ cp -a /export/doocs/server/bam_server/bam_server.dist \
    /export/doocs/server/bam_server/bam_server
 
 # create files for the lookup tables from templates
-cp /export/doocs/server/bam_server/high_charge_look_up_table.txt.template \
-   /export/doocs/server/bam_server/high_charge_look_up_table.txt
-cp /export/doocs/server/bam_server/low_charge_look_up_table.txt.template \
-   /export/doocs/server/bam_server/low_charge_look_up_table.txt
+if [ ! -f /export/doocs/server/bam_server/high_charge_look_up_table.txt ] ; then
+   cp /export/doocs/server/bam_server/high_charge_look_up_table.txt.template \
+      /export/doocs/server/bam_server/high_charge_look_up_table.txt
+fi
+
+if [ ! -f /export/doocs/server/bam_server/low_charge_look_up_table.txt ] ; then
+    cp /export/doocs/server/bam_server/low_charge_look_up_table.txt.template \
+       /export/doocs/server/bam_server/low_charge_look_up_table.txt
+fi
 
 #create dmap file from template
-cp /export/doocs/server/bam_server/BAM.dmap.template \
-   /export/doocs/server/bam_server/BAM.dmap
+if [ ! -f /export/doocs/server/bam_server/BAM.dmap ] ; then
+    cp /export/doocs/server/bam_server/BAM.dmap.template \
+       /export/doocs/server/bam_server/BAM.dmap
+fi
 
 # change owership
 chown -R doocsadm:doocsadm /export/doocs/server/bam_server
