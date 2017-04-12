@@ -69,13 +69,19 @@ fi
 
 #
 # generate and/or update configuration files
-/usr/share/llrfConfigGenerator/generateConfigForCurrentHost.sh
+/usr/share/llrfConfigGenerator/generateConfigForCurrentHost.sh llrfctrl
 
 #
 # change ownership of the server directory and all files in it
 chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_server
+if [ -d /export/doocs/server/llrfCtrl_39_server ]; then
+  chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_39_server
+fi
 
 #
 # start the server
 /export/doocs/server/doocs restart llrfCtrl_server
+if [ -d /export/doocs/server/llrfCtrl_39_server ]; then
+  /export/doocs/server/doocs restart llrfCtrl_39_server
+fi
 
