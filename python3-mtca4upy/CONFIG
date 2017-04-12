@@ -1,0 +1,24 @@
+SourceURI: https://github.com/ChimeraTK/DeviceAccess-PythonBindings
+
+Maintainer: Geogin Varghese <geogin.varghese@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
+#The dev package is handled as extra because it does not depend on a lib package
+Has-packages: python extra
+
+Package-name-extra: python3-mtca4upy-dev
+
+Override-auto-configure-flags: "-DPYTHON3=True"
+
+Dependencies: debhelper cmake libmtca4u-deviceaccess-dev python3-numpy libboost-python-dev python3-dev lsb-release
+Dependencies-extra: python3-mtca4upy 
+Dependencies-python: python3, python3-numpy
+
+Conflicts-extra: python2-mtca4upy-dev 
+
+Install-pattern-extra: usr/include#newline#usr/share/cmake*
+
+Description-extra: This package provides utility methods. The methods are provided as include files with this package. Note the same content is brought in by python2-mtca4upy-dev as well (hence the conflict)
+Description-python: This package provides python3 bindings to the mtca4u deviceaccess library
