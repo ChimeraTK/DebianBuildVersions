@@ -69,7 +69,8 @@ fi
 
 #
 # generate and/or update configuration files
-/usr/share/llrfConfigGenerator/generateConfigForCurrentHost.sh llrfctrl
+ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh llrfctrl
 
 #
 # change ownership of the server directory and all files in it
