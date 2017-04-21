@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libdaction-dev doocs-watchdog-server libmtca4u-deviceaccess-dev libdoocs-tc4-eqfct-dev doxygen graphviz
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libdaction-dev doocs-watchdog-server libmtca4u-deviceaccess-dev libdoocs-tc4-eqfct-dev doxygen graphviz libboost-test-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-dcm-ctrl-server
