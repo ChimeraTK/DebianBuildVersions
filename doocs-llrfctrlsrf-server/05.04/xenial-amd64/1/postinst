@@ -1,0 +1,88 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-llrfctrlsrf-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+##### make the /export/<nodename> linl ###########
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/llrfCtrl_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/llrfCtrl_server/RPC_LIBNO`
+export RPC_LIBNO
+else
+  echo 2>&1 "File: /export/doocs/server/llrfCtrl_server/RPC_LIBNO is missing"
+  exit 1
+fi
+
+#
+# watchdog template 
+#
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/llrfCtrl_server/g" | \
+      sed -e "s/SERVERNAME/LLRFCTRL/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.llrfCtrl
+fi 
+
+#
+# move the running server to old
+if [ -f /export/doocs/server/llrfCtrl_server/llrfCtrl_server ] ; then
+   if [ -f /export/doocs/server/llrfCtrl_server/llrfCtrl_server.OLD ] ; then
+      rm /export/doocs/server/llrfCtrl_server/llrfCtrl_server.OLD
+   fi
+   mv /export/doocs/server/llrfCtrl_server/llrfCtrl_server /export/doocs/server/llrfCtrl_server/llrfCtrl_server.OLD
+fi
+
+# 
+# install the new server
+cp -a /export/doocs/server/llrfCtrl_server/llrfCtrl_server.dist /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/llrfCtrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add llrfCtrl_server || true
+fi
+
+#
+# stop the server (just in case it is already running)
+/export/doocs/server/doocs stop llrfCtrl_server || true
+
+#
+# generate and/or update configuration files
+ConfigGeneratorVersion=`echo 00-10-xenial1 | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh llrfctrl
+
+#
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_server
+if [ -d /export/doocs/server/llrfCtrl_39_server ]; then
+  chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_39_server
+fi
+
+#
+# start the server
+/export/doocs/server/doocs restart llrfCtrl_server
+if [ -d /export/doocs/server/llrfCtrl_39_server ]; then
+  /export/doocs/server/doocs restart llrfCtrl_39_server
+fi
+
