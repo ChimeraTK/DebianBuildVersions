@@ -1,0 +1,24 @@
+SourceURI: https://github.com/ChimeraTK/ApplicationCore
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib doc bin
+
+Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libmtca4u-
+Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev
+
+Package-name-bin: mtca4u-deviceaccess-lmap-editor
+
+Recommends-dev: libmtca4u-deviceaccess-doc
+Enhances-doc: libmtca4u-deviceaccess-dev
+Suggests-lib: #Package-name-bin#
+Enhances-bin: #Package-name-lib#
+
+Install-pattern-bin: usr/bin/mtca4u_lmap_editor.py
+
+Description-dev: Header and cmake files for libmtca4u-deviceaccess. The files you need to compile against libmtca4u-deviceaccess.
+Description-lib: mtca4u-deviceaccess provides a C++ API to access MTCA.4 devices. MTCA4U is a software package which provides divers, a C++ API and tools for hardware monitoring on MicroTCA.4 crates. mtca4u-deviceaccess is the C++ API which provides basic and generic access to the boards.
+Description-doc: The doxygen html documentation for libmtca4u-deviceaccess and some examples.
+Description-bin: GUI to create config files for the logical name mapping of DeviceAccess.
