@@ -6,3 +6,6 @@ export DH_VERBOSE=1
 %:
 	dh $@ --parallel
 
+# don't run test in parallel
+override_dh_auto_test:
+	dh $@ --no-parallel
