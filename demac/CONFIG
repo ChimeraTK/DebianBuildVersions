@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libconsatt-dev libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev
-Dependencies-dev: libboost-dev libconsatt-dev libmtca4u-deviceaccess-dev
+Dependencies: debhelper cmake doxygen libconsatt-dev libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libtec-dev libmtca4u-motordrivercard-dev
+Dependencies-dev: libboost-dev libconsatt-dev libmtca4u-deviceaccess-dev libtec-dev libmtca4u-motordrivercard-dev
 
 Description-lib: Demac (Device Modules, Actuators and Controllers) library.
 Description-dev: Header and cmake files for the Demac Library. 
