@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libDevMod.git
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libconsatt-dev libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev
+Dependencies-dev: libboost-dev libconsatt-dev libmtca4u-deviceaccess-dev
+
+Description-lib: Demac (Device Modules, Actuators and Controllers) library.
+Description-dev: Header and cmake files for the Demac Library. 
+
+Install-additional-pattern-dev: usr/share/doc/*
