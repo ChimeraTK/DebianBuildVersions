@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libDevMod.git
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libDemac.git
 Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Section: libs
 License: desy_internal
