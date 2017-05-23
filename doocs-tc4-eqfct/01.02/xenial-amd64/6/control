@@ -1,0 +1,32 @@
+Source: libdoocs-tc4-eqfct
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libboost-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 18.10.13-xenial1), dev-doocs-serverlib (= 18.10.13-xenial1), libmtca4u-deviceaccess-dev (= 00.21xenial1.02), libdaction-dev (= 02.07xenial5.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/common/tc4eqfct.git
+
+Package: libdoocs-tc4-eqfct-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdoocs-tc4-eqfct01-02-xenial6, libboost-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 18.10.13-xenial1), dev-doocs-serverlib (= 18.10.13-xenial1), libmtca4u-deviceaccess-dev (>= 00.21xenial1), libmtca4u-deviceaccess-dev (<< 00.21xenial2), libdaction-dev (>= 02.07xenial5), libdaction-dev (<< 02.07xenial6)
+Description: Header and cmake files for the TC4 EqFct library.
+
+Package: libdoocs-tc4-eqfct01-02-xenial6
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DOOCS EqFct for the 4 channel temperature controller FMC (TC4). A library to be included in other DOOCS servers.
+
