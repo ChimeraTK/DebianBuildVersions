@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libCsa.git
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libConsatt.git
 Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Section: libs
 License: desy_internal
@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev
-Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib 
+Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev
+Dependencies-dev: libboost-dev
 
 Description-lib: Consatt (control system attacher) library.
 Description-dev: Header and cmake files for the Consatt Library. 
