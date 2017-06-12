@@ -1,0 +1,32 @@
+Source: libtec
+Priority: extra
+Maintainer: Pawel Predki <pawel.predki@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), libmtca4u-deviceaccess-dev (= 00.24xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/common/tec.git
+
+Package: libtec-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libtec01-02-xenial2, 
+Description: Header and cmake files for TEC controller base communication library
+
+Package: libtec01-02-xenial2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TEC controller base communication library. Developed at DESY for the  FLASH/XFEL project.
+
