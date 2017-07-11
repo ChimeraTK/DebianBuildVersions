@@ -1,0 +1,14 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mo_dism.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: debhelper cmake doxygen libboost-test-dev dev-doocs-clientlib libdaction-dev dev-doocs-serverlib doocs-watchdog-server libdoocs-tc4-eqfct-dev libmtca4u-deviceaccess-dev libmtca4u-virtuallab-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-dism-server
+Description-bin: DOOCS DSIM server.
+
