@@ -4,14 +4,14 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev lib doc
+Has-packages: dev lib
 
 Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev
 Dependencies-dev: libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev
 
-Recommends-dev: libchimeratk-controlsystemadapter-doc
+#Recommends-dev: libchimeratk-controlsystemadapter-doc
 Enhances-doc: libchimeratk-controlsystemadapter-dev
 
 Description-dev: Header and cmake files for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper.
 Description-lib: chimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
-Description-doc: The doxygen html documentation for chimeratk-controlsystemadapter.
+#Description-doc: The doxygen html documentation for chimeratk-controlsystemadapter.
