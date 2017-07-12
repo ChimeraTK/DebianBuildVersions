@@ -13,5 +13,5 @@ Dependencies-dev: libmtca4u-deviceaccess-dev libboost-dev libboost-test-dev libb
 Enhances-doc: libchimeratk-controlsystemadapter-dev
 
 Description-dev: Header and cmake files for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper.
-Description-lib: chimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
+Description-lib: libchimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
 #Description-doc: The doxygen html documentation for chimeratk-controlsystemadapter.
