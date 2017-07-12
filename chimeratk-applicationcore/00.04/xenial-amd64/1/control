@@ -1,0 +1,32 @@
+Source: libchimeratk-applicationcore
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libchimeratk-controlsystemadapter-dev (= 00.05xenial1.01)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ApplicationCore
+
+Package: libchimeratk-applicationcore-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-applicationcore00-04-xenial1, libchimeratk-controlsystemadapter-dev (>= 00.05xenial1), libchimeratk-controlsystemadapter-dev (<< 00.05xenial2)
+Description: Header and cmake files for the ChimeraTK ApplicationCore. The files you need to compile against libchimeratk-applicationcore.
+
+Package: libchimeratk-applicationcore00-04-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChimeraTK ApplicationCore provides a C++ API for writing control system applications with the ChimeraTK ControlSystemAdapter and DeviceAccess libraries.
+
