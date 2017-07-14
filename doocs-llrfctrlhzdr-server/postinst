@@ -24,8 +24,7 @@ UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTU
 # RPC_LIBNO
 # 
 if [ -f /export/doocs/server/llrfCtrl_server/RPC_LIBNO ] ; then
-RPC_LIBNO=`cat /export/doocs/server/llrfCtrl_server/RPC_LIBNO`
-export RPC_LIBNO
+  export RPC_LIBNO=`cat /export/doocs/server/llrfCtrl_server/RPC_LIBNO`
 else
   echo 2>&1 "File: /export/doocs/server/llrfCtrl_server/RPC_LIBNO is missing"
   exit 1
@@ -51,9 +50,10 @@ if [ -f /export/doocs/server/llrfCtrl_server/llrfCtrl_server ] ; then
    fi
    mv /export/doocs/server/llrfCtrl_server/llrfCtrl_server /export/doocs/server/llrfCtrl_server/llrfCtrl_server.OLD
 fi
+
 # 
 # install the new server
- -a /export/doocs/server/llrfCtrl_server/bin/llrfserver /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+cp -a /export/doocs/server/llrfCtrl_server/bin/llrfserver /export/doocs/server/llrfCtrl_server/llrfCtrl_server
 
 # change ownership of the server directory and all files in it
 chown -R doocsadm:doocsadm /export/doocs/server/llrfCtrl_server
