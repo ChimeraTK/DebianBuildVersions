@@ -18,7 +18,7 @@ Enhances-bin: #Package-name-lib#
 
 Install-pattern-bin: usr/bin/*MotorConfigCalculator
 
-Description-dev: Header and cmake files for MTCA4U MotorDriverCard. The files you need to compile against MTCA4U MotorDriverCard.
-Description-lib: MTCA4U MotorDriverCard provides a C++ API for the DFMC-MD22 motor driver card, based on the MTCA4U tool kit.
-Description-bin: Config calculators (command line and Qt GUI) for the MTCA4U MotorDriverCard.
+Description-dev: Header and cmake files for ChimeraTK MotorDriverCard. The files you need to compile against ChimerarTK MotorDriverCard.
+Description-lib: ChimeraTK MotorDriverCard provides a C++ API for the DFMC-MD22 motor driver card, based on ChimeraTK.
+Description-bin: Config calculators (command line and Qt GUI) for the ChimeraTK MotorDriverCard.
 
