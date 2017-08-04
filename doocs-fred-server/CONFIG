@@ -1,0 +1,17 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/utility/fred.git
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libdoocs-fred-eqfct-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-fred-server
+Conflicts-bin: doocs-fred-server
+
+Description-bin: Doocs server for the FRED.
+
