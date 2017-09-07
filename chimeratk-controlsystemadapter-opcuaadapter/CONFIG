@@ -1,0 +1,15 @@
+SourceURI: /home/mhier/ChimeraTK/sources/ControlSystemAdapter-OPC-UA-Adapter
+#SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-OPC-UA-Adapter
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-noheader lib
+
+Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev
+
+Description-dev: Header and cmake files for the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-opcuaadapter.
+Description-lib: libchimeratk-controlsystemadapter-opcuaadapter provides the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a OPC UA server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
