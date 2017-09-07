@@ -1,5 +1,4 @@
-SourceURI: /home/mhier/ChimeraTK/sources/ControlSystemAdapter-OPC-UA-Adapter
-#SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-OPC-UA-Adapter
+SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-OPC-UA-Adapter
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: lgpl3
