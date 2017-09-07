@@ -6,8 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib
-Dependencies-dev: libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib libdoocs-server-test-helper-dev
+Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib libdoocs-server-test-helper-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header and cmake files for the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-doocsadapter.
 Description-lib: libchimeratk-controlsystemadapter-doocsadapter provides the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a DOOCS server out of any control application built against the ChimeraTK ControlSystemAdapter.
