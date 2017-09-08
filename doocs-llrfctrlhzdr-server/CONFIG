@@ -7,7 +7,7 @@ Target-repositories: intern
 Has-packages: doocs-bin
 
 Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev
 
 Override-auto-configure-flags: -DADAPTER=DOOCS -DTYPE=HZDR
 
