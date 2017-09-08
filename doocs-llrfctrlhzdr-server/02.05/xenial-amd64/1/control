@@ -15,6 +15,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: doocs-llrfctrl-server
-Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev
 Description: Low-level RF control server for the ELBE accelerator at HZDR.
 
