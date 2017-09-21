@@ -68,6 +68,10 @@ fi
 # It has to be off while the config is being updated.
 /export/doocs/server/doocs stop  fred_server || true
 
+#
+# generate and/or update configuration files
+ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh fred
 
 #
 # change ownership of the server directory and all files in it
