@@ -1,0 +1,20 @@
+Source: doocs-dcm-ctrl-server
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), dev-doocs-clientlib (= 18.10.15-xenial1), dev-doocs-serverlib (= 18.10.15-xenial1), dev-doocs-doocsdapilib (= 18.10.15-xenial1), libdaction-dev (= 02.12xenial4.01), doocs-watchdog-server (= 18.10.15-xenial1), libmtca4u-deviceaccess-dev (= 00.25xenial1.00), libdoocs-tc4-eqfct-dev (= 01.02xenial19.00), doxygen (= 1.8.11-1), graphviz (= 2.38.0-12ubuntu2), libboost-test-dev (= 1.58.0.1ubuntu1), doocs-llrfctrlconfig-generator00-12-xenial1 (= 00.12xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_dcm.git
+
+Package: doocs-dcm-ctrl-server05-01-xenial3
+Section: net
+Architecture: amd64
+Conflicts: doocs-dcm-ctrl-server, doocs-dcm-ctrl-xfel-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-dcm-ctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator00-12-xenial1
+Description: DESY FLASH/XFEL controls package. DOOCS DCM control server.
+
