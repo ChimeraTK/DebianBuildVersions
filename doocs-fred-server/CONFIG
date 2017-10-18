@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-UseConfigGeneratorVersion: 00-12-xenial1
+UseConfigGeneratorVersion: 00-13-xenial1
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libdoocs-fred-eqfct-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
