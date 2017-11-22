@@ -1,0 +1,20 @@
+Source: moduletestbrowser
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libqt5gui5 (= 5.5.1+dfsg-16ubuntu7), libqt5core5a (= 5.5.1+dfsg-16ubuntu7), libqt5network5 (= 5.5.1+dfsg-16ubuntu7), libqt5printsupport5 (= 5.5.1+dfsg-16ubuntu7), libqt5svg5-dev (= 5.5.1-2build1), libqt5widgets5 (= 5.5.1+dfsg-16ubuntu7), texlive-latex-recommended (= 2015.20160320-1), texlive-latex-extra (= 2015.20160320-1), libqcustomplot-dev (= 1.3.2+dfsg1-1), libamtfdbaccess-dev (= 02.09xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/tools/rf/amtfTestBrowser.git
+
+Package: moduletestbrowser
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ModuleTestBrowser is a tool for browsing AMTF and XFEL module test results and generating test reports.
+
