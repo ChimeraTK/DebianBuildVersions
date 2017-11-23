@@ -1,0 +1,20 @@
+Source: python3-piezoclient
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), python3-mtca4upy (= 01.01xenial4.01), python3-numpy (= 1:1.11.0-1ubuntu1), lsb-release (= 9.20160110), python3-scipy (= 0.17.0-1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/tools/rf/piezo_client.git
+
+Package: python3-piezoclient
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3, python3-numpy, python3-scipy
+Description: This package provides Python client for PZ16M module.
+
