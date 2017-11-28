@@ -1,0 +1,14 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/DeviceAccess-PiezoSerialBackend.git
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libmtca4u-deviceaccess-dev libboost-dev libboost-system-dev libboost-test-dev 
+Dependencies-dev: libmtca4u-deviceaccess-dev
+ 
+Description-dev: Header and cmake files for the PiezoSerial Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-piezoserialbackend.
+Description-lib: libchimeratk-deviceaccess-piezoserialbackend provides the PiezoSerial backend for the ChimeraTK DeviceAccess library, which allows accessing PZ16M via USB diagnostic port  as devices through the DeviceAccess interface.
+
