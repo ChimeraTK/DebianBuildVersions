@@ -18,9 +18,20 @@ case "$1" in
 	;;
 esac
 
-########## make the /export/<nodename> linl ######################
 NODENAME=`uname -n`
 UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# ACCELERATOR
+#
+if [ ${NODENAME:0:6} == "xfelml" ] || [ ${NODENAME:0:9} == "xfelcpull" ];then
+  ACCELERATOR="XFEL"
+elif [ ${NODENAME:0:7} == "flashml" ] || [ ${NODENAME:0:10} == "flashcpull" ] || [ ${NODENAME:0:9} == "mskcpuacc" ];then
+  ACCELERATOR="FLASH"
+else
+  echo 2>&1 "Cannot determine accelerator"
+  exit 1
+fi
 
 #
 # RPC_LIBNO
@@ -38,7 +49,8 @@ fi
 if [ ! -f /export/doocs/server/mopll1300_server/mopll1300_server.conf  ] ; then
    if [ -f /export/doocs/server/mopll1300_server/mopll1300_CONF.TEMPLATE ] ; then
       cat /export/doocs/server/mopll1300_server/mopll1300_CONF.TEMPLATE | \
-       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g"| \
+       sed -e "s/ACCELERATOR/$ACCELERATOR/g" > \
        /export/doocs/server/mopll1300_server/mopll1300_server.conf
       chown doocsadm.doocsadm /export/doocs/server/mopll1300_server/mopll1300_server.conf
    else
