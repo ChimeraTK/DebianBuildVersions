@@ -1,0 +1,16 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/form_dialogs.git
+
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
+#The dev package is handled as extra because it does not depend on a lib package
+Has-packages: python 
+
+Override-auto-configure-flags: "-DPYTHON3=True"
+
+Dependencies: debhelper cmake python3-tk lsb-release 
+Dependencies-python: python3, python3-tk 
+
+Description-python: This package provides TKInter Form Dialogs for Robot Framework / PyRATE.
