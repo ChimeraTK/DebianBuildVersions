@@ -11,7 +11,7 @@ Has-packages: python
 Override-auto-configure-flags: "-DPYTHON3=True"
 
 Dependencies: debhelper cmake python3-docutils python3-tk lsb-release 
-Dependencies-python: python3, python3-docutils, python3-tk, python3-setuptools, python-distutils-extra
+Dependencies-python: python3, python3-docutils, python3-tk, python3-setuptools
 
 Provides-python: python3-robotframework
 Conflicts-python: python3-robotframework
