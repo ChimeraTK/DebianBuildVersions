@@ -1,12 +1,12 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/fredeqfctlib.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: libs
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev
+Dependencies: debhelper cmake doxygen libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-rf-util-dev
 Dependencies-dev: libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-lib: Fred eq fucntion library.
