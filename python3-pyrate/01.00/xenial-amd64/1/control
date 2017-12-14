@@ -1,0 +1,20 @@
+Source: python3-pyrate
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), python3-robotframework-desy (= 3.0xenial1.2), python3-piezoclient (= 00.01xenial1.07), python3-formdialogs (= 00.01xenial1.00), libchimeratk-deviceaccess-piezoserialbackend-dev (= 00.03xenial1.00), python3-sphinx (= 1.3.6-2ubuntu1), lsb-release (= 9.20160110)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/tools/rf/pystand-piezo.git
+
+Package: python3-pyrate
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3, python3-robotframework, python3-piezoclient, python3-formdialogs, python3-sphinx
+Description: This package provides PyRATE (Python Robot Acceptance Testing Environment) used for the hardware testing.
+
