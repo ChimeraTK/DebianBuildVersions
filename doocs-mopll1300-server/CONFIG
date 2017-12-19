@@ -6,12 +6,12 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper doocs-watchdog-server
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-chimeratk-deviceaccess-server
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libmtca4u-deviceaccess-dev libdoocs-rf-util-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-mopll1300-server
 Conflicts-bin: doocs-mopll1300-server
 
-Description-bin: Configuration for the XFEL MO 1.3 GHz sythesizer, based on the ChimeraTK DeviceAccess server
+Description-bin: Monitoring server for Master Oscillator 1300 MHz synthesizer
 
 #Disable-tests: yes
