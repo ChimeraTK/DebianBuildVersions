@@ -29,8 +29,8 @@ if [ ${NODENAME:0:6} == "xfelml" ] || [ ${NODENAME:0:9} == "xfelcpull" ];then
 elif [ ${NODENAME:0:7} == "flashml" ] || [ ${NODENAME:0:10} == "flashcpull" ] || [ ${NODENAME:0:9} == "mskcpuacc" ];then
   ACCELERATOR="FLASH"
 else
-  #echo 2>&1 "Cannot determine accelerator"
-  exit 1
+  echo 2>&1 "Cannot determine accelerator"
+  #exit 1
 fi
 
 #
