@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 # post install script for the Debian GNU/Linux doocs-mosyn100-server package
 # Manually adapted by killenb to fit the special needs of the Doocsk ChimeraTK DeviceAccess Server
 # This package does not contain the executable, but a symlink to this server.
