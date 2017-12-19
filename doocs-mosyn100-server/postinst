@@ -31,6 +31,7 @@ elif [ ${NODENAME:0:7} == "flashml" ] || [ ${NODENAME:0:10} == "flashcpull" ] ||
   ACCELERATOR="FLASH"
 else
   echo 2>&1 "Cannot determine accelerator"
+  ACCELERATOR="ACCELERATORNAME"
   #exit 1
 fi
 
