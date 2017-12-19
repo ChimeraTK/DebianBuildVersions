@@ -1,0 +1,20 @@
+Source: doocs-mosyn100-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), doocs-watchdog-server (= 18.10.17-xenial3)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/mosyn100.git
+
+Package: doocs-mosyn100-server03-00-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-mosyn100-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-mosyn100-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-chimeratk-deviceaccess-server
+Description: Configuration for the XFEL MO 100 MHz sythesizer, based on the ChimeraTK DeviceAccess server
+
