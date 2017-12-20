@@ -1,0 +1,20 @@
+Source: doocs-gpsdo-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 18.10.17-xenial1), dev-doocs-serverlib (= 18.10.17-xenial1), doocs-watchdog-server (= 18.10.17-xenial4), dev-doocs-doocsdzmqlib (= 18.10.17-xenial1), libdoocs-rf-util-dev (= 01.00xenial2.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/mo_gpsdo.git
+
+Package: doocs-gpsdo-server01-01-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-gpsdo-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-gpsdo-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: Doocs server for the GPS Disciplined Oscillator of the XFEL Master Oscillator.
+
