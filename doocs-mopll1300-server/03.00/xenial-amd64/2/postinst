@@ -1,0 +1,108 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-mopll1300-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# ACCELERATOR
+#
+if [ ${NODENAME:0:6} == "xfelml" ] || [ ${NODENAME:0:9} == "xfelcpull" ];then
+  ACCELERATOR="XFEL"
+elif [ ${NODENAME:0:7} == "flashml" ] || [ ${NODENAME:0:10} == "flashcpull" ] || [ ${NODENAME:0:9} == "mskcpuacc" ];then
+  ACCELERATOR="FLASH"
+else
+  echo 2>&1 "Cannot determine accelerator"
+  ACCELERATOR="ACCELERATORNAME"
+  #exit 1
+fi
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/mopll1300_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/mopll1300_server/RPC_LIBNO`
+export RPC_LIBNO
+else
+  echo 2>&1 "File: /export/doocs/server/mopll1300_server/RPC_LIBNO is missing"
+  exit 1
+fi
+
+# Note: The old config stuff has been removed. The server is written with the current style.
+
+if [ ! -f /export/doocs/server/mopll1300_server/mopll1300_server.conf  ] ; then
+   if [ -f /export/doocs/server/mopll1300_server/mopll1300_CONF.TEMPLATE ] ; then
+      cat /export/doocs/server/mopll1300_server/mopll1300_CONF.TEMPLATE | \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g"| \
+       sed -e "s/ACCELERATOR/$ACCELERATOR/g" > \
+       /export/doocs/server/mopll1300_server/mopll1300_server.conf
+      chown doocsadm.doocsadm /export/doocs/server/mopll1300_server/mopll1300_server.conf
+   else
+       echo "!!! no mopll1300 template !!! "
+   fi
+fi
+
+##
+## watchdog template 
+##
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/mopll1300_server/g" | \
+      sed -e "s/SERVERNAME/MOPLL1300/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.mopll1300
+fi 
+
+##
+## ens
+##
+echo "add server to ens "
+echo "RPC_LIBNO = $RPC_LIBNO"
+
+# 
+# install the new server
+cp -a /export/doocs/server/mopll1300_server/mopll1300_server.dist /export/doocs/server/mopll1300_server/mopll1300_server
+#
+#
+
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/mopll1300_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/mopll1300_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add mopll1300_server || true
+fi
+
+#
+# kill the server if there is a valid PID file and 
+# a AUTORESTART flag in the server dir
+if [ -f /export/doocs/server/mopll1300_server/mopll1300_server.PID -a \
+   -f /export/doocs/server/mopll1300_server/AUTORESTART ] ; then
+   SPID=`cat /export/doocs/server/mopll1300_server/mopll1300_server.PID`
+   if [ -d /proc/${SPID} ] ; then
+      kill ${SPID} || true
+   else
+      echo "mopll1300_server: postinstall remove not valid PID file"
+      rm /export/doocs/server/mopll1300_server/mopll1300_server.PID
+   fi
+fi
+

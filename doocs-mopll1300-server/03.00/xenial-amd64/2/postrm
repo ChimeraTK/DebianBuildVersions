@@ -1,0 +1,15 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-mopll1300-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   # check if this server is already in the watchdog
+   INWD=`grep "/server/mopll1300_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete mopll1300_server || true
+   fi
+   /export/doocs/server/doocs stop mopll1300_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   rm -rf /export/doocs/server/mopll1300_server
+fi
