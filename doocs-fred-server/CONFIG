@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 00-14-xenial1
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libdoocs-fred-eqfct-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server libdoocs-fred-eqfct-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-fred-server
