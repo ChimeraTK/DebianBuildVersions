@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # post install script for the Debian GNU/Linux doocs-fred-server package
 
-set -e
+#set -e
 
 case "$1" in
 	configure)
@@ -71,7 +71,11 @@ fi
 #
 # generate and/or update configuration files
 ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
-/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh fred
+if ! /usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh fred ; then
+  echo "cannot configure the server, please do it manually"
+  exit 0
+fi   
+ 
 
 #
 # change ownership of the server directory and all files in it
