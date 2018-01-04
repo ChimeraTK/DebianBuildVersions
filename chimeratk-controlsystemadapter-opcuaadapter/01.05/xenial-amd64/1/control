@@ -1,0 +1,32 @@
+Source: libchimeratk-controlsystemadapter-opcuaadapter
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libchimeratk-controlsystemadapter-dev (= 00.10xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-OPC-UA-Adapter
+
+Package: libchimeratk-controlsystemadapter-opcuaadapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-opcuaadapter01-05-xenial1, libchimeratk-controlsystemadapter-dev (>= 00.10xenial1), libchimeratk-controlsystemadapter-dev (<< 00.10xenial2)
+Description: Header and cmake files for the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-opcuaadapter.
+
+Package: libchimeratk-controlsystemadapter-opcuaadapter01-05-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-opcuaadapter provides the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a OPC UA server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
