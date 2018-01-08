@@ -1,0 +1,19 @@
+#SourceURI: https://gitlab.hzdr.de/llrf/watchdog
+SourceURI: /home/zenker/sw/ac_watchdog
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: net
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: bin
+
+Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libprocps4-dev
+
+Description-bin: ChimeraTK ApplicationCore based watchdog server.
+Provides-bin: watchdog-server
+
+Override-auto-configure-flags: -DADAPTER=OPCUA -DCMAKE_BUILD_TYPE=Release
+
+Description-lib: ChimeraTK Watchdog Server provides a C++ API for controlling processes based on forking and exec calls.
+
+Disable-tests: yes
