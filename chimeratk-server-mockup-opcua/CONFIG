@@ -1,0 +1,20 @@
+#SourceURI: https://gitlab.hzdr.de/llrf/dummy-server
+#SourceURI: https://github.com/ChimeraTK/ServerMockup
+SourceURI: /home/zenker/sw/dummy-server/
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: net
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: bin
+
+Package-name-bin: chimeratk-server-mockup-opcua
+
+Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev 
+
+Description-bin: ChimeraTK ApplicationCore based server mockup for integration tasks.
+Provides-bin: server-mockup
+
+Override-auto-configure-flags: -DADAPTER=OPCUA -DCMAKE_BUILD_TYPE=Release
+
+Disable-tests: yes
