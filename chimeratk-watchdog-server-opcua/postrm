@@ -1,20 +1,4 @@
 #!/bin/sh
-SUDOSTART=`grep "start ALL = NOPASSWD: /bin/systemctl start chimeratk-watchdog.service" /etc/sudoers`
-if [ -n "${SUDOSTART}" ] ; then
-   grep -v "start ALL = NOPASSWD: /bin/systemctl start chimeratk-watchdog.service" /etc/sudoers > /etc/sudoers.tmp
-   mv /etc/sudoers.tmp /etc/sudoers
-fi
-SUDOSTOP=`grep "start ALL = NOPASSWD: /bin/systemctl stop chimeratk-watchdog.service" /etc/sudoers`
-if [ -n "${SUDOSTOP}" ] ; then
-   grep -v "start ALL = NOPASSWD: /bin/systemctl stop chimeratk-watchdog.service" /etc/sudoers > /etc/sudoers.tmp
-   mv /etc/sudoers.tmp /etc/sudoers
-fi
-SUDORESTART=`grep "start ALL = NOPASSWD: /bin/systemctl restart chimeratk-watchdog.service" /etc/sudoers`
-if [ -n "${SUDORESTART}" ] ; then
-   grep -v "start ALL = NOPASSWD: /bin/systemctl restart chimeratk-watchdog.service" /etc/sudoers > /etc/sudoers.tmp
-   mv /etc/sudoers.tmp /etc/sudoers
-fi
-
 if [ "purge" = "$1" ] ; then
 	if [ -e "/var/lib/chimeratk/watchdog-server/WatchdogServer.persist" ]; then
 	#do not remove the directory since it is removed by apt
