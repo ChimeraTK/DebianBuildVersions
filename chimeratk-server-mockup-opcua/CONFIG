@@ -1,6 +1,4 @@
-#SourceURI: https://gitlab.hzdr.de/llrf/dummy-server
-#SourceURI: https://github.com/ChimeraTK/ServerMockup
-SourceURI: /home/zenker/sw/dummy-server/
+SourceURI: https://github.com/ChimeraTK/ServerMockup
 Maintainer: Klaus Zenker <k.zenker@hzdr.de>
 Section: net
 License: lgpl3
