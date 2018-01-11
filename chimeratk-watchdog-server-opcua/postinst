@@ -2,10 +2,10 @@
 # post install script for the ChimeraTK watchdog package
 
 # create links to config files that are needed for running the server
-if [ ! -e "/etc/chimeratk/watchdog-server/WatchdogServer_mapping.xml" ]; then
+if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer_mapping.xml" ]; then
 	ln -s /etc/chimeratk/watchdog-server/WatchdogServer_mapping.xml /var/lib/chimeratk/watchdog-server/
 fi
-if [ ! -e "/etc/chimeratk/watchdog-server/WatchdogServer_processes.xml" ]; then
+if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer_processes.xml" ]; then
 	ln -s /etc/chimeratk/watchdog-server/WatchdogServer_processes.xml /var/lib/chimeratk/watchdog-server/
 fi
 
