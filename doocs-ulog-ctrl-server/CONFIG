@@ -9,7 +9,7 @@ Has-packages: doocs-bin
 UseConfigGeneratorVersion: 00-15-xenial1
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libmtca4u-deviceaccess-dev libboost-filesystem-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-ulog-ctrl-server
 Conflicts-bin: doocs-ulog-ctrl-server
