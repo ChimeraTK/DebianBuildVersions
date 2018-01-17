@@ -1,12 +1,12 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_dcm.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin
 
-UseConfigGeneratorVersion: 00-14-xenial1
+UseConfigGeneratorVersion: 00-15-xenial1
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libdaction-dev doocs-watchdog-server libmtca4u-deviceaccess-dev libdoocs-tc4-eqfct-dev doxygen graphviz libboost-test-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
