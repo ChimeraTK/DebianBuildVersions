@@ -6,9 +6,9 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libssl-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
-
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libssl-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+ 
 Provides-bin: doocs-psm-ctrl-server
 Replaces-bin: doocs-psm-ctrl-server
 Conflicts-bin: doocs-psm-ctrl-server
