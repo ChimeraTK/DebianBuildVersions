@@ -1,10 +1,11 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_psm.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin
+UseConfigGeneratorVersion: 00-15-xenial8
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libssl-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
