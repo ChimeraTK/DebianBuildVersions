@@ -78,5 +78,4 @@ chown -R doocsadm:doocsadm /export/doocs/server/llrfPiezo_server
 
 #
 # start the server
-/export/doocs/server/doocs restart llrfCtrl_server
-
+/export/doocs/server/doocs restart llrfPiezo_server
