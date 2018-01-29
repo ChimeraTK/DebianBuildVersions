@@ -1,0 +1,20 @@
+Source: doocs-llrfctrlsrf-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), dev-doocs-clientlib (= 18.10.17-xenial1), dev-doocs-serverlib (= 18.10.17-xenial1), dev-doocs-doocsdzmqlib (= 18.10.17-xenial1), libdoocsllrfwrapper-dev (= 00.11xenial4.00), libllrflibrary-dev (= 04.00xenial1.01), liblua5.2-dev (= 5.2.4-1ubuntu1), doocs-watchdog-server (= 18.10.17-xenial4), doocs-llrfctrlconfig-generator00-14-xenial1 (= 00.14xenial1.13)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrlsrf.git
+
+Package: doocs-llrfctrlsrf-server05-05-xenial2
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator00-14-xenial1
+Description: DESY FLASH/XFEL controls package. DOOCS low-level RF control server for DESY multi-cavity systems (i.e. with vector sum).
+
