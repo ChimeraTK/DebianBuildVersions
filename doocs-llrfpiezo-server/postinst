@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 # post install script for the Debian GNU/Linux doocs-llrfpiezo-server package
 
 set -e
@@ -32,22 +32,8 @@ else
 fi
 
 #
-# Install server config file template, if no config file exists
+# watchdog template 
 #
-if [ ! -f /export/doocs/server/llrfPiezo_server/llrfPiezo_server.conf  ] ; then
-   if [ -f /export/doocs/server/llrfPiezo_server/llrfPiezo_CONF.TEMPLATE ] ; then
-      cat /export/doocs/server/llrfPiezo_server/llrfPiezo_CONF.TEMPLATE |         \
-           sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" >   \
-           /export/doocs/server/llrfPiezo_server/llrfPiezo_server.conf
-      chown doocsadm.doocsadm /export/doocs/server/llrfPiezo_server/llrfPiezo_server.conf
-   else
-       echo "!!! no llrfPiezo_CONF.TEMPLATE file found !!! "
-   fi
-fi
-
-###
-### watchdog template 
-###
 if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
    cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
@@ -56,16 +42,6 @@ if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; th
       sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
       /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.llrfPiezo
 fi 
-
-###
-### ens
-###
-echo "add server to ens "
-echo "RPC_LIBNO = $RPC_LIBNO"
-
-#
-# stop the old server server if running
-/export/doocs/server/doocs stop llrfPiezo_server || true
 
 #
 # move the running server to old
@@ -80,13 +56,27 @@ fi
 # install the new server
 cp -a /export/doocs/server/llrfPiezo_server/llrfPiezo_server.dist /export/doocs/server/llrfPiezo_server/llrfPiezo_server
 
-# change ownership of the server directory and all files in it
-chown -R doocsadm:doocsadm /export/doocs/server/llrfPiezo_server
-
 #
-# add the server to the watchdog, if not yet in
+# check if this server is already in the watchdog
 INWD=`grep "/server/llrfPiezo_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 if [ -z "${INWD}" ] ; then
    /export/doocs/server/doocs add llrfPiezo_server || true
 fi
+
+#
+# stop the server (just in case it is already running)
+/export/doocs/server/doocs stop llrfPiezo_server || true
+
+#
+# generate and/or update configuration files
+ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh llrfpiezo
+
+#
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/llrfPiezo_server
+
+#
+# start the server
+/export/doocs/server/doocs restart llrfCtrl_server
 

@@ -6,8 +6,10 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev liblua5.2-dev doocs-watchdog-server
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+UseConfigGeneratorVersion: 00-15-xenial1
+
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev liblua5.2-dev doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-llrfpiezo-server
 Conflicts-bin: doocs-llrfpiezo-server
