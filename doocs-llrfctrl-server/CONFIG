@@ -6,8 +6,10 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev
+UseConfigGeneratorVersion: 01-00-xenial1
+
+Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
 
