@@ -11,6 +11,9 @@ Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependenc
 
 Override-auto-configure-flags: -DADAPTER=OPCUA
 
+Provides-bin: opcua-llrfctrl-server
+Conflicts-bin: opcua-llrfctrl-server
+
 Description-bin: Low-level RF control server for OPC UA based control systems
 
 Disable-tests: yes
