@@ -7,7 +7,7 @@ Target-repositories: intern
 Has-packages: dev lib
 
 Dependencies: debhelper cmake doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libdaction-dev libdoocs-rf-util-dev
-Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libdaction-dev
+Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libdaction-dev libdoocs-rf-util-dev
 
 Description-lib: DOOCS EqFct for the 4 channel temperature controller FMC (TC4). A library to be included in other DOOCS servers.
 Description-dev: Header and cmake files for the TC4 EqFct library.

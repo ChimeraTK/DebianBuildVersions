@@ -7,7 +7,7 @@ Target-repositories: intern
 Has-packages: dev lib
 
 Dependencies: debhelper cmake doxygen libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-rf-util-dev
-Dependencies-dev: libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib
+Dependencies-dev: libfred-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libdoocs-rf-util-dev
 
 Description-lib: Fred eq fucntion library.
 Description-dev: Header and cmake files for the FreqEqFct Library.
