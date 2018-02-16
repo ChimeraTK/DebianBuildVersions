@@ -1,0 +1,82 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-dcm-ctrl-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+##### make the /export/<nodename> linl ###########
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/dcm_ctrl_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/dcm_ctrl_server/RPC_LIBNO`
+export RPC_LIBNO
+else
+  echo 2>&1 "File: /export/doocs/server/dcm_ctrl_server/RPC_LIBNO is missing"
+  exit 1
+fi
+
+##
+## watchdog template 
+##
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/dcm_ctrl_server/g" | \
+      sed -e "s/SERVERNAME/DCM_CTRL/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.dcm_ctrl
+fi 
+
+#
+# move the running server to old
+if [ -f /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server ] ; then
+   if [ -f /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.OLD ] ; then
+      rm /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.OLD
+   fi
+   mv /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.OLD
+fi
+# 
+# install the new server
+cp -a /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.dist /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/dcm_ctrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add dcm_ctrl_server || true
+fi
+
+#
+# stop the server (just in case it is already running)
+# It has to be off while the config is being updated.
+/export/doocs/server/doocs stop  dcm_ctrl_server || true
+
+#
+# generate and/or update configuration files
+ConfigGeneratorVersion=`echo 01-00-xenial1 | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh dcmctrl
+
+#
+# change ownership of the server directory and all files in it
+chown -R doocsadm:doocsadm /export/doocs/server/dcm_ctrl_server
+
+#
+# restart the server
+/export/doocs/server/doocs restart dcm_ctrl_server
