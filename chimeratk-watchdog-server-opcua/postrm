@@ -6,6 +6,7 @@ if [ "purge" = "$1" ] ; then
 	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer.persist
 	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer_mapping.xml
 	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer_processes.xml
+	  rm /var/lib/chimaratk/watchdog-server/*.log
     fi
     if [ -d "/etc/chimeratk/watchdog-server" ]; then
       rm -fr /etc/chimeratk/watchdog-server
