@@ -1,5 +1,4 @@
-#SourceURI: https://github.com/ChimeraTK/Watchdog
-SourceURI: /home/zenker/sw/ac_watchdog/
+SourceURI: https://github.com/ChimeraTK/Watchdog
 Maintainer: Klaus Zenker <k.zenker@hzdr.de>
 Section: net
 License: lgpl3
