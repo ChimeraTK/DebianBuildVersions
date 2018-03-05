@@ -11,4 +11,7 @@ if [ "purge" = "$1" ] ; then
     if [ -d "/etc/chimeratk/watchdog-server" ]; then
       rm -fr /etc/chimeratk/watchdog-server
     fi
+    if [ -e "/var/lib/chimeratk/watchdog-server/uDAQ" ]; then
+    	rm -fr /var/lib/chimeratk/watchdog-server/uDAQ
+    fi
 fi
