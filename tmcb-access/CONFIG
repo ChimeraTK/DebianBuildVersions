@@ -1,0 +1,13 @@
+SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/msk/tmcb_library.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libboost-dev libmtca4u-deviceaccess-dev
+Dependencies-dev: libboost-dev libmtca4u-deviceaccess-dev
+
+Description-lib: Libraray with TMCB helper function.
+Description-dev: Header and cmake files for the TMCB access library.
