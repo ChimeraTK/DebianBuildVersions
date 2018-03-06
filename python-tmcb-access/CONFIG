@@ -1,0 +1,12 @@
+SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/msk/TmcbLibrary-PythonBindings.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: utils
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: python
+
+Dependencies: debhelper cmake doxygen libboost-dev libtmcb-access-dev
+Dependencies-python: python 2.7
+
+Description-python: Header and cmake files for the tmcb access python bindings.
