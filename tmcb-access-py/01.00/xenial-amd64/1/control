@@ -1,0 +1,20 @@
+Source: tmcb-access-py
+Priority: extra
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libboost-dev (= 1.58.0.1ubuntu1), libtmcb-access-dev (= 01.00xenial1.00), libboost-python-dev (= 1.58.0.1ubuntu1), python (= 2.7.11-1), lsb-release (= 9.20160110)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/vendor/desy/msk/TmcbLibrary-PythonBindings.git
+
+Package: tmcb-access-py
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python2.7
+Description: Header and cmake files for the tmcb access python bindings.
+
