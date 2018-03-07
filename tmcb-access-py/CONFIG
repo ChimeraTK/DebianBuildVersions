@@ -6,7 +6,9 @@ Target-repositories: intern
 
 Has-packages: python
 
-Dependencies: debhelper cmake doxygen libboost-dev libtmcb-access-dev
-Dependencies-python: python 2.7
+#Override-auto-configure-flags: "-DPYTHON3=True"
+
+Dependencies: debhelper cmake doxygen libboost-dev libtmcb-access-dev libboost-python-dev python lsb-release
+Dependencies-python: python2.7
 
 Description-python: Header and cmake files for the tmcb access python bindings.
