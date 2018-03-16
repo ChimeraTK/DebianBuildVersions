@@ -5,7 +5,7 @@ if [ "purge" = "$1" ] ; then
 	#just delete files that are added after installation 
 	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer.persist
 	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer_mapping.xml
-	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer_processes.xml
+	  rm /var/lib/chimeratk/watchdog-server/WatchdogServerConfig.xml
 	  find /var/lib/chimaratk/watchdog-server/ -iname "*.log" -delete
     fi
     if [ -d "/etc/chimeratk/watchdog-server" ]; then
