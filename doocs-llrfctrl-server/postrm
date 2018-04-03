@@ -6,7 +6,7 @@ if [ "purge" = "$1" -o "remove" = "$1" ] ; then
 fi
 
 if [ "purge" = "$1" ] ; then
-   # check if this server is already in the watchdog
+   # check if this server is in the watchdog
    INWD=`grep "/server/llrfCtrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
    if [ -n "${INWD}" ] ; then
       /export/doocs/server/doocs delete llrfCtrl_server || true
