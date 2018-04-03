@@ -1,13 +1,15 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/ldd.git/
-Maintainer: Michele Viti <michele.viti@desy.de>
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake libboost-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server libqt4-dev
-Dependencies-bin: doocs-watchdog-server
+UseConfigGeneratorVersion: 01-01-xenial1
+
+Dependencies: debhelper cmake libboost-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server libqt4-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-ldd-server
 Conflicts-bin: doocs-ldd-server
