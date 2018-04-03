@@ -16,10 +16,6 @@ case "$1" in
 	;;
 esac
 
-########## make the /export/<nodename> linl ######################
-NODENAME=`uname -n`
-UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
-
 # 
 # install the new server
 ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfserver /export/doocs/server/llrfCtrl_server/llrfCtrl_server
