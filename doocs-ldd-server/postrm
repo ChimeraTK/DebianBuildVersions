@@ -2,14 +2,15 @@
 # post remove script for the Debian GNU/Linux doocs-ldd-server package
 
 if [ "purge" = "$1" -o "remove" = "$1" ] ; then
-   # check if this server is already in the watchdog
-   INWD=`grep "/server/ldd_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-   if [ -n "${INWD}" ] ; then
-      /export/doocs/server/doocs delete ldd_server || true
-   fi
    /export/doocs/server/doocs stop ldd_server || true
 fi
 
 if [ "purge" = "$1" ] ; then
+   # check if this server is in the watchdog
+   INWD=`grep "/server/ldd_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete ldd_server || true
+   fi
+   # remove entire server directory
    rm -rf /export/doocs/server/ldd_server
 fi
