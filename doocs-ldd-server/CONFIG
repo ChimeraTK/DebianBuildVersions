@@ -9,7 +9,7 @@ Has-packages: doocs-bin
 UseConfigGeneratorVersion: 01-01-xenial1
 
 Dependencies: debhelper cmake libboost-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server libqt4-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
-Dependencies-bin: doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-ldd-server
 Conflicts-bin: doocs-ldd-server
