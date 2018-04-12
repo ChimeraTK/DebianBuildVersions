@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/csaApplications.git
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libconsatt-dev libdemac-dev
+Dependencies-dev: libdemac-dev libconsatt-dev
+
+Description-lib: ConsattApp library for application based on consatt and demac.
+Description-dev: Header and cmake files for the ConsattApp Library. 
+
+Install-additional-pattern-dev: usr/share/doc/*
