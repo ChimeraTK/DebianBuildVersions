@@ -8,8 +8,8 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 01-02-xenial1
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev liblua5.2-dev doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev liblua5.2-dev doocs-watchdog-server libchimeratk-deviceaccess-doocsbackend-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy
 
 Provides-bin: doocs-llrfctrl-server
 Conflicts-bin: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
