@@ -13,4 +13,4 @@ Provides-bin: doocs-logm-ctrl-server
 Conflicts-bin: doocs-logm-ctrl-server
 Replaces-bin: doocs-logm-ctrl-server
 
-Description-bin: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+Description-bin: DESY FLASH/XFEL controls package. DOOCS LOGM control server.
