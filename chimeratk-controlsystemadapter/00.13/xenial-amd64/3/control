@@ -1,0 +1,32 @@
+Source: libchimeratk-controlsystemadapter
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libmtca4u-deviceaccess-dev (= 00.32xenial1.00), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-chrono-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), libxml++2.6-dev (= 2.40.1-1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter
+
+Package: libchimeratk-controlsystemadapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter00-13-xenial3, libmtca4u-deviceaccess-dev (>= 00.32xenial1), libmtca4u-deviceaccess-dev (<< 00.32xenial2), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-chrono-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), libxml++2.6-dev (= 2.40.1-1)
+Description: Header and cmake files for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper.
+
+Package: libchimeratk-controlsystemadapter00-13-xenial3
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
+
