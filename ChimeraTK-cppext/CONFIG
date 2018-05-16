@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/cppext
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-headeronly doc
+
+Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev
+Dependencies-dev:
+
+Recommends-dev: libchimeratk-cppext-doc
+Enhances-doc: libchimeratk-cppext-dev
+
+Description-dev: Small header-only C++ library with a collection with useful template classes for use within the ChimeraTK framework.
+Description-doc: The doxygen html documentation for libchimeratk-cppext.
