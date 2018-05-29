@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/amtfmo.git
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/flashmo.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
@@ -9,7 +9,7 @@ Has-packages: doocs-bin
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doxygen graphviz libboost-test-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
-Provides-bin: doocs-amtfmo-server
-Conflicts-bin: doocs-amtfmo-server
+Provides-bin: doocs-mo-server
+Conflicts-bin: doocs-mo-server doocs-amtfmo-server
 
-Description-bin: DOOCS server for the AMTF Master Oscillator.
+Description-bin: DOOCS server for the FLASH and AMTF Master Oscillator.

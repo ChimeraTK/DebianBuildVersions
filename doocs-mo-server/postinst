@@ -1,5 +1,5 @@
 #!/bin/bash -e
-# post install script for the Debian GNU/Linux doocs-amtfmo-server package
+# post install script for the Debian GNU/Linux doocs-mo-server package
 
 set -e
 
@@ -23,11 +23,11 @@ UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTU
 #
 # RPC_LIBNO
 # 
-if [ -f /export/doocs/server/amtfmo_server/RPC_LIBNO ] ; then
-RPC_LIBNO=`cat /export/doocs/server/amtfmo_server/RPC_LIBNO`
+if [ -f /export/doocs/server/mo_server/RPC_LIBNO ] ; then
+RPC_LIBNO=`cat /export/doocs/server/mo_server/RPC_LIBNO`
 export RPC_LIBNO
 else
-  echo 2>&1 "File: /export/doocs/server/amtfmo_server/RPC_LIBNO is missing"
+  echo 2>&1 "File: /export/doocs/server/mo_server/RPC_LIBNO is missing"
   exit 1
 fi
 
@@ -37,36 +37,36 @@ fi
 if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
    cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-      sed -e "s/servername/amtfmo_server/g" | \
-      sed -e "s/SERVERNAME/AMTFMO/g" | \
+      sed -e "s/servername/mo_server/g" | \
+      sed -e "s/SERVERNAME/MO/g" | \
       sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
-      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.amtfmo
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.mo
 fi 
 
 #
 # move the running server to old
-if [ -f /export/doocs/server/amtfmo_server/amtfmo_server ] ; then
-   if [ -f /export/doocs/server/amtfmo_server/amtfmo_server.OLD ] ; then
-      rm /export/doocs/server/amtfmo_server/amtfmo_server.OLD
+if [ -f /export/doocs/server/mo_server/mo_server ] ; then
+   if [ -f /export/doocs/server/mo_server/mo_server.OLD ] ; then
+      rm /export/doocs/server/mo_server/mo_server.OLD
    fi
-   mv /export/doocs/server/amtfmo_server/amtfmo_server /export/doocs/server/amtfmo_server/amtfmo_server.OLD
+   mv /export/doocs/server/mo_server/mo_server /export/doocs/server/mo_server/mo_server.OLD
 fi
 # 
 # install the new server
-cp -a /export/doocs/server/amtfmo_server/amtfmo_server.dist /export/doocs/server/amtfmo_server/amtfmo_server
+cp -a /export/doocs/server/mo_server/mo_server.dist /export/doocs/server/mo_server/mo_server
 
 #
 # check if this server is already in the watchdog
-INWD=`grep "/server/amtfmo_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+INWD=`grep "/server/mo_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 
 if [ -z "${INWD}" ] ; then
-   /export/doocs/server/doocs add amtfmo_server || true
+   /export/doocs/server/doocs add mo_server || true
 fi
 
 #
 # stop the server (just in case it is already running)
 # It has to be off while the config is being updated.
-/export/doocs/server/doocs stop  amtfmo_server || true
+/export/doocs/server/doocs stop  mo_server || true
 
 #FIXME:
 # generate and/or update configuration files
@@ -75,8 +75,8 @@ fi
 
 #
 # change ownership of the server directory and all files in it
-chown -R doocsadm:doocsadm /export/doocs/server/amtfmo_server
+chown -R doocsadm:doocsadm /export/doocs/server/mo_server
 
 #
 # restart the server
-/export/doocs/server/doocs restart amtfmo_server
+/export/doocs/server/doocs restart mo_server
