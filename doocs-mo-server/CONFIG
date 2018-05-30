@@ -10,6 +10,6 @@ Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watc
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-mo-server
-Conflicts-bin: doocs-mo-server doocs-amtfmo-server
+Conflicts-bin: doocs-mo-server, doocs-amtfmo-server
 
 Description-bin: DOOCS server for the FLASH and AMTF Master Oscillator.
