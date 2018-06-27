@@ -1,17 +1,26 @@
 #!/bin/sh
 if [ "purge" = "$1" ] ; then
-	if [ -e "/var/lib/chimeratk/watchdog-server/WatchdogServer.persist" ]; then
 	#do not remove the directory since it is removed by apt
 	#just delete files that are added after installation 
-	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer.persist
-	  rm /var/lib/chimeratk/watchdog-server/WatchdogServer_mapping.xml
-	  rm /var/lib/chimeratk/watchdog-server/WatchdogServerConfig.xml
-	  find /var/lib/chimeratk/watchdog-server/ -iname "*.log" -delete
+
+    if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer.xml" ]; then
+      rm /etc/chimeratk/watchdog-server/WatchdogServer.xml
     fi
-    if [ -d "/etc/chimeratk/watchdog-server" ]; then
-      rm -fr /etc/chimeratk/watchdog-server
+    
+    if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer.persist" ]; then
+      rm /etc/chimeratk/watchdog-server/WatchdogServer.persist
     fi
-    if [ -e "/var/lib/chimeratk/watchdog-server/uDAQ" ]; then
-    	rm -fr /var/lib/chimeratk/watchdog-server/uDAQ
-    fi
+fi
+
+#remove runtime directory and files
+if [ -e "/var/lib/chimeratk/watchdog-server/keep_daq" ]; then
+	find /var/lib/chimeratk/watchdog-server/* -iname "*"  ! -iname "uDAQ" -delete
+	echo "Found existing uDAQ during upgrade step."
+else
+     if [ -d "/var/lib/chimeratk/watchdog-server" ]; then
+	rm -r /var/lib/chimeratk/watchdog-server
+     fi
+fi
+if [ -d "/var/lib/chimeratk/" ] && [ -z "$(ls -A /var/lib/chimeratk/)" ]; then
+	rm -r /var/lib/chimeratk
 fi

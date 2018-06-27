@@ -1,0 +1,32 @@
+Source: libconsatt-apps
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libconsatt-dev (= 00.06xenial1.00), libdemac-dev (= 00.05xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/csaApplications.git
+
+Package: libconsatt-apps-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libconsatt-apps00-02-xenial1, libdemac-dev (>= 00.05xenial1), libdemac-dev (<< 00.05xenial2), libconsatt-dev (>= 00.06xenial1), libconsatt-dev (<< 00.06xenial2)
+Description: Header and cmake files for the ConsattApp Library.
+
+Package: libconsatt-apps00-02-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ConsattApp library for application based on consatt and demac.
+
