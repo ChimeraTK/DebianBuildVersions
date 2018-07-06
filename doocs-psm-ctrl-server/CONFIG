@@ -5,7 +5,7 @@ License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin
-UseConfigGeneratorVersion: 00-15-xenial1
+UseConfigGeneratorVersion: 01-03-xenial1
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libssl-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
