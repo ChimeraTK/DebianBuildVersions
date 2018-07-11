@@ -6,8 +6,10 @@ Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev
-Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy
+UseConfigGeneratorVersion: 01-03-xenial1
+
+Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
 
