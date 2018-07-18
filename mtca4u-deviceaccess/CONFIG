@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib doc bin
 
-Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libxml++2.6-dev libchimeratk-cppext-dev
+Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libchimeratk-cppext-dev
 
 Package-name-bin: mtca4u-deviceaccess-lmap-editor
