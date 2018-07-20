@@ -15,6 +15,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, subversion
+Depends: ${shlibs:Depends}, ${misc:Depends}, git
 Description: DESY FLASH/XFEL controls package. Configuration generator for the DOOCS low-level RF control servers.
 
