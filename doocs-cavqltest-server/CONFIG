@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/cavQlTest.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libamtfdbaccess-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-cavqltest-server
+Conflicts-bin: doocs-cavqltest-server
+
+Description-bin: DOOCS server for the FLASH and AMTF Master Oscillator.
