@@ -1,0 +1,20 @@
+Source: doocs-cavqltest-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), dev-doocs-clientlib (= 18.11.3-xenial1), dev-doocs-serverlib (= 18.11.3-xenial1), dev-doocs-doocsdapilib (= 18.11.3-xenial1), libamtfdbaccess-dev (= 02.09xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/cavQlTest.git
+
+Package: doocs-cavqltest-server01-01-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-cavqltest-server
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-cavqltest-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for the FLASH and AMTF Master Oscillator.
+
