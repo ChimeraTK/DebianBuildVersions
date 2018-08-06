@@ -12,5 +12,5 @@ Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 Provides-bin: doocs-amtfmanagement-server
 Conflicts-bin: doocs-amtfmanagement-server
 
-Description-bin: DOOCS server for test managent at AMTF
+Description-bin: DOOCS server for test management at AMTF
 
