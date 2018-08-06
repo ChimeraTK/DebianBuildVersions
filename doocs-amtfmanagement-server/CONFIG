@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/cavQlTest.git
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/amtf-testManagement.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
@@ -9,7 +9,8 @@ Has-packages: doocs-bin
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libamtfdbaccess-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
-Provides-bin: doocs-cavqltest-server
-Conflicts-bin: doocs-cavqltest-server
+Provides-bin: doocs-amtfmanagement-server
+Conflicts-bin: doocs-amtfmanagement-server
 
-Description-bin: DOOCS server for cavity QL tests at AMTF
+Description-bin: DOOCS server for test managent at AMTF
+
