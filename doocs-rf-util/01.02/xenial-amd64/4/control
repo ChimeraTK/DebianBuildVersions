@@ -1,0 +1,32 @@
+Source: libdoocs-rf-util
+Priority: extra
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), dev-doocs-clientlib (= 18.11.4-xenial1), dev-doocs-serverlib (= 18.11.4-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/rf/util.git
+
+Package: libdoocs-rf-util-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdoocs-rf-util01-02-xenial4, dev-doocs-clientlib (= 18.11.4-xenial1), dev-doocs-serverlib (= 18.11.4-xenial1)
+Description: Header and cmake files for the util Library.
+
+Package: libdoocs-rf-util01-02-xenial4
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Helper library to get macropulse.
+
