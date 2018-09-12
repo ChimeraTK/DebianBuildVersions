@@ -6,8 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libhdf5-serial-dev
-Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-serial-dev
+Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev
 
 Enhances-doc: libmtca4u-deviceaccess-dev
 Enhances-bin: #Package-name-lib#
