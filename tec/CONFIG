@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake libmtca4u-deviceaccess-dev
-Dependencies-dev: libmtca4u-deviceaccess-dev
+Dependencies: debhelper cmake libchimeratk-deviceaccess-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev
 
 Description-dev: Header and cmake files for TEC controller base communication library 
 Description-lib: TEC controller base communication library. Developed at DESY for the  FLASH/XFEL project.

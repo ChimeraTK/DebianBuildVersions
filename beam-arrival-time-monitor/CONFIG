@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libmtca4u-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
-Dependencies-dev: libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libmtca4u-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
+Dependencies-dev: libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
 
 
 

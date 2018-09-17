@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libboost-system-dev
-Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libmtca4u-deviceaccess-dev libboost-system-dev
+Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
+Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
 
 Replaces-dev: dev-doocswrappers
 Conflicts-dev: dev-doocswrappers

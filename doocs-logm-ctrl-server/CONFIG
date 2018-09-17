@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libmtca4u-deviceaccess-dev libdoocs-rf-util-dev
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libdoocs-rf-util-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-logm-ctrl-server

@@ -9,7 +9,7 @@ Has-packages: dev lib
 Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev
 
-Enhances-doc: libmtca4u-deviceaccess-dev
+Enhances-doc: #Package-name-dev#
 Enhances-bin: #Package-name-lib#
 
 Description-dev: Header and cmake files for the ChimeraTK ApplicationCore. The files you need to compile against libchimeratk-applicationcore.

@@ -7,7 +7,7 @@ Target-repositories: intern pub
 #The dev package is handled as extra because it does not depend on a lib package
 Has-packages: python 
 
-Dependencies: debhelper cmake libmtca4u-deviceaccess-dev python-numpy libboost-python-dev lsb-release
+Dependencies: debhelper cmake libchimeratk-deviceaccess-dev python-numpy libboost-python-dev lsb-release
 Dependencies-python: python2.7, python-numpy 
 
 
