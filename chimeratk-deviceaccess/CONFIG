@@ -4,15 +4,15 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev lib doc bin
+Has-packages: dev lib doc bin extra
 
 Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libchimeratk-cppext-dev
 
 Package-name-bin: chimeratk-deviceaccess-lmap-editor
 
-Recommends-dev: libchimeratk-deviceaccess-doc
-Enhances-doc: libchimeratk-deviceaccess-dev
+Recommends-dev: #Package-name-doc#
+Enhances-doc: #Package-name-dev#
 Suggests-lib: #Package-name-bin#
 Enhances-bin: #Package-name-lib#
 
@@ -22,3 +22,11 @@ Description-dev: Header and cmake files for libchimeratk-deviceaccess. The files
 Description-lib: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
 Description-doc: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
 Description-bin: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
+
+Replaces-dev: libmtca4u-deviceaccess-dev (<< 01.00)
+Breaks-dev: libmtca4u-deviceaccess-dev (<< 01.00)
+
+Package-name-extra: libmtca4u-deviceaccess-dev
+Dependes-extra: #Package-name-dev#
+Description-extra: Transitional package. This is a transitional package. It can safely be removed.
+
