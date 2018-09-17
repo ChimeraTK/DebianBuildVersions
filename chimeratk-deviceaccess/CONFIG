@@ -4,6 +4,8 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
+project: ChimeraTK-DeviceAccess
+
 Has-packages: dev lib doc bin extra
 
 Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev
