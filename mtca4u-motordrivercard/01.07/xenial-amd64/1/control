@@ -1,0 +1,47 @@
+Source: libmtca4u-motordrivercard
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu3), doxygen (= 1.8.11-1), libchimeratk-deviceaccess-dev (= 01.00xenial1.03), libboost-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libqt4-dev (= 4:4.8.7+dfsg-5ubuntu2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/MotorDriverCard
+
+Package: libmtca4u-motordrivercard-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: dev-mtca4u-motordrivercard
+Replaces: dev-mtca4u-motordrivercard
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libmtca4u-motordrivercard01-07-xenial1, libboost-dev (= 1.58.0.1ubuntu1), libchimeratk-deviceaccess-dev (>= 01.00xenial1), libchimeratk-deviceaccess-dev (<< 01.00xenial2)
+Description: Header and cmake files for ChimeraTK MotorDriverCard. The files you need to compile against ChimerarTK MotorDriverCard.
+
+Package: libmtca4u-motordrivercard01-07-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: mtca4u-motordrivercard-configcalculator
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChimeraTK MotorDriverCard provides a C++ API for the DFMC-MD22 motor driver card, based on ChimeraTK.
+
+Package: mtca4u-motordrivercard-configcalculator
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libmtca4u-motordrivercard01-07-xenial1
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Config calculators (command line and Qt GUI) for the ChimeraTK MotorDriverCard.
+
