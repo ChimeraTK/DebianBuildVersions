@@ -27,7 +27,7 @@ Description-bin: GUI to create config files for the ChimeraTK DeviceAccess logic
 
 Replaces-dev: libmtca4u-deviceaccess-dev (<< 01.00)
 Breaks-dev: libmtca4u-deviceaccess-dev (<< 01.00)
-Provides-dev: libmtca4u-deviceaccess-dev (<< 01.00)
+Provides-dev: libmtca4u-deviceaccess-dev
 
 Package-name-extra: libmtca4u-deviceaccess-dev
 Dependes-extra: #Package-name-dev#
