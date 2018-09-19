@@ -4,7 +4,7 @@ Section: libs
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: dev lib
+Has-packages: dev lib extra
 
 Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
@@ -16,3 +16,8 @@ Description-dev: Header files for the DOOCS Wrappers Library. The files you need
 Description-lib: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
 
 Install-additional-pattern-dev: usr/share/DOOCSwrappers/*
+
+Package-name-extra: dev-doocswrappers
+Dependes-extra: #Package-name-dev#
+Description-extra: Transitional package. This is a transitional package. It can safely be removed.
+
