@@ -30,6 +30,6 @@ Breaks-dev: libmtca4u-deviceaccess-dev (<< 01.00)
 Provides-dev: libmtca4u-deviceaccess-dev
 
 Package-name-extra: libmtca4u-deviceaccess-dev
-Dependes-extra: #Package-name-dev#
+Depends-extra: #Package-name-dev#
 Description-extra: Transitional package. This is a transitional package. It can safely be removed.
 

@@ -19,6 +19,6 @@ Breaks-dev: dev-doocswrappers (<< 0.5)
 Provides-dev: dev-doocswrappers
 
 Package-name-extra: dev-doocswrappers
-Dependes-extra: #Package-name-dev#
+Depends-extra: #Package-name-dev#
 Description-extra: Transitional package. This is a transitional package. It can safely be removed.
 
