@@ -9,13 +9,14 @@ Has-packages: dev lib extra
 Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
 
-Replaces-dev: dev-doocswrappers
-Conflicts-dev: dev-doocswrappers
-
 Description-dev: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
 Description-lib: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
 
 Install-additional-pattern-dev: usr/share/DOOCSwrappers/*
+
+Replaces-dev: dev-doocswrappers (<< 0.5)
+Breaks-dev: dev-doocswrappers (<< 0.5)
+Provides-dev: dev-doocswrappers
 
 Package-name-extra: dev-doocswrappers
 Dependes-extra: #Package-name-dev#
