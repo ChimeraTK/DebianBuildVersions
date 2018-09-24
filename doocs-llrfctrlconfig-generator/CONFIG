@@ -4,7 +4,7 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: extra
+Has-packages: extra extra2
 
 package-name-contains-buildversion: 0
 
@@ -13,5 +13,13 @@ Dependencies-extra: git
 
 Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
-Description-extra: DESY FLASH/XFEL controls package. Configuration generator for the DOOCS low-level RF control servers.
+Replaces-extra: doocs-llrfctrlconfig-generator#debversion#-xenial1
+Provides-extra: doocs-llrfctrlconfig-generator#debversion#-xenial1
+
+Description-extra: Configuration generator for the DESY low-level RF related servers.
+
+
+Package-name-extra2:  doocs-llrfctrlconfig-generator#debversion#-xenial1
+Dependencies-extra2: doocs-llrfctrlconfig-generator#debversion#
+Description-extra2: Transitional package. This is a transitional package. It can safely be removed.
 
