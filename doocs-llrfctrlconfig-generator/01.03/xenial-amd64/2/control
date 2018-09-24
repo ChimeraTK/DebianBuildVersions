@@ -6,7 +6,20 @@ Standards-Version: 3.8.3
 Section: libs
 Homepage: http://doocs-git.desy.de/cgit/doocs/tools/rf/llrfCtrl_config.git
 
-Package: doocs-llrfctrlconfig-generator01-03-xenial2
+Package: doocs-llrfctrlconfig-generator01-03
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: doocs-llrfctrlconfig-generator01-03-xenial1
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrlconfig-generator01-03-xenial1
+Depends: ${shlibs:Depends}, ${misc:Depends}, git
+Description: Configuration generator for the DESY low-level RF related servers.
+
+Package: doocs-llrfctrlconfig-generator01-03-xenial1
 Section: net
 Architecture: amd64
 Conflicts: 
@@ -16,6 +29,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, git
-Description: DESY FLASH/XFEL controls package. Configuration generator for the DOOCS low-level RF control servers.
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-llrfctrlconfig-generator01-03
+Description: Transitional package. This is a transitional package. It can safely be removed.
 
