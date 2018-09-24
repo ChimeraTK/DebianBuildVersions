@@ -6,6 +6,8 @@ Target-repositories: intern
 
 Has-packages: extra
 
+package-name-contains-buildversion: 0
+
 Dependencies: debhelper cmake
 Dependencies-extra: git
 
