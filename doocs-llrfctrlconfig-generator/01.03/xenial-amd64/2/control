@@ -10,25 +10,12 @@ Package: doocs-llrfctrlconfig-generator01-03
 Section: net
 Architecture: amd64
 Conflicts: 
-Replaces: doocs-llrfctrlconfig-generator01-03-xenial1
-Breaks: 
-Recommends: 
-Suggests: 
-Enhances: 
-Provides: doocs-llrfctrlconfig-generator01-03-xenial1
-Depends: ${shlibs:Depends}, ${misc:Depends}, git
-Description: Configuration generator for the DESY low-level RF related servers.
-
-Package: doocs-llrfctrlconfig-generator01-03-xenial1
-Section: net
-Architecture: amd64
-Conflicts: 
 Replaces: 
 Breaks: 
 Recommends: 
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-llrfctrlconfig-generator01-03
-Description: Transitional package. This is a transitional package. It can safely be removed.
+Depends: ${shlibs:Depends}, ${misc:Depends}, git
+Description: Configuration generator for the DESY low-level RF related servers.
 
