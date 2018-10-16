@@ -2,7 +2,7 @@
 # post install script for the Debian GNU/Linux doocs-bam-server package
 
 
-exit 0
+
 
 set -e
 
@@ -18,6 +18,12 @@ case "$1" in
 	exit 0;
 	;;
 esac
+
+
+# change owership
+chown -R doocsadm:doocsadm /export/doocs/server/laserlock_server
+
+exit 0
 
 ########## make the /export/<nodename> linl ######################
 NODENAME=`uname -n`
@@ -226,8 +232,7 @@ if [ ! -f /export/doocs/server/bam_server/BAM.dmap ] ; then
        /export/doocs/server/bam_server/BAM.dmap
 fi
 
-# change owership
-chown -R doocsadm:doocsadm /export/doocs/server/bam_server
+
 #
 # check if this server is already in the watchdog
 INWD=`grep "/server/bam_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
