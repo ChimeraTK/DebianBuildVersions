@@ -1,0 +1,251 @@
+#!/bin/bash
+# post install script for the Debian GNU/Linux doocs-bam-server package
+
+
+exit 0
+
+set -e
+
+case "$1" in
+    configure)
+    # continue as normal
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+	exit 0;
+	;;
+    *)
+	echo "postinst called with unknown argument \`$1'" >&2;
+	exit 0;
+	;;
+esac
+
+##### make the /export/<nodename> linl ###########
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+POS=`expr index $UNODENAME CPU`
+UFACILITY_NAME=${UNODENAME:0:POS-1}
+FACILITY_NAME=${NODENAME:0:POS-1}
+DOOCS_FACILITY_NAME=$UFACILITY_NAME.SDIAG
+XTIMER_SERVER="$DOOCS_FACILITY_NAME\/TIMER\/${UNODENAME:POS+2}"
+MLO_SERVER='XFEL.SYNC\/MLO.LASER_LOCK\/XTIN.MLO1.CONTROLLER\/APP.CTRL.0.IS_ACTIVE.REG.RD'
+
+if [ "$FACILITY_NAME" == "xfel" ] ; then
+    GID_OPERATOR=514
+    GIT_EXPERT=514
+    if [ ! -f /export/doocs/server/bam_server/bam_motor.conf ] ; then
+	echo 'MOTOR_DEVICE MD220 0 motorConfig_2xlimes60_optimal_bam.xml ""' >  /export/doocs/server/bam_server/bam_motor.conf
+	echo 'MOTOR_DEVICE MD220 1 motorConfig_2xlimes60_optimal_bam.xml ""' >> /export/doocs/server/bam_server/bam_motor.conf
+	echo '"" "" 0 "" ""' >> /export/doocs/server/bam_server/bam_motor.conf
+	echo 'MOTOR_DEVICE MD221 1 motorConfig_2xlimes60_optimal_bam.xml ""' >> /export/doocs/server/bam_server/bam_motor.conf
+    fi
+elif [ "$FACILITY_NAME" == "flash" ] ;  then
+    GID_OPERATOR=422
+    GIT_EXPERT=414
+fi
+
+if [ "$NODENAME" == "xfelcpusd47i1" ] ; then
+    LOCATION='47.I1'
+    LINK_SERVER='XFEL.SYNC\/LINK_LOCK\/AMC6.CONTROLLER\/LSU.0.CTRL.IS_ACTIVE.REG.RD'
+    TOROID_SERVER='XFEL.DIAG\/TOROID\/TORA.46.I1'
+    TOROID_DATA_THREESHOLD=0.010
+    SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+    SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+    MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+    MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+    MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+    DELTAT_MOTOR_SIGN='1    1    1'
+    DELTAT_SIGN='0.001    0.001    0'
+    MODULATION_SIGN='-1.0    -1.0    -1.0'
+    ARRIVAL_TIME_OFFSET=0
+    START_ARRAY_VALUE_ACCURACY=10
+    N_SAMPLE_ACCURACY=200
+    FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+
+if [ "$NODENAME" == "xfelcpusd181b1" ] ; then
+    LOCATION='181.B1'
+    LINK_SERVER=''
+    TOROID_SERVER='XFEL.DIAG\/TOROID\/TORA.175.B1'
+    TOROID_DATA_THREESHOLD=0.010
+    SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+    SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+    MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+    MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+    MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+    DELTAT_MOTOR_SIGN='1    1    1'
+    DELTAT_SIGN='0.001    0.001    0'
+    MODULATION_SIGN='-1.0    -1.0    -1.0'
+    ARRIVAL_TIME_OFFSET=0
+    START_ARRAY_VALUE_ACCURACY=10
+    N_SAMPLE_ACCURACY=20
+    FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+
+if [ "$NODENAME" == "xfelcpusd205b1" ] ; then
+    LOCATION='203.B1'
+    LINK_SERVER=''
+    TOROID_SERVER='XFEL.DIAG\/TOROID\/TORA.203.B1'
+    TOROID_DATA_THREESHOLD=0.010
+    SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+    SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+    MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+    MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+    MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+    DELTAT_MOTOR_SIGN='1    1    1'
+    DELTAT_SIGN='0.001    0.001    0'
+    MODULATION_SIGN='-1.0    -1.0    -1.0'
+    ARRIVAL_TIME_OFFSET=0
+    START_ARRAY_VALUE_ACCURACY=10
+    N_SAMPLE_ACCURACY=200
+    FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+
+if [ "$NODENAME" == "xfelcpusd392b2" ] ; then
+    LOCATION='392.B2'
+    LINK_SERVER=''
+    TOROID_SERVER='XFEL.DIAG\/TOROID\/TORA.387.B2'
+    TOROID_DATA_THREESHOLD=0.010
+    SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+    SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+    MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+    MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+    MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+    DELTAT_MOTOR_SIGN='1    1    1'
+    DELTAT_SIGN='0.001    0.001    0'
+    MODULATION_SIGN='-1.0    -1.0    -1.0'
+    ARRIVAL_TIME_OFFSET=0
+    START_ARRAY_VALUE_ACCURACY=10
+    N_SAMPLE_ACCURACY=200
+    FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+
+if [ "$NODENAME" == "xfelcpusd417b2" ] ; then
+    LOCATION='414.B2'
+    LINK_SERVER=''
+    TOROID_SERVER='XFEL.DIAG\/TOROID\/TORA.387.B2'
+    TOROID_DATA_THREESHOLD=0.010
+    SET_PEAK_BASE_LOW_CHARGE_CHANNEL=0
+    SET_PEAK_BASE_HIGH_CHARGE_CHANNEL=0
+    MOTOR_CONVERSION_FACTOR='0.26067    0.26067    0.26067 0.26067'
+    MOTOR_CONVERSION_REFLECTION='1    1    1    1'
+    MOTOR_CONVERSION_TRANSLATION_OFFSET='0.0 0.0 0.0 0.0' 
+    DELTAT_MOTOR_SIGN='1    1    1'
+    DELTAT_SIGN='0.001    0.001    0'
+    MODULATION_SIGN='-1.0    -1.0    -1.0'
+    ARRIVAL_TIME_OFFSET=0
+    START_ARRAY_VALUE_ACCURACY=10
+    N_SAMPLE_ACCURACY=200
+    FEEDBACK_THREESHOLD_CHARGE='0.01   0.01   0.01'
+fi
+
+#
+# RPC_LIBNO
+# 
+if [ -f /export/doocs/server/bam_server/RPC_LIBNO ] ; then
+    RPC_LIBNO=`cat /export/doocs/server/bam_server/RPC_LIBNO`
+    export RPC_LIBNO
+else
+    echo 2>&1 "File: /export/doocs/server/bam_server/RPC_LIBNO is missing"
+    exit 1
+fi
+
+if [ ! -f /export/doocs/server/bam_server/bam_server.conf  ] ; then
+    if [ -f /export/doocs/server/bam_server/bam_CONF.TEMPLATE ] ; then
+	cat /export/doocs/server/bam_server/bam_CONF.TEMPLATE | \
+	    sed "s/LOCATION/$LOCATION/g" | sed "s/LINK_SERVER/$LINK_SERVER/g" | \
+	    sed "s/MLO_SERVER/$MLO_SERVER/g"| sed "s/TOROID_SERVER/$TOROID_SERVER/g" | \
+	    sed "s/GID_OPERATOR/$GID_OPERATOR/g"| sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
+	    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g"| sed "s/FACILITY_NAME/$FACILITY_NAME/g" | \
+	    sed "s/XTIMER_SERVER/$XTIMER_SERVER/g" | \
+	    sed "/^TOROID_DATA_THREESHOLD/s/$/$TOROID_DATA_THREESHOLD/g" | \
+	    sed "/^SET_PEAK_BASE_LOW_CHARGE_CHANNEL/s/$/$SET_PEAK_BASE_LOW_CHARGE_CHANNEL/g" | \
+	    sed "/^SET_PEAK_BASE_HIGH_CHARGE_CHANNEL/s/$/$SET_PEAK_BASE_HIGH_CHARGE_CHANNEL/g" | \
+	    sed "/^MOTOR_CONVERSION_FACTOR/s/$/$MOTOR_CONVERSION_FACTOR/g" | \
+	    sed "/^MOTOR_CONVERSION_REFLECTION/s/$/$MOTOR_CONVERSION_REFLECTION/g" | \
+	    sed "/^MOTOR_CONVERSION_TRANSLATION_OFFSET/s/$/$MOTOR_CONVERSION_TRANSLATION_OFFSET/g" | \
+	    sed "/^DELTAT_MOTOR_SIGN/s/$/$DELTAT_MOTOR_SIGN/g" | \
+	    sed "/^DELTAT_SIGN/s/$/$DELTAT_SIGN/g" | \
+       	    sed "/^MODULATION_SIGN/s/$/$MODULATION_SIGN/g" | \
+	    sed "/^ARRIVAL_TIME_OFFSET/s/$/$ARRIVAL_TIME_OFFSET/g" | \
+	    sed "/^START_ARRAY_VALUE_ACCURACY/s/$/$START_ARRAY_VALUE_ACCURACY/g" | \
+	    sed "/^N_SAMPLE_ACCURACY/s/$/$N_SAMPLE_ACCURACY/g" | \
+	    sed "/^FEEDBACK_THREESHOLD_CHARGE/s/$/$FEEDBACK_THREESHOLD_CHARGE/g" | \
+	    sed "s/NODENAME/$UNODENAME/g" | sed "s/nodename/$NODENAME/g" > \
+						/export/doocs/server/bam_server/bam_server.conf 
+    fi
+fi
+
+#
+# watchdog template 
+#
+if [ ! -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam  ] ; then
+    if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+	cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+	    sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+	    sed -e "s/servername/bam_server/g" | \
+	    sed -e "s/SERVERNAME/BAM/g" | \
+	    sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+		/export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam
+	chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.bam
+    fi
+fi 
+
+#
+# ens
+#
+echo "add server to ens "
+echo "RPC_LIBNO = $RPC_LIBNO"
+
+#
+# move the running server to old
+if [ -f /export/doocs/server/bam_server/bam_server ] ; then
+    if [ -f /export/doocs/server/bam_server/bam_server.OLD ] ; then
+	rm /export/doocs/server/bam_server/bam_server.OLD
+    fi
+    mv /export/doocs/server/bam_server/bam_server /export/doocs/server/bam_server/bam_server.OLD
+fi
+# 
+# install the new server
+cp -a /export/doocs/server/bam_server/bam_server.dist \
+   /export/doocs/server/bam_server/bam_server
+
+# create files for the lookup tables from templates
+if [ ! -f /export/doocs/server/bam_server/high_charge_look_up_table.txt ] ; then
+   cp /export/doocs/server/bam_server/high_charge_look_up_table.txt.template \
+      /export/doocs/server/bam_server/high_charge_look_up_table.txt
+fi
+
+if [ ! -f /export/doocs/server/bam_server/low_charge_look_up_table.txt ] ; then
+    cp /export/doocs/server/bam_server/low_charge_look_up_table.txt.template \
+       /export/doocs/server/bam_server/low_charge_look_up_table.txt
+fi
+
+#create dmap file from template
+if [ ! -f /export/doocs/server/bam_server/BAM.dmap ] ; then
+    cp /export/doocs/server/bam_server/BAM.dmap.template \
+       /export/doocs/server/bam_server/BAM.dmap
+fi
+
+# change owership
+chown -R doocsadm:doocsadm /export/doocs/server/bam_server
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/bam_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+    /export/doocs/server/doocs add bam_server || true
+fi
+
+#
+# kill the server if there is a valid PID file and 
+# a AUTORESTART flag in the server dir
+if [ -f /export/doocs/server/bam_server/bam_server.PID ] ; then
+    SPID=`cat /export/doocs/server/bam_server/bam_server.PID`
+    if [ -d /proc/${SPID} ] ; then
+	/export/doocs/server/doocs restart bam_server
+    else
+	echo "bam_server: postinstall remove not valid PID file"
+	rm /export/doocs/server/bam_server/bam_server.PID
+    fi
+fi
+
