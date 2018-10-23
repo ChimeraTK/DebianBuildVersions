@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 01-03
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libboost-filesystem-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libboost-filesystem-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion# libboost-test-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-ulog-ctrl-server
