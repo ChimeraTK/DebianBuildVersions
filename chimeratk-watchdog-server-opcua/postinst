@@ -25,9 +25,9 @@ if [ -d "/lib/systemd/system" -a -x "/bin/systemctl" ] ; then
    systemctl start chimeratk-watchdog.service
 fi
 
-# recover old persist file
+# recover old persist file and keep e.g. user and group settings
 if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer.persist" ]; then
-	cp /etc/chimeratk/watchdog-server/WatchdogServer.persist /var/lib/chimeratk/watchdog-server
+	rsync -a /etc/chimeratk/watchdog-server/WatchdogServer.persist /var/lib/chimeratk/watchdog-server
 fi
 
 #create variable tree file
