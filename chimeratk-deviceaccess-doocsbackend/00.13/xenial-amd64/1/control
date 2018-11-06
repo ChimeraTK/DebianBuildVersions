@@ -1,0 +1,34 @@
+Source: libchimeratk-deviceaccess-doocsbackend
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu3), doxygen (= 1.8.11-1), libchimeratk-deviceaccess-dev (= 01.00xenial1.05), dev-doocs-clientlib (= 18.11.6-xenial1), dev-doocs-serverlib (= 18.11.6-xenial3), libboost-test-dev (= 1.58.0.1ubuntu1), libdoocs-server-test-helper-dev (= 01.01xenial3.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-DoocsBackend
+
+Package: libchimeratk-deviceaccess-doocsbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-doocsbackend00-13-xenial1, libchimeratk-deviceaccess-dev (>= 01.00xenial1), libchimeratk-deviceaccess-dev (<< 01.00xenial2), dev-doocs-clientlib (= 18.11.6-xenial1), dev-doocs-serverlib (= 18.11.6-xenial3)
+Description: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.
+
+Package: libchimeratk-deviceaccess-doocsbackend00-13-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-doocsbackend provides the DOOCS backend for the ChimeraTK DeviceAccess library, which allows accessing DOOCS servers as devices through the DeviceAccess interface.
+
