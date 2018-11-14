@@ -1,0 +1,21 @@
+Source: doocs-laserlock-server
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu3), libconsatt-apps-dev (= 00.06xenial1.00), libconsatt-doocs-dev (= 00.05xenial5.01), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 18.11.6-xenial1), dev-doocs-serverlib (= 18.11.6-xenial3), doocs-watchdog-server (= 18.11.6-xenial2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/laserlock.git
+
+Package: doocs-laserlock-server01-09-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-laserlock-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-laserlock-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for laser locking application for LbSynch
+
