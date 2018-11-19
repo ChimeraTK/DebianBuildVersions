@@ -18,12 +18,6 @@ fi
 if [ -e "/etc/chimeratk/watchdog-server/chimeratk-watchdog.service" ] && [ ! -e "/var/lib/chimeratk/watchdog-server/chimeratk-watchdog.service" ]; then
 	ln -s /etc/chimeratk/watchdog-server/chimeratk-watchdog.service /var/lib/chimeratk/watchdog-server/
 fi
-if [ -d "/lib/systemd/system" -a -x "/bin/systemctl" ] ; then
-   systemctl daemon-reload
-   # no need to perform stop or disable before, since with every installation an old version is uninstalled and prerm is executed 
-   systemctl enable /var/lib/chimeratk/watchdog-server/chimeratk-watchdog.service
-   systemctl start chimeratk-watchdog.service
-fi
 
 # recover old persist file and keep e.g. user and group settings
 if [ -e "/etc/chimeratk/watchdog-server/WatchdogServer.persist" ]; then
@@ -33,5 +27,13 @@ fi
 #create variable tree file
 cd /etc/chimeratk/watchdog-server/
 /usr/bin/watchdog-server-xmlGenerator
+
+if [ -d "/lib/systemd/system" -a -x "/bin/systemctl" ] ; then
+   systemctl daemon-reload
+   # no need to perform stop or disable before, since with every installation an old version is uninstalled and prerm is executed 
+   systemctl enable /var/lib/chimeratk/watchdog-server/chimeratk-watchdog.service
+   systemctl start chimeratk-watchdog.service
+fi
+
 
 
