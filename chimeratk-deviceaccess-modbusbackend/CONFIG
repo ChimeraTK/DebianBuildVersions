@@ -1,0 +1,13 @@
+SourceURI: //github.com/ChimeraTK/DeviceAccess-ModbusBackend.git
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libchimeratk-deviceaccess-dev libboost-test-dev libmodbus5 libmodbus-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev libmodbus5 libmodbus-dev
+
+Description-dev: Header and cmake files for the Modbus Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-modbusbackend.
+Description-lib: libchimeratk-deviceaccess-modbusbackend provides the modbus backend for the ChimeraTK DeviceAccess library, which allows accessing modbus devices via tcp.
