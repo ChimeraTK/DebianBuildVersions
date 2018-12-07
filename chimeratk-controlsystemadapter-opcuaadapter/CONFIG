@@ -6,6 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev-noheader lib
 
+Disable-tests: yes
+
 Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev
 
