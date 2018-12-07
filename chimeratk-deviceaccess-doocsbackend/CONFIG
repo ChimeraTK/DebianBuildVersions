@@ -6,6 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
+Disable-tests: yes
+
 Dependencies: debhelper cmake doxygen libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-server-test-helper-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib
 
