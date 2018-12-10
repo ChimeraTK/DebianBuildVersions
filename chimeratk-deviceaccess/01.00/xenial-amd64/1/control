@@ -68,6 +68,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libchimeratk-deviceaccess-dev
 Description: Transitional package. This is a transitional package. It can safely be removed.
 
