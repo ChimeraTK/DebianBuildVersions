@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-UseConfigGeneratorVersion: 01-03
+UseConfigGeneratorVersion: 01-04
 
 Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev libllrflibrary-dev liblua5.2-dev doocs-watchdog-server libchimeratk-deviceaccess-doocsbackend-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, libchimeratk-deviceaccess-doocsbackend-dev, python3-mtca4upy
