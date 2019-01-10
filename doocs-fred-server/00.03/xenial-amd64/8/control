@@ -1,0 +1,21 @@
+Source: doocs-fred-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu3), dev-doocs-clientlib (= 18.12.1-xenial1), dev-doocs-serverlib (= 18.12.1-xenial1), doocs-watchdog-server (= 18.12.1-xenial1), libdoocs-fred-eqfct-dev (= 01.04xenial12.03), doocs-llrfctrlconfig-generator01-04 (= 01.04xenial1.08)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/utility/fred.git
+
+Package: doocs-fred-server00-03-xenial8
+Section: net
+Architecture: amd64
+Conflicts: doocs-fred-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-fred-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-04
+Description: Doocs server for the FRED.
+
