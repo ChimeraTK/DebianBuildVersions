@@ -6,10 +6,10 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-UseConfigGeneratorVersion: 01-03
+UseConfigGeneratorVersion: 01-04
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libdoocs-fred-eqfct-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: debhelper cmake libfred-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, libfred-dev, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-fred-server
 Conflicts-bin: doocs-fred-server
