@@ -1,0 +1,18 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_diagnostic.git
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+UseConfigGeneratorVersion: 01-04
+
+Dependencies: debhelper cmake libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend-dev, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+
+Provides-bin: doocs-llrfdiagnostic-server
+Conflicts-bin: doocs-llrfdiagnostic-server
+
+Description-bin: Doocs server for the llrf diagnostic.
+
