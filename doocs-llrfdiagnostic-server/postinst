@@ -20,5 +20,7 @@ esac
 # install the new server
 ln -snf /export/doocs/server/llrf_diagnostic_server/llrf_diagnostic_server.dist /export/doocs/server/llrf_diagnostic_server/llrf_diagnostic_server
 
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
 /usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/configureCurrentHost.sh llrf-diagnostic
