@@ -16,71 +16,11 @@ case "$1" in
 	;;
 esac
 
-########## make the /export/<nodename> linl ######################
-NODENAME=`uname -n`
-UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
-
 #
-# RPC_LIBNO
-# 
-if [ -f /export/doocs/server/fred_server/RPC_LIBNO ] ; then
-RPC_LIBNO=`cat /export/doocs/server/fred_server/RPC_LIBNO`
-export RPC_LIBNO
-else
-  echo 2>&1 "File: /export/doocs/server/fred_server/RPC_LIBNO is missing"
-  exit 1
-fi
-
-###
-### watchdog template 
-###
-if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
-   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
-      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-      sed -e "s/servername/fred_server/g" | \
-      sed -e "s/SERVERNAME/FRED/g" | \
-      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
-      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.fred
-fi 
-
-#
-# move the running server to old
-if [ -f /export/doocs/server/fred_server/fred_server ] ; then
-   if [ -f /export/doocs/server/fred_server/fred_server.OLD ] ; then
-      rm /export/doocs/server/fred_server/fred_server.OLD
-   fi
-   mv /export/doocs/server/fred_server/fred_server /export/doocs/server/fred_server/fred_server.OLD
-fi
-# 
 # install the new server
-cp -a /export/doocs/server/fred_server/fred_server.dist /export/doocs/server/fred_server/fred_server
+ln -snf /export/doocs/server/fred_server/fred_server.dist /export/doocs/server/fred_server/fred_server
 
 #
-# check if this server is already in the watchdog
-INWD=`grep "/server/fred_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-
-if [ -z "${INWD}" ] ; then
-   /export/doocs/server/doocs add fred_server || true
-fi
-
-#
-# stop the server (just in case it is already running)
-# It has to be off while the config is being updated.
-/export/doocs/server/doocs stop  fred_server || true
-
-#
-# generate and/or update configuration files
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
-if ! /usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/generateConfigForCurrentHost.sh fred ; then
-  echo "cannot configure the server, please do it manually"
-  exit 0
-fi   
- 
-
-#
-# change ownership of the server directory and all files in it
-chown -R doocsadm:doocsadm /export/doocs/server/fred_server
-
-#
-# restart the server
-/export/doocs/server/doocs restart fred_server
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/configureCurrentHost.sh fred
