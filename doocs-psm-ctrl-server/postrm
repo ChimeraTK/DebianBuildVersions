@@ -2,14 +2,10 @@
 # post remove script for the Debian GNU/Linux psm_ctrl_server package
 
 if [ "purge" = "$1" -o "remove" = "$1" ] ; then
-   # check if this server is already in the watchdog
-   INWD=`grep "/server/psm_ctrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-   if [ -n "${INWD}" ] ; then
-      /export/doocs/server/doocs delete psm_ctrl_server || true
-   fi
    /export/doocs/server/doocs stop psm_ctrl_server || true
 fi
 
 if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete psm_ctrl_server || true
    rm -rf /export/doocs/server/psm_ctrl_server
 fi
