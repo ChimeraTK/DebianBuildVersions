@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-dcm-ctrl-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop dcm_ctrl_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete dcm_ctrl_server || true
+   rm -rf /export/doocs/server/dcm_ctrl_server
+fi
