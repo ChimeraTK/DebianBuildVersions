@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -d "/lib/systemd/system" -a -x "/bin/systemctl" ] ; then
+   systemctl stop chimeratk-watchdog.service
+   systemctl disable chimeratk-watchdog.service
+fi

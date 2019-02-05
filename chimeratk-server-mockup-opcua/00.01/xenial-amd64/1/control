@@ -1,0 +1,20 @@
+Source: chimeratk-server-mockup-opcua
+Priority: extra
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu1), doxygen (= 1.8.11-1), libchimeratk-controlsystemadapter-dev (= 00.10xenial1.00), libchimeratk-applicationcore-dev (= 00.10xenial1.00), libchimeratk-controlsystemadapter-opcuaadapter-dev (= 01.05xenial1.00)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: /home/zenker/sw/dummy-server/
+
+Package: chimeratk-server-mockup-opcua
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: server-mockup
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ChimeraTK ApplicationCore based server mockup for integration tasks.
+

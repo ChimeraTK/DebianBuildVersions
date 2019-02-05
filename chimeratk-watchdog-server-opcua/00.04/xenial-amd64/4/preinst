@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -e "/var/lib/chimeratk/watchdog-server/uDAQ" ]; then
+  touch /var/lib/chimeratk/watchdog-server/keep_daq
+fi

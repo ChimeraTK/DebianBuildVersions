@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+# default action
+%:
+	dh $@ --parallel
+
+# disable tests
+override_dh_auto_test:
+	echo Tests disabled.
+
+# Override flags for Project if needed.
+override_dh_auto_configure:
+	dh_auto_configure -- -DENABLE_LOGGING=True -DADAPTER=OPCUA -DCMAKE_BUILD_TYPE=Release
+
