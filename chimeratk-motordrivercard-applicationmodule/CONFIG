@@ -1,0 +1,14 @@
+SourceURI: https://github.com/ChimeraTK/MotorDriverCard-ApplicationModule
+Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: debhelper cmake doxygen libmtca4u-motordrivercard-dev libchimeratk-applicationcore-dev
+Dependencies-dev: libmtca4u-motordrivercard-dev libchimeratk-applicationcore-dev
+
+Description-dev: Header and cmake files for ChimeraTK MotorDriverCard-ApplicationModule. The files you need to compile against this library.
+Description-lib: ChimeraTK MotorDriverCard-ApplicationModule provides an ApplicationCore interface to the MotorDriverCard library.
+
