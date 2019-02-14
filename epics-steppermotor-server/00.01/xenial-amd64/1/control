@@ -1,0 +1,21 @@
+Source: epics-steppermotor-server
+Priority: extra
+Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+Build-Depends: debhelper (= 9.20160115ubuntu3), cmake (= 3.5.1-1ubuntu3), libchimeratk-motordrivercard-applicationmodule-dev (= 00.02xenial1.01), libchimeratk-applicationcore-dev (= 01.02xenial2.00), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 01.01xenial4.00), doocs-llrfctrlconfig-generator01-05 (= 01.05xenial1.27)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: git@doocs-git.desy.de:doocs/server/motor/ChimeraTK_StepperMotor.git
+
+Package: epics-steppermotor-server00-01-xenial1
+Section: net
+Architecture: amd64
+Conflicts: epics-steppermotor-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-steppermotor-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, python3-mtca4upy, doocs-llrfctrlconfig-generator01-05
+Description: Stepper motor front-end server for EPICS based control systems
+
