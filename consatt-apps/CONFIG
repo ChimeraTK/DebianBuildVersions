@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libconsatt-dev libdemac-dev
+Dependencies: doxygen libconsatt-dev libdemac-dev
 Dependencies-dev: libdemac-dev libconsatt-dev
 
 Description-lib: ConsattApp library for application based on consatt and demac.

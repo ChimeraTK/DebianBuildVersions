@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib
+Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib
 
 Description-lib: Cavity section location library.

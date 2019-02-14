@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libamtfdbaccess-dev
+Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libamtfdbaccess-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-amtfmanagement-server

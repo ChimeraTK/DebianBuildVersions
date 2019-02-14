@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 01-05
 
-Dependencies: debhelper cmake libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, python3-mtca4upy
 
 Override-auto-configure-flags: -DADAPTER=DOOCS

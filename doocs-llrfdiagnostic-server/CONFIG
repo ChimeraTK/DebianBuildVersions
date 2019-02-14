@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 01-05
 
-Dependencies: debhelper cmake libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-llrfdiagnostic-server

@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libconsatt-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev
+Dependencies: doxygen libconsatt-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev
 Dependencies-dev: libconsatt-dev libboost-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-lib: Consatt (control system attacher) library.

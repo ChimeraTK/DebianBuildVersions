@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libchimeratk-deviceaccess-dev libboost-test-dev libboost-system-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test-dev libboost-system-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev
 
 Description-dev: Header and cmake files for libmtca4u-virtuallab. The files you need to compile against libmtca4u-virtuallab.

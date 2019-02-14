@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake libchimeratk-deviceaccess-dev
+Dependencies: libchimeratk-deviceaccess-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev
 
 Description-dev: Header and cmake files for TEC controller base communication library 

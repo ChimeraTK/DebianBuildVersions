@@ -10,7 +10,7 @@ Has-packages: python
 
 Override-auto-configure-flags: "-DPYTHON3=True"
 
-Dependencies: debhelper cmake python3-robotframework-desy python3-piezoclient python3-formdialogs libchimeratk-deviceaccess-piezoserialbackend-dev python3-sphinx lsb-release
+Dependencies: python3-robotframework-desy python3-piezoclient python3-formdialogs libchimeratk-deviceaccess-piezoserialbackend-dev python3-sphinx lsb-release
 Dependencies-python: python3, python3-robotframework, python3-piezoclient, python3-formdialogs, python3-sphinx
 
 Description-python: This package provides PyRATE (Python Robot Acceptance Testing Environment) used for the hardware testing.

@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libboost-dev libchimeratk-deviceaccess-dev
+Dependencies: doxygen libboost-dev libchimeratk-deviceaccess-dev
 Dependencies-dev: libboost-dev libchimeratk-deviceaccess-dev
 
 Description-lib: Libraray with TMCB helper function.

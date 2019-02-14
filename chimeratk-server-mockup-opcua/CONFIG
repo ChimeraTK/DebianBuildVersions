@@ -8,7 +8,7 @@ Has-packages: bin
 
 Package-name-bin: chimeratk-server-mockup-opcua
 
-Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev 
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev 
 
 Description-bin: ChimeraTK ApplicationCore based server mockup for integration tasks.
 Provides-bin: server-mockup

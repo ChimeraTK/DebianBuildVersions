@@ -8,7 +8,7 @@ Has-packages: bin
 
 Package-name-bin: moduletestbrowser
 
-Dependencies: debhelper cmake doxygen libqt5gui5 libqt5core5a libqt5network5 libqt5printsupport5 libqt5svg5-dev libqt5widgets5 texlive-latex-recommended texlive-latex-extra libqcustomplot-dev libamtfdbaccess-dev
+Dependencies: doxygen libqt5gui5 libqt5core5a libqt5network5 libqt5printsupport5 libqt5svg5-dev libqt5widgets5 texlive-latex-recommended texlive-latex-extra libqcustomplot-dev libamtfdbaccess-dev
 
 Description-bin: ModuleTestBrowser is a tool for browsing AMTF and XFEL module test results and generating test reports.
 

@@ -9,7 +9,7 @@ Has-packages: bin
 # fix the package name -> no version number will be part of the package name
 Package-name-bin: chimeratk-watchdog-server-opcua
 
-Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libprocps4-dev
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libprocps4-dev
 
 Description-bin: ChimeraTK ApplicationCore based watchdog server.
 Provides-bin: watchdog-server

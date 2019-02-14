@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libmtca4u-motordrivercard-dev libchimeratk-applicationcore-dev
+Dependencies: doxygen libmtca4u-motordrivercard-dev libchimeratk-applicationcore-dev
 Dependencies-dev: libmtca4u-motordrivercard-dev libchimeratk-applicationcore-dev
 
 Description-dev: Header and cmake files for ChimeraTK MotorDriverCard-ApplicationModule. The files you need to compile against this library.

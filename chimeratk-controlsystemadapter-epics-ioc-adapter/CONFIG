@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev-noheader lib
 
-Dependencies: debhelper cmake doxygen libchimeratk-controlsystemadapter-dev libreadline-dev
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libreadline-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev
 
 Description-dev: Header and cmake files for the EPICS IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.

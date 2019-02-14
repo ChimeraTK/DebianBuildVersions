@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 UseConfigGeneratorVersion: 01-05
 
-Dependencies: debhelper cmake dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libdoocs-tc4-eqfct-dev doxygen graphviz libboost-test-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libdoocs-tc4-eqfct-dev doxygen graphviz libboost-test-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-dcm-ctrl-server

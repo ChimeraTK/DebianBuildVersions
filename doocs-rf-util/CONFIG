@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen dev-doocs-clientlib dev-doocs-serverlib
+Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib
 
 Description-lib: Helper library to get macropulse.

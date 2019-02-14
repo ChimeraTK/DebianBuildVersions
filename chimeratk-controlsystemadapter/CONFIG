@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev
 
 #Recommends-dev: libchimeratk-controlsystemadapter-doc

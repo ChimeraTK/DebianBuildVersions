@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev-headeronly doc
 
-Dependencies: debhelper cmake doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev
+Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev
 Dependencies-dev:
 
 Recommends-dev: libchimeratk-cppext-doc

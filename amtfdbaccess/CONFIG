@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake doxygen libboost-dev libpqxx-dev
+Dependencies: doxygen libboost-dev libpqxx-dev
 Dependencies-dev: libboost-dev libpqxx-dev
 Replaces-dev: libamtfdbaccess-dev
 Conflicts-dev: libamtfdbaccess-dev

@@ -10,7 +10,7 @@ Disable-tests: yes
 
 Override-auto-configure-flags: -DCMAKE_INSTALL_LIBDIR=lib
 
-Dependencies: debhelper cmake libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev doxygen libchimeratk-deviceaccess-doocsbackend-dev
+Dependencies: libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev doxygen libchimeratk-deviceaccess-doocsbackend-dev
 Dependencies-dev: libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev libgsl-dev
 
 

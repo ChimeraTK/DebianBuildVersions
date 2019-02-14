@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: debhelper cmake libbeam-arrival-time-monitor-dev libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev doocs-watchdog-server
+Dependencies: libbeam-arrival-time-monitor-dev libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev doocs-watchdog-server
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, python3-mtca4upy, python3-numpy
 
 Provides-bin: doocs-bam-server
