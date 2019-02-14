@@ -1,0 +1,19 @@
+SourceURI: git@doocs-git.desy.de:doocs/server/motor/ChimeraTK_StepperMotor.git
+Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+UseConfigGeneratorVersion: 01-05
+
+Dependencies: debhelper cmake libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, python3-mtca4upy
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+ 
+Provides-bin: doocs-steppermotor-server
+Replaces-bin: doocs-steppermotor-server
+Conflicts-bin: doocs-steppermotor-server
+
+Description-bin: DOOCS steppermotor server. A server to control steppermotors driven by the MD22 motor driver card.
