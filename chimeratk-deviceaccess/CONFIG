@@ -26,12 +26,3 @@ Description-dev: Header and cmake files for libchimeratk-deviceaccess. The files
 Description-lib: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
 Description-doc: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
 Description-bin: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
-
-Replaces-dev: libmtca4u-deviceaccess-dev (<< 01.00)
-Breaks-dev: libmtca4u-deviceaccess-dev (<< 01.00)
-Provides-dev: libmtca4u-deviceaccess-dev
-
-Package-name-extra: libmtca4u-deviceaccess-dev
-Dependencies-extra: #Package-name-dev#
-Description-extra: Transitional package. This is a transitional package. It can safely be removed.
-
