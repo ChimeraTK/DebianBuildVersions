@@ -58,16 +58,3 @@ Provides:
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
 Description: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
 
-Package: libchimeratk-deviceaccess-extra
-Section: libs
-Architecture: amd64
-Conflicts: 
-Replaces: 
-Breaks: 
-Recommends: 
-Suggests: 
-Enhances: 
-Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
-Description: 
-
