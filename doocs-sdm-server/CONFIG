@@ -1,5 +1,5 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/sdm.git/
-Maintainer: Michele Viti <michele.viti@desy.de>
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern

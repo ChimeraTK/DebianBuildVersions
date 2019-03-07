@@ -73,6 +73,13 @@ if [ "$NODENAME" == "xfelcpusd417b2" ] ; then
     RPCNO=$RPCNOBAM
 fi
 
+if [ "$NODENAME" == "flashcpullbacca" ]; then
+    LOCATION='BACCA'
+    DEVICE_NAME='BACCA'
+    RPCNO=$RPCNOBAM
+    TMCB_ADDRESS='flashtmcbfgmbacca'
+fi
+
 if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
 	cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
