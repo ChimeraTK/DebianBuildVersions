@@ -15,3 +15,4 @@ Install-pattern-extra: /usr/share/Wt/resources/*
 
 Description-dev: Header and cmake files for the webtoolkit library libwt.
 Description-lib: The webtoolkit library libwt.
+Description-extra: Resources for the webtoolkit library libwt. Might be needed by applications using libwt.
