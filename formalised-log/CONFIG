@@ -1,0 +1,14 @@
+SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/mcs/logbook/formalisedlog.git
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Package-name-bin: formalised-log
+
+Dependencies: libwt-dev libcurl4-gnutls-dev
+Dependencies-bin: libwt-resources
+
+Description-bin: Web application for creating standardised log book entries in the DESY elogbooks
