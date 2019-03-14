@@ -1,0 +1,17 @@
+SourceURI: https://github.com/emweb/wt
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: dev-alien lib extra
+
+Dependencies: cmake libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev zlib1g-dev libmysqlclient-dev libssl-dev libsqlite3-dev libhpdf-dev libpango1.0-dev libgraphicsmagick++1-dev
+Dependencies-dev: libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev
+Install-additional-pattern-dev: usr/lib/cmake/*
+
+Package-name-extra: libwt-resources
+Install-pattern-extra: /usr/share/Wt/resources/*
+
+Description-dev: Header and cmake files for the webtoolkit library libwt.
+Description-lib: The webtoolkit library libwt.
