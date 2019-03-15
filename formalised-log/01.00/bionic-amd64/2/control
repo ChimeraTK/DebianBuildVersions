@@ -1,0 +1,21 @@
+Source: formalised-log
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libwt-dev (= 4.0bionic2.5), libcurl4-gnutls-dev (= 7.58.0-2ubuntu3.6)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/vendor/desy/mcs/logbook/formalisedlog.git
+
+Package: formalised-log
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libwt-resources
+Description: Web application for creating standardised log book entries in the DESY elogbooks
+
