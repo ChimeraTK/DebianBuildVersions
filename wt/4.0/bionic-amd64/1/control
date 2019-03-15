@@ -43,5 +43,5 @@ Suggests:
 Enhances: 
 Provides: 
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
-Description: 
+Description: Resources for the webtoolkit library libwt. Might be needed by applications using libwt.
 
