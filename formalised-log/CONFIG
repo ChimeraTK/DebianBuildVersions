@@ -2,7 +2,7 @@ SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/mcs/logbook/formalisedlog.g
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: utils
 License: lgpl3
-Target-repositories: intern pub
+Target-repositories: intern
 
 Has-packages: bin
 
