@@ -1,0 +1,18 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/linklock.git
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: libconsatt-apps-dev libconsatt-doocs-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-linklock-server
+Conflicts-bin: doocs-linklock-server
+Recommends-bin: pcieuni-dkms
+
+Description-bin: DOOCS server for link locking application for LbSynch 
+
+Disable-tests: yes
