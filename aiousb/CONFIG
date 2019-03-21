@@ -1,0 +1,31 @@
+SourceURI: https://github.com/ChimeraTK/aiousb
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: dev-alien lib python extra extra2
+
+Override-auto-configure-flags: "-DBUILD_PYTHON=ON"
+
+Description-lib: The aiousb library.
+Dependencies: cmake libusb-1.0-0 libusb-1.0-0-dev swig python3-dev
+Install-pattern-lib: usr/lib/lib*.so 
+							 
+
+Description-dev: Header and cmake files for the aiousb library.
+Dependencies-dev: libusb-1.0-0-dev python3-dev 
+Install-additional-pattern-dev: usr/include/aiousb/*
+
+
+Description-python: This package provides Python binding for aiousb library.
+Dependencies-python: python3
+Install-additional-pattern-python: usr/lib/python3.5/*
+
+Description-extra: hex files for asiousb device testing. 
+Package-name-extra: libaiousb-firmwares
+Install-pattern-extra: /usr/share/usb/*
+
+Description-extra2: udev files for asiousb device. 
+Package-name-extra2: libaiousb-rules
+Install-pattern-extra2: /etc/udev/rules.d/*
