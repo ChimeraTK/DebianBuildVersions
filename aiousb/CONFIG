@@ -10,13 +10,10 @@ Override-auto-configure-flags: "-DBUILD_PYTHON=ON"
 
 Description-lib: The aiousb library.
 Dependencies: cmake libusb-1.0-0 libusb-1.0-0-dev swig python3-dev
-Install-pattern-lib: usr/lib/lib*.so 
-							 
 
 Description-dev: Header and cmake files for the aiousb library.
 Dependencies-dev: libusb-1.0-0-dev python3-dev 
 Install-additional-pattern-dev: usr/include/aiousb/*
-
 
 Description-python: This package provides Python binding for aiousb library.
 Dependencies-python: python3
