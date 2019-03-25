@@ -49,7 +49,7 @@ elif [ "$FACILITY_NAME" == "flash" ] ;  then
     MLO_LOCATION='FLASH.MLO1'
     SASE0='SAMPLE.FLASH1'
     SASE1='SAMPLE.FLASH2'
-    SASE2='<constant name="SASE.2"><type>integer</type><value>0</value></constant>'
+    SASE2='<constant name="SASE.2"><type>integer</type><numberOfElements>4</numberOfElements><value index="0">0</value><value index="1">0</value><value index="2">0</value><value index="3">0</value></constant>'
 fi
 
 if [ "$NODENAME" == "xfelcpusd47i1" ] ; then
