@@ -8,12 +8,12 @@ case "$1" in
     # continue as normal
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
-	exit 0;
-	;;
+        exit 0;
+        ;;
     *)
-	echo "postinst called with unknown argument \`$1'" >&2;
-	exit 0;
-	;;
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
 esac
 
 ########## make the /export/<nodename> linl ######################
@@ -73,6 +73,13 @@ if [ "$NODENAME" == "xfelcpusd417b2" ] ; then
     RPCNO=$RPCNOBAM
 fi
 
+if [ "$NODENAME" == "xfelcpulltdsi1" ] ; then
+    LOCATION="52.I1"
+    DEVICE_NAME="TDS"
+    RPCNO=$RPCNOBAM
+    TMCB_ADDRESS='xfeltmcbtds52i1'
+fi
+
 if [ "$NODENAME" == "flashcpullbacca" ]; then
     LOCATION='BACCA'
     DEVICE_NAME='BACCA'
@@ -82,33 +89,34 @@ fi
 
 if [ ! -f /export/doocs/server/sdm_server/sdm_server.conf  ] ; then
     if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
-	cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
-	    sed "s/LOCATION/$LOCATION/g" | \
-	    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
-	    sed "s/NODENAME/$UNODENAME/g" | \
-	    sed "s/DEVICE_NAME/$DEVICE_NAME/g" | \
-	    sed "s/RPCNO/$RPCNO/g"| \
-	    sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
-	    sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
-	    sed "s/nodename/$NODENAME/g" > \
-		/export/doocs/server/sdm_server/sdm_server.conf
+        cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
+            sed "s/LOCATION/$LOCATION/g" | \
+            sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
+            sed "s/NODENAME/$UNODENAME/g" | \
+            sed "s/DEVICE_NAME/$DEVICE_NAME/g" | \
+            sed "s/RPCNO/$RPCNO/g"| \
+            sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
+            sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
+            sed "s/nodename/$NODENAME/g" > \
+                /export/doocs/server/sdm_server/sdm_server.conf
     fi
-    if [ "$NODENAME" != "xfelcpusd51i1" ] ; then
-	echo 'SDM /dev/pcieunis4 bam.map' > /export/doocs/server/sdm_server/sdm.dmap
-    elif  [ "$NODENAME" == "xfelcpusd51i1" ] ; then
-	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_server/sdm.dmap
-	mv /export/doocs/server/sdm_server/sdm_server.conf /export/doocs/server/sdm_server/sdm_server.conf.temp
-	cat /export/doocs/server/sdm_server/sdm_server.conf.temp | sed -e "/${LOCATION}.OPTICAL_SWITCH/I, +22 d" > \
-								       /export/doocs/server/sdm_server/sdm_server.conf
-	rm /export/doocs/server/sdm_server/sdm_server.conf.temp
-    fi
+    case "${NODENAME}" in
+        "xfelcpusd51i1" | "xfelcpulltdsi1" | "flashcpullbacca")
+            echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_server/sdm.dmap
+            sed /export/doocs/server/sdm_server/sdm_server.conf --in-place \
+                -e "/${LOCATION}.OPTICAL_SWITCH/I, +22 d"
+            ;;
+        *)
+            echo 'SDM /dev/pcieunis4 bam.map' > /export/doocs/server/sdm_server/sdm.dmap
+            ;;
+    esac
 fi
 
 #
 # move the running server to old
 if [ -f /export/doocs/server/sdm_server/sdm_server ] ; then
     if [ -f /export/doocs/server/sdm_server/sdm_server.OLD ] ; then
-	rm /export/doocs/server/sdm_server/sdm_server.OLD
+        rm /export/doocs/server/sdm_server/sdm_server.OLD
     fi
     mv /export/doocs/server/sdm_server/sdm_server /export/doocs/server/sdm_server/sdm_server.OLD
 fi
@@ -122,11 +130,11 @@ chown -R doocsadm:doocsadm /export/doocs/server/sdm_server
 
 if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
     cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
-	sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-	sed -e "s/servername/sdm_server/g" | \
-	sed -e "s/SERVERNAME/SDM/g" | \
-	sed -e "s/SERVERLIBNO/$RPCNOBAM/g" > \
-	    /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
+        sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+        sed -e "s/servername/sdm_server/g" | \
+        sed -e "s/SERVERNAME/SDM/g" | \
+        sed -e "s/SERVERLIBNO/$RPCNOBAM/g" > \
+            /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
     chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm
     #
     # check if this server is already in the watchdog
@@ -143,69 +151,69 @@ fi
 if [ -f /export/doocs/server/sdm_server/sdm_server.PID ] ; then
     SPID=`cat /export/doocs/server/sdm_server/sdm_server.PID`
     if [ -d /proc/${SPID} ] ; then
-	/export/doocs/server/doocs restart sdm_server
+        /export/doocs/server/doocs restart sdm_server
     else
-	echo "sdm_server: postinstall remove not valid PID file"
-	rm /export/doocs/server/sdm_server/sdm_server.PID
+        echo "sdm_server: postinstall remove not valid PID file"
+        rm /export/doocs/server/sdm_server/sdm_server.PID
     fi
 fi
 
 #install second 
 if [ "$NODENAME" == "xfelcpusd181b1" -o "$NODENAME" == "xfelcpusd205b1" ] ; then
     if [ ! -d /export/doocs/server/sdm_eod_server ] ; then
-	mkdir /export/doocs/server/sdm_eod_server
-	ln -sfn /export/doocs/server/sdm_server/sdm_server /export/doocs/server/sdm_eod_server/sdm_eod_server
-	ln -sfn /export/doocs/server/sdm_server/eod.map /export/doocs/server/sdm_eod_server/eod.map
-	if [ ! -f /export/doocs/server/sdm_eod_server/sdm_eod_server.conf  ] ; then
-	    if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
-		cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
-		    sed "/LOCATION.OPTICAL_SWITCH/I, +22 d" | \
-		    sed "s/LOCATION/$LOCATIONEOD/g" | \
-		    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
-		    sed "s/NODENAME/$UNODENAME/g" | \
-		    sed "s/DEVICE_NAME/EOD/g" | \
-		    sed "s/RPCNO/$RPCNOEOD/g"| \
-		    sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
-		    sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
-		    sed "s/nodename/$NODENAME/g" | \
-		    sed "s/sdm_server/sdm_eod_server/g" > \
-		/export/doocs/server/sdm_eod_server/sdm_eod_server.conf
-	    fi
-	fi
-	echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_eod_server/sdm.dmap
+        mkdir /export/doocs/server/sdm_eod_server
+        ln -sfn /export/doocs/server/sdm_server/sdm_server /export/doocs/server/sdm_eod_server/sdm_eod_server
+        ln -sfn /export/doocs/server/sdm_server/eod.map /export/doocs/server/sdm_eod_server/eod.map
+        if [ ! -f /export/doocs/server/sdm_eod_server/sdm_eod_server.conf  ] ; then
+            if [ -f /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE ] ; then
+                cat /export/doocs/server/sdm_server/sdm_CONF.TEMPLATE | \
+                    sed "/LOCATION.OPTICAL_SWITCH/I, +22 d" | \
+                    sed "s/LOCATION/$LOCATIONEOD/g" | \
+                    sed "s/DOOCS_FACILITY_NAME/$DOOCS_FACILITY_NAME/g" | \
+                    sed "s/NODENAME/$UNODENAME/g" | \
+                    sed "s/DEVICE_NAME/EOD/g" | \
+                    sed "s/RPCNO/$RPCNOEOD/g"| \
+                    sed "s/GID_OPERATOR/$GID_OPERATOR/g" | \
+                    sed "s/GIT_EXPERT/$GIT_EXPERT/g" | \
+                    sed "s/nodename/$NODENAME/g" | \
+                    sed "s/sdm_server/sdm_eod_server/g" > \
+                /export/doocs/server/sdm_eod_server/sdm_eod_server.conf
+            fi
+        fi
+        echo "SDM  sdm://./rebot=$TMCB_ADDRESS,5001 eod.map" >> /export/doocs/server/sdm_eod_server/sdm.dmap
     fi
 
     # change owership
     chown -R doocsadm:doocsadm /export/doocs/server/sdm_eod_server
     
     if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
-	cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
-	    sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-	    sed -e "s/servername/sdm_eod_server/g" | \
-	    sed -e "s/SERVERNAME/SDM_EOD/g" | \
-	    sed -e "s/SERVERLIBNO/$RPCNOEOD/g" > \
-		/export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
-	chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
-	#
-	# check if this server is already in the watchdog
-	INWD=`grep "/server/sdm_eod_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+        cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+            sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+            sed -e "s/servername/sdm_eod_server/g" | \
+            sed -e "s/SERVERNAME/SDM_EOD/g" | \
+            sed -e "s/SERVERLIBNO/$RPCNOEOD/g" > \
+                /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
+        chown doocsadm:doocsadm /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.sdm_eod
+        #
+        # check if this server is already in the watchdog
+        INWD=`grep "/server/sdm_eod_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
 
-	if [ -z "${INWD}" ] ; then
-	    /export/doocs/server/doocs add sdm_eod_server || true
-	fi
+        if [ -z "${INWD}" ] ; then
+            /export/doocs/server/doocs add sdm_eod_server || true
+        fi
     fi
 
     #
     # kill the server if there is a valid PID file and 
     # a AUTORESTART flag in the server dir
     if [ -f /export/doocs/server/sdm_eod_server/sdm_eod_server.PID ] ; then
-	SPID=`cat /export/doocs/server/sdm_eod_server/sdm_eod_server.PID`
-	if [ -d /proc/${SPID} ] ; then
-	    /export/doocs/server/doocs restart sdm_eod_server
-	else
-	    echo "sdm_eod_server: postinstall remove not valid PID file"
-	    rm /export/doocs/server/sdm_eod_server/sdm_eod_server.PID
-	fi
+        SPID=`cat /export/doocs/server/sdm_eod_server/sdm_eod_server.PID`
+        if [ -d /proc/${SPID} ] ; then
+            /export/doocs/server/doocs restart sdm_eod_server
+        else
+            echo "sdm_eod_server: postinstall remove not valid PID file"
+            rm /export/doocs/server/sdm_eod_server/sdm_eod_server.PID
+        fi
     fi
 
 fi
