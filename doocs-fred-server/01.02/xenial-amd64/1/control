@@ -1,0 +1,21 @@
+Source: doocs-fred-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libfred-dev (= 01.00xenial1.01), libchimeratk-applicationcore-dev (= 01.03xenial2.00), libchimeratk-controlsystemadapter-doocsadapter-dev (= 00.09xenial12.00), dev-doocs-clientlib (= 19.2.0-xenial1), dev-doocs-serverlib (= 19.2.0-xenial1), doocs-watchdog-server (= 19.2.0-xenial2), doocs-llrfctrlconfig-generator01-05 (= 01.05xenial1.46)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/utility/fred.git
+
+Package: doocs-fred-server01-02-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-fred-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-fred-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-05
+Description: Doocs server for the FRED.
+
