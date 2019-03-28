@@ -1,5 +1,5 @@
 #!/bin/bash
-# post install script for the Debian GNU/Linux doocs-bam-server package
+# post install script for the Debian GNU/Linux doocs-linklock-server package
 
 
 
@@ -21,7 +21,7 @@ esac
 
 
 # change owership
-chown -R doocsadm:doocsadm /export/doocs/server/laserlock_server
+chown -R doocsadm:doocsadm /export/doocs/server/linklock_server
 
 exit 0
 
