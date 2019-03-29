@@ -6,9 +6,11 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev dev-doocs-csalib libtec-dev libconsatt-dev libconsatt-doocs-dev libdemac-dev dev-doocs-libgul
+UseConfigGeneratorVersion: 01-05
 
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Dependencies: libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev dev-doocs-csalib libtec-dev libconsatt-dev libconsatt-doocs-dev libdemac-dev dev-doocs-libgul doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-sdm-server
 Conflicts-bin: doocs-sdm-server
