@@ -10,7 +10,7 @@ Disable-tests: yes
 
 Has-packages: dev lib doc bin
 
-Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev
+Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev libexprtk-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libchimeratk-cppext-dev
 
 Package-name-bin: chimeratk-deviceaccess-lmap-editor
