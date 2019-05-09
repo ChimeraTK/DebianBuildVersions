@@ -1,0 +1,12 @@
+SourceURI: https://github.com/ChimeraTK/exprtk-interface
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-headeronly
+
+Dependencies: doxygen
+Dependencies-dev:
+
+Description-dev: C++ Mathematical Expression Toolkit Library ExprTk. See http://www.partow.net/programming/exprtk/index.html
