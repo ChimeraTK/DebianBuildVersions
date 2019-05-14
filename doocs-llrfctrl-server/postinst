@@ -18,7 +18,7 @@ esac
 
 # 
 # install the new server
-ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfserver /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl /export/doocs/server/llrfCtrl_server/llrfCtrl_server
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
