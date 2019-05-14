@@ -1,0 +1,14 @@
+SourceURI: https://github.com/mhier/MskKanbanBoard/
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: bin
+
+Package-name-bin: msk-kanban-board
+
+Dependencies: libwt-dev libcurl4-gnutls-dev
+Dependencies-bin: libwt-resources
+
+Description-bin: Web application for displaying the DESY MSK software group's Kanban board
