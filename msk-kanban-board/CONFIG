@@ -1,4 +1,4 @@
-SourceURI: https://github.com/mhier/MskKanbanBoard/
+SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/msk/mskkanbanboard.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: utils
 License: lgpl3
