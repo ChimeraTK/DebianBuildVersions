@@ -10,6 +10,7 @@ package-name-contains-buildversion: 0
 
 Dependencies: debhelper cmake
 Dependencies-extra: git
+Dependencies-python: python3
 
 Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
