@@ -10,7 +10,7 @@ Has-packages: python
 
 Override-auto-configure-flags: "-DPYTHON3=True"
 
-Dependencies: python3-mtca4upy python3-numpy lsb-release python3-scipy
+Dependencies: python3-mtca4upy python3-numpy lsb-release python3-scipy libaiousb
 Dependencies-python: python3, python3-numpy, python3-scipy
 
 Description-python: This package provides Python client for PZ16M module.
