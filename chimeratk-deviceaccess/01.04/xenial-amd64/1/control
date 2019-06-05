@@ -1,0 +1,60 @@
+Source: libchimeratk-deviceaccess
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: doxygen (= 1.8.11-1ubuntu0.1), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-chrono-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), libxml++2.6-dev (= 2.40.1-1), libchimeratk-cppext-dev (= 01.02xenial2.01), libexprtk-dev (= 01.00xenial2.01)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess
+
+Package: libchimeratk-deviceaccess-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: libchimeratk-deviceaccess-doc
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess01-04-xenial1, libboost-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-chrono-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), libchimeratk-cppext-dev (>= 01.02xenial2), libchimeratk-cppext-dev (<< 01.02xenial3)
+Description: Header and cmake files for libchimeratk-deviceaccess. The files you need to compile against libchimeratk-deviceaccess.
+
+Package: libchimeratk-deviceaccess01-04-xenial1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: chimeratk-deviceaccess-lmap-editor
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
+
+Package: libchimeratk-deviceaccess-doc
+Section: libdevel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libchimeratk-deviceaccess-dev
+Provides: 
+Depends: libchimeratk-deviceaccess-dev
+Description: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
+
+Package: chimeratk-deviceaccess-lmap-editor
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libchimeratk-deviceaccess01-04-xenial1
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
+
