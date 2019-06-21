@@ -1,0 +1,14 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/dosimetry/radcon.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: utils
+License: gpl3
+
+Target-repositories: intern
+Has-packages: extra
+Override-auto-configure-flags: -DRADCON_UDEV_ONLY=ON
+Dependencies: udev
+
+Package-name-extra: radcon-udev-rules
+Description-extra: Udev rules for radcon devices
+Install-pattern-extra: etc/udev/rules.d/*radcon*
+
