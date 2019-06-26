@@ -1,0 +1,21 @@
+Source: doocs-ldd-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libboost-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 19.5.0-xenial1), dev-doocs-serverlib (= 19.5.0-xenial1), dev-doocs-doocsdzmqlib (= 19.5.0-xenial1), doocs-watchdog-server (= 19.5.0-xenial3), libqt4-dev (= 4:4.8.7+dfsg-5ubuntu2), doocs-llrfctrlconfig-generator01-06 (= 01.06xenial2.16)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/ldd.git/
+
+Package: doocs-ldd-server01-05-xenial3
+Section: net
+Architecture: amd64
+Conflicts: doocs-ldd-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-ldd-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-06
+Description: DOOCS server for Laser Diode Driver for XFEL and FLASH
+
