@@ -1,0 +1,13 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/math-utils.git
+Maintainer: Jan Tim <jan.horst.karl.tim@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-headeronly doc
+
+Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev
+Description-dev: Header-only C++ library for math functions.
+Description-doc: The doxygen html documentation for math-utils.
+Dependencies-dev:
+
