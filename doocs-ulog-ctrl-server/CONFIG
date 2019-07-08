@@ -4,14 +4,20 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: doocs-bin
+Has-packages: doocs-bin extra
 
 UseConfigGeneratorVersion: 01-06
 
 Dependencies: dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libboost-filesystem-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion# libboost-test-dev
+
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
 Provides-bin: doocs-ulog-ctrl-server
 Conflicts-bin: doocs-ulog-ctrl-server
-
 Description-bin: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+Install-pattern-bin: export
+
+Package-name-extra: ulog-ctrl-server-udev-rules
+Description-extra: Udev rules for uLOG devices
+Install-pattern-extra: etc/udev/rules.d/*ulog*
+
