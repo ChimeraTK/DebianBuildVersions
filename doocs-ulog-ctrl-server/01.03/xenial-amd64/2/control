@@ -1,0 +1,34 @@
+Source: doocs-ulog-ctrl-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 19.5.0-xenial1), dev-doocs-serverlib (= 19.5.0-xenial1), libdaction-dev (= 02.16xenial19.01), doocs-watchdog-server (= 19.5.0-xenial3), libchimeratk-deviceaccess-dev (= 01.07xenial1.00), libboost-filesystem-dev (= 1.58.0.1ubuntu1), libdoocs-rf-util-dev (= 01.02xenial11.00), doocs-llrfctrlconfig-generator01-06 (= 01.06xenial2.26), libboost-test-dev (= 1.58.0.1ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_ulog.git
+
+Package: ulog-ctrl-server-udev-rules
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Udev rules for uLOG devices
+
+Package: doocs-ulog-ctrl-server01-03-xenial2
+Section: net
+Architecture: amd64
+Conflicts: doocs-ulog-ctrl-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-ulog-ctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-06
+Description: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+
