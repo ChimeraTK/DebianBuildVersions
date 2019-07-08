@@ -11,7 +11,7 @@ package-name-contains-buildversion: 0
 Dependencies: debhelper cmake python3
 Dependencies-extra: git
 
-Package-name-extra: doocs-llrfctrlconfig-generator#debversion#-xenial2
+Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
 Description-extra: Configuration generator for the DESY low-level RF related servers.
 
