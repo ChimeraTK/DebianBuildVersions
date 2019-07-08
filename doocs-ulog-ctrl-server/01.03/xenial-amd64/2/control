@@ -6,19 +6,6 @@ Standards-Version: 3.8.3
 Section: libs
 Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_ulog.git
 
-Package: ulog-ctrl-server-udev-rules
-Section: net
-Architecture: amd64
-Conflicts: 
-Replaces: 
-Breaks: 
-Recommends: 
-Suggests: 
-Enhances: 
-Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
-Description: Udev rules for uLOG devices
-
 Package: doocs-ulog-ctrl-server01-03-xenial2
 Section: net
 Architecture: amd64
@@ -31,4 +18,17 @@ Enhances:
 Provides: doocs-ulog-ctrl-server
 Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-06
 Description: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+
+Package: ulog-ctrl-server-udev-rules
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Udev rules for uLOG devices
 
