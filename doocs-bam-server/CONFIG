@@ -10,14 +10,17 @@ Dependencies: libbeam-arrival-time-monitor-dev libboost-dev libboost-test-dev li
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts
 Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/RPC_LIBNO
 
-Package-name-extra: bam-init-scripts
-Dependencies-extra: python3-mtca4upy, python3-numpy
-Install-pattern-extra: export/doocs/server/bam_server/init_scripts/bam-init.py
-
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server
 Recommends-bin: pcieuni-dkms
 
 Description-bin: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
 
+Package-name-extra: bam-init-scripts
+Dependencies-extra: python3-mtca4upy, python3-numpy
+Install-pattern-extra: export/doocs/server/bam_server/init_scripts/bam-init.py
+Description-extra: Initialization scripts for bam and motor hardware
+
+
 Disable-tests: yes
+
