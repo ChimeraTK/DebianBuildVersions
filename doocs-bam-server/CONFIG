@@ -4,10 +4,15 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: doocs-bin
+Has-packages: doocs-bin extra
 
 Dependencies: libbeam-arrival-time-monitor-dev libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev doocs-watchdog-server dev-doocs-libgul libchimeratk-deviceaccess-doocsbackend-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, python3-mtca4upy, python3-numpy
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts
+Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/RPC_LIBNO
+
+Package-name-extra: bam-init-scripts
+Dependencies-extra: python3-mtca4upy, python3-numpy
+Install-pattern-extra: export/doocs/server/bam_server/init_scripts/bam-init.py
 
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server
