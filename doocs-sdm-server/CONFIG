@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-UseConfigGeneratorVersion: 01-06
+UseConfigGeneratorVersion: 01-07
 
 Dependencies: libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libmtca4u-motordrivercard-dev dev-doocs-csalib libtec-dev libconsatt-dev libconsatt-doocs-dev libdemac-dev dev-doocs-libgul doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
