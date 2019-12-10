@@ -1,14 +1,14 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_ulog.git
-Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin extra
 
-UseConfigGeneratorVersion: 01-06
+UseConfigGeneratorVersion: 01-07
 
-Dependencies: dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libboost-filesystem-dev libdoocs-rf-util-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion# libboost-test-dev
+Dependencies:  libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion# libboost-test-dev
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
 
