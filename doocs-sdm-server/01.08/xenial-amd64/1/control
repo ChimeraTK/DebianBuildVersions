@@ -1,0 +1,21 @@
+Source: doocs-sdm-server
+Priority: extra
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: libboost-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 19.11.0-xenial1), dev-doocs-serverlib (= 19.11.0-xenial1), doocs-watchdog-server (= 19.11.0-xenial1), libchimeratk-deviceaccess-dev (= 01.08xenial1.00), libmtca4u-motordrivercard-dev (= 01.09xenial10.00), dev-doocs-csalib (= 0.0.46-xenial1), libtec-dev (= 01.03xenial11.00), libconsatt-dev (= 00.14xenial1.00), libconsatt-doocs-dev (= 00.11xenial1.00), libdemac-dev (= 00.16xenial1.00), dev-doocs-libgul (= 19.11.0-xenial1), doocs-llrfctrlconfig-generator01-07 (= 01.07xenial1.10)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/sdm.git/
+
+Package: doocs-sdm-server01-08-xenial1
+Section: net
+Architecture: amd64
+Conflicts: doocs-sdm-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-sdm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-07
+Description: DOOCS server for Special Diagnostic Module
+
