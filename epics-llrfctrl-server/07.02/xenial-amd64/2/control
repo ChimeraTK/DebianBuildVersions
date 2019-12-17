@@ -1,0 +1,21 @@
+Source: epics-llrfctrl-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libllrflibrary-dev (= 05.01xenial1.01), libchimeratk-applicationcore-dev (= 01.09xenial3.00), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 01.02xenial3.00), libchimeratk-deviceaccess-doocsbackend-dev (= 00.17xenial9.01), libmtca4u-virtuallab-dev (= 00.08xenial10.01), libhdf5-serial-dev (= 1.8.16+docs-4ubuntu1.1), libmath-utils-dev (= 01.00xenial1.01), doocs-llrfctrlconfig-generator01-07 (= 01.07xenial1.16)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrl.git
+
+Package: epics-llrfctrl-server07-02-xenial2
+Section: net
+Architecture: amd64
+Conflicts: epics-llrfctrl-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend00-17-xenial9, python3-mtca4upy, doocs-llrfctrlconfig-generator01-07
+Description: Low-level RF control server for EPICS based control systems
+
