@@ -1,0 +1,19 @@
+SourceURI: https://github.com/ChimeraTK/MatlabTools
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: extra
+
+Disable-tests: yes
+
+Matlab_ROOT_DIR: /opt/matlab_R2016b
+additional-bind-mounts: #Matlab_ROOT_DIR#
+
+Dependencies: cmake libchimeratk-deviceaccess-dev libx11-6 libxext6 csh
+Override-auto-configure-flags: -DMatlab_ROOT_DIR=#Matlab_ROOT_DIR# -DCMAKE_INSTALL_PREFIX=/local
+
+Package-name-extra: chimeratk-deviceaccess-matlabtools
+Description-extra: Matlab bindings for ChimeraTK DeviceAccess. Requires Matlab to be installed in #Matlab_ROOT_DIR#.
+
