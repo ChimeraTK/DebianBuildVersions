@@ -1,0 +1,21 @@
+Source: doocs-psm-ctrl-server
+Priority: extra
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: dev-doocs-clientlib (= 19.11.0-xenial1), dev-doocs-serverlib (= 19.11.0-xenial1), libdaction-dev (= 02.16xenial28.02), doocs-watchdog-server (= 19.11.0-xenial3), libssl-dev (= 1.0.2g-1ubuntu4.15), libdoocs-rf-util-dev (= 01.02xenial16.00), doocs-llrfctrlconfig-generator01-07 (= 01.07xenial1.18)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_psm.git
+
+Package: doocs-psm-ctrl-server01-05-xenial5
+Section: net
+Architecture: amd64
+Conflicts: doocs-psm-ctrl-server
+Replaces: doocs-psm-ctrl-server
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-psm-ctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator01-07
+Description: DESY FLASH/XFEL controls package. DOOCS PSM control server.
+
