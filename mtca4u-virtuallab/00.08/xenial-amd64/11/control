@@ -1,0 +1,34 @@
+Source: libmtca4u-virtuallab
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: doxygen (= 1.8.11-1ubuntu0.1), libchimeratk-deviceaccess-dev (= 01.09xenial2.02), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/VirtualLab
+
+Package: libmtca4u-virtuallab-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libmtca4u-virtuallab00-08-xenial11, libchimeratk-deviceaccess-dev (>= 01.09xenial2), libchimeratk-deviceaccess-dev (<< 01.09xenial3)
+Description: Header and cmake files for libmtca4u-virtuallab. The files you need to compile against libmtca4u-virtuallab.
+
+Package: libmtca4u-virtuallab00-08-xenial11
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Framework for creating virtual devices connected to modelled hardware components. VirtualLab is part of the ChimeraTK tool kit.
+
