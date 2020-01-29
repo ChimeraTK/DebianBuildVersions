@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib extra
 
-Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
+Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev dev-doocs-libgul14
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libboost-system-dev
 
 Description-dev: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
