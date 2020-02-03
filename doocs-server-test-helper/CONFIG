@@ -7,7 +7,7 @@ Target-repositories: intern pub
 Has-packages: dev lib
 
 Dependencies: doxygen libboost-dev libboost-test-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-libgul14
-Dependencies-dev: libboost-dev, dev-doocs-clientlib, dev-doocs-serverlib, dev-doocs-libgul14
+Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header files for the DOOCS server test helper library.
 Description-lib: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.
