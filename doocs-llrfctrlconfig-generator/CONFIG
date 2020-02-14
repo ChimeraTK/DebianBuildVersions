@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/llrfCtrl_config.git
+SourceURI: /home/nshehzad/work/llrfCtrl_config
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
 License: desy_internal
@@ -15,3 +15,4 @@ Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
 Description-extra: Configuration generator for the DESY low-level RF related servers.
 
+Provides-extra: doocs-llrfctrlconfig-generator
