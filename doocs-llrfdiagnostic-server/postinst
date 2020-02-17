@@ -23,4 +23,4 @@ ln -snf /export/doocs/server/llrf_diagnostic_server/llrf_diagnostic_server.dist 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 #ConfigGeneratorVersion=`echo #debversion# | sed -e 's|-|.|' -e 's|-||'`
-CFGDIR=/usr/share/ConfigGenerator-llrf-diagnostic-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh llrf-diagnostic
+CFGDIR=/usr/share/ConfigGenerator-llrfdiagnostic-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh llrf-diagnostic

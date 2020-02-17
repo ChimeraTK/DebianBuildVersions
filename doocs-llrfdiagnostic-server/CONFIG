@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev dev-doocs-libgul14 doocs-llrf-diagnostic-config#epochdashversion#
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-llrf-diagnostic-config#epochdashversion#
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev dev-doocs-libgul14 doocs-llrfdiagnostic-config#epochdashversion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-llrfdiagnostic-config#epochdashversion#
 
 Provides-bin: doocs-llrfdiagnostic-server
 Conflicts-bin: doocs-llrfdiagnostic-server
