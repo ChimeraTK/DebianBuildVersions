@@ -15,4 +15,4 @@ Package-name-extra: doocs-dcm-ctrl-config#debversion#
 
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
 
-Description-extra: Configuration generator for the LLRF diagnostic servers.
+Description-extra: Configuration generator for the dcm server.
