@@ -1,4 +1,4 @@
-SourceURI: /home/nshehzad/work/ChimeraTK/llrf_diagnostic-config
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_diagnostic-config.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal

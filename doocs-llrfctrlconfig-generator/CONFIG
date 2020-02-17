@@ -1,4 +1,4 @@
-SourceURI: /home/nshehzad/work/llrfCtrl_config
+SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/llrfCtrl_config.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
 License: desy_internal
