@@ -1,0 +1,18 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/ldd-config.git
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako doocs-llrfctrlconfig-generator
+Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
+
+Package-name-extra: doocs-ldd-config#debversion#
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
+
+Description-extra: Configuration generator for the LDD (Laser Diode Driver) server.
