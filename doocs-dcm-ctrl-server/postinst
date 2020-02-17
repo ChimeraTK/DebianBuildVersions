@@ -21,5 +21,4 @@ esac
 ln -snf /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.dist /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
-/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/configureCurrentHost.sh dcmctrl
+CFGDIR=/usr/share/ConfigGenerator-dcm-ctrl-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh dcmctrl
