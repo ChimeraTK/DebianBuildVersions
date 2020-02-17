@@ -5,10 +5,9 @@ License: desy_internal
 Target-repositories: intern
 
 Has-packages: doocs-bin
-UseConfigGeneratorVersion: 01-06
 
-Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-watchdog-server doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, python3-mtca4upy
+Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-watchdog-server doocs-steppermotor-config#epochdashversion#
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-steppermotor-config#epochdashversion#, python3-mtca4upy
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
  
