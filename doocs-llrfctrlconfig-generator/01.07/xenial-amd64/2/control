@@ -15,7 +15,7 @@ Breaks:
 Recommends: 
 Suggests: 
 Enhances: 
-Provides: 
+Provides: doocs-llrfctrlconfig-generator
 Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako
 Description: Configuration generator for the DESY low-level RF related servers.
 
