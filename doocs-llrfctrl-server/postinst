@@ -22,4 +22,4 @@ ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl /export/doocs/server/l
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh llrfctrl6
+CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-#epochversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh llrfctrl6
