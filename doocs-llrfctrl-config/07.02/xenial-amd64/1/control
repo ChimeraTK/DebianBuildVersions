@@ -6,7 +6,7 @@ Standards-Version: 3.8.3
 Section: libs
 Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrl-config.git
 
-Package: doocs-llrf-diagnostic-config07-02
+Package: doocs-llrfctrl-config07-02
 Section: net
 Architecture: amd64
 Conflicts: 
