@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libfred-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-fred-config#epochdashversion#
+Dependencies: libfred-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server doocs-fred-config#epochdashversion# doocs-llrfctrlconfig-generator
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-fred-config#epochdashversion#
 
 Provides-bin: doocs-fred-server
