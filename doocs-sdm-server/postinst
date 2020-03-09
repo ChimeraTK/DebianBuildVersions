@@ -22,4 +22,4 @@ ln -snf /export/doocs/server/sdm_server/sdm_server.dist /export/doocs/server/sdm
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-sdm-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh sdm
+CFGDIR=/usr/share/ConfigGenerator-sdm-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh sdm
