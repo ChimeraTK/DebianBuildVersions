@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-watchdog-server doocs-steppermotor-config#epochdashversion#
+Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-watchdog-server doocs-steppermotor-config#epochdashversion# doocs-llrfctrlconfig-generator
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-steppermotor-config#epochdashversion#, python3-mtca4upy
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
