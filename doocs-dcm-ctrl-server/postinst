@@ -21,4 +21,4 @@ esac
 ln -snf /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server.dist /export/doocs/server/dcm_ctrl_server/dcm_ctrl_server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-dcm-ctrl-config-#epochversion# /usr/share/ConfigGenerator-#dependency-epochdashversion-doocs-llrfctrlconfig-generator# configureCurrentHost.sh dcmctrl
+CFGDIR=/usr/share/ConfigGenerator-dcmctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh dcmctrl
