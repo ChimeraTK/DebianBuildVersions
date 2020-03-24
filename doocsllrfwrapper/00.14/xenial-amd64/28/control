@@ -1,0 +1,47 @@
+Source: libdoocsllrfwrapper
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: doxygen (= 1.8.11-1ubuntu0.1), dev-doocs-clientlib (= 20.3.0-xenial1), dev-doocs-serverlib (= 20.3.0-xenial1), libchimeratk-deviceaccess-dev (= 01.11xenial1.00-0), libboost-system-dev (= 1.58.0.1ubuntu1), dev-doocs-libgul14 (= 20.3.00-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/rf/doocsllrfwrapper.git
+
+Package: libdoocsllrfwrapper-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: dev-doocswrappers (<< 0.5)
+Breaks: dev-doocswrappers (<< 0.5)
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: dev-doocswrappers
+Depends: libdoocsllrfwrapper00-14-xenial28, dev-doocs-clientlib (= 20.3.0-xenial1), dev-doocs-serverlib (= 20.3.0-xenial1), libchimeratk-deviceaccess-dev (>= 01.11xenial1), libchimeratk-deviceaccess-dev (<< 01.11xenial2), libboost-system-dev (= 1.58.0.1ubuntu1)
+Description: Header files for the DOOCS Wrappers Library. The files you need to compile against the DOOCS Wrappers Library.
+
+Package: libdoocsllrfwrapper00-14-xenial28
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DOOCS Wrappers Library. Developed at DSESY for the FLASH/XFEL project.
+
+Package: dev-doocswrappers
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libdoocsllrfwrapper-dev
+Description: Transitional package. This is a transitional package. It can safely be removed.
+
