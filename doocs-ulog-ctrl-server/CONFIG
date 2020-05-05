@@ -6,9 +6,11 @@ Target-repositories: intern
 
 Has-packages: doocs-bin extra
 
-Dependencies:  libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev doocs-ulog-ctrl-config#epochdashversion# libboost-test-dev
+UseConfigGeneratorVersion: 01-07
 
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ulog-ctrl-config#epochdashversion#, ulog-ctrl-server-udev-rules
+Dependencies:  libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion# libboost-test-dev
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfctrlconfig-generator#UseConfigGeneratorVersion#, ulog-ctrl-server-udev-rules
 
 Provides-bin: doocs-ulog-ctrl-server
 Conflicts-bin: doocs-ulog-ctrl-server
