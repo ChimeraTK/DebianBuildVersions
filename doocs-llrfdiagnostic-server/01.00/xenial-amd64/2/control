@@ -1,0 +1,21 @@
+Source: doocs-llrfdiagnostic-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 01.11xenial1.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 00.16xenial2.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 00.19xenial9.02-0), libmath-utils-dev (= 02.00xenial1.00), dev-doocs-libgul14 (= 20.6.10-xenial1), doocs-llrfdiagnostic-config01-00 (= 01.00xenial1.01-0), doocs-llrfctrlconfig-generator02-00 (= 02.00xenial1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_diagnostic.git
+
+Package: doocs-llrfdiagnostic-server01-00-xenial2
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfdiagnostic-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfdiagnostic-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend00-19-xenial9, doocs-llrfdiagnostic-config01-00
+Description: Doocs server for the llrf diagnostic.
+
