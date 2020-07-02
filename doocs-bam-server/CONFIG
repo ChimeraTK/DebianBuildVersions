@@ -7,7 +7,7 @@ Target-repositories: intern
 Has-packages: doocs-bin extra
 
 Dependencies: pkg-config libtirpc-dev libbeam-arrival-time-monitor-dev libboost-dev libboost-test-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libchimeratk-deviceaccess-dev doocs-watchdog-server dev-doocs-libgul14 libchimeratk-deviceaccess-doocsbackend-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts, doocs-bam-config#epochdashversion#
 Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/RPC_LIBNO
 
 Provides-bin: doocs-bam-server
