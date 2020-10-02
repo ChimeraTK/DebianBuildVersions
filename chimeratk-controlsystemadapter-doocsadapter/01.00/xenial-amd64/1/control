@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-controlsystemadapter-doocsadapter01-00-xenial1, libchimeratk-controlsystemadapter-dev (>= 02.00xenial1), libchimeratk-controlsystemadapter-dev (<< 02.00xenial2), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1)
+Depends: libchimeratk-controlsystemadapter-doocsadapter01-00-xenial1, libchimeratk-controlsystemadapter-dev (>= 02.00xenial1), libchimeratk-controlsystemadapter-dev (<< 02.00xenial2), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1), dev-libtine (= 5.2.1-5592-xenial1)
 Description: Header and cmake files for the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-doocsadapter.
 
 Package: libchimeratk-controlsystemadapter-doocsadapter01-00-xenial1
