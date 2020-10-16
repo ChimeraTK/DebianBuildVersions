@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib bin
 
-Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-system-dev libboost-test-dev libboost-thread-dev libqt4-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-system-dev libboost-test-dev libboost-thread-dev libqt5-dev
 Dependencies-dev: libboost-dev libchimeratk-deviceaccess-dev
 
 Package-name-bin: mtca4u-motordrivercard-configcalculator
