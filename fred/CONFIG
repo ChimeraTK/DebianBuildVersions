@@ -6,7 +6,7 @@ License: gpl3
 Target-repositories: intern pub
 Has-packages: lib dev doc bin extra extra2
 
-Dependencies: doxygen libboost-dev libboost-thread-dev libboost-system-dev libqt4-dev
+Dependencies: doxygen libboost-dev libboost-thread-dev libboost-system-dev qtbase5-dev
 
 Description-lib: The C++ library to access the Fuse RElay boarD (FRED).
 Install-pattern-lib: usr/lib/libfred.so.*
