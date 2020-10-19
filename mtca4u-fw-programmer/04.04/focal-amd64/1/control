@@ -1,0 +1,21 @@
+Source: mtca4u-fw-programmer
+Priority: extra
+Maintainer: Piotr Perek <piotr.perek@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libchimeratk-deviceaccess-dev (= 01.11focal1.00-0), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-program-options-dev (= 1.71.0.0ubuntu2), libncurses5-dev (= 6.2-0ubuntu2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/FirmwareProgrammer
+
+Package: mtca4u-fw-programmer
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Application for FPGA firmware upgrade through the DeviceAccess interface.
+
