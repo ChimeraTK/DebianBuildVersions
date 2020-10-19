@@ -4,16 +4,16 @@
 #set -e
 
 case "$1" in
-  configure)
-    # continue as normal
-    ;;
-  abort-upgrade|abort-remove|abort-deconfigure)
-    exit 0;
-  ;;
-  *)
-    echo "postinst called with unknown argument \`$1'" >&2;
-    exit 0;
-  ;;
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
 esac
 
 #
@@ -22,4 +22,5 @@ ln -snf /export/doocs/server/fred_server/fred_server.dist /export/doocs/server/f
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-fred-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh fred
+ConfigGeneratorVersion=`echo #UseConfigGeneratorVersion# | sed -e 's|-|.|' -e 's|-||'`
+/usr/share/llrfConfigGenerator${ConfigGeneratorVersion}/configureCurrentHost.sh fred
