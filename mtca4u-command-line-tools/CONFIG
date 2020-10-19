@@ -6,6 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: bin extra
 
+Disable-tests: yes
+
 #Turn off that the buildversion is added to the package name. It only has
 #the epoch in the name.
 package-name-contains-buildversion: 0
