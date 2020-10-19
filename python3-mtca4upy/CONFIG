@@ -8,6 +8,9 @@ Target-repositories: intern pub
 #The dev package is handled as extra because it does not depend on a lib package
 Has-packages: python 
 
+#Currently tests are written against the dummy driver, which is not available in pbuilder
+Disable-tests: yes
+
 Override-auto-configure-flags: "-DPYTHON3=True"
 
 Dependencies: libchimeratk-deviceaccess-dev python3-numpy libboost-python-dev libboost-test-dev python3-dev lsb-release
