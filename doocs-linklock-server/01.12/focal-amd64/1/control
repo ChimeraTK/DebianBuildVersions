@@ -1,0 +1,21 @@
+Source: doocs-linklock-server
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: libconsatt-apps-dev (= 00.18focal1.00-0), libconsatt-doocs-dev (= 00.14focal1.01-0), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 20.8.0-focal1), dev-doocs-serverlib (= 20.8.0-focal1), doocs-watchdog-server (= 20.8.0-focal4)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/linklock.git
+
+Package: doocs-linklock-server01-12-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-linklock-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-linklock-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for link locking application for LbSynch
+
