@@ -8,7 +8,7 @@ Has-packages: dev-noheader lib
 
 Disable-tests: yes
 
-Dependencies: doxygen libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-server-test-helper-dev dev-doocs-libgul14 libxml++2.6-dev dev-libtine libtirpc-dev pkg-config
+Dependencies: doxygen libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-server-test-helper-dev dev-doocs-libgul14 libxml++2.6-dev libtirpc-dev pkg-config
 Dependencies-dev: libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.

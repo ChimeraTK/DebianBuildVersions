@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: dev-libtine dev-doocs-libgul14 dev-doocs-clientlib dev-doocs-serverlib pkg-config libtirpc-dev dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev liblua5.2-dev doocs-watchdog-server doocs-llrfpiezo-config#epochdashversion# doocs-llrfctrlconfig-generator
+Dependencies: dev-doocs-libgul14 dev-doocs-clientlib dev-doocs-serverlib pkg-config libtirpc-dev dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev liblua5.2-dev doocs-watchdog-server doocs-llrfpiezo-config#epochdashversion# doocs-llrfctrlconfig-generator
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfpiezo-config#epochdashversion#
 
 Provides-bin: doocs-llrfpiezo-server
