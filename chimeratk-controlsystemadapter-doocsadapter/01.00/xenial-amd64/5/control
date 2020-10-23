@@ -1,0 +1,34 @@
+Source: libchimeratk-controlsystemadapter-doocsadapter
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: pkg-config (= 0.29.1-0ubuntu1), libtirpc-dev (= 0.2.5-1ubuntu0.1), doxygen (= 1.8.11-1ubuntu0.1), libchimeratk-controlsystemadapter-dev (= 02.00xenial2.01-0), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1), libdoocs-server-test-helper-dev (= 01.04xenial3.01-0), dev-doocs-libgul14 (= 20.8.0-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-DoocsAdapter
+
+Package: libchimeratk-controlsystemadapter-doocsadapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-doocsadapter01-00-xenial5, libchimeratk-controlsystemadapter-dev (>= 02.00xenial2), libchimeratk-controlsystemadapter-dev (<< 02.00xenial3), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1)
+Description: Header and cmake files for the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-doocsadapter.
+
+Package: libchimeratk-controlsystemadapter-doocsadapter01-00-xenial5
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-doocsadapter provides the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a DOOCS server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
