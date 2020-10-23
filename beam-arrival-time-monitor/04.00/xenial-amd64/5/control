@@ -1,0 +1,47 @@
+Source: libbeam-arrival-time-monitor
+Priority: extra
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1), dev-doocs-doocsdzmqlib (= 20.8.0-xenial1), libchimeratk-deviceaccess-dev (= 02.00xenial1.01-0), libmtca4u-motordrivercard-dev (= 01.09xenial18.01-0), libgsl-dev (= 2.1+dfsg-2), doxygen (= 1.8.11-1ubuntu0.1), libchimeratk-deviceaccess-doocsbackend-dev (= 01.00xenial4.01-0), dev-doocs-libgul14 (= 20.8.0-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/diagnostics/libBAM.git/
+
+Package: libbeam-arrival-time-monitor-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libbeam-arrival-time-monitor04-00-xenial5, libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 20.8.0-xenial1), dev-doocs-serverlib (= 20.8.0-xenial1), dev-doocs-doocsdzmqlib (= 20.8.0-xenial1), libchimeratk-deviceaccess-dev (>= 02.00xenial1), libchimeratk-deviceaccess-dev (<< 02.00xenial2), libmtca4u-motordrivercard-dev (>= 01.09xenial18), libmtca4u-motordrivercard-dev (<< 01.09xenial19), libgsl-dev (= 2.1+dfsg-2)
+Description: Development package for BAM related systems library
+
+Package: libbeam-arrival-time-monitor04-00-xenial5
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: BAM related systems library. Developed at DESY for the FLASH/XFEL project.
+
+Package: libbeam-arrival-time-monitor-doc
+Section: libdevel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libbeam-arrival-time-monitor-dev
+Description: Development documentation for BAM related systemd library
+
