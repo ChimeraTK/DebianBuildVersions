@@ -1,0 +1,21 @@
+Source: opcua-llrfctrl-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libllrflibrary-dev (= 05.01focal1.01-0), libchimeratk-applicationcore-dev (= 01.10focal1.03-0), libchimeratk-controlsystemadapter-opcuaadapter-dev (= 02.00focal2.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 00.19focal2.02-0), libmtca4u-virtuallab-dev (= 00.08focal1.02-0), libhdf5-dev (= 1.10.4+repack-11ubuntu1), libmath-utils-dev (= 02.00focal1.01-0), doocs-llrfctrl-config07-02 (= 07.02focal1.32-0), doocs-llrfctrlconfig-generator02-00 (= 02.00focal1.02-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrl.git
+
+Package: opcua-llrfctrl-server07-02-focal1
+Section: net
+Architecture: amd64
+Conflicts: opcua-llrfctrl-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: opcua-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend00-19-focal2, python3-mtca4upy, doocs-llrfctrl-config07-02
+Description: Low-level RF control server for OPC UA based control systems
+
