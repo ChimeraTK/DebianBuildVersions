@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config libtirpc-dev dev-doocs-doocsdapilib dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libconsatt-apps-dev libconsatt-doocs-dev libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev
+Dependencies: pkg-config libtirpc-dev dev-doocs-doocsdapilib dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib libdaq-dev libconsatt-apps-dev libconsatt-doocs-dev libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-refmopt-server
