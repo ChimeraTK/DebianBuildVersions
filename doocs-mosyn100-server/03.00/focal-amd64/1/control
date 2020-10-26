@@ -1,0 +1,21 @@
+Source: doocs-mosyn100-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 20.8.0-focal1), dev-doocs-serverlib (= 20.8.0-focal1), doocs-watchdog-server (= 20.8.0-focal5), dev-doocs-doocsdzmqlib (= 20.8.0-focal1), libchimeratk-deviceaccess-dev (= 01.11focal1.00-0), libdoocs-rf-util-dev (= 01.02focal1.01-0), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/mosyn100.git
+
+Package: doocs-mosyn100-server03-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-mosyn100-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-mosyn100-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: Monitoring server for Master Oscillator 100 MHz synthesizer
+
