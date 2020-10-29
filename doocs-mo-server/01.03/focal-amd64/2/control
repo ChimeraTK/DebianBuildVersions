@@ -1,0 +1,21 @@
+Source: doocs-mo-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 20.10.1-focal1), dev-doocs-serverlib (= 20.10.1-focal1), doocs-watchdog-server (= 20.10.1-focal1), doxygen (= 1.8.17-0ubuntu2), graphviz (= 2.42.2-3build2), libboost-test-dev (= 1.71.0.0ubuntu2), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/flashmo.git
+
+Package: doocs-mo-server01-03-focal2
+Section: net
+Architecture: amd64
+Conflicts: doocs-mo-server, doocs-amtfmo-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-mo-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for the FLASH and AMTF Master Oscillator.
+
