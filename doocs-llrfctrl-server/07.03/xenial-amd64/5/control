@@ -1,0 +1,21 @@
+Source: doocs-llrfctrl-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libllrflibrary-dev (= 05.01xenial1.01), libchimeratk-applicationcore-dev (= 02.00xenial3.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.00xenial8.02-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.00xenial7.02-0), libmtca4u-virtuallab-dev (= 00.08xenial16.02-0), libhdf5-dev (= 1.8.16+docs-4ubuntu1.1), libmath-utils-dev (= 02.00xenial1.01-0), doocs-llrfctrl-config07-03 (= 07.03xenial1.03-0), doocs-llrfctrlconfig-generator02-00 (= 02.00xenial1.01-0), dev-doocs-libgul14 (= 20.10.1-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrl.git
+
+Package: doocs-llrfctrl-server07-03-xenial5
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend01-00-xenial7, doocs-llrfctrl-config07-03, python3-mtca4upy
+Description: Low-level RF control server usable for multiple accelerators and facilities.
+
