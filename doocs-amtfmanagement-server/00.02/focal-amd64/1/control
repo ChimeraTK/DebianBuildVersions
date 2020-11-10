@@ -1,0 +1,21 @@
+Source: doocs-amtfmanagement-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 20.10.1-focal1), dev-doocs-serverlib (= 20.10.1-focal1), dev-doocs-doocsdapilib (= 20.10.1-focal1), libamtfdbaccess-dev (= 02.09focal1.00-0), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/amtf_testManagement.git
+
+Package: doocs-amtfmanagement-server00-02-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-amtfmanagement-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-amtfmanagement-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for test management at AMTF
+
