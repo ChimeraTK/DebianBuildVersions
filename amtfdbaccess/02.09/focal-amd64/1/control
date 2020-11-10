@@ -1,0 +1,34 @@
+Source: libamtfdbaccess
+Priority: extra
+Maintainer: Filip Makowski <filip.makowski@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libboost-dev (= 1.71.0.0ubuntu2), libpqxx-dev (= 6.4.5-2build1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/rf/AmtfDbAccess.git
+
+Package: libamtfdbaccess-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: libamtfdbaccess-dev
+Replaces: libamtfdbaccess-dev
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libamtfdbaccess02-09-focal1, libboost-dev (= 1.71.0.0ubuntu2), libpqxx-dev (= 6.4.5-2build1)
+Description: Header and cmake files for the AmtfDbAccess Library.
+
+Package: libamtfdbaccess02-09-focal1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: AMTF Database Access library.
+
