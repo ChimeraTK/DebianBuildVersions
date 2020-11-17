@@ -1,0 +1,26 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-llrfdiagnostic-server package
+
+#set -e
+
+case "$1" in
+  configure)
+    # continue as normal
+    ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+    exit 0;
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2;
+    exit 0;
+  ;;
+esac
+
+# 
+# install the new server
+ln -snf /export/doocs/server/llrf_diagnostic_server/llrf_diagnostic_server.dist /export/doocs/server/llrf_diagnostic_server/llrf_diagnostic_server
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+#ConfigGeneratorVersion=`echo 02-00-focal1 | sed -e 's|-|.|' -e 's|-||'`
+CFGDIR=/usr/share/ConfigGenerator-llrf-diagnostic-config-02-00 /usr/share/ConfigGenerator02.00/configureCurrentHost.sh llrf-diagnostic
