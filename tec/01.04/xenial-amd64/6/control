@@ -1,0 +1,34 @@
+Source: libtec
+Priority: extra
+Maintainer: Pawel Predki <pawel.predki@desy.de>
+Build-Depends: libchimeratk-deviceaccess-dev (= 02.01xenial1.02-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/library/common/tec.git
+
+Package: libtec-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libtec01-04-xenial6, libchimeratk-deviceaccess-dev (>= 02.01xenial1), libchimeratk-deviceaccess-dev (<< 02.01xenial2)
+Description: Header and cmake files for TEC controller base communication library
+
+Package: libtec01-04-xenial6
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TEC controller base communication library. Developed at DESY for the  FLASH/XFEL project.
+
