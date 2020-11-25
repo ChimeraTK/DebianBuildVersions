@@ -1,0 +1,34 @@
+Source: libchimeratk-controlsystemadapter-epics-ioc-adapter
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libchimeratk-controlsystemadapter-dev (= 02.01focal2.00-0), libreadline-dev (= 8.0-4)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
+
+Package: libchimeratk-controlsystemadapter-epics-ioc-adapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-epics-ioc-adapter01-02-focal5, libchimeratk-controlsystemadapter-dev (>= 02.01focal2), libchimeratk-controlsystemadapter-dev (<< 02.01focal3)
+Description: Header and cmake files for the EPICS IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
+
+Package: libchimeratk-controlsystemadapter-epics-ioc-adapter01-02-focal5
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+
