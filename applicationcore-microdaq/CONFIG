@@ -1,0 +1,13 @@
+SourceURI: https://github.com/ChimeraTK/ApplicationCore-MicroDAQ
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev
+
+Description-dev: Header and cmake files for the ApplicationCore MicroDAQ module.
+Description-lib: Provides ApplicaitonCore MicroDAQ modules. Supported MicroDAQ backend is HDF5.
