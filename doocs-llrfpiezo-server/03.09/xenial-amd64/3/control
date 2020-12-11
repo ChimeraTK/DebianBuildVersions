@@ -1,0 +1,21 @@
+Source: doocs-llrfpiezo-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: dev-doocs-libgul14 (= 20.10.1-xenial1), dev-doocs-clientlib (= 20.10.1-xenial1), dev-doocs-serverlib (= 20.10.1-xenial1), pkg-config (= 0.29.1-0ubuntu1), libtirpc-dev (= 0.2.5-1ubuntu0.1), dev-doocs-doocsdzmqlib (= 20.10.1-xenial1), libdoocsllrfwrapper-dev (= 00.14xenial44.03-0), liblua5.2-dev (= 5.2.4-1ubuntu1), doocs-watchdog-server (= 20.10.1-xenial5), doocs-llrfpiezo-config03-09 (= 03.09xenial1.00-0), doocs-llrfctrlconfig-generator02-00 (= 02.00xenial1.01-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfpiezoctrl.git
+
+Package: doocs-llrfpiezo-server03-09-xenial3
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfpiezo-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfpiezo-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfpiezo-config03-09
+Description: DESY FLASH/XFEL controls package. DOOCS low-level RF piezo control server.
+
