@@ -80,7 +80,7 @@ echo "RPC_LIBNO = $RPC_LIBNO"
 
 # 
 # install the new server
-cp -a /export/doocs/server/mopll1300_server/mopll1300_server.dist /export/doocs/server/mopll1300_server/mopll1300_server
+cp -a /export/doocs/server/mosyn100_server/mosyn100_server.dist /export/doocs/server/mosyn100_server/mosyn100_server
 #
 #
 
