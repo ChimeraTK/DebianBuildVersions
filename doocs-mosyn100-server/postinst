@@ -78,9 +78,11 @@ fi
 echo "add server to ens "
 echo "RPC_LIBNO = $RPC_LIBNO"
 
-# Note: copying around executables is not the idea of debian packages in the first place.
-# The section has been removed because the 'executable' is a symlink. No
-# point in copying this around.
+# 
+# install the new server
+cp -a /export/doocs/server/mopll1300_server/mopll1300_server.dist /export/doocs/server/mopll1300_server/mopll1300_server
+#
+#
 
 # change ownership of the server directory and all files in it
 chown -R doocsadm:doocsadm /export/doocs/server/mosyn100_server
