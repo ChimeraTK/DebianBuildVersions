@@ -1,0 +1,21 @@
+Source: doocs-klm-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 20.10.1-focal1), dev-doocs-serverlib (= 20.10.1-focal1), dev-doocs-doocsdapilib (= 20.10.1-focal1), doocs-watchdog-server (= 20.10.1-focal5), doxygen (= 1.8.17-0ubuntu2), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1), libchimeratk-deviceaccess-dev (= 02.02focal2.02-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/klm.git
+
+Package: doocs-klm-server02-01-focal2
+Section: net
+Architecture: amd64
+Conflicts: doocs-klm-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-klm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for the klystron lifetime management (klm)
+
