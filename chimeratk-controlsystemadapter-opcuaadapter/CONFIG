@@ -8,7 +8,7 @@ Has-packages: dev-noheader lib
 
 Disable-tests: yes
 
-Dependencies: doxygen libchimeratk-controlsystemadapter-dev
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libopen62541-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev
 
 Description-dev: Header and cmake files for the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-opcuaadapter.

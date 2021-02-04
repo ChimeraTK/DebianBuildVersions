@@ -1,0 +1,14 @@
+SourceURI: https://github.com/ChimeraTK/open62541-interface
+Maintainer: Klaus Zenker (HZDR) <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: lib dev
+
+Dependencies: doxygen python3-dev git
+Dependencies-dev:
+
+Description-lib: OPC-UA implementation open62541. See https://github.com/open62541/open62541
+Description-dev: Header and config files for OPC-UA implementation open62541. See https://github.com/open62541/open62541
+
