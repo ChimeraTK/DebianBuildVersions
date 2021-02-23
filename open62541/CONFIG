@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: lib dev
 
-Dependencies: doxygen python3-dev git
+Dependencies: doxygen python3-dev git ca-certificates
 Dependencies-dev:
 
 Description-lib: OPC-UA implementation open62541. See https://github.com/open62541/open62541
