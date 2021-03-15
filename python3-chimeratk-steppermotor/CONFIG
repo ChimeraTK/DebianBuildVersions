@@ -1,0 +1,13 @@
+SourceURI: https://github.com/ChimeraTK/MotorDriverCard-PythonBindings
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: utils
+License: gpl3
+Target-repositories: intern pub
+
+Has-packages: python
+
+# pyhon itself must be in the dependencies, since libboost-python-dev does not pull it in on trusty
+Dependencies: libmtca4u-motordrivercard-dev libboost-python-dev python3-dev
+Dependencies-python: python3
+
+Description-python: This package provides python bindings for the ChimeraTK MotorDriverCard library
