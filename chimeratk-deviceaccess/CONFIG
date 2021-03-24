@@ -22,6 +22,9 @@ Enhances-bin: #Package-name-lib#
 
 Install-pattern-bin: usr/bin/chimeratk-lmap-editor
 
+#Hack to quickly get pkgconfig deployed before all projects have been released with it.
+Install-additional-pattern-dev: usr/share/pkgconfig/*
+
 Description-dev: Header and cmake files for libchimeratk-deviceaccess. The files you need to compile against libchimeratk-deviceaccess.
 Description-lib: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
 Description-doc: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
