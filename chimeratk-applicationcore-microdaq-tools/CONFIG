@@ -9,7 +9,6 @@ Has-packages: bin
 # The UAClient requires to install opcua-client via pip3
 Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev libboost-log-dev libboost-regex-dev libboost-program-options-dev libhdf5-dev python3-dev
 Dependencies-bin: python3-numpy, python3-pyqt5, python3-pyqtgraph, python3-h5py, libhdf5-dev
-Package-name-bin: applicationcore-microdaq-tools
 
 Install-pattern-bin: usr/bin/MicroDAQViewer, usr/lib/python*/*/chimeratk_daq/*
 
