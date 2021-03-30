@@ -1,0 +1,21 @@
+Source: doocs-llrfctrl-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libllrflibrary-dev (= 05.02focal1.00-0), libchimeratk-applicationcore-dev (= 02.01focal1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.00focal9.04-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.01focal3.00-0), libmtca4u-virtuallab-dev (= 00.08focal8.02-0), libchimeratk-applicationcore-microdaq-dev (= 01.00focal1.03-0), libhdf5-dev (= 1.10.4+repack-11ubuntu1), libmath-utils-dev (= 02.01focal1.00-0), doocs-llrfctrl-config07-05 (= 07.05focal1.00-0), doocs-llrfctrlconfig-generator02-00 (= 02.00focal1.02-0), dev-doocs-libgul14 (= 21.3.1-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfctrl.git
+
+Package: doocs-llrfctrl-server07-05-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend01-01-focal3, doocs-llrfctrl-config07-05, python3-mtca4upy
+Description: Low-level RF control server usable for multiple accelerators and facilities.
+
