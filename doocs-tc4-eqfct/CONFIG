@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libdaction-dev libdoocs-rf-util-dev dev-doocs-libgul14
+Dependencies: doxygen libboost-dev dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libdaction-dev libdoocs-rf-util-dev dev-doocs-libgul14 libboost-test-dev
 Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev libdaction-dev libdoocs-rf-util-dev
 
 Description-lib: DOOCS EqFct for the 4 channel temperature controller FMC (TC4). A library to be included in other DOOCS servers.
