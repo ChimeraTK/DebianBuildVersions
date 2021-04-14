@@ -9,7 +9,7 @@ Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/bam-config.git
 Package: config-bam-server02-00
 Section: net
 Architecture: amd64
-Conflicts: 
+Conflicts: doocs-bam-config01-19, doocs-bam-config01-18
 Replaces: 
 Breaks: 
 Recommends: 
