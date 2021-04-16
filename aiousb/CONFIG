@@ -17,7 +17,7 @@ Install-additional-pattern-dev: usr/include/aiousb/*
 
 Description-python: This package provides Python binding for aiousb library.
 Dependencies-python: python3
-Install-additional-pattern-python: usr/lib/python3.5/*
+Install-additional-pattern-python: usr/lib/python3.8/*
 
 Description-extra: hex files for asiousb device testing. 
 Package-name-extra: libaiousb-firmwares
