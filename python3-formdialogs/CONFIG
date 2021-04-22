@@ -1,6 +1,6 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/form_dialogs.git
 
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: utils
 License: lgpl3
 Target-repositories: intern pub
