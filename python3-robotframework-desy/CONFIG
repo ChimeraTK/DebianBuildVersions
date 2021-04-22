@@ -1,7 +1,7 @@
-SourceURI: /home/nshehzad/work/robot-framework-local
+SourceURI: https://github.com/ChimeraTK/robot-framework.git
 #https://github.com/robotframework/robotframework.git
 
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: utils
 License: lgpl3
 Target-repositories: intern pub
@@ -11,7 +11,7 @@ Has-packages: python
 
 Override-auto-configure-flags: "-DPYTHON3=True"
 
-Dependencies: git python3-docutils python3-tk lsb-release
+Dependencies: git python3-docutils python3-tk lsb-release python3-pip texlive-latex-extra
 Dependencies-python: python3, python3-docutils, python3-tk, python3-setuptools
 
 Provides-python: python3-robotframework
