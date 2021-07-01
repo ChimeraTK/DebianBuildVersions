@@ -1,0 +1,86 @@
+Source: libfred
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libboost-dev (= 1.71.0.0ubuntu2), libboost-thread-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2), qtbase5-dev (= 5.12.8+dfsg-0ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/vendor/desy/msk/fred_library.git
+
+Package: libfred02-04-focal1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: fred-gui, fred-utilities
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The C++ library to access the Fuse RElay boarD (FRED).
+
+Package: libfred-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: libfred-doc
+Suggests: fred-dummy-servers
+Enhances: 
+Provides: 
+Depends: libfred02-04-focal1, libboost-dev (= 1.71.0.0ubuntu2), libboost-thread-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2)
+Description: Header and cmake files for the  Fuse RElay boarD (FRED) C++ library. The development package also comes with dummy servers for testing.
+
+Package: libfred-doc
+Section: libdevel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libfred-dev
+Provides: 
+Depends: libfred-dev
+Description: Provides doxygen html documentation for the FRED c++ access library.
+
+Package: fred-gui
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libfred02-04-focal1
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: The GUI to control the Fuse RElay boarD (FRED).
+
+Package: fred-utilities
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libfred02-04-focal1
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Tools for interacting with the Fuse RElay boarD (FRED). Currently includes fred-communicator tool.
+
+Package: fred-dummy-servers
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libfred-dev
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Fuse RElay boarD (FRED) and xport gpio dummy servers; used for mocking FRED hardware
+
