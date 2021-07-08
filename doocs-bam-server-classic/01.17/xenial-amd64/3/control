@@ -1,0 +1,34 @@
+Source: doocs-bam-server
+Priority: extra
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: pkg-config (= 0.29.1-0ubuntu1), libtirpc-dev (= 0.2.5-1ubuntu0.1), libbeam-arrival-time-monitor-dev (= 03.00xenial4.00-0), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 20.6.1-xenial1), dev-doocs-serverlib (= 20.6.1-xenial1), dev-doocs-doocsdzmqlib (= 20.6.1-xenial1), libchimeratk-deviceaccess-dev (= 01.11xenial1.00-0), doocs-watchdog-server (= 20.6.1-xenial1), dev-doocs-libgul14 (= 20.6.10-xenial1), libchimeratk-deviceaccess-doocsbackend-dev (= 00.19xenial9.02-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/bam.git
+
+Package: doocs-bam-server01-17-xenial3
+Section: net
+Architecture: amd64
+Conflicts: doocs-bam-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-bam-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts
+Description: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
+
+Package: bam-init-scripts
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-mtca4upy, python3-numpy
+Description: Initialization scripts for bam and motor hardware
+

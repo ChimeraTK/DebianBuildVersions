@@ -1,0 +1,21 @@
+Source: doocs-bam-server
+Priority: extra
+Maintainer: Michele Viti <michele.viti@desy.de>
+Build-Depends: libbeam-arrival-time-monitor-dev (= 02.00xenial9.01), libboost-dev (= 1.58.0.1ubuntu1), libboost-test-dev (= 1.58.0.1ubuntu1), libboost-thread-dev (= 1.58.0.1ubuntu1), libboost-system-dev (= 1.58.0.1ubuntu1), libboost-filesystem-dev (= 1.58.0.1ubuntu1), dev-doocs-clientlib (= 19.2.0-xenial1), dev-doocs-serverlib (= 19.2.0-xenial1), dev-doocs-doocsdzmqlib (= 19.2.0-xenial1), libchimeratk-deviceaccess-dev (= 01.01xenial1.01), doocs-watchdog-server (= 19.2.0-xenial2), dev-doocs-libgul (= 19.2.0-xenial1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/bam.git
+
+Package: doocs-bam-server01-16-xenial2
+Section: net
+Architecture: amd64
+Conflicts: doocs-bam-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-bam-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, python3-mtca4upy, python3-numpy
+Description: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
+
