@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: dev lib
 
-Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib dev-doocs-libgul14 pkg-config
+Dependencies: doxygen dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib dev-doocs-libgul14 pkg-config libzmq3-dev
 Dependencies-dev: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib
 
 Description-lib: Cavity section location library.
