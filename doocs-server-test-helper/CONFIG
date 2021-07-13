@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: pkg-config libtirpc-dev doxygen libboost-dev libboost-test-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-libgul14
+Dependencies: pkg-config libtirpc-dev doxygen libboost-dev libboost-test-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-libgul14 libzmq3-dev
 Dependencies-dev: libboost-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header files for the DOOCS server test helper library.

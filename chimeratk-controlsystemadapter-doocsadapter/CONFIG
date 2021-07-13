@@ -8,7 +8,7 @@ Has-packages: dev lib
 
 Disable-tests: yes
 
-Dependencies: pkg-config libtirpc-dev doxygen libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib libdoocs-server-test-helper-dev dev-doocs-libgul14
+Dependencies: pkg-config libtirpc-dev doxygen libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib libdoocs-server-test-helper-dev dev-doocs-libgul14 libzmq3-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header and cmake files for the DOOCS Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-doocsadapter.
