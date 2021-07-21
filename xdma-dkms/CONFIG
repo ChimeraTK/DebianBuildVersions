@@ -1,0 +1,15 @@
+SourceURI: https://github.com/MicroTCA-Tech-Lab/xdma-metapackage
+Maintainer: Patrick Huesmann <patrick.huesmann@desy.de>
+Section: contrib/kernel
+License: desy_internal
+Target-repositories: intern pub
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: git cmake make
+
+Dependencies-extra: dkms,udev
+Package-name-extra: xdma-dkms
+Description-extra: Xilinx XDMA driver with added DKMS and udev support
