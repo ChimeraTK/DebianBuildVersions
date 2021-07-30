@@ -18,7 +18,8 @@ esac
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-bcm-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh bcm-server
+export CFGDIR=/usr/share/ConfigGenerator-bcm-config-#epochdashversion# 
+/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh bcm-server
 
 # make the template-generated scripts executable
 . $CFGDIR/.stationSettings.sh
