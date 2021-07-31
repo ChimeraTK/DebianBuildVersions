@@ -22,6 +22,8 @@ export CFGDIR=/usr/share/ConfigGenerator-bcm-config-#epochdashversion#
 /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh bcm-server
 
 # make the template-generated scripts executable
-. $CFGDIR/.stationSettings.sh
-DIR=${SETTINGS['WORKDIR']}   
-chmod +x $DIR/*.sh $DIR/*.py
+DIR=/export/doocs/server/bcm_server
+shopt -s nullglob
+for a in $DIR/*.sh $DIR/*.py; do
+	chmod +x "$a"
+done
