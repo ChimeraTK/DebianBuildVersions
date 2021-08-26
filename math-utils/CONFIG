@@ -1,5 +1,5 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/math-utils.git
-Maintainer: Jan Tim <jan.horst.karl.tim@desy.de>
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: libs
 License: lgpl3
 Target-repositories: intern pub
