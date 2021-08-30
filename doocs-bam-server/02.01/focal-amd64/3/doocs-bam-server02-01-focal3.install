@@ -1,0 +1,3 @@
+export/doocs/server/bam_server/*.*
+export/doocs/server/bam_server/RPC_LIBNO
+export/doocs/server/bam_server/lib

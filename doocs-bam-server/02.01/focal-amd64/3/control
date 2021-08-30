@@ -1,0 +1,34 @@
+Source: doocs-bam-server
+Priority: extra
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: libtirpc-dev (= 1.2.5-1), pkg-config (= 0.29.1-0ubuntu4), libbeam-arrival-time-monitor-dev (= 04.00focal17.04-0), libboost-dev (= 1.71.0.0ubuntu2), libboost-thread-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 21.7.1-focal1), dev-doocs-serverlib (= 21.7.1-focal1), doocs-watchdog-server (= 21.7.1-focal5), libchimeratk-deviceaccess-dev (= 02.05focal1.00-0), dev-doocs-libgul14 (= 21.7.1-focal1), doocs-llrfctrlconfig-generator02-01 (= 02.01focal1.00-0), libchimeratk-deviceaccess-dev (= 02.05focal1.00-0), libchimeratk-applicationcore-dev (= 02.03focal3.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.02focal1.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.02focal3.02-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), libmath-utils-dev (= 03.00focal1.00-0), libchimeratk-motordrivercard-applicationmodule-dev (= 00.03focal6.01-0), dev-doocs-doocstiminglib (= 21.7.1-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/diagnostics/bam.git
+
+Package: doocs-bam-server02-01-focal3
+Section: net
+Architecture: amd64
+Conflicts: doocs-bam-server,doocs-optical-switch-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-bam-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts, config-bam-server02-01
+Description: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
+
+Package: bam-init-scripts
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-mtca4upy, python3-numpy
+Description: Initialization scripts for bam and motor hardware
+
