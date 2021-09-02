@@ -18,5 +18,5 @@ fi
 
 if [ "purge" = "$1" ] ; then
    rm -rf /export/doocs/server/refmopt_server
-
+fi
 
