@@ -1,0 +1,85 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-itcf-server package
+
+set -e
+
+case "$1" in
+    configure)
+        # continue as normal
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0;
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
+esac
+
+########## make the /export/<nodename> linl ######################
+NODENAME=`uname -n`
+UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
+
+RPC_LIBNO=""
+## get RPC RPC_LIBNO
+if [ -f /export/doocs/server/itcf_server/itcf_server.conf ]
+then
+    RPC_LIBNO=`cat /export/doocs/server/itcf_server/itcf_server.conf | grep SVR.RPC_NUMBER | awk '{print $2}'`
+elif [ -f /export/doocs/server/itcf_server/itcf_CONF.TEMPLATE ]
+then
+    RPC_LIBNO=`cat /export/doocs/server/itcf_server/itcf_CONF.TEMPLATE | grep SVR.RPC_NUMBER | awk '{print $2}'`
+fi
+if [ "$RPC_LIBNO" == "" ]
+then
+    echo "No cofing file with RPC number"
+    exit 1
+fi
+
+###
+### watchdog template 
+###
+if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
+   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
+      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
+      sed -e "s/servername/itcf_server/g" | \
+      sed -e "s/SERVERNAME/ITCF/g" | \
+      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
+      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.itcf
+fi 
+
+
+# config file
+if [ ! -f /export/doocs/server/itcf_server/itcf_server.conf  ] ; then
+   if [ -f /export/doocs/server/itcf_server/itcf_CONF.TEMPLATE ] ; then
+      cat /export/doocs/server/itcf_server/itcf_CONF.TEMPLATE | \
+       sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" > \
+       /export/doocs/server/itcf_server/itcf_server.conf
+   else
+       echo "!!! no itcf config template !!! "
+   fi
+fi
+
+# change owership of server folder and all file inside
+chown -R doocsadm:doocsadm /export/doocs/server/itcf_server
+
+#
+# check if this server is already in the watchdog
+INWD=`grep "/server/itcf_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+
+if [ -z "${INWD}" ] ; then
+   /export/doocs/server/doocs add itcf_server || true
+fi
+
+#
+# kill the server if there is a valid PID file and 
+# a AUTORESTART flag in the server dir
+if [ -f /export/doocs/server/itcf_server/itcf_server.PID -a \
+   -f /export/doocs/server/itcf_server/AUTORESTART ] ; then
+   SPID=`cat /export/doocs/server/itcf_server/itcf_server.PID`
+   if [ -d /proc/${SPID} ] ; then
+      kill ${SPID} || true
+   else
+      echo "itcf_server: postinstall remove not valid PID file"
+      rm /export/doocs/server/itcf_server/itcf_server.PID
+   fi
+fi

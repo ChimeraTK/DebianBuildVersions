@@ -1,0 +1,20 @@
+SourceURI: http://mcs-gitlab.desy.de/controls-and-operation/laser/controls/itcf.git/
+Maintainer: Jiri Kral <jiri.kral@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-deviceaccess-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 libgsl-dev
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, libgsl23, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Provides-bin: doocs-itcf-server
+Conflicts-bin: doocs-itcf-server
+
+Description-bin: DOOCS server for MSK Special Diagnostic FLASH Laser2 Intra Train Charge Feedback
+
+Disable-tests: yes 
