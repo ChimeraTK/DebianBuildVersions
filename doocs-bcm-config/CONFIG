@@ -1,5 +1,5 @@
-#SourceURI: https://mcs-gitlab.desy.de/controls-and-operation/particle-beam-diagnostics/bunch-compression-measurement/bcm-config.git
-SourceURI: /home/drothe/projects/bcm/bcm-config
+SourceURI: https://mcs-gitlab.desy.de/controls-and-operation/particle-beam-diagnostics/bunch-compression-measurement/bcm-config.git
+#SourceURI: /home/drothe/projects/bcm/bcm-config
 Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
 Section: net
 License: desy_internal

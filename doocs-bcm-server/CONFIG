@@ -1,12 +1,12 @@
 SourceURI: https://mcs-gitlab.desy.de/controls-and-operation/particle-beam-diagnostics/bunch-compression-measurement/bcm-server.git
 Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
 Section: net
-License: gpl3
+License: lgpl3
 Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev doocs-llrfctrlconfig-generator 
+Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev doocs-llrfctrlconfig-generator 
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-bcm-config#epochdashversion#, doocs-llrfctrlconfig-generator02-00, python3-mtca4upy, python3-numpy, doocstools
 
