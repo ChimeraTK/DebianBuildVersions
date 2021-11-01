@@ -1,0 +1,21 @@
+Source: doocs-refmopt-server
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1), dev-doocs-doocsdapilib (= 21.7.1-focal1), dev-doocs-clientlib (= 21.7.1-focal1), dev-doocs-serverlib (= 21.7.1-focal1), dev-doocs-daqbmlib (= 21.7.1-focal1), dev-doocs-daqsndlib (= 21.7.1-focal1), dev-doocs-doocsdzmqlib (= 21.7.1-focal2), libconsatt-apps-dev (= 00.20focal8.01-0), libconsatt-doocs-dev (= 00.16focal6.03-0), libdaction-dev (= 02.16focal19.06-0), doocs-watchdog-server (= 21.7.1-focal6), libchimeratk-deviceaccess-dev (= 02.06focal1.01-0), libzmq3-dev (= 4.3.2-2ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/refmopt.git
+
+Package: doocs-refmopt-server01-02-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-refmopt-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-refmopt-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DESY FLASH/XFEL controls package. DOOCS REFMOPT control server.
+
