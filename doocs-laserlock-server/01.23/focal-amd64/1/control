@@ -1,0 +1,21 @@
+Source: doocs-laserlock-server
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: libconsatt-apps-dev (= 00.21focal1.00-0), libconsatt-doocs-dev (= 00.17focal1.00-0), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 21.7.1-focal1), dev-doocs-serverlib (= 21.7.1-focal1), doocs-watchdog-server (= 21.7.1-focal9)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/lbsync/laserlock.git
+
+Package: doocs-laserlock-server01-23-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-laserlock-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-laserlock-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for laser locking application for LbSynch
+
