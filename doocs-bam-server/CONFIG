@@ -8,7 +8,7 @@ Has-packages: doocs-bin extra
 
 Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev libchimeratk-motordrivercard-applicationmodule-dev dev-doocs-doocstiminglib libgsl-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts, config-bam-server#epochdashversion#
-Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/RPC_LIBNO,export/doocs/server/bam_server/lib
+Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/lib
 
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server,doocs-optical-switch-server
