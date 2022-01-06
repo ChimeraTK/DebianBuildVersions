@@ -4,22 +4,17 @@ Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: doocs-bin extra
+Has-packages: doocs-bin
 
 Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev libchimeratk-motordrivercard-applicationmodule-dev dev-doocs-doocstiminglib libgsl-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, bam-init-scripts, config-bam-server#epochdashversion#
-Install-pattern-bin: export/doocs/server/bam_server/*.*,export/doocs/server/bam_server/lib
+Install-pattern-bin: export/doocs/server/bam_server/*
 
 Provides-bin: doocs-bam-server
-Conflicts-bin: doocs-bam-server,doocs-optical-switch-server
+Conflicts-bin: doocs-bam-server,doocs-optical-switch-server,bam-init-scripts
 Recommends-bin: pcieuni-dkms
 
 Description-bin: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
-
-Package-name-extra: bam-init-scripts
-Dependencies-extra: python3-mtca4upy, python3-numpy
-Install-pattern-extra: export/doocs/server/bam_server/init_scripts/bam-init.py
-Description-extra: Initialization scripts for bam and motor hardware
 
 
 Disable-tests: yes
