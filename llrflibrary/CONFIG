@@ -1,8 +1,8 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/llrflibrary.git
-Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-library.git
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: desy_internal
-Target-repositories: intern
+Target-repositories: intern pub
 
 Has-packages: dev lib
 
@@ -12,7 +12,7 @@ Dependencies-dev:
 Replaces-dev: dev-llrflibrary
 Conflicts-dev: dev-llrflibrary
 
-Description-dev: Header and cmake files for the MTCA4U Low Level Radio Frequency Library. The files you need to compile against the MTCA4U LLRFLibrary.
-Description-lib: Low Level Radio Frequency (LLRF) control library. Developed at DSESY for the  FLASH/XFEL project.
+Description-dev: Header and cmake files for the Low Level Radio Frequency Library. The files you need to compile against the LLRFLibrary.
+Description-lib: Low Level Radio Frequency (LLRF) control library. Developed at DESY for the  FLASH/XFEL project.
 
 Install-additional-pattern-dev: usr/share/LLRFLibrary/*
