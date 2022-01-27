@@ -1,10 +1,10 @@
 Source: libllrflibrary
 Priority: extra
-Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1)
 Standards-Version: 3.8.3
 Section: libs
-Homepage: http://doocs-git.desy.de/cgit/doocs/library/rf/llrflibrary.git
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-library.git
 
 Package: libllrflibrary-dev
 Section: libdevel
@@ -17,7 +17,7 @@ Suggests:
 Enhances: 
 Provides: 
 Depends: libllrflibrary05-02-focal1, 
-Description: Header and cmake files for the MTCA4U Low Level Radio Frequency Library. The files you need to compile against the MTCA4U LLRFLibrary.
+Description: Header and cmake files for the Low Level Radio Frequency Library. The files you need to compile against the LLRFLibrary.
 
 Package: libllrflibrary05-02-focal1
 Section: libs
@@ -30,5 +30,5 @@ Suggests:
 Enhances: 
 Provides: 
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Low Level Radio Frequency (LLRF) control library. Developed at DSESY for the  FLASH/XFEL project.
+Description: Low Level Radio Frequency (LLRF) control library. Developed at DESY for the  FLASH/XFEL project.
 
