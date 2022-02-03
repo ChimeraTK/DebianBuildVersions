@@ -1,8 +1,8 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/llrfCtrl_config.git
+SourceURI: https://gitlab.desy.de/msk-sw/utilities/config-generator/config-generator-scripts.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
-License: desy_internal
-Target-repositories: intern
+License: lgpl3
+Target-repositories: intern pub
 
 Has-packages: extra
 
@@ -13,6 +13,6 @@ Dependencies-extra: git, python3, python3-mako
 
 Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
 
-Description-extra: Configuration generator for the DESY low-level RF related servers.
+Description-extra: Config Generator script package, for MSK server auto-configuration
 
 Provides-extra: doocs-llrfctrlconfig-generator
