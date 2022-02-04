@@ -1,0 +1,21 @@
+Source: doocs-dcm-ctrl-config
+Priority: extra
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2), doocs-llrfctrlconfig-generator02-01 (= 02.01focal1.03-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_dcm-config.git
+
+Package: doocs-dcm-ctrl-config07-01
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, doocs-llrfctrlconfig-generator02-01
+Description: Configuration generator for the dcm server.
+
