@@ -1,5 +1,5 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_dcm-config.git
-Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
@@ -12,5 +12,7 @@ Dependencies: debhelper cmake python3 python3-mako doocs-llrfctrlconfig-generato
 Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
 
 Package-name-extra: doocs-dcm-ctrl-config#debversion#
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
 
 Description-extra: Configuration generator for the dcm server.
