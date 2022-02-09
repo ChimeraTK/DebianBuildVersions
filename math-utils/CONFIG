@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/math-utils.git
+SourceURI: https://gitlab.desy.de/msk-sw/utilities/libraries/math-utils.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: libs
 License: lgpl3
