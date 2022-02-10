@@ -8,7 +8,7 @@ Has-packages: doocs-bin
 
 Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev doocs-llrfctrlconfig-generator 
 
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-bcm-config#epochdashversion#, doocs-llrfctrlconfig-generator02-01, python3-mtca4upy, python3-numpy, doocstools
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-bcm-config#epochdashversion#, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#, python3-mtca4upy, python3-numpy, doocstools
 
 Install-pattern-bin: export/doocs/server/bcm_server/*
 
