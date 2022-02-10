@@ -1,0 +1,34 @@
+Source: libopen62541
+Priority: extra
+Maintainer: Klaus Zenker (HZDR) <k.zenker@hzdr.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), python3-dev (= 3.8.2-0ubuntu2), git (= 1:2.25.1-1ubuntu3.2), ca-certificates (= 20210119~20.04.2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/open62541-interface
+
+Package: libopen625411-2-focal1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OPC-UA implementation open62541. See https://github.com/open62541/open62541
+
+Package: libopen62541-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libopen625411-2-focal1, 
+Description: Header and config files for OPC-UA implementation open62541. See https://github.com/open62541/open62541
+
