@@ -13,6 +13,9 @@ Has-packages: dev lib doc bin
 Dependencies: doxygen graphviz libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev libexprtk-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libchimeratk-cppext-dev
 
+#Dependencies for a binary package 'chimeratk-deviceaccess-lmap-editor'. It MUST be a coma-separated list (not space separated). Probably reaso is that it used dirrectly by dpkg, not a Python.#
+Dependencies-bin: python3-lxml , python3-pyqt5
+
 Package-name-bin: chimeratk-deviceaccess-lmap-editor
 
 Recommends-dev: #Package-name-doc#
