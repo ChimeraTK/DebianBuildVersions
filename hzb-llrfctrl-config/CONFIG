@@ -1,0 +1,22 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/hzb-llrfctrl-config.git
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako doocs-llrfctrlconfig-generator
+Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
+
+Package-name-extra: hzb-llrfctrl-config#debversion#
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
+
+Description-extra: Configuration generator for the LLRF diagnostic servers.
+
+Provides-extra: doocs-llrfctrl-config#debversion#
+Conflicts-extra: doocs-llrfctrl-config#debversion#
+Replaces-extra: doocs-llrfctrl-config#debversion#
