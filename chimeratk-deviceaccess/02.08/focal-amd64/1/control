@@ -55,6 +55,6 @@ Recommends:
 Suggests: 
 Enhances: libchimeratk-deviceaccess02-08-focal1
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-lxml , python3-pyqt5
 Description: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
 
