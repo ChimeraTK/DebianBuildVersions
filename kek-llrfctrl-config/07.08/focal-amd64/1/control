@@ -1,0 +1,21 @@
+Source: kek-llrfctrl-config
+Priority: extra
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2), screen (= 4.8.0-1ubuntu0.1), doocs-llrfctrlconfig-generator02-02 (= 02.02focal1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/kek-llrfctrl-config.git
+
+Package: kek-llrfctrl-config07-08
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfctrl-config07-08
+Replaces: doocs-llrfctrl-config07-08
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrl-config07-08
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, doocs-llrfctrlconfig-generator02-02
+Description: Configuration for the llrfctrl-servers at KEK.
+
