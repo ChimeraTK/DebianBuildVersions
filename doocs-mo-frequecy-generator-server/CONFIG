@@ -1,0 +1,15 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/master-oscillator/mo-synth-generic-server-config.git
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator
+Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev# doocs-generic-chimeratk-server#epochdashversion#
+
+Provides-bin: doocs-mo-frequecy-generator-server 
+Conflicts-bin: doocs-mo-frequecy-generator-server 
+
+Description-bin: mo generator 1300 server.
