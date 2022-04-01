@@ -1,0 +1,21 @@
+Source: doocs-generic-chimeratk-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 02.07focal1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.03focal7.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.03focal6.00-0), dev-doocs-libgul14 (= 21.12.1-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/GenericDeviceServer.git
+
+Package: doocs-generic-chimeratk-server01-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-generic-chimeratk-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-generic-chimeratk-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-03-focal6
+Description: Chimeratk generic DOOCS server.
+
