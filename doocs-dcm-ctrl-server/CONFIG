@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_dcm.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/dcm-server/dcm-server.git
 Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
 Section: net
 License: desy_internal
