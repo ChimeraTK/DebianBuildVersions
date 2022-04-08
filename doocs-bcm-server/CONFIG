@@ -1,4 +1,4 @@
-SourceURI: https://mcs-gitlab.desy.de/controls-and-operation/particle-beam-diagnostics/bunch-compression-measurement/bcm-server.git
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/bcm/bcm-server.git
 Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
 Section: net
 License: lgpl3
