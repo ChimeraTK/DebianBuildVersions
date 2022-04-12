@@ -1,6 +1,6 @@
 SourceURI: https://github.com/ChimeraTK/DeviceAccess-PythonBindings
 
-Maintainer: Geogin Varghese <geogin.varghese@desy.de>
+Maintainer: Christian Willner <christian.willner@desy.de>
 Section: utils
 License: lgpl3
 Target-repositories: intern pub
