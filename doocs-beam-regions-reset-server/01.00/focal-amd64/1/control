@@ -1,0 +1,21 @@
+Source: doocs-beam-regions-reset-server
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 02.08focal1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.04focal1.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.04focal1.00-0), doocs-beam-regions-reset-server-config01-00 (= 01.00focal1.00-0), doocs-llrfctrlconfig-generator02-02 (= 02.02focal1.00-0), dev-doocs-libgul14 (= 21.12.1-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/beam-regions-reset-server
+
+Package: doocs-beam-regions-reset-server01-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-beam-regions-reset-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-beam-regions-reset-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-beam-regions-reset-server-config01-00
+Description: Middle-layer server resetting the beam regions setpoint tables to flat tables in the llrfctrl server. Note: This server is considered a TEMOPRARY solution.
+
