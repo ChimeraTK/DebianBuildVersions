@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin extra
 
-Dependencies:  libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev doocs-ulog-ctrl-config#epochdashversion# libboost-test-dev doocs-llrfctrlconfig-generator
+Dependencies:  libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev doocs-ulog-ctrl-config#epochdashversion# libboost-test-dev doocs-llrfctrlconfig-generator python3-mtca4upy
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ulog-ctrl-config#epochdashversion#, ulog-ctrl-server-udev-rules
 
