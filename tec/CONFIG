@@ -1,5 +1,5 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/common/tec.git
-Maintainer: Pawel Predki <pawel.predki@desy.de>
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-library.git
+Maintainer: Jens Georg <jgeorg@desy.de>
 Section: libs
 License: desy_internal
 Target-repositories: intern
