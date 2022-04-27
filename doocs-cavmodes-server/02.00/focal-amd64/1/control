@@ -1,0 +1,21 @@
+Source: doocs-cavmodes-server
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: dev-doocs-clientlib (= 21.12.1-focal1), dev-doocs-serverlib (= 21.12.1-focal1), dev-doocs-doocsdapilib (= 21.12.1-focal1), libzmq3-dev (= 4.3.2-2ubuntu1), libamtfdbaccess-dev (= 02.09focal1.00-0), libcavitysectionlocation-dev (= 00.01focal9.05-0), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1), libfftw3-dev (= 3.3.8-2ubuntu1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: http://doocs-git.desy.de/cgit/doocs/server/rf/cavmod.git
+
+Package: doocs-cavmodes-server02-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-cavmodes-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-cavmodes-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for cavity fundamental mode tests at AMTF
+
