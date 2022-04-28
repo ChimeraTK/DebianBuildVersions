@@ -1,0 +1,15 @@
+SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mod_perf.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libcavitysectionlocation-dev libzmq3-dev libamtfdbaccess-dev pkg-config libtirpc-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+
+Provides-bin: doocs-modperf-server
+Conflicts-bin: doocs-modperf-server
+
+Description-bin: DOOCS server for vector sum regulation performance measurement during AMTF testing.
