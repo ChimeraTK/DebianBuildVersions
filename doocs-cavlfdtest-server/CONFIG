@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libzmq3-dev libamtfdbaccess-dev pkg-config libtirpc-dev
+Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib libcavitysectionlocation-dev libzmq3-dev libamtfdbaccess-dev pkg-config libtirpc-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-cavlfdtest-server
