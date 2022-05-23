@@ -1,4 +1,4 @@
-SourceURI: git@doocs-git.desy.de:doocs/server/motor/ChimeraTK_StepperMotor.git
+SourceURI: https://github.com/ChimeraTK/StepperMotor-config.git
 Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
 Section: net
 License: desy_internal
