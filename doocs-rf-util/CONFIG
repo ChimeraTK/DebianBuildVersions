@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/util.git
+SourceURI: https://gitlab.desy.de/msk-sw/utilities/libraries/rf-util-lib.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: libs
 License: desy_internal
