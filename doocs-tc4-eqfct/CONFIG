@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/common/tc4eqfct.git
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tc4/tc4eqfct.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal
