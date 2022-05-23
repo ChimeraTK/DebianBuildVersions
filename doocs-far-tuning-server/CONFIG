@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/far_tuning.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/far-tuning/far-tuning-server.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
