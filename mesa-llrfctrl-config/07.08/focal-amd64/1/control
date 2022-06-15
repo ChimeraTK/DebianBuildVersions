@@ -6,7 +6,7 @@ Standards-Version: 3.8.3
 Section: libs
 Homepage: git@gitlab.desy.de:msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/mesa-llrfctrl-config.git
 
-Package: kek-llrfctrl-config07-08
+Package: mesa-llrfctrl-config07-08
 Section: net
 Architecture: amd64
 Conflicts: doocs-llrfctrl-config07-08
