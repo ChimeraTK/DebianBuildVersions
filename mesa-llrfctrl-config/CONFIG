@@ -11,7 +11,7 @@ package-name-contains-buildversion: 0
 Dependencies: debhelper cmake python3 python3-mako screen doocs-llrfctrlconfig-generator
 Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
 
-Package-name-extra: kek-llrfctrl-config#debversion#
+Package-name-extra: mesa-llrfctrl-config#debversion#
 
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
 
