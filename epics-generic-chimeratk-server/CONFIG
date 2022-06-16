@@ -14,5 +14,5 @@ Override-auto-configure-flags: -DADAPTER=EPICSIOC
 Provides-bin: epics-generic-chimeratk-server
 Conflicts-bin: epics-generic-chimeratk-server
 
-Description-bin: ChimeraTK server, publishing firmware registers directly to control system
+Description-bin: ChimeraTK-based EPICS server, to expose registers of any firmware directly to the control system.
 
