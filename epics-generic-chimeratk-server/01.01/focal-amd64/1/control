@@ -1,0 +1,21 @@
+Source: epics-generic-chimeratk-server
+Priority: extra
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 02.08focal3.00-0), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 01.02focal21.05-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.04focal3.00-0), dev-doocs-libgul14 (= 22.5.0-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/GenericDeviceServer.git
+
+Package: epics-generic-chimeratk-server01-01-focal1
+Section: net
+Architecture: amd64
+Conflicts: epics-generic-chimeratk-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-generic-chimeratk-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, libchimeratk-deviceaccess-doocsbackend01-04-focal3
+Description: ChimeraTK server, publishing firmware registers directly to control system
+
