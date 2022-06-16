@@ -1,0 +1,18 @@
+SourceURI: https://github.com/ChimeraTK/GenericDeviceServer.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14
+Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#
+
+Override-auto-configure-flags: -DADAPTER=EPICSIOC
+
+Provides-bin: epics-generic-chimeratk-server
+Conflicts-bin: epics-generic-chimeratk-server
+
+Description-bin: ChimeraTK server, publishing firmware registers directly to control system
+
