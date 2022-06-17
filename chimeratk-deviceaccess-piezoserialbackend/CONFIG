@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/DeviceAccess-PiezoSerialBackend.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-serial-backend.git
 Maintainer: Filip Makowski <filip.makowski@desy.de>
 Section: libs
 License: lgpl3

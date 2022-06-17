@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/msk/tmcb_library.git
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tmcb/tmcb-library.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: libs
 License: desy_internal
