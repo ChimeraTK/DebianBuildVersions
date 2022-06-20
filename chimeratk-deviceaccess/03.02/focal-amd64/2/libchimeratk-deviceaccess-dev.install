@@ -1,0 +1,6 @@
+usr/bin/*-config
+usr/lib/lib*.so
+usr/include/*
+usr/share/cmake*
+usr/share/pkgconfig
+usr/share/pkgconfig/*
