@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/cavity_section_location.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/cavity-section-location.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal
