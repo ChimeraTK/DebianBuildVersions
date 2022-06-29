@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/laserlock.git
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-locking/laser-locking-server.git
 Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Section: net
 License: desy_internal
