@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrf_psm-config.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/psm/psm-config.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal
