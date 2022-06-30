@@ -1,4 +1,4 @@
-SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/master-oscillator/mo-synth-generic-server-config.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/master-oscillator/flash/mo-synth-generic-server-config.git
 Maintainer: N Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal
@@ -6,10 +6,10 @@ Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator
-Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev# doocs-generic-chimeratk-server#epochdashversion#
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator doocs-generic-chimeratk-server
+Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-generic-chimeratk-server#dependency-debversion-doocs-generic-chimeratk-server#
 
-Provides-bin: doocs-mo-frequecy-generator-server 
-Conflicts-bin: doocs-mo-frequecy-generator-server 
+Provides-bin: mo-synth-generic-server
+Conflicts-bin:mo-synth-generic-server
 
-Description-bin: mo generator 1300 server.
+Description-bin: mo generator server.
