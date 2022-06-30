@@ -7,10 +7,10 @@ Target-repositories: intern
 Has-packages: extra
 
 Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator doocs-generic-chimeratk-server
-Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-generic-chimeratk-server#dependency-debversion-doocs-generic-chimeratk-server# doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
+Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-generic-chimeratk-server#dependency-debversion-doocs-generic-chimeratk-server#, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
 
 
-Package-name-extra: doocs-psm-ctrl-config#debversion#
+Package-name-extra: doocs-mo-frequecy-generator-server#debversion#
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
 
 
