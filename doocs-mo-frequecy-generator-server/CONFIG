@@ -12,4 +12,4 @@ Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#
 Provides-bin: mo-synth-generic-server
 Conflicts-bin:mo-synth-generic-server
 
-Description-bin: mo generator server.
+Description-extra: Configuration generator for the mo-synth-generic-server.
