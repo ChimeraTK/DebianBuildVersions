@@ -27,3 +27,11 @@ shopt -s nullglob
 for a in $DIR/*.sh $DIR/*.py; do
 	chmod +x "$a"
 done
+# special handling for station with two dcm server instances
+DIR=/export/doocs/server/dcm_ctrl_39_server
+if [ -d $DIR ]; then
+	for a in $DIR/*.sh $DIR/*.py; do
+        	chmod +x "$a"
+	done
+fi
+
