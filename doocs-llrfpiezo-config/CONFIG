@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfpiezoctrl-config.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-server-configuration.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
 License: desy_internal
