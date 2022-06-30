@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libDemac.git
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/demac.git
 Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Section: libs
 License: desy_internal
