@@ -4,7 +4,7 @@ Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Build-Depends: pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1), doxygen (= 1.8.17-0ubuntu2), libconsatt-dev (= 00.22focal1.00-0), libboost-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 22.6.1-focal1), dev-doocs-serverlib (= 22.6.1-focal1), libboost-test-dev (= 1.71.0.0ubuntu2), dev-doocs-libgul14 (= 22.6.1-focal1), libzmq3-dev (= 4.3.2-2ubuntu1)
 Standards-Version: 3.8.3
 Section: libs
-Homepage: http://doocs-git.desy.de/cgit/doocs/library/lbsync/libConsatt-Doocs.git
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/consatt-doocs.git
 
 Package: libconsatt-doocs-dev
 Section: libdevel
