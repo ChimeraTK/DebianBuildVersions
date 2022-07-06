@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/lbsync/refmopt.git
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/refm-opt/refm-opt-server.git
 Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
 Section: net
 License: desy_internal
