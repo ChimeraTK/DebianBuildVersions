@@ -1,0 +1,20 @@
+SourceURI: /home/nshehzad/work/configs/mo-fcm-generic-server-config
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator doocs-generic-chimeratk-server
+Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-generic-chimeratk-server#dependency-debversion-doocs-generic-chimeratk-server#
+
+
+Package-name-extra: doocs-mo-frequency-conversion-module-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#
+
+
+Provides-bin: mo-fcm-generic-server
+Conflicts-bin:mo-fcm-generic-server
+
+Description-extra: Configuration generator for the mo-fcm-generic-server.
