@@ -1,0 +1,25 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-fred-server package
+
+#set -e
+
+case "$1" in
+  configure)
+    # continue as normal
+    ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+    exit 0;
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2;
+    exit 0;
+  ;;
+esac
+
+#
+# install the new server
+ln -snf /export/doocs/server/fred_server/fred_server.dist /export/doocs/server/fred_server/fred_server
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+CFGDIR=/usr/share/ConfigGenerator-fred-config-01-07 /usr/share/ConfigGenerator02.02/configureCurrentHost.sh fred
