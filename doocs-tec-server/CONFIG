@@ -1,0 +1,20 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-server.git
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev dev-doocs-libgul14 doocs-llrfctrlconfig-generator libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libtec-applicationmodule-dev config-tec-server#epochdashversion#
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, config-tec-server#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Provides-bin: doocs-tec-server
+Recommends-bin: pcieuni-dkms
+
+Description-bin: DOOCS server for accessing Meerstedter TEC devices
+
+Disable-tests: yes 
