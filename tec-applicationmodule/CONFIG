@@ -1,0 +1,13 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-applicationmodule.git
+Maintainer: Jens Georg <jgeorg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: dev lib
+
+Dependencies: libtec-dev libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev
+Dependencies-dev: libtec-dev libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev
+
+Description-dev: Header and cmake files for TEC controller ApplicationModule
+Description-lib: TEC controller ApplicationModule. Developed at DESY for the  FLASH/XFEL project.
