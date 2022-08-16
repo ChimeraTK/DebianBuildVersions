@@ -1,6 +1,6 @@
 Source: doocs-fred-config
 Priority: extra
-Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2), doocs-llrfctrlconfig-generator02-02 (= 02.02focal1.00-0)
 Standards-Version: 3.8.3
 Section: libs
