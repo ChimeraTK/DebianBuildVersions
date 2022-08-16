@@ -1,5 +1,5 @@
 SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-server-configuration.git
-Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern

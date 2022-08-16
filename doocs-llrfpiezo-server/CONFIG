@@ -1,16 +1,17 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/llrfpiezoctrl.git
-Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/llrf-piezo-server.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
-License: desy_internal
-Target-repositories: intern
+License: lgpl3
+Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: dev-doocs-libgul14 dev-doocs-clientlib dev-doocs-serverlib pkg-config libtirpc-dev dev-doocs-doocsdzmqlib libdoocsllrfwrapper-dev liblua5.2-dev doocs-watchdog-server doocs-llrfpiezo-config#epochdashversion# doocs-llrfctrlconfig-generator
+Dependencies: libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-llrfpiezo-config#epochdashversion# doocs-llrfctrlconfig-generator
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfpiezo-config#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Provides-bin: doocs-llrfpiezo-server
 Conflicts-bin: doocs-llrfpiezo-server
 
 Description-bin: DESY FLASH/XFEL controls package. DOOCS low-level RF piezo control server.
-
