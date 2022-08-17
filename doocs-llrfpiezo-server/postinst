@@ -22,4 +22,4 @@ ln -snf /export/doocs/server/llrfPiezo_server/llrfPiezo_server.dist /export/dooc
 
 #
 # generate and/or update configuration files
-CFGDIR=/usr/share/ConfigGenerator-llrfpiezoctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh llrfpiezo
+CFGDIR=/usr/share/ConfigGenerator-llrfpiezoctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh llrfpiezo4
