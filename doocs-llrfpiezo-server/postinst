@@ -16,10 +16,6 @@ case "$1" in
 	;;
 esac
 
-# 
-# install the new server
-ln -snf /export/doocs/server/llrfPiezo_server/llrfPiezo_server.dist /export/doocs/server/llrfPiezo_server/llrfPiezo_server
-
 #
 # generate and/or update configuration files
 CFGDIR=/usr/share/ConfigGenerator-llrfpiezoctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh llrfpiezo4
