@@ -1,0 +1,21 @@
+Source: doocs-llrfpiezo-config
+Priority: extra
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2), doocs-llrfctrlconfig-generator02-02 (= 02.02focal1.01-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-server-configuration.git
+
+Package: doocs-llrfpiezo-config04-03
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, doocs-llrfctrlconfig-generator02-02
+Description: Configuration generator for the piezo control server.
+
