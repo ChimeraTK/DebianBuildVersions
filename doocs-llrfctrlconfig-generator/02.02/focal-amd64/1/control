@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: doocs-llrfctrlconfig-generator
-Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, ca-certificates
 Description: Config Generator script package, for MSK server auto-configuration
 
