@@ -9,6 +9,6 @@ Has-packages: bin
 Package-name-bin: deploy-tool
 
 Dependencies: libwt-dev libpam0g-dev
-Dependencies-bin: libwt-resources, ansible (>= 5.10)
+Dependencies-bin: libwt-resources, ansible
 
 Description-bin: Web application for deployment of control system servers and firmware
