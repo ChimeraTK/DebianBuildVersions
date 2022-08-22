@@ -1,0 +1,14 @@
+SourceURI: https://gitlab.desy.de/msk-sw/utilities/deploy-tool.git
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: bin
+
+Package-name-bin: deploy-tool
+
+Dependencies: libwt-dev libpam0g-dev
+Dependencies-bin: libwt-resources, ansible (>= 5.10)
+
+Description-bin: Web application for deployment of control system servers and firmware
