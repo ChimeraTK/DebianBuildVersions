@@ -2,7 +2,7 @@ SourceURI: https://gitlab.desy.de/msk-sw/utilities/deploy-tool.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: utils
 License: lgpl3
-Target-repositories: intern
+Target-repositories: pub
 
 Has-packages: bin
 
