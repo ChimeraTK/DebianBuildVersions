@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, libwt-resources, ansible
+Depends: ${shlibs:Depends}, ${misc:Depends}, libwt-resources, ansible, sshpass
 Description: Web application for deployment of control system servers and firmware
 
