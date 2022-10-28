@@ -6,9 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: lib dev
 
-Dependencies: doxygen python3-dev git ca-certificates
+Dependencies: doxygen python3-dev git ca-certificates libmbedtls-dev
 Dependencies-dev:
 
 Description-lib: OPC-UA implementation open62541. See https://github.com/open62541/open62541
 Description-dev: Header and config files for OPC-UA implementation open62541. See https://github.com/open62541/open62541
-
