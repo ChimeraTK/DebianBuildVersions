@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/utility/fred.git
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-server.git
 Maintainer: N Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal

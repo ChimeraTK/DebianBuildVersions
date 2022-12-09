@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/vendor/desy/msk/fred_library.git
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-library.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: utils
 License: gpl3
