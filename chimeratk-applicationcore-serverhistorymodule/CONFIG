@@ -1,0 +1,18 @@
+SourceURI: /home/zenker/sw/chimeraTK/ApplicationCore-ServerHistoryModule
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Package-name-lib: libchimeratk-appicationcore-serverhistorymodule
+Package-name-dev: libchimeratk-appicationcore-serverhistorymodule-dev
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev
+
+Enhances-doc: libchimeratk-applicationcore-dev
+
+Description-dev: Header and cmake files for the ApplicationCore server based history module.
+Description-lib: Provides the server based ApplicaitonCore history module.
