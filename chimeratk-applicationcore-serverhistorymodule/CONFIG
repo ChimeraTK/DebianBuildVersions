@@ -6,8 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Package-name-lib: libchimeratk-appicationcore-serverhistorymodule
-Package-name-dev: libchimeratk-appicationcore-serverhistorymodule-dev
+Package-name-lib: libchimeratk-applicationcore-serverhistorymodule
+Package-name-dev: libchimeratk-applicationcore-serverhistorymodule-dev
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev
