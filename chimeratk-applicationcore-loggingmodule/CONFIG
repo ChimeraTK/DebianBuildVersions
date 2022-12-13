@@ -6,8 +6,8 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Package-name-lib: libchimeratk-appicationcore-loggingmodule
-Package-name-dev: libchimeratk-appicationcore-loggingmodule-dev
+Package-name-lib: libchimeratk-applicationcore-loggingmodule
+Package-name-dev: libchimeratk-applicationcore-loggingmodule-dev
 
 Dependencies: doxygen libchimeratk-applicationcore-dev libboost-filesystem-dev
 Dependencies-dev: libchimeratk-applicationcore-dev libboost-filesystem-dev
