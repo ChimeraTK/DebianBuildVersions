@@ -16,10 +16,10 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-applicationcore-serverhistorymodule, libchimeratk-deviceaccess-dev (>= 03.06focal1), libchimeratk-deviceaccess-dev (<< 03.06focal2)
+Depends: libchimeratk-applicationcore-serverhistorymodule01-00-focal2, libchimeratk-deviceaccess-dev (>= 03.06focal1), libchimeratk-deviceaccess-dev (<< 03.06focal2)
 Description: Header and cmake files for the ApplicationCore server based history module.
 
-Package: libchimeratk-applicationcore-serverhistorymodule
+Package: libchimeratk-applicationcore-serverhistorymodule01-00-focal2
 Section: libs
 Architecture: amd64
 Conflicts: 

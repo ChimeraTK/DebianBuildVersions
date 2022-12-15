@@ -16,10 +16,10 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-applicationcore-loggingmodule, libchimeratk-applicationcore-dev (>= 03.00focal2), libchimeratk-applicationcore-dev (<< 03.00focal3), libboost-filesystem-dev (= 1.71.0.0ubuntu2)
+Depends: libchimeratk-applicationcore-loggingmodule01-00-focal2, libchimeratk-applicationcore-dev (>= 03.00focal2), libchimeratk-applicationcore-dev (<< 03.00focal3), libboost-filesystem-dev (= 1.71.0.0ubuntu2)
 Description: Header and cmake files for the ApplicationCore logging module.
 
-Package: libchimeratk-applicationcore-loggingmodule
+Package: libchimeratk-applicationcore-loggingmodule01-00-focal2
 Section: libs
 Architecture: amd64
 Conflicts: 
