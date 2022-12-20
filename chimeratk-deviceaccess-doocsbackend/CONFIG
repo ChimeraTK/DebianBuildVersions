@@ -4,15 +4,17 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev-noheader lib
+Has-packages: dev-noheader-dynload lib dynload
 
 Disable-tests: yes
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-server-test-helper-dev dev-doocs-libgul14 libxml++2.6-dev libtirpc-dev pkg-config libzmq3-dev
-Dependencies-dev: libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib
+Dependencies-dev: libchimeratk-deviceaccess dev-doocs-clientlib dev-doocs-serverlib
+Dependencies-dynload: libchimeratk-deviceaccess#dependency-debversion-libchimeratk-deviceaccess#
 
 #Hack to quickly get pkgconfig deployed before all projects have been released with it.
 Install-additional-pattern-dev: usr/share/pkgconfig/*
 
 Description-dev: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.
 Description-lib: libchimeratk-deviceaccess-doocsbackend provides the DOOCS backend for the ChimeraTK DeviceAccess library, which allows accessing DOOCS servers as devices through the DeviceAccess interface.
+Description-dynload: Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies.
