@@ -4,13 +4,12 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev-noheader-dynload lib dynload
+Has-packages: dev-noheader-dynload lib
 
 Disable-tests: yes
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib libboost-test-dev libdoocs-server-test-helper-dev dev-doocs-libgul14 libxml++2.6-dev libtirpc-dev pkg-config libzmq3-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev dev-doocs-clientlib dev-doocs-serverlib
-Dependencies-dynload: libchimeratk-deviceaccess (= #dependency-soversion-libchimeratk-deviceaccess#-0)
 
 #Hack to quickly get pkgconfig deployed before all projects have been released with it.
 Install-additional-pattern-dev: usr/share/pkgconfig/*
