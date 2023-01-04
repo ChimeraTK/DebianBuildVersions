@@ -4,7 +4,7 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev lib
+Has-packages: dev-noheader-dynload lib
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test-dev libmodbus-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev libmodbus-dev
