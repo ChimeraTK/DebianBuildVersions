@@ -8,20 +8,23 @@ project: ChimeraTK-DeviceAccess
 
 Disable-tests: yes
 
-Has-packages: dev lib doc bin
+Has-packages: dev lib doc bin extra
 
 Dependencies: doxygen graphviz libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev libexprtk-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libchimeratk-cppext-dev
+Dependencies-extra: #Package-name-lib#
 
 #Dependencies for a binary package 'chimeratk-deviceaccess-lmap-editor'. It MUST be a coma-separated list (not space separated). Probably reaso is that it used dirrectly by dpkg, not a Python.#
 Dependencies-bin: python3-lxml , python3-pyqt5
 
 Package-name-bin: chimeratk-deviceaccess-lmap-editor
+Package-name-extra: libchimeratk-deviceaccess
 
 Recommends-dev: #Package-name-doc#
 Enhances-doc: #Package-name-dev#
 Suggests-lib: #Package-name-bin#
 Enhances-bin: #Package-name-lib#
+Enhances-extra: #Package-name-lib#
 
 Install-pattern-bin: usr/bin/chimeratk-lmap-editor
 
@@ -32,3 +35,4 @@ Description-dev: Header and cmake files for libchimeratk-deviceaccess. The files
 Description-lib: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
 Description-doc: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
 Description-bin: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
+Description-extra: Meta-package to declare dependencies to a package without version numbers in the name, which is not the dev-package.

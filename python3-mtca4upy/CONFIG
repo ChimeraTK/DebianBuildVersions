@@ -7,6 +7,7 @@ Target-repositories: intern pub
 
 #The dev package is handled as extra because it does not depend on a lib package
 Has-packages: python 
+Use-dynload: python
 
 #Currently tests are written against the dummy driver, which is not available in pbuilder
 Disable-tests: yes
