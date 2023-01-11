@@ -2,7 +2,7 @@ Format: http://dep.debian.net/deps/dep5
 Source: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/llrfctrl-config.git
 
 Files: *
-Copyright: 2022 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
+Copyright: 2023 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
 License: LGPL-3+
 
 License: LGPL-3+
