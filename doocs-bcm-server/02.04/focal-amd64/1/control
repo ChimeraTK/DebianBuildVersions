@@ -1,0 +1,21 @@
+Source: doocs-bcm-server
+Priority: extra
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Build-Depends: pkg-config (= 0.29.1-0ubuntu4), dev-doocs-clientlib (= 22.11.0-focal1), dev-doocs-serverlib (= 22.11.0-focal1), dev-doocs-doocstiminglib (= 22.11.0-focal1), doocs-watchdog-server (= 22.11.0-focal4), libchimeratk-deviceaccess-dev (= 03.07focal1.01-0), libchimeratk-applicationcore-dev (= 03.00focal4.02-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.07focal5.00-0), libchimeratk-controlsystemadapter-opcuaadapter-dev (= 03.01focal7.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.04focal15.02-0), libmath-utils-dev (= 03.00focal1.01-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2), libboost-log-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), doocs-llrfctrlconfig-generator02-02 (= 02.02focal1.01-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/special-diagnostics/bcm/bcm-server.git
+
+Package: doocs-bcm-server02-04-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-bcm-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-bcm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-bcm-config02-04, doocs-llrfctrlconfig-generator02-02, python3-mtca4upy, python3-numpy, doocstools
+Description: DOOCS server for Bunch Compression Monitor at XFEL and FLASH, based on ChimeraTK
+
