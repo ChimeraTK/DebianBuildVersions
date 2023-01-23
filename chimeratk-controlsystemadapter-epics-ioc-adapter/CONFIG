@@ -9,7 +9,9 @@ Has-packages: dev-noheader lib
 Dependencies: doxygen libchimeratk-controlsystemadapter-dev libreadline-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev
 
-Description-dev: Header and cmake files for the EPICS IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
-Description-lib: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+Description-dev: Header and cmake files for the EPICS R3.16 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
+Description-lib: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS R3.16 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R3.16 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+
+Override-auto-configure-flags: -DEPICS_VERSION="3"
 
 Install-additional-pattern-dev: usr/share/ChimeraTK-ControlSystemAdapter-EPICS-IOC-Adapter/*
