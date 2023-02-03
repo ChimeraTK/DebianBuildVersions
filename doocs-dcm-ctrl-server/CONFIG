@@ -6,8 +6,8 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev doxygen graphviz libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev doocs-watchdog-server libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-dcm-ctrl-config#epochdashversion# doocs-llrfctrlconfig-generator
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, python3-mtca4upy, python3-numpy, doocs-dcm-ctrl-config#epochdashversion#, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator# 
+Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib libchimeratk-deviceaccess-dev doxygen graphviz libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev doocs-watchdog-server libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev doocs-dcm-ctrl-config#epochdashversion# config-generator-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, python3-mtca4upy, python3-numpy, doocs-dcm-ctrl-config#epochdashversion#, config-generator-scripts#dependency-epochdashversion-config-generator-scripts# 
 
 Provides-bin: doocs-dcm-ctrl-server
 Conflicts-bin: doocs-dcm-ctrl-server, doocs-dcm-ctrl-xfel-server

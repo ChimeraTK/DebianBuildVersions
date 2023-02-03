@@ -8,8 +8,8 @@ Has-packages: extra
 
 package-name-contains-buildversion: 0
 
-Dependencies: debhelper cmake python3 python3-mako doocs-llrfctrlconfig-generator
-Dependencies-extra: git, python3, python3-mako, doocs-llrfctrlconfig-generator#dependency-epochdashversion-doocs-llrfctrlconfig-generator#
+Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#
 
 Package-name-extra: doocs-dcm-ctrl-config#debversion#
 
