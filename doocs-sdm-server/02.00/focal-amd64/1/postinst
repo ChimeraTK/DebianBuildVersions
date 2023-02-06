@@ -1,0 +1,23 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-bam-server package
+
+set -e
+
+case "$1" in
+    configure)
+        # continue as normal
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0;
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
+esac
+
+# Linking this here so the executable name in package can be set to the base one so that the instance handling does not break in the config generator
+ln -snf /usr/bin/tec_server /usr/bin/sdm_server
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+CFGDIR=/usr/share/ConfigGenerator-sdm-config-02-00 /usr/share/ConfigGenerator02.02/configureCurrentHost.sh sdm

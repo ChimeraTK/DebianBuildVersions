@@ -1,0 +1,4 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-bam-server package
+
+

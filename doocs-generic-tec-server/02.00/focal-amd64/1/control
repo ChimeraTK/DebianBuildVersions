@@ -1,0 +1,21 @@
+Source: doocs-generic-tec-server
+Priority: extra
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: libtirpc-dev (= 1.2.5-1ubuntu0.1), pkg-config (= 0.29.1-0ubuntu4), libboost-dev (= 1.71.0.0ubuntu2), libboost-thread-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 22.11.0-focal1), dev-doocs-serverlib (= 22.11.0-focal1), doocs-watchdog-server (= 22.11.0-focal4), libchimeratk-deviceaccess-dev (= 03.07focal1.01-0), dev-doocs-libgul14 (= 22.11.0-focal1), libchimeratk-deviceaccess-dev (= 03.07focal1.01-0), libchimeratk-applicationcore-dev (= 03.00focal4.02-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.07focal5.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.04focal15.02-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), libtec-applicationmodule-dev (= 02.00focal1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-server.git
+
+Package: doocs-generic-tec-server02-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-tec-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-generic-tec-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for accessing Meerstedter TEC devices
+
