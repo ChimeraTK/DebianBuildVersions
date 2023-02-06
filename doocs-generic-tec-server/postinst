@@ -16,8 +16,10 @@ case "$1" in
         ;;
 esac
 
-# Linking this here so the executable name in package can be set to the base one so that the instance handling does not break in the config generator
-ln -snf /usr/bin/tec_server /usr/bin/sdm_server
+#
+# install the new server
+#ln -snf /export/doocs/server/tec_server/bin/tec_server /export/doocs/server/tec_server/tec_server
+
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-sdm-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh sdm
+#CFGDIR=/usr/share/ConfigGenerator-tec-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh tec
