@@ -20,4 +20,4 @@ esac
 ln -snf /usr/bin/tec_server /usr/bin/sdm_server
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-sdm-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh sdm
+CFGDIR=/usr/share/ConfigGenerator-sdm-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh sdm
