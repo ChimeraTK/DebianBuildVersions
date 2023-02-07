@@ -11,8 +11,8 @@ package-name-contains-buildversion: 0
 Dependencies: debhelper cmake python3 python3-mako
 Dependencies-extra: git, python3, python3-mako, ca-certificates
 
-Package-name-extra: doocs-llrfctrlconfig-generator#debversion#
+Package-name-extra: config-generator-scripts#debversion#
 
 Description-extra: Config Generator script package, for MSK server auto-configuration
 
-Provides-extra: doocs-llrfctrlconfig-generator
+Provides-extra: config-generator-scripts

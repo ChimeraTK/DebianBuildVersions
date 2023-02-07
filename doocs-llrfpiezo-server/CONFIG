@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-llrfpiezo-config#epochdashversion# doocs-llrfctrlconfig-generator
+Dependencies: libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-llrfpiezo-config#epochdashversion# config-generator-scripts
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfpiezo-config#epochdashversion#
 
 Override-auto-configure-flags: -DADAPTER=DOOCS

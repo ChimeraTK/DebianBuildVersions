@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev doocs-steppermotor-config#epochdashversion# doocs-llrfctrlconfig-generator
+Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev doocs-steppermotor-config#epochdashversion# config-generator-scripts
 Dependencies-bin: pcieuni-dkms, python3-mtca4upy, doocs-steppermotor-config#epochdashversion#
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC

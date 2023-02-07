@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev dev-doocs-libgul14 config-optical-switch-server#epochdashversion# doocs-llrfctrlconfig-generator libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev dev-doocs-libgul14 config-optical-switch-server#epochdashversion# config-generator-scripts libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, config-optical-switch-server#epochdashversion#
 

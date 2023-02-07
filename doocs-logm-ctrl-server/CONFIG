@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config libtirpc-dev dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libdoocs-rf-util-dev doocs-logm-ctrl-config#epochdashversion# doocs-llrfctrlconfig-generator
+Dependencies: pkg-config libtirpc-dev dev-doocs-clientlib dev-doocs-serverlib libdaction-dev doocs-watchdog-server libchimeratk-deviceaccess-dev libdoocs-rf-util-dev doocs-logm-ctrl-config#epochdashversion# config-generator-scripts
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-logm-ctrl-config#epochdashversion#
 
 Provides-bin: doocs-logm-ctrl-server

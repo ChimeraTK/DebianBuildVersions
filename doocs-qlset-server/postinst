@@ -43,4 +43,4 @@ fi
 cp -a /export/doocs/server/qlset_server/qlset_server.dist /export/doocs/server/qlset_server/qlset_server
 
 # generate and/or update configuration files
-CFGDIR=/usr/share/ConfigGenerator-qlset-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh qlset
+CFGDIR=/usr/share/ConfigGenerator-qlset-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh qlset

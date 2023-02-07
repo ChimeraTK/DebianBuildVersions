@@ -22,4 +22,4 @@ ln -snf /export/doocs/server/bam_server/bam_server.dist /export/doocs/server/bam
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-bam-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh bam
+CFGDIR=/usr/share/ConfigGenerator-bam-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh bam

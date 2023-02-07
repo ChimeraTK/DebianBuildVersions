@@ -22,4 +22,4 @@ ln -snf /export/doocs/server/fred_server/fred_server.dist /export/doocs/server/f
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-fred-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-doocs-llrfctrlconfig-generator#/configureCurrentHost.sh fred
+CFGDIR=/usr/share/ConfigGenerator-fred-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh fred
