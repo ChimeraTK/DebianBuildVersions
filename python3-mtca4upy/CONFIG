@@ -9,9 +9,6 @@ Target-repositories: intern pub
 Has-packages: python 
 Use-dynload: python
 
-#Currently tests are written against the dummy driver, which is not available in pbuilder
-Disable-tests: yes
-
 Override-auto-configure-flags: "-DPYTHON3=True"
 
 Dependencies: libchimeratk-deviceaccess-dev python3-numpy libboost-python-dev libboost-numpy-dev libboost-test-dev python3-dev lsb-release
