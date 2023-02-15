@@ -2,7 +2,7 @@ Format: http://dep.debian.net/deps/dep5
 Source: https://github.com/ChimeraTK/DeviceAccess-DoocsBackend
 
 Files: *
-Copyright: 2022 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
+Copyright: 2023 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
 License: LGPL-3+
 
 License: LGPL-3+
