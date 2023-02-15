@@ -4,7 +4,7 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev-noheader lib
+Has-packages: lib
 
 Disable-tests: yes
 
