@@ -1,19 +1,21 @@
-SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/SDM/sdm-server-configuration.git
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/SDM/sdm-server.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
-Has-packages: extra
+Has-packages: doocs-bin
 
-package-name-contains-buildversion: 0
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libtec-applicationmodule-dev dev-doocs-libgul14 libchimeratk-controlsystemadapter-doocsadapter-dev doocs-sdm-config#epochdashversion# config-generator-scripts libzmq3-dev libmath-utils-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-sdm-config#epochdashversion#
+Install-pattern-bin: export/doocs/server/sdm_server/*
 
-Dependencies: debhelper cmake python3 python3-mako config-generator-scripts doocs-generic-tec-server
-Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-tec-server#dependency-debversion-doocs-generic-tec-server#
+Provides-bin: doocs-sdm-server
+Conflicts-bin: doocs-sdm-server
+Recommends-bin: pcieuni-dkms
 
-Package-name-extra: doocs-sdm-server#debversion#
-Conflicts-extra: doocs-sdm-config
+Override-auto-configure-flags: -DADAPTER=DOOCS
 
-Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+Description-bin: DOOCS server for Special Diagnostic Module
 
-Description-extra: Configuration generator for the sdm (Special Diagnostic Module) server.
+Disable-tests: yes 
