@@ -1,5 +1,5 @@
 SourceURI: https://github.com/ChimeraTK/FirmwareProgrammer
-Maintainer: Piotr Perek <piotr.perek@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: utils
 License: lgpl3
 Target-repositories: intern pub
