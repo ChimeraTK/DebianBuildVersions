@@ -15,5 +15,4 @@ Package-name-extra: config-generator-scripts#debversion#
 
 Description-extra: Config Generator script package, for MSK server auto-configuration
 
-Provides-extra: config-generator-scripts, doocs-llrfctrlconfig-generator02-02
-Conflicts-extra: doocs-llrfctrlconfig-generator02-02
+Provides-extra: config-generator-scripts
