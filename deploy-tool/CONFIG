@@ -8,7 +8,7 @@ Has-packages: bin
 
 Package-name-bin: deploy-tool
 
-Dependencies: libwt-dev libpam0g-dev
+Dependencies: libwt-dev libpam0g-dev libinja-dev
 Dependencies-bin: libwt-resources, ansible, sshpass
 
 Description-bin: Web application for deployment of control system servers and firmware
