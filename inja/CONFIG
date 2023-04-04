@@ -1,0 +1,12 @@
+SourceURI: https://github.com/pantor/inja
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: mit
+Target-repositories: intern pub
+
+Has-packages: dev-alien-headeronly
+
+Dependencies: cmake
+Dependencies-dev: cmake
+
+Description-dev: Inja is a template engine for modern C++, loosely inspired by jinja for python.
