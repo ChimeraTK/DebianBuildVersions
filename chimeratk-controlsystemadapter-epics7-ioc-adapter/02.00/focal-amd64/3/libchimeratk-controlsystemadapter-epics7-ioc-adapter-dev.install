@@ -1,0 +1,5 @@
+usr/bin/*-config
+@LIBDIR@/lib*.so
+@LIBDIR@/cmake/*
+usr/share/pkgconfig
+usr/share/ChimeraTK-ControlSystemAdapter-EPICS7-IOC-Adapter/*
