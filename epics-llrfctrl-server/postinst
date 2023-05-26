@@ -17,5 +17,5 @@ case "$1" in
 esac
 
 #
-# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh llrfctrl6-epics
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script- not done for epics version
+# CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh llrfctrl6-epics

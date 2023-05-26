@@ -1,13 +1,13 @@
 SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrfctrl-server.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
-License: desy_internal
+License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
 
-Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev libmath-utils-dev doocs-llrfctrl-config#epochdashversion# config-generator-scripts libchimeratk-applicationcore-microdaq-dev
-Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy, doocs-llrfctrl-config#epochdashversion#
+Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libhdf5-serial-dev libmath-utils-dev libchimeratk-applicationcore-microdaq-dev
+Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
 
