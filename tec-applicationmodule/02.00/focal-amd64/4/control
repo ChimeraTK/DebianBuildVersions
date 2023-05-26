@@ -1,0 +1,34 @@
+Source: libtec-applicationmodule
+Priority: extra
+Maintainer: Jens Georg <jgeorg@desy.de>
+Build-Depends: libtec-dev (= 02.00focal9.03-0), libchimeratk-deviceaccess-dev (= 03.10focal1.00-0), libchimeratk-applicationcore-dev (= 03.02focal1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-applicationmodule.git
+
+Package: libtec-applicationmodule-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libtec-applicationmodule02-00-focal4, libtec-dev (>= 02.00focal9), libtec-dev (<< 02.00focal10), libchimeratk-deviceaccess-dev (>= 03.10focal1), libchimeratk-deviceaccess-dev (<< 03.10focal2), libchimeratk-applicationcore-dev (>= 03.02focal1), libchimeratk-applicationcore-dev (<< 03.02focal2)
+Description: Header and cmake files for TEC controller ApplicationModule
+
+Package: libtec-applicationmodule02-00-focal4
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TEC controller ApplicationModule. Developed at DESY for the  FLASH/XFEL project.
+
