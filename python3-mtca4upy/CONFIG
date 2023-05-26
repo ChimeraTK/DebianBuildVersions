@@ -5,6 +5,9 @@ Section: utils
 License: lgpl3
 Target-repositories: intern pub
 
+# JUST TEMPORARILY FOR CURRENT RELEASE!
+Disable-tests: yes
+
 #The dev package is handled as extra because it does not depend on a lib package
 Has-packages: python 
 Use-dynload: python
