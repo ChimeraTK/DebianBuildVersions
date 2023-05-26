@@ -9,7 +9,7 @@ Use-dynload: bin
 
 Package-name-bin: qthardmon
 
-Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev libqwt-qt5-dev qtbase5-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test-dev libboost-system-dev libboost-filesystem-dev libqwt-qt5-dev qtbase5-dev pkg-config
 
 Description-bin: MTCA4U QtHardMon provides a GUI to access MTCA.4 devices. MTCA4U is a software package which provides divers, a C++ API and tools for hardware monitoring on MicroTCA.4 crates. QtHardMon is a GUI which provides access to the registers on the board (display and modify). It also includes simple plotting functionality.
 
