@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, python3-packaging, config-generator-scripts03-00
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, python3-packaging, python3-simplejson, config-generator-scripts03-00
 Description: Configuration generator for the LLRF controller server.
 
