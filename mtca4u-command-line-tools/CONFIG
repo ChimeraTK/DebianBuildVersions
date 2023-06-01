@@ -17,7 +17,7 @@ Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-system
 #We use the extra package to define the unversioned package with the symlink
 #to the versioned package
 Package-name-extra: mtca4u-command-line-tools
-Dependencies-extra:  #Package-name-bin#
+Dependencies-extra:  #Package-name-bin# (=#package-version#)
 
 Install-pattern-bin: usr/bin/mtca4u-*
 Install-pattern-extra: usr/bin/mtca4u
@@ -25,4 +25,3 @@ Install-pattern-extra: usr/bin/mtca4u
 Description-bin: MTCA4U command line executable with version number in the executable and package name. Like this you can have multiple versions installed and declare dependencies in scripts which use it.
 
 Description-extra: MTCA4U command line tools to read and write from the command line using device aliasses and register names.
-
