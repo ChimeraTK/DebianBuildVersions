@@ -14,6 +14,7 @@ Provides-bin: doocs-ulog-ctrl-server
 Conflicts-bin: doocs-ulog-ctrl-server
 Description-bin: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
 Install-pattern-bin: export
+Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Package-name-extra: ulog-ctrl-server-udev-rules
 Description-extra: Udev rules for uLOG devices
