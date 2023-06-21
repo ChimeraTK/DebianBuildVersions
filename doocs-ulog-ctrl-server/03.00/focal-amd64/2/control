@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: doocs-ulog-ctrl-server
-Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ulog-ctrl-config03-00, ulog-ctrl-server-udev-rules (=03.00focal2.01)
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ulog-ctrl-config03-00, ulog-ctrl-server-udev-rules (=03.00focal2.02)
 Description: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
 
 Package: ulog-ctrl-server-udev-rules
