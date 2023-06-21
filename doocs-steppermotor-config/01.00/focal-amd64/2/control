@@ -1,0 +1,21 @@
+Source: doocs-steppermotor-config
+Priority: extra
+Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1.20.04.1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2.1), config-generator-scripts03-00 (= 03.00focal2.08-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/StepperMotor-config.git
+
+Package: doocs-steppermotor-config01-00
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-00
+Description: Configuration generator for the steppermotor server.
+
