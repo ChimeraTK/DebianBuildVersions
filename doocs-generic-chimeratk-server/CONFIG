@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Use-dynload: bin
 
 Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14
 Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#
