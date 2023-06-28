@@ -1,4 +1,4 @@
-SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-library.git
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-config.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal
