@@ -11,6 +11,9 @@ include /usr/share/dpkg/default.mk
 %:
 	dh $@ --parallel
 
+override_dh_install:
+	./debian/detect_libdir.sh
+	dh_install
 # tests are enabled
 # Override flags for Project if needed.
 override_dh_auto_configure:
