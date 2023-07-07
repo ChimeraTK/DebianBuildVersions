@@ -1,0 +1,34 @@
+Source: libchimeratk-applicationcore-loggingmodule
+Priority: extra
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libchimeratk-applicationcore-dev (= 03.03focal1.00-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ApplicationCore-LoggingModule
+
+Package: libchimeratk-applicationcore-loggingmodule-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-applicationcore-loggingmodule01-01-focal3, libchimeratk-applicationcore-dev (>= 03.03focal1), libchimeratk-applicationcore-dev (<< 03.03focal2), libboost-filesystem-dev (= 1.71.0.0ubuntu2)
+Description: Header and cmake files for the ApplicationCore logging module.
+
+Package: libchimeratk-applicationcore-loggingmodule01-01-focal3
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Provides the server based ApplicaitonCore logging module.
+
