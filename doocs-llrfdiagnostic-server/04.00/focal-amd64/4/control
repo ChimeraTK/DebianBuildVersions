@@ -1,0 +1,21 @@
+Source: doocs-llrfdiagnostic-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 03.03focal1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.09focal2.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.06focal2.00-0), libmath-utils-dev (= 03.01focal1.02-0), dev-doocs-libgul14 (= 23.6.0-focal1), doocs-llrfdiagnostic-config04-00 (= 04.00focal2.03-0), config-generator-scripts03-00 (= 03.00focal2.10-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrf-diagnostics/llrf-diagnostic-server.git
+
+Package: doocs-llrfdiagnostic-server04-00-focal4
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfdiagnostic-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfdiagnostic-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-06-focal2, doocs-llrfdiagnostic-config04-00
+Description: Doocs server for the llrf diagnostic.
+
