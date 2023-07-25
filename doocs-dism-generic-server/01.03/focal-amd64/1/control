@@ -17,5 +17,5 @@ Suggests:
 Enhances: 
 Provides: 
 Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-00, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-06-focal2, doocs-generic-chimeratk-server01-03-focal1
-Description: Configuration generator for the dism-generic-server.
+Description: Configuration generator for the dism-generic-server for flash only.
 

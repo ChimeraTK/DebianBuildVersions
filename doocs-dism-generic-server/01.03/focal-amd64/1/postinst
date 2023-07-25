@@ -18,10 +18,10 @@ esac
 # 
 # install the new server
 # create dir if it doesn't exists.
-mkdir -p foo /export/doocs/server/dism-generic-server
+mkdir -p foo /export/doocs/server/flash-dism-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server01 /export/doocs/server/dism-generic-server/dism-generic-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server01 /export/doocs/server/flash-dism-server/flash-dism-server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 CFGDIR=/usr/share/ConfigGenerator-doocs-flash-dism-server-config-01-03 /usr/share/ConfigGenerator03.00/configureCurrentHost.sh flash-dism-generic-server
