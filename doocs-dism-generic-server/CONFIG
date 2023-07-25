@@ -12,7 +12,7 @@ Dependencies-extra: git, python3, python3-mako, config-generator-scripts#depende
 Package-name-extra: doocs-dism-generic-server#debversion#
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
 
-Provides-bin: dism-generic-server
-Conflicts-bin:dism-generic-server
+Provides-bin: flash-dism-server
+Conflicts-bin:flash-dism-server
 
-Description-extra: Configuration generator for the dism-generic-server.
+Description-extra: Configuration generator for the dism-generic-server for flash only.
