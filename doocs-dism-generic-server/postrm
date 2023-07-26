@@ -2,15 +2,15 @@
 # post remove script for the Debian 
 
 if [ "purge" = "$1" -o "remove" = "$1" ] ; then
-   /export/doocs/server/doocs stop flash-dism-server || true
+   /export/doocs/server/doocs stop flash-dism-generic-server || true
 fi
 
 if [ "purge" = "$1" ] ; then
    # check if this server is in the watchdog
-   INWD=`grep "/server/flash-dism-server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   INWD=`grep "/server/flash-dism-generic-server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
    if [ -n "${INWD}" ] ; then
-      /export/doocs/server/doocs delete flash-dism-server || true
+      /export/doocs/server/doocs delete flash-dism-generic-server || true
    fi
    # remove entire server directory
-   rm -rf /export/doocs/server/flash-dism-server
+   rm -rf /export/doocs/server/flash-dism-generic-server
 fi
