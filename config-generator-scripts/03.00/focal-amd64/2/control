@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: config-generator-scripts
-Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, python3-packaging, ca-certificates
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, python3-packaging, python3-simplejson, ca-certificates
 Description: Config Generator script package, for MSK server auto-configuration
 
