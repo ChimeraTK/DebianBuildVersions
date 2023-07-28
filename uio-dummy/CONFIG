@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/uio-dummy.git
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: kernel
+License: gpl2-only
+Target-repositories: intern
+
+package-name-contains-buildversion: 0
+
+Has-packages: dkms
+
+Dependencies: dkms
+
+Description-dkms: UIO dummy driver module
+
+Dkms-Module-Name: uio-dummy
+Install-pattern-dkms: /etc/udev/rules.d/*
