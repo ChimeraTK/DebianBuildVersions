@@ -1,0 +1,34 @@
+Source: libchimeratk-controlsystemadapter-epics7-ioc-adapter
+Priority: extra
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libchimeratk-controlsystemadapter-dev (= 02.07focal1.00-0), libreadline-dev (= 8.0-4), libyajl-dev (= 2.1.0-3)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
+
+Package: libchimeratk-controlsystemadapter-epics7-ioc-adapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-epics7-ioc-adapter02-00-focal6, libchimeratk-controlsystemadapter-dev (>= 02.07focal1), libchimeratk-controlsystemadapter-dev (<< 02.07focal2), libyajl-dev (= 2.1.0-3)
+Description: Header and cmake files for the EPICS R7.0 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics7-ioc-adapter.
+
+Package: libchimeratk-controlsystemadapter-epics7-ioc-adapter02-00-focal6
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-epics7-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+
