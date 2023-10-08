@@ -1,0 +1,22 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/tarla-llrfctrl-config.git
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako screen config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, screen
+
+Package-name-extra: tarla-llrfctrl-config#debversion#
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Description-extra: Configuration generator for the llrfctrl servers at TARLA.
+
+Provides-extra: tarla-llrfctrl-config#debversion#
+Conflicts-extra: tarla-llrfctrl-config#debversion#
+Replaces-extra: tarla-llrfctrl-config#debversion#
