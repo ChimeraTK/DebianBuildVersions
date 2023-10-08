@@ -1,0 +1,21 @@
+Source: tarla-llrfctrl-config
+Priority: extra
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Build-Depends: debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1.20.04.1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2.1), screen (= 4.8.0-1ubuntu0.1), config-generator-scripts03-00 (= 03.00focal2.11-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/tarla-llrfctrl-config.git
+
+Package: tarla-llrfctrl-config08-04
+Section: net
+Architecture: amd64
+Conflicts: tarla-llrfctrl-config08-04
+Replaces: tarla-llrfctrl-config08-04
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: tarla-llrfctrl-config08-04
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-00, screen
+Description: Configuration generator for the llrfctrl servers at TARLA.
+
