@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/eod/eod-config.git
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
+Dependencies-extra: git, python3, python3-mako 
+
+Conflicts-extra: 
+
+Package-name-extra: doocs-eod-config#debversion#
+
+Description-extra: Configuration generator for the EOD (Electro-optical detector) server.

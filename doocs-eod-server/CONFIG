@@ -1,0 +1,21 @@
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/eod/eod-server.git
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libarmadillo-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev config-generator-scripts python3-mako libpython3.8-stdlib
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-eod-config#epochdashversion#, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, python3-mtca4upy, python3-numpy
+
+Install-pattern-bin: export/doocs/server/eod_server/*
+
+Provides-bin: doocs-eod-server
+Conflicts-bin: doocs-eod-server
+Recommends-bin: pcieuni-dkms
+
+Description-bin: DOOCS server for Electro-optical detector at XFEL and FLASH, based on ChimeraTK
+
+Disable-tests: yes
