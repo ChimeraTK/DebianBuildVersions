@@ -6,13 +6,13 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: libconsatt-apps-dev libconsatt-doocs-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server
+Dependencies: libconsatt-apps-dev libconsatt-doocs-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server pkg-config
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
 
 Provides-bin: doocs-linklock-server
 Conflicts-bin: doocs-linklock-server
 Recommends-bin: pcieuni-dkms
 
-Description-bin: DOOCS server for link locking application for LbSynch 
+Description-bin: DOOCS server for LSU for LbSynch 
 
 Disable-tests: yes
