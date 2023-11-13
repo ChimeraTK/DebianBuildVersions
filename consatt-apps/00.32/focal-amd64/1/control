@@ -1,0 +1,34 @@
+Source: libconsatt-apps
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libconsatt-dev (= 00.27focal1.00-0), libdemac-dev (= 00.34focal1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/consatt-apps.git
+
+Package: libconsatt-apps-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libconsatt-apps00-32-focal1, libdemac-dev (>= 00.34focal1), libdemac-dev (<< 00.34focal2), libconsatt-dev (>= 00.27focal1), libconsatt-dev (<< 00.27focal2)
+Description: Header and cmake files for the ConsattApp Library.
+
+Package: libconsatt-apps00-32-focal1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ConsattApp library for application based on consatt and demac.
+

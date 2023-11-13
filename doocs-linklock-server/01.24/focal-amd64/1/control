@@ -1,0 +1,21 @@
+Source: doocs-linklock-server
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: libconsatt-apps-dev (= 00.32focal1.00-0), libconsatt-doocs-dev (= 00.23focal1.00-0), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 23.9.0-focal1), dev-doocs-serverlib (= 23.9.0-focal1), doocs-watchdog-server (= 23.9.0-focal6), pkg-config (= 0.29.1-0ubuntu4)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/fibre-link-stabilisation/link-lock-server.git
+
+Package: doocs-linklock-server01-24-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-linklock-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-linklock-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for LSU for LbSynch
+
