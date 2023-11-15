@@ -8,7 +8,7 @@ Has-packages: extra
 
 package-name-contains-buildversion: 0
 
-Dependencies: debhelper cmake python3 python3-mako screen config-generator-scripts
+Dependencies: debhelper cmake python3 python3-mako screen config-generator-scripts#dependency-epochdashversion-config-generator-scripts#
 Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, screen
 
 Package-name-extra: hzb-llrfctrl-config#debversion#
@@ -17,6 +17,6 @@ Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#
 
 Description-extra: Configuration generator for the llrfctrl servers at HZB facilities BESSY, HOBICAT and SEALAB.
 
-Provides-extra: doocs-llrfctrl-config#debversion#
-Conflicts-extra: doocs-llrfctrl-config#debversion#
-Replaces-extra: doocs-llrfctrl-config#debversion#
+Provides-extra: hzb-llrfctrl-config#debversion#
+Conflicts-extra: hzb-llrfctrl-config#debversion#
+Replaces-extra: hzb-llrfctrl-config#debversion#
