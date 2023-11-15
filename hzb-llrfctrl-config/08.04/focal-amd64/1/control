@@ -9,13 +9,13 @@ Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-
 Package: hzb-llrfctrl-config08-04
 Section: net
 Architecture: amd64
-Conflicts: doocs-llrfctrl-config08-04
-Replaces: doocs-llrfctrl-config08-04
+Conflicts: hzb-llrfctrl-config08-04
+Replaces: hzb-llrfctrl-config08-04
 Breaks: 
 Recommends: 
 Suggests: 
 Enhances: 
-Provides: doocs-llrfctrl-config08-04
+Provides: hzb-llrfctrl-config08-04
 Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-00, screen
 Description: Configuration generator for the llrfctrl servers at HZB facilities BESSY, HOBICAT and SEALAB.
 

@@ -1,0 +1,22 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux tarla-llrfctrl-server package
+
+set -e
+
+case "$1" in
+    configure)
+        # continue as normal
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0;
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
+esac
+
+#
+# generate and/or update configuration files.
+export CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-08-04 
+/usr/share/ConfigGenerator03.00/config myself --type llrfctrl6-epics
