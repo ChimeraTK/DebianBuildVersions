@@ -1,0 +1,34 @@
+Source: libdemac
+Priority: extra
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: doxygen (= 1.8.17-0ubuntu2), libconsatt-dev (= 00.27focal1.00-0), libchimeratk-deviceaccess-dev (= 03.12focal1.00-0), libboost-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), libtec-dev (= 02.01focal2.00-0), libmtca4u-motordrivercard-dev (= 01.13focal3.03-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/demac.git
+
+Package: libdemac-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdemac00-34-focal2, libboost-dev (= 1.71.0.0ubuntu2), libconsatt-dev (>= 00.27focal1), libconsatt-dev (<< 00.27focal2), libchimeratk-deviceaccess-dev (>= 03.12focal1), libchimeratk-deviceaccess-dev (<< 03.12focal2), libtec-dev (>= 02.01focal2), libtec-dev (<< 02.01focal3), libmtca4u-motordrivercard-dev (>= 01.13focal3), libmtca4u-motordrivercard-dev (<< 01.13focal4)
+Description: Header and cmake files for the Demac Library.
+
+Package: libdemac00-34-focal2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Demac (Device Modules, Actuators and Controllers) library.
+
