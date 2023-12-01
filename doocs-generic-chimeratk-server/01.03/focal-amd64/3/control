@@ -1,0 +1,21 @@
+Source: doocs-generic-chimeratk-server
+Priority: extra
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 03.04focal2.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.10focal2.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.08focal2.00-0), dev-doocs-libgul14 (= 23.9.0-focal1)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/GenericDeviceServer.git
+
+Package: doocs-generic-chimeratk-server01-03-focal3
+Section: net
+Architecture: amd64
+Conflicts: doocs-generic-chimeratk-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-generic-chimeratk-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-08-focal2
+Description: ChimeraTK-based DOOCS server, to expose registers of any firmware directly to the control system.
+

@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-opc-ua-backend
+Priority: extra
+Maintainer: Klaus Zenker (HZDR) <k.zenker@hzdr.de>
+Build-Depends: python3 (= 3.8.2-0ubuntu2), debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1.20.04.1), doxygen (= 1.8.17-0ubuntu2), libchimeratk-deviceaccess-dev (= 03.13focal1.00-0), libboost-test-dev (= 1.71.0.0ubuntu2), libopen62541-dev (= 1.3focal4.3-9-0), libchimeratk-deviceaccess (= 03.13focal1.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-OPCUABackend
+
+Package: libchimeratk-deviceaccess-opc-ua-backend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-opc-ua-backend, libchimeratk-deviceaccess-dev (>= 03.13focal1), libchimeratk-deviceaccess-dev (<< 03.13focal2)
+Description: Header and cmake files for the OPC UA Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-opcuabackend.
+
+Package: libchimeratk-deviceaccess-opc-ua-backend01-02-focal15
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-opcuabackend provides the OPC UA backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via OPC UA protocol.
+
+Package: libchimeratk-deviceaccess-opc-ua-backend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-opc-ua-backend01-02-focal15, libchimeratk-deviceaccess (>= 03.13focal1), libchimeratk-deviceaccess (<< 03.13focal2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
