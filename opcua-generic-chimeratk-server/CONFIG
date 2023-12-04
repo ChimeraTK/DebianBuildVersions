@@ -1,0 +1,18 @@
+SourceURI: https://github.com/ChimeraTK/GenericDeviceServer.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev
+Dependencies-bin: libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#
+
+Override-auto-configure-flags: -DADAPTER=OPCUA
+
+Provides-bin: opcua-generic-chimeratk-server
+Conflicts-bin: opcua-generic-chimeratk-server
+
+Description-bin: ChimeraTK-based OPC UA device server, to expose registers of any firmware directly to the control system.
+
