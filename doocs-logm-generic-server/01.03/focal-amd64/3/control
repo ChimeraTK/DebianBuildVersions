@@ -1,0 +1,21 @@
+Source: doocs-logm-generic-server
+Priority: extra
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: libchimeratk-applicationcore-dev (= 03.04focal2.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.10focal2.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.08focal2.00-0), dev-doocs-libgul14 (= 23.9.0-focal1), config-generator-scripts03-01 (= 03.01focal1.00-0), doocs-generic-chimeratk-server01-03-focal3 (= 01.03focal3.00-0)
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/logm/logm-generic-server-config.git
+
+Package: doocs-logm-generic-server01-03-focal3
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-01, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-08-focal2, doocs-generic-chimeratk-server01-03-focal3
+Description: Configuration generator for the logm-generic-server.
+
