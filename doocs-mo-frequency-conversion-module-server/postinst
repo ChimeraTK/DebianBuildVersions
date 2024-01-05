@@ -18,10 +18,10 @@ esac
 # 
 # install the new server
 # create dir if it doesn't exists.
-mkdir -p foo /export/doocs/server/mo-fcm-generic-server
+mkdir -p /export/doocs/server/mo-fcm-generic-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server#version-major# /export/doocs/server/mo-fcm-generic-server/mo-fcm-generic-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/mo-fcm-generic-server/mo-fcm-generic-server
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script

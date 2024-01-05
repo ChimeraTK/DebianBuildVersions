@@ -5,14 +5,12 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Use-dynload: bin
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14
-Dependencies-bin: libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#
+Package-name-bin: epics-generic-chimeratk-server
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
 
-Provides-bin: epics-generic-chimeratk-server
-Conflicts-bin: epics-generic-chimeratk-server
-
 Description-bin: ChimeraTK-based EPICS server, to expose registers of any firmware directly to the control system.
-

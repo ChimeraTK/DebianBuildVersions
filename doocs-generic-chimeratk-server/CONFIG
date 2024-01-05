@@ -5,13 +5,13 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Use-dynload: bin
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14
-Dependencies-bin: doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#
+Package-name-bin: doocs-generic-chimeratk-server
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev
+Dependencies-bin: doocs-watchdog-server
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
-
-Provides-bin: doocs-generic-chimeratk-server
-Conflicts-bin: doocs-generic-chimeratk-server
 
 Description-bin: ChimeraTK-based DOOCS server, to expose registers of any firmware directly to the control system.
