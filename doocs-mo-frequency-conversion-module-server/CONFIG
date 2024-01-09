@@ -1,4 +1,4 @@
-SourceURI: /home/nshehzad/work/configs/mo-fcm-generic-server-config
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/master-oscillator/flash/mo-fcm-generic-server-config.git
 Maintainer: N Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal
