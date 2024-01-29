@@ -10,6 +10,8 @@ Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, config-bam-server#epochdashversion#
 Install-pattern-bin: export/doocs/server/bam_server/*
 
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server,doocs-optical-switch-server,bam-init-scripts
 Recommends-bin: pcieuni-dkms
