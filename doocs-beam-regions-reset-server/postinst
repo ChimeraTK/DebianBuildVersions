@@ -18,4 +18,4 @@ esac
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-beam-regions-reset-server-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh beam-regions-reset-server
+/usr/share/ConfigGenerator-beam-regions-reset-server-config-#epochdashversion#/configureThisHost.sh beam-regions-reset-server

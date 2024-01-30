@@ -22,4 +22,4 @@ esac
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-#CFGDIR=/usr/share/ConfigGenerator-tec-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh tec
+#/usr/share/ConfigGenerator-tec-config-#epochdashversion#/configureThisHost.sh tec

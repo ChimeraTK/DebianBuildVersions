@@ -18,8 +18,7 @@ esac
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-export CFGDIR=/usr/share/ConfigGenerator-eod-config-#epochdashversion# 
-/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/config myself --type eod
+/usr/share/ConfigGenerator-eod-config-#epochdashversion#/configureThisHost.sh eod
 
 
 # make the template-generated scripts executable

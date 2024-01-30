@@ -24,4 +24,4 @@ mkdir -p foo /export/doocs/server/logm-generic-server
 ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/logm-generic-server/logm-generic-server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-doocs-logm-generic-server-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh logm-generic-server
+/usr/share/ConfigGenerator-doocs-logm-generic-server-config-#epochdashversion#/configureThisHost.sh logm-generic-server

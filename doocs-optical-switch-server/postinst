@@ -22,4 +22,4 @@ ln -snf /export/doocs/server/optical_switch_server/optical_switch_server.dist /e
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-optical-switch-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh optical-switch
+/usr/share/ConfigGenerator-optical-switch-config-#epochdashversion#/configureThisHost.sh optical-switch
