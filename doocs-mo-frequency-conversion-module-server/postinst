@@ -25,4 +25,4 @@ ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/mo-fcm-gene
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-doocs-mo-fcm-server-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh mo-fcm-generic-server
+/usr/share/ConfigGenerator-doocs-mo-fcm-server-config-#epochdashversion#/configureThisHost.sh mo-fcm-generic-server

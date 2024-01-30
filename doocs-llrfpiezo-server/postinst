@@ -18,4 +18,4 @@ esac
 
 #
 # generate and/or update configuration files
-CFGDIR=/usr/share/ConfigGenerator-llrfpiezoctrl-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh llrfpiezo4
+/usr/share/ConfigGenerator-llrfpiezoctrl-config-#epochdashversion#/configureThisHost.sh llrfpiezo4

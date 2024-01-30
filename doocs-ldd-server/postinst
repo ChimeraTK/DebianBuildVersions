@@ -22,5 +22,5 @@ ln -sfn /export/doocs/server/ldd_server/ldd_server.dist /export/doocs/server/ldd
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-CFGDIR=/usr/share/ConfigGenerator-ldd-config-#epochdashversion# /usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/configureCurrentHost.sh ldd
+/usr/share/ConfigGenerator-ldd-config-#epochdashversion#/configureThisHost.sh ldd
 

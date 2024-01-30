@@ -18,5 +18,4 @@ esac
 
 #
 # generate and/or update configuration files.
-export CFGDIR=/usr/share/ConfigGenerator-llrfctrl-config-#epochdashversion# 
-/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#/config myself --type llrfctrl6-epics
+/usr/share/ConfigGenerator-llrfctrl-config-#epochdashversion#/configureThisHost.sh llrfctrl6-epics
