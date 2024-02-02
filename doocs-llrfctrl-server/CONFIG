@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmtca4u-virtuallab-dev libchimeratk-applicationcore-microdaq-dev libhdf5-serial-dev libmath-utils-dev doocs-llrfctrl-config#epochdashversion# config-generator-scripts dev-doocs-libgul14
+Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-virtuallab-dev libchimeratk-applicationcore-microdaq-dev libhdf5-serial-dev libmath-utils-dev doocs-llrfctrl-config#epochdashversion# config-generator-scripts dev-doocs-libgul14
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, xdma-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-llrfctrl-config#epochdashversion#, python3-mtca4upy
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
