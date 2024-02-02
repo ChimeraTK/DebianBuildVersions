@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: dev lib
+Disable-tests: yes
 
 Dependencies: doxygen libchimeratk-applicationcore-dev
 Dependencies-dev: libchimeratk-applicationcore-dev
