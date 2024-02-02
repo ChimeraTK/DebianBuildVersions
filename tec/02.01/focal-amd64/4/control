@@ -1,0 +1,34 @@
+Source: libtec
+Priority: optional
+Maintainer: Jens Georg <jgeorg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-dev (= 03.14focal1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tec/tec-library.git
+
+Package: libtec-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libtec02-01-focal4, libchimeratk-deviceaccess-dev (>= 03.14focal1), libchimeratk-deviceaccess-dev (<< 03.14focal2)
+Description: Header and cmake files for TEC controller base communication library
+
+Package: libtec02-01-focal4
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TEC controller base communication library. Developed at DESY for the  FLASH/XFEL project.
+
