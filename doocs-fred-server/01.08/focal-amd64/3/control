@@ -1,0 +1,21 @@
+Source: doocs-fred-server
+Priority: optional
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, libfred-dev (= 02.04focal1.01-0), libchimeratk-applicationcore-dev (= 03.02focal2.02-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.09focal2.00-0), dev-doocs-clientlib (= 23.6.0-focal1), dev-doocs-serverlib (= 23.6.0-focal1), doocs-watchdog-server (= 24.1.1-focal1), doocs-fred-config01-08 (= 01.08focal2.01-0), config-generator-scripts03-01 (= 03.01focal1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-server.git
+
+Package: doocs-fred-server01-08-focal3
+Section: net
+Architecture: amd64
+Conflicts: doocs-fred-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-fred-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-fred-config01-08
+Description: Doocs server for the FRED.
+
