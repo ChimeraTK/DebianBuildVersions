@@ -1,13 +1,15 @@
 SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/laser-diode-driver/ldd-server.git
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: net
-License: desy_internal
-Target-repositories: intern
+License: lgpl3
+Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: libboost-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdzmqlib doocs-watchdog-server doocs-ldd-config#epochdashversion# config-generator-scripts libtirpc-dev pkg-config libzmq3-dev
-Dependencies-bin: doocs-watchdog-server, doocs-ldd-config#epochdashversion#
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-deviceaccess-modbusbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ldd-config#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Provides-bin: doocs-ldd-server
 Conflicts-bin: doocs-ldd-server
