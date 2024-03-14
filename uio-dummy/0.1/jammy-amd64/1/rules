@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+## Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+export DH_BUILD_DDEBS=1
+
+DPKG_EXPORT_BUILDFLAGS=1
+include /usr/share/dpkg/default.mk
+
+# default action
+%:
+	dh $@ --parallel --with dkms
+
+override_dh_install:
+	./debian/detect_libdir.sh
+	dh_install
+# tests are enabled
+override_dh_dkms:
+	dh_dkms -V 0.1.0
+
+build:
+	@echo "========= BUILD ============="
+
+override_dh_auto_build:
+
+override_dh_auto_install:
+	dh_auto_install -- PACKAGING_INSTALL=1 DKMS_PKG_NAME=uio-dummy DKMS_PKG_VERSION=0.1.0
