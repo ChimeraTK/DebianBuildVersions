@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-TangoAdapter
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-noheader lib
+
+Disable-tests: yes
+
+Dependencies: pkg-config doxygen libchimeratk-controlsystemadapter-dev libtango-dev libzmq3-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev
+
+Description-dev: Header and cmake files for the Tango Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-tangoadapter.
+Description-lib: libchimeratk-controlsystemadapter-tangoadapter provides the Tango Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a Tango server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
