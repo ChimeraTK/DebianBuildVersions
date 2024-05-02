@@ -1,5 +1,5 @@
 SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-TangoAdapter
-Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: libs
 License: lgpl3
 Target-repositories: intern pub
