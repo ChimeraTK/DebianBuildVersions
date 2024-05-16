@@ -1,0 +1,5 @@
+PACKAGE_NAME="uio-dummy"
+PACKAGE_VERSION="MODULE_VERSION"
+AUTOINSTALL="yes"
+DEST_MODULE_LOCATION[0]="/extra/drivers/uio-dummy"
+BUILT_MODULE_NAME[0]="uio-dummy"
