@@ -1,12 +1,12 @@
-SourceURI: https://github.com/ChimeraTK/StepperMotor-config.git
-Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+SourceURI: https://github.com/ChimeraTK/StepperMotorServer.git
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
 
 Has-packages: bin
 
-Dependencies: libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev doocs-steppermotor-config#epochdashversion# config-generator-scripts
+Dependencies: python3-mtca4upy libchimeratk-motordrivercard-applicationmodule-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev doocs-steppermotor-config#epochdashversion# config-generator-scripts
 Dependencies-bin: pcieuni-dkms, python3-mtca4upy, doocs-steppermotor-config#epochdashversion#
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
