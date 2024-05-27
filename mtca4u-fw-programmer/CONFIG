@@ -8,6 +8,6 @@ Has-packages: bin
 
 Package-name-bin: mtca4u-fw-programmer
 
-Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-system-dev libboost-program-options-dev libncurses5-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-system-dev libboost-program-options-dev libncurses-dev
 
 Description-bin: Application for FPGA firmware upgrade through the DeviceAccess interface.
