@@ -1,0 +1,21 @@
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/BAM/bam-server.git
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev libchimeratk-deviceaccess-dev libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev libchimeratk-motordrivercard-applicationmodule-dev libgsl-dev
+Dependencies-bin: pcieuni-dkms
+Install-pattern-bin: /var/epics-servers/*
+
+Override-auto-configure-flags: -DADAPTER=EPICSIOC
+
+Provides-bin: epics-bam-server
+Conflicts-bin: epics-bam-server,bam-init-scripts
+
+Description-bin: EPICS 3.16-based server for Beam Arrival-time Monitors
+
+Disable-tests: yes
+
