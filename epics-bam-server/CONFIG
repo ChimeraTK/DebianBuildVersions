@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: bin
 
-Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev libchimeratk-deviceaccess-dev libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev libchimeratk-motordrivercard-applicationmodule-dev dev-doocs-doocstiminglib libgsl-dev
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev libchimeratk-deviceaccess-dev libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libboost-filesystem-dev libboost-test-dev libmath-utils-dev libchimeratk-motordrivercard-applicationmodule-dev libgsl-dev
 Dependencies-bin: pcieuni-dkms
 Install-pattern-bin: /var/epics-servers/*
 
