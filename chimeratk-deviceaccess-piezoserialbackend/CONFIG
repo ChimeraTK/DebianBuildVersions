@@ -1,10 +1,10 @@
 SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-serial-backend.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: dev lib
+Has-packages: dev-noheader-dynload lib
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-dev libboost-system-dev libboost-test-dev 
 Dependencies-dev: libchimeratk-deviceaccess-dev
