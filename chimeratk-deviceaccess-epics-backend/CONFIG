@@ -1,0 +1,15 @@
+SourceURI: https://github.com/ChimeraTK/DeviceAccess-EpicsBackend
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-noheader-dynload lib
+
+Dependencies: debhelper cmake pkg-config doxygen libchimeratk-deviceaccess-dev libboost-test-dev epics-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev
+
+Description-dev: Cmake files for the EPICS Backend for the ChimeraTK DeviceAccess library. The files you need to link against libchimeratk-deviceaccess-epicsbackend.
+Description-lib: libchimeratk-deviceaccess-epicsbackend provides the EPICS backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via EPICS channel access.
+
+Disable-tests: yes
