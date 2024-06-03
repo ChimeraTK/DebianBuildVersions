@@ -1,0 +1,21 @@
+Source: epics-sdm-server
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (= 0.29.1-0ubuntu4), libboost-dev (= 1.71.0.0ubuntu2), libboost-thread-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2), libboost-filesystem-dev (= 1.71.0.0ubuntu2), libchimeratk-deviceaccess-dev (= 03.15focal1.01-0), libchimeratk-deviceaccess-dev (= 03.15focal1.01-0), libchimeratk-applicationcore-dev (= 03.06focal2.00-0), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 02.01focal5.01-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), libtec-applicationmodule-dev (= 02.01focal7.05-0), libmath-utils-dev (= 03.01focal1.02-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/special-diagnostics/SDM/sdm-server.git
+
+Package: epics-sdm-server02-01-focal1
+Section: net
+Architecture: amd64
+Conflicts: epics-sdm-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-sdm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms
+Description: EPICS 3.16-based server for Special Diagnostc Module
+
