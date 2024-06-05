@@ -1,0 +1,21 @@
+Source: doocs-klm-server
+Priority: optional
+Maintainer: Christian Willner <Christian.Willner@desy.de>
+Build-Depends: debhelper | debhelper-compat, libllrflibrary-dev (= 05.04focal2.00-0), libchimeratk-applicationcore-dev (= 03.06focal2.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.11focal3.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.09focal3.00-0), doocs-klm-config03-00 (= 03.00focal1.00-0), config-generator-scripts03-01 (= 03.01focal1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/klm/klm3-server.git
+
+Package: doocs-klm-server03-00-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-klm-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-klm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, xdma-dkms, libchimeratk-deviceaccess-doocsbackend01-09-focal3, doocs-klm-config03-00, python3-mtca4upy
+Description: DOOCS server for the klystron lifetime management (klm)
+
