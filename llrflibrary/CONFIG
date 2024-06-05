@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: debhelper cmake libboost-dev libboost-test-dev
+Dependencies: debhelper cmake libboost-dev libboost-test-dev libchimeratk-applicationcore-dev
 Dependencies-dev:
 
 Replaces-dev: dev-llrflibrary
