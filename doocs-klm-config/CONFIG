@@ -1,7 +1,7 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/klm-config.git
-Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Maintainer: Christian Willner <Christian.Willner@desy.de>
 Section: net
-License: desy_internal
+License: lgpl3
 Target-repositories: intern
 
 Has-packages: extra

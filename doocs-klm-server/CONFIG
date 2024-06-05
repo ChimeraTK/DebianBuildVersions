@@ -1,13 +1,14 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/klm.git
-Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+SourceURI: <https://gitlab.desy.de/msk-sw/low-level-radio-frequency/klm/klm3-server.git>
+Maintainer: Christian Willner <Christian.Willner@desy.de>
 Section: net
-License: desy_internal
+License: lgpl3
 Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocsdapilib doocs-watchdog-server doxygen pkg-config libtirpc-dev libchimeratk-deviceaccess-dev
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev doocs-klm-config#epochdashversion# config-generator-scripts
+
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, xdma-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-klm-config#epochdashversion#, python3-mtca4upy
 
 Provides-bin: doocs-klm-server
 Conflicts-bin: doocs-klm-server
