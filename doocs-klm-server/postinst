@@ -24,7 +24,7 @@ UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTU
 
 #
 # RPC_LIBNO
-# 
+#
 if [ -f /export/doocs/server/klm_server/RPC_LIBNO ] ; then
 RPC_LIBNO=`cat /export/doocs/server/klm_server/RPC_LIBNO`
 export RPC_LIBNO
@@ -34,7 +34,7 @@ else
 fi
 
 ###
-### watchdog template 
+### watchdog template
 ###
 if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
    cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
@@ -43,7 +43,7 @@ if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; th
       sed -e "s/SERVERNAME/KLM/g" | \
       sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
       /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.klm
-fi 
+fi
 
 #
 # move the running server to old
@@ -53,7 +53,7 @@ if [ -f /export/doocs/server/klm_server/klm_server ] ; then
    fi
    mv /export/doocs/server/klm_server/klm_server /export/doocs/server/klm_server/klm_server.OLD
 fi
-# 
+#
 # install the new server
 cp -a /export/doocs/server/klm_server/klm_server.dist /export/doocs/server/klm_server/klm_server
 
