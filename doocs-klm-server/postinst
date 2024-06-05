@@ -3,8 +3,6 @@
 
 set -e
 
-# FIXME: Move this script to use the config generator
-
 case "$1" in
 	configure)
 		# continue as normal
@@ -18,62 +16,10 @@ case "$1" in
 	;;
 esac
 
-########## make the /export/<nodename> linl ######################
-NODENAME=`uname -n`
-UNODENAME=`uname -n | sed -e "y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/" `
-
-#
-# RPC_LIBNO
-#
-if [ -f /export/doocs/server/klm_server/RPC_LIBNO ] ; then
-RPC_LIBNO=`cat /export/doocs/server/klm_server/RPC_LIBNO`
-export RPC_LIBNO
-else
-  echo 2>&1 "File: /export/doocs/server/klm_server/RPC_LIBNO is missing"
-  exit 1
-fi
-
-###
-### watchdog template
-###
-if [ -f /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE ] ; then
-   cat /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.TEMPLATE | \
-      sed -e "s/NODENAME/$UNODENAME/g" | sed -e "s/nodename/$NODENAME/g" | \
-      sed -e "s/servername/klm_server/g" | \
-      sed -e "s/SERVERNAME/KLM/g" | \
-      sed -e "s/SERVERLIBNO/$RPC_LIBNO/g" > \
-      /export/doocs/server/watchdog_server/WATCHDOG_CONF_ENTRY.klm
-fi
-
-#
-# move the running server to old
-if [ -f /export/doocs/server/klm_server/klm_server ] ; then
-   if [ -f /export/doocs/server/klm_server/klm_server.OLD ] ; then
-      rm /export/doocs/server/klm_server/klm_server.OLD
-   fi
-   mv /export/doocs/server/klm_server/klm_server /export/doocs/server/klm_server/klm_server.OLD
-fi
 #
 # install the new server
-cp -a /export/doocs/server/klm_server/klm_server.dist /export/doocs/server/klm_server/klm_server
+ln -sfn /export/doocs/server/klm_server/bin/klm /export/doocs/server/klm_server/klm_server
 
 #
-# check if this server is already in the watchdog
-INWD=`grep "/server/klm_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-
-if [ -z "${INWD}" ] ; then
-   /export/doocs/server/doocs add klm_server || true
-fi
-
-#
-# stop the server (just in case it is already running)
-# It has to be off while the config is being updated.
-/export/doocs/server/doocs stop  klm_server || true
-
-#
-# change ownership of the server directory and all files in it
-chown -R doocsadm:doocsadm /export/doocs/server/klm_server
-
-#
-# restart the server
-/export/doocs/server/doocs restart klm_server
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-klm-config-#epochdashversion#/configureThisHost.sh klm
