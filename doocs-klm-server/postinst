@@ -18,7 +18,7 @@ esac
 
 #
 # install the new server
-ln -sfn /export/doocs/server/klm_server/bin/klm /export/doocs/server/klm_server/klm_server
+ln -sfn /export/doocs/server/klm_server/bin/klm-server /export/doocs/server/klm_server/klm_server
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
