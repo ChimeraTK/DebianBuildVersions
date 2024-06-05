@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/klm-config.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/klm/klm-config.git
 Maintainer: Christian Willner <Christian.Willner@desy.de>
 Section: net
 License: lgpl3
