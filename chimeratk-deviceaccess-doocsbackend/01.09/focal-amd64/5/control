@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-doocsbackend
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (= 1.8.17-0ubuntu2), libchimeratk-deviceaccess-dev (= 03.15focal1.01-0), dev-doocs-clientlib (= 24.6.2-focal1), dev-doocs-serverlib (= 24.6.2-focal1), libboost-test-dev (= 1.71.0.0ubuntu2), libdoocs-server-test-helper-dev (= 01.07focal4.00-0), dev-doocs-libgul14 (= 24.6.2-focal1), libxml++2.6-dev (= 2.40.1-3build1), libtirpc-dev (= 1.2.5-1ubuntu0.1), pkg-config (= 0.29.1-0ubuntu4), libzmq3-dev (= 4.3.2-2ubuntu1), libchimeratk-deviceaccess (= 03.15focal1.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-DoocsBackend
+
+Package: libchimeratk-deviceaccess-doocsbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-doocsbackend (= 01.09focal5.01), libchimeratk-deviceaccess-dev (>= 03.15focal1), libchimeratk-deviceaccess-dev (<< 03.15focal2), dev-doocs-clientlib (= 24.6.2-focal1), dev-doocs-serverlib (= 24.6.2-focal1)
+Description: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.
+
+Package: libchimeratk-deviceaccess-doocsbackend01-09-focal5
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-doocsbackend provides the DOOCS backend for the ChimeraTK DeviceAccess library, which allows accessing DOOCS servers as devices through the DeviceAccess interface.
+
+Package: libchimeratk-deviceaccess-doocsbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-doocsbackend01-09-focal5, libchimeratk-deviceaccess (>= 03.15focal1), libchimeratk-deviceaccess (<< 03.15focal2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
