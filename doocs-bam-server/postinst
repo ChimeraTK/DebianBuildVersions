@@ -18,7 +18,10 @@ esac
 
 #
 # install the new server
-ln -snf /export/doocs/server/bam_server/bam_server.dist /export/doocs/server/bam_server/bam_server
+if [ -e /export/doocs/server/bam_server/bam_server.dist ];
+then
+    ln -snf /export/doocs/server/bam_server/bam_server.dist /export/doocs/server/bam_server/bam_server
+fi
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
