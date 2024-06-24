@@ -1,0 +1,34 @@
+Source: doocs-ulog-ctrl-server
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-dev (= 03.15focal1.01-0), libchimeratk-applicationcore-dev (= 03.07focal1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.11focal5.03-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.09focal5.01-0), libboost-filesystem-dev (= 1.71.0.0ubuntu2), doocs-ulog-ctrl-config03-00 (= 03.00focal4.07-0), libboost-test-dev (= 1.71.0.0ubuntu2), config-generator-scripts03-01 (= 03.01focal1.00-0), python3-mtca4upy (= 03.03focal2.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/ulog/ulog-server.git
+
+Package: doocs-ulog-ctrl-server03-00-focal3
+Section: net
+Architecture: amd64
+Conflicts: doocs-ulog-ctrl-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-ulog-ctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-ulog-ctrl-config03-00, ulog-ctrl-server-udev-rules (=03.00focal3.04)
+Description: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
+
+Package: ulog-ctrl-server-udev-rules
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Udev rules for uLOG devices
+

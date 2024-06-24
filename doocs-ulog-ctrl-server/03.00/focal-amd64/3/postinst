@@ -1,0 +1,25 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-ulog-ctrl-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+# 
+# install the new server
+ln -snf /export/doocs/server/ulog_ctrl_server/ulog_ctrl_server.dist /export/doocs/server/ulog_ctrl_server/ulog_ctrl_server
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-ulog-config-03-00/configureThisHost.sh ulog
