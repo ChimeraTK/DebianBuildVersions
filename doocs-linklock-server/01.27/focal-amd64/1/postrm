@@ -1,0 +1,22 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-linklock-server package
+
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop linklock_server || true
+   if [ "remove" = "$1"]; then
+        echo "postrm called with remove - linklock server will NOT be deleted from the Watchdog.\n"
+   fi
+
+fi
+
+if [ "purge" = "$1" ] ; then
+   echo "postrm called with purge - linklock server will be deleted from the Watchdog.\n"
+   # check if this server is already in the watchdog
+   INWD=`grep "/server/linklock_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete linklock_server || true
+   fi
+   rm -rf /export/doocs/server/linklock_server
+fi
+
