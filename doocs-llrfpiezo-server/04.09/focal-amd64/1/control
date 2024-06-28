@@ -1,0 +1,21 @@
+Source: doocs-llrfpiezo-server
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-doocsbackend-dev (= 01.09focal5.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.11focal5.03-0), libchimeratk-applicationcore-dev (= 03.08focal1.01-0), doocs-llrfpiezo-config04-09 (= 04.09focal1.00-0), config-generator-scripts03-01 (= 03.01focal1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/llrf-piezo-server.git
+
+Package: doocs-llrfpiezo-server04-09-focal1
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfpiezo-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfpiezo-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-llrfpiezo-config04-09
+Description: DESY FLASH/XFEL controls package. DOOCS low-level RF piezo control server.
+
