@@ -1,0 +1,21 @@
+Source: doocs-bcm-config
+Priority: optional
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Build-Depends: debhelper | debhelper-compat, debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1.20.04.1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2.1), config-generator-scripts03-01 (= 03.01focal1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/special-diagnostics/bcm/bcm-config.git
+
+Package: doocs-bcm-config02-04
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako
+Description: Configuration generator for the BCM (Bunch Compression Monitor) server.
+
