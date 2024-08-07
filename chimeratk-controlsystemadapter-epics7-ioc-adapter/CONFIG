@@ -1,4 +1,5 @@
-SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
+#SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
+SourceURI: /home/mhier/software/sources/ChimeraTK-ControlSystemAdapter-EPICS-IOC-Adapter
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: lgpl3
@@ -6,12 +7,10 @@ Target-repositories: intern pub
 
 Has-packages: dev-noheader lib
 
-Dependencies: doxygen libchimeratk-controlsystemadapter-dev libreadline-dev libyajl-dev
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libreadline-dev libyajl-dev libchimeratk-epics-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev libyajl-dev
 
-Description-dev: Header and cmake files for the EPICS R7.0 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics7-ioc-adapter.
-Description-lib: libchimeratk-controlsystemadapter-epics7-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+Description-dev: Header and cmake files for the EPICS R7.0 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
+Description-lib: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
 
-Override-auto-configure-flags: -DEPICS_VERSION="7"
-
-Install-additional-pattern-dev: usr/share/ChimeraTK-ControlSystemAdapter-EPICS7-IOC-Adapter/*
+Install-additional-pattern-dev: usr/share/ChimeraTK-ControlSystemAdapter-EPICS-IOC-Adapter/*

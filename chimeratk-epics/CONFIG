@@ -1,0 +1,34 @@
+# SourceURI: <https://github.com/ChimeraTK/EPICS-interface>
+
+SourceURI: /home/mhier/software/sources/ChimeraTK-EPICS
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Dependencies: patchelf perl libyajl-dev libreadline-dev pkg-config
+
+Has-packages: extra extra2
+
+Package-name-extra: libchimeratk-epics#debversion#
+Install-pattern-extra: /usr/share/ChimeraTK-EPICS*/lib/linux-x86_64/*.so.*-ChimeraTK
+Dependencies-extra:
+Description-extra: Runtime package for EPICS used by ChimeraTK projects.
+
+Package-name-extra2: libchimeratk-epics-dev
+Install-pattern-extra2: <<<EOF
+/usr/lib/*
+/usr/share/ChimeraTK-EPICS*/lib/linux-x86_64/*.so
+/usr/share/ChimeraTK-EPICS7/lib/pkgconfig/*
+/usr/share/ChimeraTK-EPICS7/lib/perl/*
+/usr/share/ChimeraTK-EPICS7/include/*
+/usr/share/ChimeraTK-EPICS7/html/*
+/usr/share/ChimeraTK-EPICS7/dbd/*
+/usr/share/ChimeraTK-EPICS7/db/*
+/usr/share/ChimeraTK-EPICS7/configure/*
+/usr/share/ChimeraTK-EPICS7/cfg/*
+/usr/share/ChimeraTK-EPICS7/bin/*
+/usr/share/ChimeraTK-EPICS7/templates/*
+EOF
+Dependencies-extra2: libyajl-dev, libreadline-dev
+Description-extra2: Development package for EPICS used by ChimeraTK projects.
