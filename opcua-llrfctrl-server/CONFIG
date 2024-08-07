@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: bin
 
-Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-virtuallab-dev libhdf5-serial-dev libmath-utils-dev doocs-llrfctrl-config#epochdashversion# config-generator-scripts
+Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-virtuallab-dev libhdf5-serial-dev libmath-utils-dev doocs-llrfctrl-config#epochdashversion# config-generator-scripts libarmadillo-dev
 Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy, doocs-llrfctrl-config#epochdashversion#
 
 Override-auto-configure-flags: -DADAPTER=OPCUA
