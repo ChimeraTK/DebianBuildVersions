@@ -1,0 +1,34 @@
+Source: chimeratk-epics
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, patchelf (= 0.10-2build1), perl (= 5.30.0-9ubuntu0.5), libyajl-dev (= 2.1.0-3ubuntu0.20.04.1), libreadline-dev (= 8.0-4), pkg-config (= 0.29.1-0ubuntu4) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: /home/mhier/software/sources/ChimeraTK-EPICS
+
+Package: libchimeratk-epics01-00-focal1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Runtime package for EPICS used by ChimeraTK projects.
+
+Package: libchimeratk-epics-dev
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyajl-dev, libreadline-dev
+Description: Development package for EPICS used by ChimeraTK projects.
+
