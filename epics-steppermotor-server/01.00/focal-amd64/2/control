@@ -1,0 +1,21 @@
+Source: epics-steppermotor-server
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, python3-mtca4upy (= 03.04focal1.00-0), libchimeratk-motordrivercard-applicationmodule-dev (= 00.08focal10.04-0), libchimeratk-applicationcore-dev (= 03.09focal1.00-0), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 02.02focal2.00-0), doocs-steppermotor-config01-00 (= 01.00focal3.02-0), config-generator-scripts03-02 (= 03.02focal1.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/StepperMotorServer.git
+
+Package: epics-steppermotor-server01-00-focal2
+Section: net
+Architecture: amd64
+Conflicts: epics-steppermotor-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-steppermotor-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, python3-mtca4upy, doocs-steppermotor-config01-00
+Description: Stepper motor front-end server for EPICS based control systems
+
