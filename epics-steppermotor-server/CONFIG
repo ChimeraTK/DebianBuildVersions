@@ -1,8 +1,8 @@
 SourceURI: https://github.com/ChimeraTK/StepperMotorServer.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
-License: desy_internal
-Target-repositories: intern
+License: lgpl3
+Target-repositories: intern pub
 
 Has-packages: bin
 
