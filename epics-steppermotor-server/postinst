@@ -18,4 +18,6 @@ esac
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-/usr/share/ConfigGenerator-ChimeraTK_StepperMotor-config-#epochdashversion#/configureThisHost.sh steppermotor-epics
+## Moving this to the config package
+# /usr/share/ConfigGenerator-ChimeraTK_StepperMotor-config-#epochdashversion#/configureThisHost.sh steppermotor-epics
+
