@@ -9,10 +9,14 @@ Has-packages: extra
 package-name-contains-buildversion: 0
 
 Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
-Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, epics-steppermotor-server#epochdashversion#
+Dependencies-extra: git, python3, python3-mako, python3-pytest, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#
 
 Package-name-extra: epics-steppermotor-config#debversion#
 
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
 
 Description-extra: Configuration generator for the EPICS steppermotor server.
+
+Provides-extra: epics-steppermotor-config#debversion#
+Conflicts-extra: epics-steppermotor-config#debversion#
+Replaces-extra: epics-steppermotor-config#debversion#
