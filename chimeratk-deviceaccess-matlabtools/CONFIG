@@ -8,7 +8,7 @@ Has-packages: extra
 
 Disable-tests: yes
 
-Matlab_ROOT_DIR: /opt/matlab_R2016b
+Matlab_ROOT_DIR: /opt/matlab_R2022b
 additional-bind-mounts: #Matlab_ROOT_DIR#
 
 Dependencies: cmake libchimeratk-deviceaccess-dev libx11-6 libxext6 csh
