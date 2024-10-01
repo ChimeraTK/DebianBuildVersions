@@ -1,6 +1,4 @@
-# SourceURI: <https://github.com/ChimeraTK/EPICS-interface>
-
-SourceURI: /home/mhier/software/sources/ChimeraTK-EPICS
+SourceURI: https://github.com/ChimeraTK/EPICS-interface
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: lgpl3

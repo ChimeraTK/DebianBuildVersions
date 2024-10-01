@@ -1,5 +1,4 @@
-#SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
-SourceURI: /home/mhier/software/sources/ChimeraTK-ControlSystemAdapter-EPICS-IOC-Adapter
+SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: lgpl3
