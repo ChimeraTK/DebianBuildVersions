@@ -12,6 +12,17 @@ Disable-tests: yes
 Matlab_ROOT_DIR: /opt/matlab_R2022b
 additional-bind-mounts: #Matlab_ROOT_DIR#
 
+pre-pdebuild-hook: <<<EOF
+if [ ! -f /opt/matlab_R2022b/bin/matlab ]; then
+  sudo mkdir -p /opt/matlab_R2022b/
+  sudo chmod 777 /opt/matlab_R2022b/
+  echo 'Mounting Matlab...'
+  sshfs doocsdev20:/opt/matlab_R2022b/ /opt/matlab_R2022b/ -o allow_other
+else
+  echo 'Matlab found.'
+fi
+EOF
+
 Dependencies: cmake libchimeratk-deviceaccess-dev libx11-6 libxext6 csh
 Dependencies-extra: libchimeratk-deviceaccess#dependency-debversion-libchimeratk-deviceaccess-dev#
 Override-auto-configure-flags: -DMatlab_ROOT_DIR=#Matlab_ROOT_DIR# -DCMAKE_INSTALL_PREFIX=/local
@@ -20,4 +31,3 @@ Package-name-extra: chimeratk-deviceaccess-matlabtools
 Description-extra: Matlab bindings for ChimeraTK DeviceAccess. Requires Matlab to be installed in #Matlab_ROOT_DIR#.
 
 Conflicts-extra: mtca4u-matlab-tools
-
