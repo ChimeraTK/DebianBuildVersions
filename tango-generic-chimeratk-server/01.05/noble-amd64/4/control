@@ -1,0 +1,21 @@
+Source: tango-generic-chimeratk-server
+Priority: optional
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-applicationcore-dev (= 03.09noble1.00-0), libchimeratk-controlsystemadapter-tangoadapter-dev (= 01.00noble3.01-0), libchimeratk-deviceaccess (= 03.15noble2.03-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/GenericDeviceServer.git
+
+Package: tango-generic-chimeratk-server
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libchimeratk-deviceaccess (>= 03.15noble2), libchimeratk-deviceaccess (<< 03.15noble3)
+Description: ChimeraTK-based Tango device server, to expose registers of any firmware directly to the control system.
+
