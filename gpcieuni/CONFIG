@@ -1,0 +1,18 @@
+SourceURI: https://github.com/ChimeraTK/gpcieuni-basedriver
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: kernel
+License: gpl3
+Target-repositories: intern pub
+
+Has-packages: dkms
+
+package-name-contains-buildversion: 0
+
+Dependencies: cmake make dkms
+
+Dependencies-dkms: udev
+
+Dkms-Module-Name: gpcieuni
+Dkms-override-conf: dkms.conf
+
+Description-dkms: Generic part of the universal PCIexpress device driver for MicroTCA and other hot-plug capable architectures.

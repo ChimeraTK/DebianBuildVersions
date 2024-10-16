@@ -1,0 +1,19 @@
+SourceURI: https://github.com/ChimeraTK/pcieuni-driver
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: contrib/kernel
+License: gpl3
+Target-repositories: intern pub
+
+Has-packages: dkms
+
+package-name-contains-buildversion: 0
+
+Dependencies: cmake make dkms gpcieuni-dkms
+
+Dependencies-dkms: udev, gpcieuni-dkms
+Description-dkms: Universal PCIexpress device driver for MicroTCA and other hot-plug capable architectures.
+
+Install-pattern-dkms: <<<EOF
+/etc/udev/rules.d/*
+/lib/udev/*
+EOF
