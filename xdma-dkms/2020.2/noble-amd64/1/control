@@ -1,0 +1,21 @@
+Source: xdma-dkms
+Priority: optional
+Maintainer: Patrick Huesmann <patrick.huesmann@desy.de>
+Build-Depends: debhelper | debhelper-compat, git (= 1:2.43.0-1ubuntu7.1), cmake (= 3.28.3-1build7), make (= 4.3-4.1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/MicroTCA-Tech-Lab/xdma-metapackage
+
+Package: xdma-dkms
+Section: contrib/kernel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, dkms,udev
+Description: Xilinx XDMA driver with added DKMS and udev support
+
