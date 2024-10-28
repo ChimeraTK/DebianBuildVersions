@@ -1,5 +1,4 @@
-#SourceURI: https://github.com/ChimeraTK/DeviceAccess-EpicsBackend
-SourceURI: /home/mhier/software/sources/ChimeraTK-DeviceAccess-EPICS-Backend
+SourceURI: https://github.com/ChimeraTK/DeviceAccess-EpicsBackend
 Maintainer: Klaus Zenker <k.zenker@hzdr.de>
 Section: libs
 License: lgpl3
