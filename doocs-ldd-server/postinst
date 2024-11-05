@@ -16,11 +16,14 @@ case "$1" in
 	;;
 esac
 
-# 
+#
 # install the new server
-ln -sfn /export/doocs/server/ldd_server/ldd_server.dist /export/doocs/server/ldd_server/ldd_server
+if [ -f /export/doocs/server/ldd_server/ldd_server.dist ]; then
+  ln -sfn /export/doocs/server/ldd_server/ldd_server.dist /export/doocs/server/ldd_server/ldd_server
+else
+  ln -sfn /export/doocs/server/ldd_server/bin/ldd_server /export/doocs/server/ldd_server/ldd_server
+fi
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-ldd-config-#epochdashversion#/configureThisHost.sh ldd
-
