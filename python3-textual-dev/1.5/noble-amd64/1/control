@@ -1,0 +1,21 @@
+Source: python3-textual-dev
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, pybuild-plugin-pyproject (= 6.20240401), python3-all (= 3.12.3-0ubuntu2), python3-poetry (= 1.8.2+dfsg-1ubuntu2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/Textualize/textual-dev
+
+Package: python3-textual-dev
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-textual
+Description: This package contains the textual command line app, which will help to develop Textual applications.
+
