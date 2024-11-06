@@ -1,0 +1,35 @@
+SourceURI: https://github.com/Textualize/textual
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: mit
+Target-repositories: intern
+
+Has-packages: python
+
+Dependencies: pybuild-plugin-pyproject python3-all python3-click python3-jinja2 python3-linkify-it python3-poetry python3-pytest python3-pytest-asyncio python3-rich python3-syrupy python3-typing-extensions
+
+Description-python: <<<EOF
+TUI (Text User Interface) framework for Python inspired by modern web development
+ Textual uses Rich to render rich text, so anything that Rich can render may be
+ used in Textual.
+ .
+ Event handling in Textual is asynchronous (using async and await keywords).
+ Widgets (UI components) can independently update and communicate with each
+ other via message passing.
+ .
+ Textual has more in common with modern web development than it does with
+ curses; layout is done with CSS grid and (soon) the theme may be customized
+ with CSS. Other techniques are borrowed from JS frameworks such as Vue and
+ React.
+EOF
+
+Dh-extra-args: --with python3 --buildsystem=pybuild
+
+Disable-tests: yes
+
+Package-name-python: python3-textual#debversion#
+
+Conflicts-python: python3-textual
+Provides-python: python3-textual
+
+package-name-contains-buildversion: no
