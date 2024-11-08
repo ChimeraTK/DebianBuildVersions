@@ -6,8 +6,13 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev
-Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy python3-numpy
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy
+
+Install-pattern-lib: <<<EOF
+@LIBDIR@/lib*.so.*
+/usr/lib/python*/dist-packages/*
+EOF
 
 Enhances-doc: #Package-name-dev#
 Enhances-bin: #Package-name-lib#
