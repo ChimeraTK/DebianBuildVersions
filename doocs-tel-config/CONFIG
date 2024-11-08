@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/anomaly-detection/anomaly-detection-config.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#
+
+Package-name-extra: doocs-tel-config#debversion#
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Description-extra: Configuration generator for the trip event logger server.

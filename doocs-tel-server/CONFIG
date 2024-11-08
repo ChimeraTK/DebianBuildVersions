@@ -1,0 +1,17 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/tel.git
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev dev-doocs-libgul14 doocs-tel-config#epochdashversion# config-generator-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-tel-config#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Provides-bin: doocs-tel-server
+Conflicts-bin: doocs-tel-server
+
+Description-bin: Doocs server for the trip event logging.
