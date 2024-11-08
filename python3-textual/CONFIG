@@ -27,9 +27,8 @@ Dh-extra-args: --with python3 --buildsystem=pybuild
 
 Disable-tests: yes
 
-Package-name-python: python3-textual#debversion#
+Package-name-python: python3-textual-latest
 
 Conflicts-python: python3-textual
-Provides-python: python3-textual
 
 package-name-contains-buildversion: no
