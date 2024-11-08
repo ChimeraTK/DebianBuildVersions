@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-textual
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-textual-latest, python3-aiohttp
 Description: This package contains the textual command line app, which will help to develop Textual applications.
 

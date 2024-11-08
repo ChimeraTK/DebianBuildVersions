@@ -6,7 +6,7 @@ Standards-Version: 3.8.3
 Section: libs
 Homepage: https://github.com/Textualize/textual
 
-Package: python3-textual0-85
+Package: python3-textual-latest
 Section: libs
 Architecture: amd64
 Conflicts: python3-textual
@@ -15,7 +15,7 @@ Breaks:
 Recommends: 
 Suggests: 
 Enhances: 
-Provides: python3-textual
+Provides: 
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, 
 Description: TUI (Text User Interface) framework for Python inspired by modern web development
  Textual uses Rich to render rich text, so anything that Rich can render may be
