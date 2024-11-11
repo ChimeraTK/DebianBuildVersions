@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/GenericDeviceServer.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+Use-dynload: bin
+
+Package-name-bin: tango-generic-chimeratk-server02
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-tangoadapter-dev
+
+Override-auto-configure-flags: -DADAPTER=TANGO
+
+Description-bin: ChimeraTK-based Tango device server, to expose registers of any firmware directly to the control system.
