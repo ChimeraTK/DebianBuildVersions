@@ -1,0 +1,17 @@
+SourceURI: https://github.com/ChimeraTK/GenericDeviceServer.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+Use-dynload: bin
+
+Package-name-bin: doocs-generic-chimeratk-server02
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev
+Dependencies-bin: doocs-watchdog-server
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Description-bin: ChimeraTK-based DOOCS server, to expose registers of any firmware directly to the control system.
