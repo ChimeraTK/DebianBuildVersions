@@ -9,7 +9,7 @@ Has-packages: dev-noheader lib bin
 Disable-tests: yes
 
 Dependencies: doxygen libchimeratk-controlsystemadapter-dev libopen62541-dev python3-dev
-Dependencies-dev: libchimeratk-controlsystemadapter-dev python3-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libopen62541-dev
 
 #Dependencies for a binary package 'chimeratk-opc-ua-mapfile-generator'. It MUST be a coma-separated list (not space separated). Probably reaso is that it used dirrectly by dpkg, not a Python.#
 Dependencies-bin: python3-lxml , python3-pyqt5
