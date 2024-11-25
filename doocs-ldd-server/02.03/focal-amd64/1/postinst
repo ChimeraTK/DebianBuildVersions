@@ -1,0 +1,29 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-ldd-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+#
+# install the new server
+if [ -f /export/doocs/server/ldd_server/ldd_server.dist ]; then
+  ln -sfn /export/doocs/server/ldd_server/ldd_server.dist /export/doocs/server/ldd_server/ldd_server
+else
+  ln -sfn /export/doocs/server/ldd_server/bin/ldd_server /export/doocs/server/ldd_server/ldd_server
+fi
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-ldd-config-02-03/configureThisHost.sh ldd
