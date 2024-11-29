@@ -1,0 +1,21 @@
+Source: doocs-refmopt-server
+Priority: optional
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (= 1.8.1-2build1), libtirpc-dev (= 1.3.4+ds-1.1build1), dev-doocs-doocsdapilib (= 24.11.0-noble1), dev-doocs-clientlib (= 24.11.0-noble1), dev-doocs-serverlib (= 24.11.0-noble1), dev-doocs-daqbmlib (= 24.11.0-noble1), dev-doocs-daqsndlib (= 24.11.0-noble1), dev-doocs-doocsdzmqlib (= 24.11.0-noble1), libconsatt-apps-dev (= 00.37noble1.00-0), libconsatt-doocs-dev (= 00.26noble1.01-0), libdaction-dev (= 03.01noble1.01-0), doocs-watchdog-server (= 24.11.0-noble3), libchimeratk-deviceaccess-dev (= 03.17noble1.00-0), libzmq3-dev (= 4.3.5-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/refm-opt/refm-opt-server.git
+
+Package: doocs-refmopt-server01-04-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-refmopt-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-refmopt-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DESY FLASH/XFEL controls package. DOOCS REFMOPT control server.
+
