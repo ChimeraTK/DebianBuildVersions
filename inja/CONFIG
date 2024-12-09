@@ -8,9 +8,7 @@ Target-repositories: intern pub
 
 Has-packages: dev-alien-headeronly
 
-Dependencies: cmake nlohmann-json3-dev
-Dependencies-dev: cmake nlohmann-json3-dev
+Dependencies: cmake
+Dependencies-dev: cmake
 
 Description-dev: Inja is a template engine for modern C++, loosely inspired by jinja for python.
-
-Override-auto-configure-flags: -DBUILD_TESTING=OFF -DINJA_USE_EMBEDDED_JSON=OFF -DINJA_BUILD_TESTS=OFF -DBUILD_BENCHMARK=OFF
