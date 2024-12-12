@@ -1,0 +1,20 @@
+Source: mtcadummy
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, cmake (= 3.25.1-1), make (= 4.3-4.1), dkms (= 3.0.10-8+deb12u1), dh-dkms (= 3.0.10-8+deb12u1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: file:///home/jgeorg/Source/pciedummy-driver
+
+Package: mtcadummy-dkms
+Section: kernel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${misc:Depends}, udev
+Description: Dummy driver for MicroTCA and other hot-plug capable architecture.
