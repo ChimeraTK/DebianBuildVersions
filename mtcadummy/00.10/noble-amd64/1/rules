@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+## Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+export DH_BUILD_DDEBS=1
+
+DPKG_EXPORT_BUILDFLAGS=1
+include /usr/share/dpkg/default.mk
+
+# default action
+%:
+	dh $@ --parallel  --with dkms
+
+override_dh_install:
+	./debian/detect_libdir.sh
+	dh_install
+# tests are enabled
+override_dh_dkms:
+	dh_dkms -V 00.10.04
