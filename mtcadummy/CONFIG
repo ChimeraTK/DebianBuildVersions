@@ -1,0 +1,19 @@
+#SourceURI: https://github.com/ChimeraTK/pciedummy-driver
+SourceURI: file:///home/jgeorg/Source/pciedummy-driver
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: contrib/kernel
+License: gpl3
+Target-repositories: intern pub
+
+Has-packages: dkms
+
+package-name-contains-buildversion: 0
+
+Dependencies: cmake make dkms
+
+Dependencies-dkms: udev
+Description-dkms: Dummy driver for MicroTCA and other hot-plug capable architecture.
+Install-pattern-dkms: <<<EOF
+/etc/udev/rules.d/*
+/etc/modprobe.d/*
+EOF
