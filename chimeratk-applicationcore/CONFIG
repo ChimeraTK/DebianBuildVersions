@@ -6,8 +6,9 @@ Target-repositories: intern pub
 
 Has-packages: dev lib
 
-Dependencies: doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy python3-numpy
-Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy
+# libpython3-dev is a dependency of pybind11-dev which is not correctly resolved on bookworm, so we put it here explicitly
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy python3-numpy libpython3-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev mypy libpython3-dev
 
 Install-pattern-lib: <<<EOF
 @LIBDIR@/lib*.so.*
