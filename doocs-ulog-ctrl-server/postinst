@@ -16,10 +16,6 @@ case "$1" in
 	;;
 esac
 
-# 
-# install the new server
-ln -snf /export/doocs/server/ulog_ctrl_server/ulog_ctrl_server.dist /export/doocs/server/ulog_ctrl_server/ulog_ctrl_server
-
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-ulog-config-#epochdashversion#/configureThisHost.sh ulog
