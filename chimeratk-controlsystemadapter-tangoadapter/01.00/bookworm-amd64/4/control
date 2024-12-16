@@ -1,0 +1,34 @@
+Source: libchimeratk-controlsystemadapter-tangoadapter
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (= 1.8.1-1), doxygen (= 1.9.4-4), libchimeratk-controlsystemadapter-dev (= 02.12bookworm1.00-0), libtango-dev (= 9.3.4+dfsg1-2), libzmq3-dev (= 4.3.4-6) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-TangoAdapter
+
+Package: libchimeratk-controlsystemadapter-tangoadapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-tangoadapter01-00-bookworm4, libchimeratk-controlsystemadapter-dev (>= 02.12bookworm1), libchimeratk-controlsystemadapter-dev (<< 02.12bookworm2)
+Description: Header and cmake files for the Tango Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-tangoadapter.
+
+Package: libchimeratk-controlsystemadapter-tangoadapter01-00-bookworm4
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-tangoadapter provides the Tango Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a Tango server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
