@@ -1,0 +1,6 @@
+Dependencies: doxygen libchimeratk-controlsystemadapter-dev libhdf5-dev 
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev
+
+Install-pattern-lib: <<<EOF
+@LIBDIR@/lib*.so.*
+EOF
