@@ -1,0 +1,20 @@
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-pulse-arrival-time-monitor/lam-actuator-server-config.git
+Maintainer: Anthony Barker <anthony.barker@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-watchdog-server, doocs-generic-chimeratk-server02
+
+
+Package-name-extra: doocs-lam-actuator-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+
+Provides-extra: doocs-lam-actuator-server
+Conflicts-extra: doocs-lam-actuator-server
+
+Description-extra: Configuration generator for the lam-actuator_server.
