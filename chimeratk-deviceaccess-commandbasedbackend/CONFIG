@@ -4,6 +4,8 @@ Section: libs
 License: lgpl3
 Target-repositories: intern pub
 
+Disable-tests: yes
+
 Has-packages: dev-noheader-dynload lib
 
 Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test-dev libinja-dev socat
