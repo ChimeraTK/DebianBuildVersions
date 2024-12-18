@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-opc-ua-backend
+Priority: optional
+Maintainer: Klaus Zenker (HZDR) <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, python3 (= 3.12.3-0ubuntu2), debhelper (= 13.14.1ubuntu5), cmake (= 3.28.3-1build7), doxygen (= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.18noble1.00-0), libboost-test-dev (= 1.83.0.1ubuntu2), libopen62541-dev (= 1.4noble1.6-0-0), libxml++2.6-dev (= 2.42.3-1build2), libchimeratk-deviceaccess (= 03.18noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-OPCUABackend
+
+Package: libchimeratk-deviceaccess-opc-ua-backend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-opc-ua-backend (= 01.04noble2.00), libchimeratk-deviceaccess-dev (>= 03.18noble1), libchimeratk-deviceaccess-dev (<< 03.18noble2), libopen62541-dev (>= 1.4noble1), libopen62541-dev (<< 1.4noble2)
+Description: Header and cmake files for the OPC UA Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-opcuabackend.
+
+Package: libchimeratk-deviceaccess-opc-ua-backend01-04-noble2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-opcuabackend provides the OPC UA backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via OPC UA protocol.
+
+Package: libchimeratk-deviceaccess-opc-ua-backend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-opc-ua-backend01-04-noble2, libchimeratk-deviceaccess (>= 03.18noble1), libchimeratk-deviceaccess (<< 03.18noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
