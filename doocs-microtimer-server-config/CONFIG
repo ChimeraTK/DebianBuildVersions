@@ -1,0 +1,21 @@
+#SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/utilities/microtimer-config.git
+SourceURI: file:///home/jgeorg/Source/config-generator-scripts/checkout/microtimer
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02, libchimeratk-deviceaccess-doocsbackend
+
+
+Package-name-extra: doocs-microtimer-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+
+Provides-bin: microtimer-server
+Conflicts-bin: microtimer-server doocs-x2timer-server
+
+Description-extra: Configuration generator for the microtimer server
