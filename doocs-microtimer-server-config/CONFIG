@@ -1,5 +1,4 @@
-#SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/utilities/microtimer-config.git
-SourceURI: file:///home/jgeorg/Source/config-generator-scripts/checkout/microtimer
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/utilities/microtimer-config.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
