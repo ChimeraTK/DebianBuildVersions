@@ -21,7 +21,7 @@ esac
 mkdir -p /export/doocs/server/microtimer-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/microtimer-server/microtimer-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/microtimer-server/microtimer_server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-microtimer-config-00-01/configureThisHost.sh microtimer
