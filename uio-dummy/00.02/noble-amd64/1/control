@@ -1,0 +1,20 @@
+Source: uio-dummy
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, dkms (= 3.0.11-1ubuntu13), dh-dkms (= 3.0.11-1ubuntu13) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/uio-dummy.git
+
+Package: uio-dummy-dkms
+Section: kernel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${misc:Depends}, 
+Description: UIO dummy driver module
