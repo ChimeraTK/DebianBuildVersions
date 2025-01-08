@@ -1,5 +1,5 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/AmtfDbAccess.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal
 Target-repositories: intern

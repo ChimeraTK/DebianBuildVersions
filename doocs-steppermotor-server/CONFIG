@@ -1,5 +1,5 @@
 SourceURI: https://github.com/ChimeraTK/StepperMotorServer.git
-Maintainer: Christoph Kampmeyer <christoph.kampmeyer@desy.de>
+Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
 Target-repositories: intern
