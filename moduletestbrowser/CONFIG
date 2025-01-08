@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/amtfTestBrowser.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/amtf-viewer.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: utils
 License: lgpl3
@@ -11,4 +11,3 @@ Package-name-bin: moduletestbrowser
 Dependencies: doxygen libqt5gui5 libqt5core5a libqt5network5 libqt5printsupport5 libqt5svg5-dev libqt5widgets5 texlive-latex-recommended texlive-latex-extra libqcustomplot-dev libamtfdbaccess-dev
 
 Description-bin: ModuleTestBrowser is a tool for browsing AMTF and XFEL module test results and generating test reports.
-

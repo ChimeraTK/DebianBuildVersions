@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/library/rf/AmtfDbAccess.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/amtf-db-access.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: libs
 License: desy_internal

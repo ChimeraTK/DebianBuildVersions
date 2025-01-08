@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/cavmod.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/cavity-modes-identification/cavity-modes-server.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal

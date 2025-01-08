@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/mo_gpsdo.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/master-oscillator/xfel/xfel-gpsdo.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
 License: desy_internal

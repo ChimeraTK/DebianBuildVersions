@@ -1,5 +1,4 @@
-#SourceURI: https://github.com/ChimeraTK/pciedummy-driver
-SourceURI: file:///home/jgeorg/Source/pciedummy-driver
+SourceURI: https://github.com/ChimeraTK/pciedummy-driver
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: contrib/kernel
 License: gpl3
