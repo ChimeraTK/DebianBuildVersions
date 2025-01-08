@@ -1,5 +1,5 @@
 SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/amtfTestBrowser.git
-Maintainer: Filip Makowski <filip.makowski@desy.de>
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: utils
 License: lgpl3
 Target-repositories: intern
