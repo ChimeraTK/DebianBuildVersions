@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/cavTunTest.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/cavity-tuning/cavity-tuning-server.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal

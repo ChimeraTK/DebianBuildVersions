@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/server/rf/cavPiezoDCTest.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/piezo-dc-scan/piezo-dc-scan-server.git
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: net
 License: desy_internal
