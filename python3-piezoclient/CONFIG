@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/piezo_client.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/teststand/piezo-client.git
 
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: utils

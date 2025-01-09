@@ -1,4 +1,4 @@
-SourceURI: http://doocs-git.desy.de/cgit/doocs/tools/rf/form_dialogs.git
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/teststand/form-dialog.git
 
 Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
 Section: utils
