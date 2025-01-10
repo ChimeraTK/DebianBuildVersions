@@ -1,0 +1,21 @@
+Source: radcon-udev-rules
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, udev (= 255.4-1ubuntu8.4) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/radcon/racon-udev-rules.git
+
+Package: radcon-udev-rules
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Udev rules for radcon devices
+
