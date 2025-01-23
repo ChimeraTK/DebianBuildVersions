@@ -1,0 +1,21 @@
+Source: doocs-modperf-server
+Priority: optional
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, dev-doocs-clientlib (= 24.12.1-noble1), dev-doocs-serverlib (= 24.12.1-noble1), dev-doocs-doocsdapilib (= 24.12.1-noble1), libcavitysectionlocation-dev (= 00.01noble1.05-0), libzmq3-dev (= 4.3.5-1build2), libamtfdbaccess-dev (= 02.09noble1.02-0), pkg-config (= 1.8.1-2build1), libtirpc-dev (= 1.3.4+ds-1.1build1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/module-performance/mod-perf-server.git
+
+Package: doocs-modperf-server02-00-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-modperf-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-modperf-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for vector sum regulation performance measurement during AMTF testing.
+
