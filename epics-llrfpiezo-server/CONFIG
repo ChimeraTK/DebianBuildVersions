@@ -1,0 +1,17 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/llrf-piezo-server.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Dependencies: libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-applicationcore-dev
+Dependencies-bin: pcieuni-dkms, xdma-dkms, python3-mtca4upy
+
+Override-auto-configure-flags: -DADAPTER=EPICSIOC
+
+Provides-bin: epics-llrfpiezo-server
+Conflicts-bin: epics-llrfpiezo-server
+
+Description-bin: Piezo server for EPICS based control systems
