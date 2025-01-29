@@ -1,0 +1,21 @@
+Source: doocs-llrfctrl-config
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, debhelper (= 12.10ubuntu1), cmake (= 3.16.3-1ubuntu1.20.04.1), python3 (= 3.8.2-0ubuntu2), python3-mako (= 1.1.0+ds1-1ubuntu2.1), config-generator-scripts03-02 (= 03.02focal3.04-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/llrfctrl-config.git
+
+Package: doocs-llrfctrl-config08-08
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, python3-packaging, python3-simplejson, config-generator-scripts03-02
+Description: Configuration generator for the LLRF controller server.
+
