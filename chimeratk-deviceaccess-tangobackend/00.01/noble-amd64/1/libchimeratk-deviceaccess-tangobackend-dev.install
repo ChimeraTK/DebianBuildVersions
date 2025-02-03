@@ -1,0 +1,4 @@
+usr/bin/*-config
+@LIBDIR@/cmake/*
+usr/share/pkgconfig
+usr/share/pkgconfig/*
