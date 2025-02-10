@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-deviceaccess-opc-ua-backend (= 01.04focal2.00), libchimeratk-deviceaccess-dev (>= 03.18focal1), libchimeratk-deviceaccess-dev (<< 03.18focal2), libopen62541-dev (>= 1.4focal1), libopen62541-dev (<< 1.4focal2)
+Depends: libchimeratk-deviceaccess-opc-ua-backend (= 01.04focal2.01), libchimeratk-deviceaccess-dev (>= 03.18focal1), libchimeratk-deviceaccess-dev (<< 03.18focal2), libopen62541-dev (>= 1.4focal1), libopen62541-dev (<< 1.4focal2)
 Description: Header and cmake files for the OPC UA Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-opcuabackend.
 
 Package: libchimeratk-deviceaccess-opc-ua-backend01-04-focal2
