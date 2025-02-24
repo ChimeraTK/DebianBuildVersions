@@ -1,0 +1,34 @@
+Source: libdaction
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (= 1.8.17-0ubuntu2), libboost-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 25.2.0-focal1), dev-doocs-serverlib (= 25.2.0-focal1), libchimeratk-deviceaccess-dev (= 03.19focal1.00-0), libboost-test-dev (= 1.71.0.0ubuntu2), libboost-system-dev (= 1.71.0.0ubuntu2), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1ubuntu0.1), libzmq3-dev (= 4.3.2-2ubuntu1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/utilities/libraries/daction.git
+
+Package: libdaction-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: dev-doocs-daction
+Replaces: dev-doocs-daction
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdaction03-01-focal17, libboost-dev (= 1.71.0.0ubuntu2), dev-doocs-clientlib (= 25.2.0-focal1), dev-doocs-serverlib (= 25.2.0-focal1), libchimeratk-deviceaccess-dev (>= 03.19focal1), libchimeratk-deviceaccess-dev (<< 03.19focal2), pkg-config (= 0.29.1-0ubuntu4), libtirpc-dev (= 1.2.5-1ubuntu0.1)
+Description: Header and cmake files for the DAction Library.
+
+Package: libdaction03-01-focal17
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DAction library.
+
