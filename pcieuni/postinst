@@ -1,0 +1,17 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux pcieuni-dkms package
+
+DKMS_NAME="pcieuni"
+DKMS_PACKAGE_NAME="${DKMS_NAME}-dkms"
+DKMS_VERSION="#tagversion#"
+
+case "$1" in
+  configure)
+    # delegate to the common postinst script provided by dkms for the heavy lifting
+		/usr/lib/dkms/common.postinst "$DKMS_NAME" "$DKMS_VERSION" "/usr/share/${DKMS_PACKAGE_NAME}" "" "$2"
+
+		# make sure the kernel module is loaded, if loading is possible
+		# loading won't be possible in our package building validation step, so ignoring errors here is mandatory...
+		modprobe pcieuni || true
+	;;
+esac
