@@ -2,7 +2,7 @@ Format: http://dep.debian.net/deps/dep5
 Source: https://github.com/ChimeraTK/pcieuni-driver
 
 Files: *
-Copyright: 2024 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
+Copyright: 2025 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
 License: GPL-3+
 
 License: GPL-3+
