@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Wanted-on: focal, noble
 
 Dependencies: libllrflibrary-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-doocsbackend-dev libchimeratk-virtuallab-dev libhdf5-serial-dev libmath-utils-dev libchimeratk-applicationcore-microdaq-dev libarmadillo-dev
 Dependencies-bin: pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, python3-mtca4upy
@@ -17,4 +18,3 @@ Conflicts-bin: epics-llrfctrl-server
 Description-bin: Low-level RF control server for EPICS based control systems
 
 Disable-tests: yes
-
