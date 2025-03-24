@@ -31,4 +31,3 @@ Package-name-extra: chimeratk-deviceaccess-matlabtools
 Description-extra: Matlab bindings for ChimeraTK DeviceAccess. Requires Matlab to be installed in #Matlab_ROOT_DIR#.
 
 Conflicts-extra: mtca4u-matlab-tools
-Wanted-on: noble, bookworm
