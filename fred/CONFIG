@@ -5,6 +5,7 @@ License: gpl3
 
 Target-repositories: intern pub
 Has-packages: lib dev doc bin extra extra2
+Wanted-on: noble, bookworm
 
 Dependencies: doxygen libboost-dev libboost-thread-dev libboost-system-dev qtbase5-dev
 
@@ -33,4 +34,4 @@ Install-pattern-extra: usr/bin/fred-communicator
 Package-name-extra2: fred-dummy-servers
 Description-extra2: Fuse RElay boarD (FRED) and xport gpio dummy servers; used for mocking FRED hardware
 Enhances-extra2: #Package-name-dev#
-Install-pattern-extra2: usr/lib/libfredDummyServers.so*, usr/lib/libfredDummyServers*, usr/bin/*dummy* 
+Install-pattern-extra2: usr/lib/libfredDummyServers.so*, usr/lib/libfredDummyServers*, usr/bin/*dummy*

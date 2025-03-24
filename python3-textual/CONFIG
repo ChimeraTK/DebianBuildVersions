@@ -5,6 +5,7 @@ License: mit
 Target-repositories: intern
 
 Has-packages: python
+Wanted-on: noble, bookworm
 
 Dependencies: pybuild-plugin-pyproject python3-all python3-click python3-jinja2 python3-linkify-it python3-poetry python3-pytest python3-pytest-asyncio python3-rich python3-syrupy python3-typing-extensions
 

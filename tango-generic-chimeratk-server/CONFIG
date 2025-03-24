@@ -14,3 +14,4 @@ Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter
 Override-auto-configure-flags: -DADAPTER=TANGO
 
 Description-bin: ChimeraTK-based Tango device server, to expose registers of any firmware directly to the control system.
+Wanted-on:

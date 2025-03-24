@@ -14,3 +14,4 @@ Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter
 Override-auto-configure-flags: -DADAPTER=OPCUA
 
 Description-bin: ChimeraTK-based OPC UA device server, to expose registers of any firmware directly to the control system.
+Wanted-on: noble, bookworm

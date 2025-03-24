@@ -5,6 +5,7 @@ License: gpl3
 Target-repositories: intern pub
 
 Has-packages: dkms
+Wanted-on: noble, bookworm
 
 package-name-contains-buildversion: 0
 

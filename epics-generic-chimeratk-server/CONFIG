@@ -14,3 +14,4 @@ Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
 
 Description-bin: ChimeraTK-based EPICS server, to expose registers of any firmware directly to the control system.
+Wanted-on:

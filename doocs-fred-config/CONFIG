@@ -5,6 +5,7 @@ License: desy_internal
 Target-repositories: intern
 
 Has-packages: extra
+Wanted-on: noble, bookworm
 
 package-name-contains-buildversion: 0
 

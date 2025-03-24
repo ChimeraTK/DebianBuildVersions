@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: lib dev
+Wanted-on: noble, bookworm
 
 Dependencies: doxygen python3-dev git ca-certificates libmbedtls-dev libmbedtls-dev
 Dependencies-dev: libmbedtls-dev

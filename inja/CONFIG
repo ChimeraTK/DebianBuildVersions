@@ -5,6 +5,7 @@ License: mit
 Target-repositories: intern pub
 
 Has-packages: dev-alien-headeronly
+Wanted-on: noble, bookworm
 
 Dependencies: cmake nlohmann-json3-dev
 Dependencies-dev: cmake nlohmann-json3-dev

@@ -5,10 +5,10 @@ License: desy_internal
 Target-repositories: intern pub
 
 Has-packages: dev lib
+Wanted-on: noble, bookworm
 
 Dependencies: pkg-config libtirpc-dev doxygen libboost-dev libboost-test-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-libgul14 libzmq3-dev
 Dependencies-dev: libboost-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib
 
 Description-dev: Header files for the DOOCS server test helper library.
 Description-lib: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.
-

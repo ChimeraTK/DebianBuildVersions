@@ -15,3 +15,4 @@ Dependencies-bin: doocs-watchdog-server
 Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Description-bin: ChimeraTK-based DOOCS server, to expose registers of any firmware directly to the control system.
+Wanted-on: noble, bookworm

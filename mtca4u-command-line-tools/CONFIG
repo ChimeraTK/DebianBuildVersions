@@ -5,6 +5,7 @@ License: gpl3
 Target-repositories: intern pub
 
 Has-packages: bin extra
+Wanted-on: noble, bookworm
 
 Disable-tests: yes
 

@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Wanted-on: noble, bookworm
 
 Package-name-bin: mtca4u-fw-programmer
 

@@ -6,8 +6,10 @@ License: lgpl3
 Target-repositories: intern pub
 
 #The dev package is handled as extra because it does not depend on a lib package
-Has-packages: python 
+Has-packages: python
 Use-dynload: python
+
+Wanted-on: noble, bookworm
 
 Override-auto-configure-flags: "-DPYTHON3=True"
 

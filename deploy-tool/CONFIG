@@ -5,6 +5,7 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
+Wanted-on: jammy
 
 Package-name-bin: deploy-tool
 

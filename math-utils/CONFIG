@@ -5,9 +5,9 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: dev-headeronly doc
+Wanted-on: noble, bookworm
 
 Dependencies: doxygen libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev
 Description-dev: Header-only C++ library for math functions.
 Description-doc: The doxygen html documentation for math-utils.
 Dependencies-dev:
-
