@@ -24,3 +24,4 @@ Install-pattern-bin: usr/bin/chimeratk-opc-ua-mapfile-generator, usr/lib/python*
 Description-dev: Header and cmake files for the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-opcuaadapter.
 Description-lib: libchimeratk-controlsystemadapter-opcuaadapter provides the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a OPC UA server out of any control application built against the ChimeraTK ControlSystemAdapter.
 Description-bin: Tool to generate and edit map files required by the ControlSystemAdapter-OPC-UA-Adapter.
+Wanted-on: noble, bookworm

@@ -11,6 +11,8 @@ Disable-lto: yes
 
 Has-packages: dev lib doc bin extra
 
+Wanted-on: noble, bookworm
+
 Dependencies: doxygen graphviz libboost-dev libboost-test-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libxml++2.6-dev libchimeratk-cppext-dev libexprtk-dev nlohmann-json3-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-thread-dev libboost-chrono-dev libboost-filesystem-dev libchimeratk-cppext-dev
 Dependencies-extra: #Package-name-lib#

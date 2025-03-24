@@ -14,3 +14,4 @@ Dependencies-dev: libchimeratk-controlsystemadapter-dev
 Description-dev: Header and cmake files for the Tango Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-tangoadapter.
 Description-lib: libchimeratk-controlsystemadapter-tangoadapter provides the Tango Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a Tango server out of any control application built against the ChimeraTK ControlSystemAdapter.
 
+Wanted-on: noble, bookworm

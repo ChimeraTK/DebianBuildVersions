@@ -14,3 +14,4 @@ Description-lib: Framework for creating virtual devices connected to modelled ha
 
 Conflicts-dev:
 Replaces-dev:
+Wanted-on: noble, bookworm

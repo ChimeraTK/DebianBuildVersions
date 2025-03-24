@@ -30,3 +30,4 @@ Install-pattern-extra2: <<<EOF
 EOF
 Dependencies-extra2: libyajl-dev, libreadline-dev
 Description-extra2: Development package for EPICS used by ChimeraTK projects.
+Wanted-on: noble, bookworm

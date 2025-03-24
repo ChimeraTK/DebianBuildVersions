@@ -16,3 +16,4 @@ Install-additional-pattern-dev: usr/share/pkgconfig/*
 
 Description-dev: Header and cmake files for the Tango Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-tangobackend.
 Description-lib: libchimeratk-deviceaccess-tangobackend provides the Tango controls backend for the ChimeraTK DeviceAccess library, which allows accessing Tango Device servers as devices through the DeviceAccess interface.
+Wanted-on: noble, bookworm

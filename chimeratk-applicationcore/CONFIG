@@ -21,3 +21,4 @@ Enhances-bin: #Package-name-lib#
 Description-dev: Header and cmake files for the ChimeraTK ApplicationCore. The files you need to compile against libchimeratk-applicationcore.
 Description-lib: ChimeraTK ApplicationCore provides a C++ API for writing control system applications with the ChimeraTK ControlSystemAdapter and DeviceAccess libraries.
 
+Wanted-on: noble, bookworm

@@ -13,3 +13,4 @@ Description-dev: Header and cmake files for the OPC UA Backend for the ChimeraTK
 Description-lib: libchimeratk-deviceaccess-opcuabackend provides the OPC UA backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via OPC UA protocol.
 
 Disable-tests: yes
+Wanted-on: noble, bookworm

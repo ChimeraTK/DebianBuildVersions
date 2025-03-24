@@ -13,3 +13,4 @@ Dependencies-bin: python3-numpy, python3-pyqt5, python3-pyqtgraph, python3-h5py,
 Install-pattern-bin: usr/bin/MicroDAQViewer, usr/lib/python*/*/chimeratk_daq/*
 
 Description-bin: GUIs to analyse DAQ data and a data converter.
+Wanted-on: noble, bookworm

@@ -15,4 +15,4 @@ Provides-bin: server-mockup
 
 Override-auto-configure-flags: -DADAPTER=OPCUA -DCMAKE_BUILD_TYPE=Release
 
-Disable-tests: yes
+Disable-tests: yesWanted-on: noble, bookworm

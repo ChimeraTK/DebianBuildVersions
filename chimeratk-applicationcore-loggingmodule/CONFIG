@@ -13,3 +13,4 @@ Enhances-doc: libchimeratk-applicationcore-dev
 
 Description-dev: Header and cmake files for the ApplicationCore logging module.
 Description-lib: Provides the server based ApplicaitonCore logging module.
+Wanted-on: noble, bookworm

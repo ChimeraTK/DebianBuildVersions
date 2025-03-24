@@ -14,3 +14,4 @@ Enhances-doc: libchimeratk-cppext-dev
 
 Description-dev: Small header-only C++ library with a collection with useful template classes for use within the ChimeraTK framework.
 Description-doc: The doxygen html documentation for libchimeratk-cppext.
+Wanted-on: noble, bookworm

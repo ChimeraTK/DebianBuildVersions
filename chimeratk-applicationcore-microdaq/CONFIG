@@ -12,3 +12,4 @@ Dependencies-dev: libchimeratk-applicationcore-dev
 
 Description-dev: Header and cmake files for the ApplicationCore MicroDAQ module.
 Description-lib: Provides ApplicaitonCore MicroDAQ modules. Supported MicroDAQ backend is HDF5.
+Wanted-on: noble, bookworm

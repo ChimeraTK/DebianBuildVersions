@@ -13,3 +13,4 @@ Dependencies: python3
 Dependencies-bin: python3, python3-mtca4upy, python3-textual-latest
 
 Description-bin:  ChimeraTK Chai provides a textual user interface to access ChimeraTK devices. It can be used as a text-only replacement for QtHardMon, e.g. to avoid the need for X-forwarding while working on remote systems.
+Wanted-on: noble, bookworm

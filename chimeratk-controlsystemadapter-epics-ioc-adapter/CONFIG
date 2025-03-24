@@ -13,3 +13,4 @@ Description-dev: Header and cmake files for the EPICS R7.0 IOC Adapter for the C
 Description-lib: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
 
 Install-additional-pattern-dev: usr/share/ChimeraTK-ControlSystemAdapter-EPICS-IOC-Adapter/*
+Wanted-on: noble, bookworm

@@ -15,3 +15,4 @@ Enhances-doc: libchimeratk-controlsystemadapter-dev
 Description-dev: Header and cmake files for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper.
 Description-lib: libchimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
 #Description-doc: The doxygen html documentation for chimeratk-controlsystemadapter.
+Wanted-on: noble, bookworm

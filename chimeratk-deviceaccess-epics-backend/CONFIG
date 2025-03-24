@@ -13,3 +13,4 @@ Description-dev: Cmake files for the EPICS Backend for the ChimeraTK DeviceAcces
 Description-lib: libchimeratk-deviceaccess-epicsbackend provides the EPICS backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via EPICS channel access.
 
 Disable-tests: yes
+Wanted-on: noble, bookworm

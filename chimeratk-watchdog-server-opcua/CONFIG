@@ -19,3 +19,4 @@ Override-auto-configure-flags: -DENABLE_LOGGING=True -DADAPTER=OPCUA -DCMAKE_BUI
 Description-lib: ChimeraTK Watchdog Server provides a C++ API for controlling processes based on forking and exec calls.
 
 Disable-tests: yes
+Wanted-on: noble, bookworm
