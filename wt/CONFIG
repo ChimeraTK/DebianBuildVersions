@@ -6,6 +6,8 @@ Target-repositories: intern
 
 Has-packages: dev-alien lib extra
 
+Wanted-on: jammy
+
 Dependencies: cmake libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev zlib1g-dev libmysqlclient-dev libssl-dev libsqlite3-dev libhpdf-dev libpango1.0-dev libgraphicsmagick++1-dev
 Dependencies-dev: libboost-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev
 Install-additional-pattern-dev: usr/lib/cmake/*
