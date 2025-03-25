@@ -1,0 +1,27 @@
+#!/bin/bash -e
+# post install script 
+set -e
+
+case "$1" in
+  configure)
+    # continue as normal
+    ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+    exit 0;
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2;
+    exit 0;
+  ;;
+esac
+
+# 
+# install the new server
+# create dir if it doesn't exists.
+mkdir -p /export/doocs/server/microtimer_server
+
+
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/microtimer_server/microtimer_server
+
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-microtimer-config-00-01/configureThisHost.sh microtimer
