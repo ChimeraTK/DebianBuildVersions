@@ -1,0 +1,21 @@
+Source: chimeratk-server-mockup-opcua
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (= 1.9.8+ds-2build5), libchimeratk-controlsystemadapter-dev (= 02.12noble2.00-0), libchimeratk-applicationcore-dev (= 04.01noble2.00-0), libchimeratk-controlsystemadapter-opcuaadapter-dev (= 04.00noble4.03-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ServerMockup
+
+Package: chimeratk-server-mockup-opcua
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: server-mockup
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ChimeraTK ApplicationCore based server mockup for integration tasks.
+
