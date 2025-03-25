@@ -12,8 +12,10 @@ Dependencies-dev: libchimeratk-controlsystemadapter-dev libhdf5-dev pybind11-dev
 
 Install-pattern-lib: <<<EOF
 @LIBDIR@/lib*.so.*
-/usr/lib/python*/dist-packages/*
+/usr/lib/python*/dist-packages/ChimeraTK/ApplicationCore*
 EOF
+
+Install-additional-pattern-dev: /usr/lib/python*/dist-packages/PyApplicationCore.pyi
 
 Enhances-doc: #Package-name-dev#
 Enhances-bin: #Package-name-lib#
