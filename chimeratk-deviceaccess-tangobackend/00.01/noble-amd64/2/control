@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-deviceaccess-tangobackend (= 00.01noble2.00), libchimeratk-deviceaccess-dev (>= 03.19noble1), libchimeratk-deviceaccess-dev (<< 03.19noble2), libtango-dev (= 9.5.0+dfsg1-1.1build1)
+Depends: libchimeratk-deviceaccess-tangobackend (= 00.01noble2.01), libchimeratk-deviceaccess-dev (>= 03.19noble1), libchimeratk-deviceaccess-dev (<< 03.19noble2), libtango-dev (= 9.5.0+dfsg1-1.1build1)
 Description: Header and cmake files for the Tango Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-tangobackend.
 
 Package: libchimeratk-deviceaccess-tangobackend00-01-noble2
