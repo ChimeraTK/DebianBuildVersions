@@ -1,2 +1,2 @@
 @LIBDIR@/lib*.so.*
-/usr/lib/python*/dist-packages/*
+/usr/lib/python*/dist-packages/ChimeraTK/ApplicationCore*

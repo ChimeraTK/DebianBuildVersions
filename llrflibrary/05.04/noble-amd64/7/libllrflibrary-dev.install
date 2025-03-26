@@ -3,4 +3,4 @@ usr/bin/*-config
 @LIBDIR@/cmake/*
 usr/include/*
 usr/share/pkgconfig
-/usr/lib/python*/dist-packages/PyApplicationCore.pyi
+usr/share/LLRFLibrary/*
