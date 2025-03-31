@@ -21,7 +21,7 @@ esac
 mkdir -p /export/doocs/server/mo-fcm-generic-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/mo-fcm-generic-server/mo-fcm-generic-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/mo-fcm-generic-server/mo-fcm-generic-server
 
 #
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
