@@ -21,7 +21,7 @@ esac
 mkdir -p /export/doocs/server/flash-dism-generic-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/flash-dism-generic-server/flash-dism-generic-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/flash-dism-generic-server/flash-dism-generic-server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-doocs-flash-dism-server-config-01-05/configureThisHost.sh flash-dism-generic-server
