@@ -21,7 +21,7 @@ esac
 mkdir -p foo /export/doocs/server/logm-generic-server
 
 
-ln -sfn /usr/bin/doocs-generic-chimeratk-server /export/doocs/server/logm-generic-server/logm-generic-server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm-generic-server/logm-generic-server
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-doocs-logm-generic-server-config-#epochdashversion#/configureThisHost.sh logm-generic-server
