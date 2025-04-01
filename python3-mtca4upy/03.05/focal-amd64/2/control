@@ -1,7 +1,7 @@
 Source: python3-mtca4upy
 Priority: optional
 Maintainer: Christian Willner <christian.willner@desy.de>
-Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-dev (= 03.19focal1.00-0), python3-numpy (= 1:1.17.4-5ubuntu3.1), libboost-python-dev (= 1.71.0.0ubuntu2), libboost-numpy-dev (= 1.71.0.0ubuntu2), libboost-test-dev (= 1.71.0.0ubuntu2), python3-dev (= 3.8.2-0ubuntu2), lsb-release (= 11.1.0ubuntu2), libchimeratk-deviceaccess (= 03.19focal1.00-0) 
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-dev (= 03.19focal1.00-0), python3-numpy (>= 1:1.17.4-5ubuntu3.1), libboost-python-dev (>= 1.71.0.0ubuntu2), libboost-numpy-dev (>= 1.71.0.0ubuntu2), libboost-test-dev (>= 1.71.0.0ubuntu2), python3-dev (>= 3.8.2-0ubuntu2), lsb-release (>= 11.1.0ubuntu2), libchimeratk-deviceaccess (= 03.19focal1.00-0) 
 Standards-Version: 3.8.3
 Section: libs
 Homepage: https://github.com/ChimeraTK/DeviceAccess-PythonBindings
