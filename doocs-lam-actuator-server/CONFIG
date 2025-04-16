@@ -1,20 +1,17 @@
-SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-pulse-arrival-time-monitor/lam-actuator-server-config.git
-Maintainer: Anthony Barker <anthony.barker@desy.de>
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-pulse-arrival-time-monitor/lam-actuator-server.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
-License: desy_internal
-Target-repositories: intern
+License: lgpl3
+Target-repositories: intern pub
 
-Has-packages: extra
+Has-packages: doocs-bin
 
-Dependencies: config-generator-scripts
-Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-watchdog-server, doocs-generic-chimeratk-server02, libchimeratk-deviceaccess-commandbasedbackend, libchimeratk-deviceaccess-doocsbackend
+Dependencies: libchimeratk-deviceaccess-commandbasedbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-lam-actuator-config#epochdashversion# config-generator-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-lam-actuator-config#epochdashversion#
 
+Override-auto-configure-flags: -DADAPTER=DOOCS
 
-Package-name-extra: doocs-lam-actuator-server#debversion#
-Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+Provides-bin: doocs-lam-actuator-server
+Conflicts-bin: doocs-lam-actuator-server
 
-
-Provides-extra: doocs-lam-actuator-server
-Conflicts-extra: doocs-lam-actuator-server
-
-Description-extra: Configuration generator for the lam-actuator_server.
+Description-bin: DOOCS LAM actuator server.
