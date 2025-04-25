@@ -1,0 +1,34 @@
+Source: libdoocs-tc4-eqfct
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libboost-dev (>= 1.83.0.1ubuntu2), dev-doocs-clientlib (= 25.4.1-noble1), dev-doocs-serverlib (= 25.4.1-noble1), libchimeratk-deviceaccess-dev (= 03.19noble1.00-0), libdaction-dev (= 03.01noble7.02-0), libdoocs-rf-util-dev (= 01.03noble3.02-0), dev-doocs-libgul14 (= 25.4.1-noble1), libboost-test-dev (>= 1.83.0.1ubuntu2), libzmq3-dev (>= 4.3.5-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/tc4/tc4eqfct.git
+
+Package: libdoocs-tc4-eqfct-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libdoocs-tc4-eqfct01-08-noble4, libboost-dev (>= 1.83.0.1ubuntu2), dev-doocs-clientlib (= 25.4.1-noble1), dev-doocs-serverlib (= 25.4.1-noble1), libchimeratk-deviceaccess-dev (>= 03.19noble1), libchimeratk-deviceaccess-dev (<< 03.19noble2), libdaction-dev (>= 03.01noble7), libdaction-dev (<< 03.01noble8), libdoocs-rf-util-dev (>= 01.03noble3), libdoocs-rf-util-dev (<< 01.03noble4)
+Description: Header and cmake files for the TC4 EqFct library.
+
+Package: libdoocs-tc4-eqfct01-08-noble4
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DOOCS EqFct for the 4 channel temperature controller FMC (TC4). A library to be included in other DOOCS servers.
+
