@@ -8,7 +8,7 @@ Has-packages: dev-noheader lib
 
 Disable-tests: yes
 
-Dependencies: pkg-config doxygen libchimeratk-controlsystemadapter-dev libtango-dev libzmq3-dev
+Dependencies: pkg-config doxygen libchimeratk-controlsystemadapter-dev libtango-dev libzmq3-dev cppzmq-dev
 Dependencies-dev: libchimeratk-controlsystemadapter-dev
 
 Description-dev: Header and cmake files for the Tango Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-tangoadapter.
