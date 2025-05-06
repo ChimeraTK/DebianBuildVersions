@@ -8,7 +8,7 @@ Has-packages: dev-noheader-dynload lib
 
 Disable-tests: yes
 
-Dependencies: doxygen libchimeratk-deviceaccess-dev libtango-dev libboost-test-dev libxml++2.6-dev pkg-config nlohmann-json3-dev
+Dependencies: doxygen libchimeratk-deviceaccess-dev libtango-dev libboost-test-dev libxml++2.6-dev pkg-config nlohmann-json3-dev cppzmq-dev
 Dependencies-dev: libchimeratk-deviceaccess-dev libtango-dev
 
 #Hack to quickly get pkgconfig deployed before all projects have been released with it.
