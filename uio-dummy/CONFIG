@@ -2,7 +2,7 @@ SourceURI: https://github.com/ChimeraTK/uio-dummy.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: kernel
 License: gpl2-only
-Target-repositories: pub
+Target-repositories: intern pub
 
 package-name-contains-buildversion: 0
 
