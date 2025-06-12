@@ -1,4 +1,4 @@
-SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/BAM/bam-server-configuration.git
+SourceURI: https://gitlab.desy.de/msk-sw/special-diagnostics/BAM/server-configurations/desy-bam-server-config.git
 Maintainer: Jens Georg <jens.georg@desy.de>
 Section: net
 License: desy_internal
