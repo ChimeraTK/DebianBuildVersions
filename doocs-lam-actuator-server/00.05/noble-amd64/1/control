@@ -1,0 +1,21 @@
+Source: doocs-lam-actuator-server
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-commandbasedbackend-dev (= 00.01noble3.04-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.13noble1.00-0), libchimeratk-applicationcore-dev (= 04.03noble1.00-0), doocs-lam-actuator-config00-05 (= 00.05noble1.00-0), config-generator-scripts03-02 (= 03.02noble5.04-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-pulse-arrival-time-monitor/lam-actuator-server.git
+
+Package: doocs-lam-actuator-server00-05-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-lam-actuator-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-lam-actuator-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-lam-actuator-config00-05
+Description: DOOCS LAM actuator server.
+
