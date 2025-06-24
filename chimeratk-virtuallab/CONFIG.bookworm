@@ -1,0 +1,17 @@
+SourceURI: https://github.com/ChimeraTK/VirtualLab
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-test1.81-dev libboost-system1.81-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev
+
+Description-dev: Header and cmake files for libchimeratk-virtuallab. The files you need to compile against libchimeratk-virtuallab.
+Description-lib: Framework for creating virtual devices connected to modelled hardware components. VirtualLab is part of the ChimeraTK tool kit.
+
+Conflicts-dev:
+Replaces-dev:
+Wanted-on: noble, bookworm
