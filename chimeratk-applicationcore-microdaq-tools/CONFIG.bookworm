@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/ApplicationCore-MicroDAQ-Tools
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+# The UAClient requires to install opcua-client via pip3
+Dependencies: doxygen libboost1.81-dev libboost-test1.81-dev libboost-system1.81-dev libboost-filesystem1.81-dev libboost-log1.81-dev libboost-regex1.81-dev libboost-program-options1.81-dev libhdf5-dev python3-dev
+Dependencies-bin: python3-numpy, python3-pyqt5, python3-pyqtgraph, python3-h5py, libhdf5-dev
+
+Install-pattern-bin: usr/bin/MicroDAQViewer, usr/lib/python*/*/chimeratk_daq/*
+
+Description-bin: GUIs to analyse DAQ data and a data converter.
+Wanted-on: noble, bookworm

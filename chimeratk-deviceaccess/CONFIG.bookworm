@@ -1,0 +1,41 @@
+SourceURI: https://github.com/ChimeraTK/DeviceAccess
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+project: ChimeraTK-DeviceAccess
+
+Disable-tests: yes
+Disable-lto: yes
+
+Has-packages: dev lib doc bin extra
+
+Wanted-on: noble, bookworm
+
+Dependencies: doxygen graphviz libboost1.81-dev libboost-test1.81-dev libboost-system1.81-dev libboost-thread1.81-dev libboost-chrono1.81-dev libboost-filesystem1.81-dev libxml++2.6-dev libchimeratk-cppext-dev libexprtk-dev nlohmann-json3-dev
+Dependencies-dev: libboost1.81-dev libboost-system1.81-dev libboost-thread1.81-dev libboost-chrono1.81-dev libboost-filesystem1.81-dev libchimeratk-cppext-dev
+Dependencies-extra: #Package-name-lib#
+
+#Dependencies for a binary package 'chimeratk-deviceaccess-lmap-editor'. It MUST be a coma-separated list (not space separated). Probably reaso is that it used dirrectly by dpkg, not a Python.#
+Dependencies-bin: python3-lxml , python3-pyqt5
+
+Package-name-bin: chimeratk-deviceaccess-lmap-editor
+Package-name-extra: libchimeratk-deviceaccess
+
+Recommends-dev: #Package-name-doc#
+Enhances-doc: #Package-name-dev#
+Suggests-lib: #Package-name-bin#
+Enhances-bin: #Package-name-lib#
+Enhances-extra: #Package-name-lib#
+
+Install-pattern-bin: usr/bin/chimeratk-lmap-editor
+
+#Hack to quickly get pkgconfig deployed before all projects have been released with it.
+Install-additional-pattern-dev: usr/share/pkgconfig/*
+
+Description-dev: Header and cmake files for libchimeratk-deviceaccess. The files you need to compile against libchimeratk-deviceaccess.
+Description-lib: libchimeratk-deviceaccess provides a C++ API to access devices through different protocols. ChimeraTK is a software framework which provides a C++ API, drivers and tools for hardware and control system access independent with a high abstraction level.
+Description-doc: The doxygen html documentation for libchimeratk-deviceaccess and some examples.
+Description-bin: GUI to create config files for the ChimeraTK DeviceAccess logical name mapping device backend.
+Description-extra: Meta-package to declare dependencies to a package without version numbers in the name, which is not the dev-package.

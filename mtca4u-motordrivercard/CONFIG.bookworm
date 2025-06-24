@@ -1,0 +1,24 @@
+SourceURI: https://github.com/ChimeraTK/MotorDriverCard
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib bin
+Wanted-on: noble, bookworm
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost1.81-dev libboost-system1.81-dev libboost-test1.81-dev libboost-thread1.81-dev qtbase5-dev libxml++2.6-dev
+Dependencies-dev: libboost1.81-dev libchimeratk-deviceaccess-dev
+
+Package-name-bin: mtca4u-motordrivercard-configcalculator
+
+Conflicts-dev: dev-mtca4u-motordrivercard
+Replaces-dev: dev-mtca4u-motordrivercard
+Suggests-lib: #Package-name-bin#
+Enhances-bin: #Package-name-lib#
+
+Install-pattern-bin: usr/bin/*MotorConfigCalculator
+
+Description-dev: Header and cmake files for ChimeraTK MotorDriverCard. The files you need to compile against ChimerarTK MotorDriverCard.
+Description-lib: ChimeraTK MotorDriverCard provides a C++ API for the DFMC-MD22 motor driver card, based on ChimeraTK.
+Description-bin: Config calculators (command line and Qt GUI) for the ChimeraTK MotorDriverCard.

@@ -1,0 +1,18 @@
+SourceURI: https://github.com/ChimeraTK/ControlSystemAdapter
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost1.81-dev libboost-test1.81-dev libboost-system1.81-dev libboost-thread1.81-dev libboost-chrono1.81-dev libboost-filesystem1.81-dev libxml++2.6-dev
+Dependencies-dev: libchimeratk-deviceaccess-dev libboost1.81-dev libboost-test1.81-dev libboost-system1.81-dev libboost-thread1.81-dev libboost-chrono1.81-dev libboost-filesystem1.81-dev libxml++2.6-dev
+
+#Recommends-dev: libchimeratk-controlsystemadapter-doc
+Enhances-doc: libchimeratk-controlsystemadapter-dev
+
+Description-dev: Header and cmake files for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper.
+Description-lib: libchimeratk-controlsystemadapter provides the ChimeraTK ControlSystemAdapter which allows programming control applications independent of the control system middleware.
+#Description-doc: The doxygen html documentation for chimeratk-controlsystemadapter.
+Wanted-on: noble, bookworm

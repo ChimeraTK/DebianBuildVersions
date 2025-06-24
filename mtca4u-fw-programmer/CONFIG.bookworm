@@ -1,0 +1,14 @@
+SourceURI: https://github.com/ChimeraTK/FirmwareProgrammer
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+Wanted-on: noble, bookworm
+
+Package-name-bin: mtca4u-fw-programmer
+
+Dependencies: doxygen libchimeratk-deviceaccess-dev libboost-system1.81-dev libboost-program-options1.81-dev libncurses-dev
+
+Description-bin: Application for FPGA firmware upgrade through the DeviceAccess interface.

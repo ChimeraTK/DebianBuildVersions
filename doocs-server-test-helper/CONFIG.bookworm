@@ -1,0 +1,14 @@
+SourceURI: https://github.com/ChimeraTK/DoocsServerTestHelper
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Section: libs
+License: desy_internal
+Target-repositories: intern pub
+
+Has-packages: dev lib
+Wanted-on: noble, bookworm
+
+Dependencies: pkg-config libtirpc-dev doxygen libboost1.81-dev libboost-test1.81-dev libboost-filesystem1.81-dev dev-doocs-clientlib dev-doocs-serverlib dev-doocs-libgul14 libzmq3-dev
+Dependencies-dev: libboost1.81-dev libboost-filesystem1.81-dev dev-doocs-clientlib dev-doocs-serverlib
+
+Description-dev: Header files for the DOOCS server test helper library.
+Description-lib: DOOCS server test helper library. Allows writing unit tests for DOOCS servers more easily.

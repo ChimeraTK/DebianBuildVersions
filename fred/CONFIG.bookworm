@@ -1,0 +1,37 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/fred/fred-library.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: utils
+License: gpl3
+
+Target-repositories: intern pub
+Has-packages: lib dev doc bin extra extra2
+Wanted-on: noble, bookworm
+
+Dependencies: doxygen libboost1.81-dev libboost-thread1.81-dev libboost-system1.81-dev qtbase5-dev
+
+Description-lib: The C++ library to access the Fuse RElay boarD (FRED).
+Install-pattern-lib: usr/lib/libfred.so.*
+Suggests-lib:  fred-gui, fred-utilities
+
+Dependencies-dev: libboost1.81-dev libboost-thread1.81-dev libboost-system1.81-dev
+Recommends-dev: #Package-name-doc#
+Description-dev: Header and cmake files for the  Fuse RElay boarD (FRED) C++ library. The development package also comes with dummy servers for testing.
+Suggests-dev:  fred-dummy-servers
+
+Description-doc: Provides doxygen html documentation for the FRED c++ access library.
+Enhances-doc: #Package-name-dev#
+
+Package-name-bin: fred-gui
+Description-bin: The GUI to control the Fuse RElay boarD (FRED).
+Enhances-bin: #Package-name-lib#
+Install-pattern-bin: usr/bin/fred-gui, usr/bin/fred-emergency-control
+
+Package-name-extra: fred-utilities
+Description-extra: Tools for interacting with the Fuse RElay boarD (FRED). Currently includes fred-communicator tool.
+Enhances-extra: #Package-name-lib#
+Install-pattern-extra: usr/bin/fred-communicator
+
+Package-name-extra2: fred-dummy-servers
+Description-extra2: Fuse RElay boarD (FRED) and xport gpio dummy servers; used for mocking FRED hardware
+Enhances-extra2: #Package-name-dev#
+Install-pattern-extra2: usr/lib/libfredDummyServers.so*, usr/lib/libfredDummyServers*, usr/bin/*dummy*

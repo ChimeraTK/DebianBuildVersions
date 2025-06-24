@@ -1,0 +1,16 @@
+SourceURI: https://github.com/ChimeraTK/ApplicationCore-LoggingModule
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev lib
+
+Dependencies: doxygen libchimeratk-applicationcore-dev libboost-filesystem1.81-dev
+Dependencies-dev: libchimeratk-applicationcore-dev libboost-filesystem1.81-dev
+
+Enhances-doc: libchimeratk-applicationcore-dev
+
+Description-dev: Header and cmake files for the ApplicationCore logging module.
+Description-lib: Provides the server based ApplicaitonCore logging module.
+Wanted-on: noble, bookworm

@@ -1,0 +1,13 @@
+SourceURI: https://gitlab.desy.de/msk-sw/utilities/libraries/math-utils.git
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: libs
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: dev-headeronly doc
+Wanted-on: noble, bookworm
+
+Dependencies: doxygen libboost1.81-dev libboost-test1.81-dev libboost-system1.81-dev libboost-thread1.81-dev
+Description-dev: Header-only C++ library for math functions.
+Description-doc: The doxygen html documentation for math-utils.
+Dependencies-dev:
