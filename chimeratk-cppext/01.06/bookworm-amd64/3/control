@@ -1,0 +1,34 @@
+Source: libchimeratk-cppext
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libboost1.81-dev (>= 1.81.0-5+deb12u1), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libboost-system1.81-dev (>= 1.81.0-5+deb12u1), libboost-thread1.81-dev (>= 1.81.0-5+deb12u1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/cppext
+
+Package: libchimeratk-cppext-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: libchimeratk-cppext-doc
+Suggests: 
+Enhances: 
+Provides: 
+Depends: 
+Description: Small header-only C++ library with a collection with useful template classes for use within the ChimeraTK framework.
+
+Package: libchimeratk-cppext-doc
+Section: libdevel
+Architecture: any
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libchimeratk-cppext-dev
+Provides: 
+Depends: libchimeratk-cppext-dev
+Description: The doxygen html documentation for libchimeratk-cppext.
+
