@@ -1,0 +1,21 @@
+Source: chimeratk-applicationcore-microdaq-tools
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libboost1.81-dev (>= 1.81.0-5+deb12u1), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libboost-system1.81-dev (>= 1.81.0-5+deb12u1), libboost-filesystem1.81-dev (>= 1.81.0-5+deb12u1), libboost-log1.81-dev (>= 1.81.0-5+deb12u1), libboost-regex1.81-dev (>= 1.81.0-5+deb12u1), libboost-program-options1.81-dev (>= 1.81.0-5+deb12u1), libhdf5-dev (>= 1.10.8+repack1-1), python3-dev (>= 3.11.2-1+b1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ApplicationCore-MicroDAQ-Tools
+
+Package: chimeratk-applicationcore-microdaq-tools01-06-bookworm2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-numpy, python3-pyqt5, python3-pyqtgraph, python3-h5py, libhdf5-dev
+Description: GUIs to analyse DAQ data and a data converter.
+
