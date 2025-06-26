@@ -1,0 +1,34 @@
+Source: chimeratk-epics
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, patchelf (>= 0.14.3-1+b1), perl (>= 5.36.0-7+deb12u2), libyajl-dev (>= 2.1.0-3+deb12u2), libreadline-dev (>= 8.2-1.3), pkg-config (>= 1.8.1-1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/EPICS-interface
+
+Package: libchimeratk-epics01-01-bookworm1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Runtime package for EPICS used by ChimeraTK projects.
+
+Package: libchimeratk-epics-dev
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyajl-dev, libreadline-dev
+Description: Development package for EPICS used by ChimeraTK projects.
+

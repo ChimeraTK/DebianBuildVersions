@@ -1,0 +1,12 @@
+/usr/lib/*
+/usr/share/ChimeraTK-EPICS*/lib/linux-x86_64/*.so
+/usr/share/ChimeraTK-EPICS7/lib/pkgconfig/*
+/usr/share/ChimeraTK-EPICS7/lib/perl/*
+/usr/share/ChimeraTK-EPICS7/include/*
+/usr/share/ChimeraTK-EPICS7/html/*
+/usr/share/ChimeraTK-EPICS7/dbd/*
+/usr/share/ChimeraTK-EPICS7/db/*
+/usr/share/ChimeraTK-EPICS7/configure/*
+/usr/share/ChimeraTK-EPICS7/cfg/*
+/usr/share/ChimeraTK-EPICS7/bin/*
+/usr/share/ChimeraTK-EPICS7/templates/*
