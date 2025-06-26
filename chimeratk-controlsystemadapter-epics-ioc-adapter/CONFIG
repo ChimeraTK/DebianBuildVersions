@@ -7,7 +7,7 @@ Target-repositories: intern pub
 Has-packages: dev-noheader lib
 
 Dependencies: doxygen libchimeratk-controlsystemadapter-dev libreadline-dev libyajl-dev libchimeratk-epics-dev
-Dependencies-dev: libchimeratk-controlsystemadapter-dev libyajl-dev
+Dependencies-dev: libchimeratk-controlsystemadapter-dev libyajl-dev libchimeratk-epics-dev
 
 Description-dev: Header and cmake files for the EPICS R7.0 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
 Description-lib: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
