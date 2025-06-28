@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libtec-applicationmodule-dev dev-doocs-libgul14 libchimeratk-controlsystemadapter-doocsadapter-dev doocs-sdm-config#epochdashversion# config-generator-scripts libzmq3-dev libmath-utils-dev
+Dependencies: libtirpc-dev pkg-config libboost-dev libboost-thread-dev libboost-system-dev libboost-filesystem-dev dev-doocs-clientlib dev-doocs-serverlib doocs-watchdog-server libchimeratk-deviceaccess-dev libtec-applicationmodule-dev dev-doocs-libgul14 libchimeratk-controlsystemadapter-doocsadapter-dev doocs-sdm-config#epochdashversion# config-generator-scripts libzmq3-dev libtec-dev libmath-utils-dev libconsatt-dev libconsatt-doocs-dev libdemac-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-sdm-config#epochdashversion#
 Install-pattern-bin: export/doocs/server/sdm_server/*
 
