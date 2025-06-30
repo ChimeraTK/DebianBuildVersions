@@ -18,4 +18,4 @@ esac
 
 #
 # generate and/or update configuration files.
-/usr/share/ConfigGenerator-llrfctrl-config-#epochdashversion#/configureThisHost.sh llrfctrl6-epics
+/usr/share/ConfigGenerator-llrfctrl_server-hzb-config-#epochdashversion#/configureThisHost.sh llrfctrl6-epics
