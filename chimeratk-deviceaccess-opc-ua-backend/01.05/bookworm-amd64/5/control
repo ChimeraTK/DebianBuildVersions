@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-deviceaccess-opc-ua-backend (= 01.05bookworm5.00), libchimeratk-deviceaccess-dev (>= 03.20bookworm3), libchimeratk-deviceaccess-dev (<< 03.20bookworm4), libopen62541-dev (>= 1.4bookworm1), libopen62541-dev (<< 1.4bookworm2)
+Depends: libchimeratk-deviceaccess-opc-ua-backend (= 01.05bookworm5.01), libchimeratk-deviceaccess-dev (>= 03.20bookworm3), libchimeratk-deviceaccess-dev (<< 03.20bookworm4), libopen62541-dev (>= 1.4bookworm1), libopen62541-dev (<< 1.4bookworm2)
 Description: Header and cmake files for the OPC UA Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-opcuabackend.
 
 Package: libchimeratk-deviceaccess-opc-ua-backend01-05-bookworm5
