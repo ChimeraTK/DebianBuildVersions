@@ -1,0 +1,21 @@
+Source: doocs-amtfmanagement-server
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, dev-doocs-clientlib (= 25.4.1-noble1), dev-doocs-serverlib (= 25.4.1-noble1), dev-doocs-doocsdapilib (= 25.4.1-noble1), libamtfdbaccess-dev (= 02.09noble1.02-0), pkg-config (>= 1.8.1-2build1), libtirpc-dev (>= 1.3.4+ds-1.1build1), libzmq3-dev (>= 4.3.5-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/amtf-management-server/amtf-management-server.git
+
+Package: doocs-amtfmanagement-server02-00-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-amtfmanagement-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-amtfmanagement-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server
+Description: DOOCS server for test management at AMTF
+
