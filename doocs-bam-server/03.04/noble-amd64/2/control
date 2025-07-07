@@ -16,6 +16,6 @@ Recommends: pcieuni-dkms
 Suggests: 
 Enhances: 
 Provides: doocs-bam-server
-Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, config-bam-server03-04
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, config-bam-server03-04, dev-doocs-pydoocslib, python3-matplotlib
 Description: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
 
