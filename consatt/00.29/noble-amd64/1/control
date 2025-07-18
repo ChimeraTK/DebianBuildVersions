@@ -1,0 +1,34 @@
+Source: libconsatt
+Priority: optional
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libboost-dev (>= 1.83.0.1ubuntu2), libboost-test-dev (>= 1.83.0.1ubuntu2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/consatt.git
+
+Package: libconsatt-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libconsatt00-29-noble1, libboost-dev (>= 1.83.0.1ubuntu2)
+Description: Header and cmake files for the Consatt Library.
+
+Package: libconsatt00-29-noble1
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Consatt (control system attacher) library.
+
