@@ -5,7 +5,7 @@ License: desy_internal
 Target-repositories: intern pub
 
 Has-packages: dev lib
-Wanted-on: focal, noble
+Wanted-on: noble
 
 Dependencies: debhelper cmake libboost-dev libboost-test-dev libchimeratk-applicationcore-dev
 Dependencies-dev: libchimeratk-applicationcore-dev
