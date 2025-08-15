@@ -1,0 +1,16 @@
+#!/bin/sh
+# post remove script for the Debian 
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop microtimer_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   # check if this server is in the watchdog
+   INWD=`grep "/server/microtimer_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete microtimer_server || true
+   fi
+   # remove entire server directory
+   rm -rf /export/doocs/server/microtimer_server
+fi
