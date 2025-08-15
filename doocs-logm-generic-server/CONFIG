@@ -7,7 +7,7 @@ Target-repositories: intern
 Has-packages: extra
 
 Dependencies: config-generator-scripts
-Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02, doocs-watchdog-server
 
 Package-name-extra: doocs-logm-generic-server#debversion#
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
