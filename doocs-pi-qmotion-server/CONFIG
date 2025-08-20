@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/pi-qmotion/pi-qmotion-server.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: doocs-bin
+
+Dependencies: libchimeratk-deviceaccess-commandbasedbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-pi-qmotion-config#epochdashversion# config-generator-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-pi-qmotion-config#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Provides-bin: doocs-qmotion-server, lam-actuator-server
+Conflicts-bin: doocs-qmotion-server, doocs-lam-actuator-server
+Replaces-bin: doocs-lam-actuator-server
+
+Description-bin: DOOCS LAM actuator server.
