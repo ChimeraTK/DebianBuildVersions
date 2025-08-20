@@ -11,7 +11,7 @@ package-name-contains-buildversion: 0
 Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
 Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#
 
-Package-name-extra: doocs-pi_qmotion-config#debversion#
+Package-name-extra: doocs-pi-qmotion-config#debversion#
 
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
 
