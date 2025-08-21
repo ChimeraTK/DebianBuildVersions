@@ -15,4 +15,4 @@ Provides-bin: doocs-qmotion-server, lam-actuator-server
 Conflicts-bin: doocs-qmotion-server, doocs-lam-actuator-server
 Replaces-bin: doocs-lam-actuator-server
 
-Description-bin: DOOCS LAM actuator server.
+Description-bin: DOOCS server for the PI Q-Motion stages.
