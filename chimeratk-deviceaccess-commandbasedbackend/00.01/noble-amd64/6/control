@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-commandbasedbackend
+Priority: optional
+Maintainer: Anthony Barker <anthony.barker@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.23noble1.00-0), libboost-test-dev (>= 1.83.0.1ubuntu2), libinja-dev (= 3.4noble1.0-0), socat (>= 1.8.0.0-4build3), libchimeratk-deviceaccess (= 03.23noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-CommandBasedBackend.git
+
+Package: libchimeratk-deviceaccess-commandbasedbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-commandbasedbackend (= 00.01noble6.04), libchimeratk-deviceaccess-dev (>= 03.23noble1), libchimeratk-deviceaccess-dev (<< 03.23noble2)
+Description: CMake files for the CommandBaseBackend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-commandbasedbackend.
+
+Package: libchimeratk-deviceaccess-commandbasedbackend00-01-noble6
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChimeraTK DeviceAccess backend for devices with command based communication like SCPI or serial.
+
+Package: libchimeratk-deviceaccess-commandbasedbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-commandbasedbackend00-01-noble6, libchimeratk-deviceaccess (>= 03.23noble1), libchimeratk-deviceaccess (<< 03.23noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
