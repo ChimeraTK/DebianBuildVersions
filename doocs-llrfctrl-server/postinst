@@ -18,10 +18,10 @@ esac
 
 #
 # install the new server
-if [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl ]; then
-  ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl /export/doocs/server/llrfCtrl_server/llrfCtrl_server
-elif [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl-server ]; then
+if [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl-server ]; then
   ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl-server /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+elif [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl ]; then
+  ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl /export/doocs/server/llrfCtrl_server/llrfCtrl_server
 else
   echo "Cannot find executable from package."
 	exit 1
