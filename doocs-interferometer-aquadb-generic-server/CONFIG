@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/support/interferometer-aquadb-readout-server-config.git
+Maintainer: Jens Georg <jens.georg@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend
+
+Package-name-extra: doocs-interferometer-aquadb-generic-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Provides-bin: interferometer-readout_server
+Conflicts-bin:interferometer-readout_server
+
+Description-extra: Configuration generator for the interferometer aquadb readout server.
