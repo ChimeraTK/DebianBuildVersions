@@ -1,0 +1,21 @@
+Source: epics-llrfpiezo-server
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-doocsbackend-dev (= 01.11noble3.01-0), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 02.02noble9.01-0), libchimeratk-applicationcore-dev (= 04.05noble3.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/llrf-piezo-server.git
+
+Package: epics-llrfpiezo-server04-12-noble1
+Section: net
+Architecture: amd64
+Conflicts: epics-llrfpiezo-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-llrfpiezo-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, xdma-dkms, python3-mtca4upy
+Description: Piezo server for EPICS based control systems
+
