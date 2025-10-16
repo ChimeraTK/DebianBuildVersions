@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-piezoserialbackend
+Priority: optional
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.24noble1.00-0), libboost-dev (>= 1.83.0.1ubuntu2), libboost-system-dev (>= 1.83.0.1ubuntu2), libboost-test-dev (>= 1.83.0.1ubuntu2), libchimeratk-deviceaccess (= 03.24noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-serial-backend.git
+
+Package: libchimeratk-deviceaccess-piezoserialbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-piezoserialbackend (= 01.01noble7.00), libchimeratk-deviceaccess-dev (>= 03.24noble1), libchimeratk-deviceaccess-dev (<< 03.24noble2)
+Description: Header and cmake files for the PiezoSerial Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-piezoserialbackend.
+
+Package: libchimeratk-deviceaccess-piezoserialbackend01-01-noble7
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-piezoserialbackend provides the PiezoSerial backend for the ChimeraTK DeviceAccess library, which allows accessing PZ16M via USB diagnostic port  as devices through the DeviceAccess interface.
+
+Package: libchimeratk-deviceaccess-piezoserialbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-piezoserialbackend01-01-noble7, libchimeratk-deviceaccess (>= 03.24noble1), libchimeratk-deviceaccess (<< 03.24noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+

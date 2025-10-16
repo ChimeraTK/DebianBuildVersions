@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-epics-backend
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, debhelper (>= 13.14.1ubuntu5), cmake (>= 3.28.3-1build7), pkg-config (>= 1.8.1-2build1), doxygen (>= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.24noble1.00-0), libboost-test-dev (>= 1.83.0.1ubuntu2), libchimeratk-epics-dev (= 01.01noble1.01-0), libchimeratk-deviceaccess (= 03.24noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-EpicsBackend
+
+Package: libchimeratk-deviceaccess-epics-backend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-epics-backend (= 01.00noble7.02), libchimeratk-deviceaccess-dev (>= 03.24noble1), libchimeratk-deviceaccess-dev (<< 03.24noble2), libchimeratk-epics-dev (>= 01.01noble1), libchimeratk-epics-dev (<< 01.01noble2)
+Description: Cmake files for the EPICS Backend for the ChimeraTK DeviceAccess library. The files you need to link against libchimeratk-deviceaccess-epicsbackend.
+
+Package: libchimeratk-deviceaccess-epics-backend01-00-noble7
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-epicsbackend provides the EPICS backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via EPICS channel access.
+
+Package: libchimeratk-deviceaccess-epics-backend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-epics-backend01-00-noble7, libchimeratk-deviceaccess (>= 03.24noble1), libchimeratk-deviceaccess (<< 03.24noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
