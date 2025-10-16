@@ -1,0 +1,21 @@
+Source: doocs-eod-server
+Priority: optional
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (>= 1.8.1-2build1), dev-doocs-clientlib (= 25.10.0-noble1), dev-doocs-serverlib (= 25.10.0-noble1), dev-doocs-doocstiminglib (= 25.10.0-noble1), doocs-watchdog-server (= 25.10.0-noble1), libchimeratk-deviceaccess-dev (= 03.23noble1.00-0), libchimeratk-applicationcore-dev (= 04.05noble3.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.14noble4.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.11noble4.01-0), libarmadillo-dev (>= 1:12.6.7+dfsg-1build2), libboost-filesystem-dev (>= 1.83.0.1ubuntu2), libboost-log-dev (>= 1.83.0.1ubuntu2), libboost-test-dev (>= 1.83.0.1ubuntu2), config-generator-scripts03-03 (= 03.03noble2.01-0), python3-mako (>= 1.3.2-1), nlohmann-json3-dev (>= 3.11.3-1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/special-diagnostics/eod/eod-server.git
+
+Package: doocs-eod-server01-08-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-eod-server
+Replaces: 
+Breaks: 
+Recommends: pcieuni-dkms
+Suggests: 
+Enhances: 
+Provides: doocs-eod-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-eod-config01-08, config-generator-scripts03-03, python3-mtca4upy, python3-numpy
+Description: DOOCS server for Electro-optical detector at XFEL and FLASH, based on ChimeraTK
+
