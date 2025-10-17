@@ -5,7 +5,6 @@ License: lgpl3
 Target-repositories: intern pub
 
 Has-packages: bin
-Use-dynload: bin
 
 Package-name-bin: chimeratk-chai
 
