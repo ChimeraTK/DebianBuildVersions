@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, python3, python3-mtca4upy, python3-textual-latest, libchimeratk-deviceaccess (>= 03.24noble1), libchimeratk-deviceaccess (<< 03.24noble2)
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3, python3-mtca4upy(>4.0.0), python3-textual-latest, python3-rich, python3-typing-extensions, python3-platformdirs, libchimeratk-deviceaccess (>= 03.24noble1), libchimeratk-deviceaccess (<< 03.24noble2)
 Description: ChimeraTK Chai provides a textual user interface to access ChimeraTK devices. It can be used as a text-only replacement for QtHardMon, e.g. to avoid the need for X-forwarding while working on remote systems.
 
