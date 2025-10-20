@@ -1,0 +1,34 @@
+Source: libllrflibrary
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, debhelper (>= 13.14.1ubuntu5), cmake (>= 3.28.3-1build7), libboost-dev (>= 1.83.0.1ubuntu2), libboost-test-dev (>= 1.83.0.1ubuntu2), libchimeratk-applicationcore-dev (= 04.05noble5.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-library.git
+
+Package: libllrflibrary-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: dev-llrflibrary
+Replaces: dev-llrflibrary
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libllrflibrary05-05-noble7, libchimeratk-applicationcore-dev (>= 04.05noble5), libchimeratk-applicationcore-dev (<< 04.05noble6)
+Description: Header and cmake files for the Low Level Radio Frequency Library. The files you need to compile against the LLRFLibrary.
+
+Package: libllrflibrary05-05-noble7
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Low Level Radio Frequency (LLRF) control library. Developed at DESY for the  FLASH/XFEL project.
+
