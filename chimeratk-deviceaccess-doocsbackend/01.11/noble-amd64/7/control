@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-doocsbackend
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.25noble1.00-0), dev-doocs-clientlib (= 25.10.0-noble1), dev-doocs-serverlib (= 25.10.0-noble1), libboost-test-dev (>= 1.83.0.1ubuntu2), libdoocs-server-test-helper-dev (= 01.07noble9.02-0), dev-doocs-libgul14 (= 25.10.0-noble1), libxml++2.6-dev (>= 2.42.3-1build2), libtirpc-dev (>= 1.3.4+ds-1.1build1), pkg-config (>= 1.8.1-2build1), libzmq3-dev (>= 4.3.5-1build2), libchimeratk-deviceaccess (= 03.25noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-DoocsBackend
+
+Package: libchimeratk-deviceaccess-doocsbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-doocsbackend (= 01.11noble7.01), libchimeratk-deviceaccess-dev (>= 03.25noble1), libchimeratk-deviceaccess-dev (<< 03.25noble2), dev-doocs-clientlib (= 25.10.0-noble1), dev-doocs-serverlib (= 25.10.0-noble1)
+Description: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.
+
+Package: libchimeratk-deviceaccess-doocsbackend01-11-noble7
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-doocsbackend provides the DOOCS backend for the ChimeraTK DeviceAccess library, which allows accessing DOOCS servers as devices through the DeviceAccess interface.
+
+Package: libchimeratk-deviceaccess-doocsbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-doocsbackend01-11-noble7, libchimeratk-deviceaccess (>= 03.25noble1), libchimeratk-deviceaccess (<< 03.25noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
