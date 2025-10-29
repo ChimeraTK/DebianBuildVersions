@@ -16,7 +16,7 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: libchimeratk-deviceaccess-doocsbackend (= 01.11bookworm7.01), libchimeratk-deviceaccess-dev (>= 03.25bookworm1), libchimeratk-deviceaccess-dev (<< 03.25bookworm2), dev-doocs-clientlib (= 25.10.0-bookworm1), dev-doocs-serverlib (= 25.10.0-bookworm1)
+Depends: libchimeratk-deviceaccess-doocsbackend (= 01.11bookworm7.02), libchimeratk-deviceaccess-dev (>= 03.25bookworm1), libchimeratk-deviceaccess-dev (<< 03.25bookworm2), dev-doocs-clientlib (= 25.10.0-bookworm1), dev-doocs-serverlib (= 25.10.0-bookworm1)
 Description: Header and cmake files for the DOOCS Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-doocsbackend.
 
 Package: libchimeratk-deviceaccess-doocsbackend01-11-bookworm7
