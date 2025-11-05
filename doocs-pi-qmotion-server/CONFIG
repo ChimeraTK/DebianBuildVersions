@@ -6,7 +6,7 @@ Target-repositories: intern pub
 
 Has-packages: doocs-bin
 
-Dependencies: libchimeratk-deviceaccess-commandbasedbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-pi-qmotion-config#epochdashversion# config-generator-scripts
+Dependencies: libchimeratk-deviceaccess-commandbasedbackend-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-applicationcore-dev doocs-pi-qmotion-config#epochdashversion# config-generator-scripts  libchimeratk-deviceaccess-doocsbackend-dev
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-pi-qmotion-config#epochdashversion#
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
