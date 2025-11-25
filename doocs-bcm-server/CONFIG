@@ -6,15 +6,14 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev config-generator-scripts
+Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libmath-utils-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev
 
-Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-bcm-config#epochdashversion#, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, python3-mtca4upy, python3-numpy, doocstools
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, doocs-bcm-config#epochdashversion#
 
 Install-pattern-bin: export/doocs/server/bcm_server/*
 
 Provides-bin: doocs-bcm-server
 Conflicts-bin: doocs-bcm-server
-Recommends-bin: pcieuni-dkms
 
 Description-bin: DOOCS server for Bunch Compression Monitor at XFEL and FLASH, based on ChimeraTK
 
