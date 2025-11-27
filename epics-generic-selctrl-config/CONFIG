@@ -1,0 +1,22 @@
+SourceURI: git@gitlab.desy.de:msk-sw/low-level-radio-frequency/amtf/sel-controller/cavity-test-sel-config.git
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: pub
+
+Has-packages: extra
+
+package-name-contains-buildversion: 0
+
+Dependencies: debhelper cmake python3 python3-mako config-generator-scripts
+Dependencies-extra: python3, python3-mtca4upy, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, screen, epics-generic-chimeratk-server02
+
+Package-name-extra: epics-generic-selctrl-config
+
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Description-extra: Configuration for EPICS SEL generic server.
+
+Provides-extra: epics-generic-selctrl-config
+Conflicts-extra: epics-generic-selctrl-config
+Replaces-extra: epics-generic-selctrl-config
