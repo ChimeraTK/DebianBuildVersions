@@ -2,7 +2,7 @@ SourceURI: https://github.com/Textualize/textual
 Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
 Section: libs
 License: mit
-Target-repositories: intern
+Target-repositories: intern pub
 
 Has-packages: python
 Wanted-on: noble, bookworm
