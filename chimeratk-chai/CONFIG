@@ -4,12 +4,12 @@ Section: utils
 License: lgpl3
 Target-repositories: intern pub
 
-Has-packages: bin
+Has-packages: python
 
-Package-name-bin: chimeratk-chai
+Package-name-python: chimeratk-chai
 
 Dependencies: python3
-Dependencies-bin: python3, python3-mtca4upy(>04.00), python3-textual-latest, python3-rich, python3-typing-extensions, python3-platformdirs
+Dependencies-python: python3, python3-mtca4upy(>04.00), python3-textual-latest, python3-rich, python3-typing-extensions, python3-platformdirs
 
-Description-bin:  ChimeraTK Chai provides a textual user interface to access ChimeraTK devices. It can be used as a text-only replacement for QtHardMon, e.g. to avoid the need for X-forwarding while working on remote systems.
+Description-python:  ChimeraTK Chai provides a textual user interface to access ChimeraTK devices. It can be used as a text-only replacement for QtHardMon, e.g. to avoid the need for X-forwarding while working on remote systems.
 Wanted-on: noble, bookworm
