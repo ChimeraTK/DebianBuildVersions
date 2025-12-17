@@ -6,7 +6,7 @@ Target-repositories: intern
 
 Has-packages: doocs-bin
 
-Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libarmadillo-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev config-generator-scripts python3-mako nlohmann-json3-dev
+Dependencies: pkg-config dev-doocs-clientlib dev-doocs-serverlib dev-doocs-doocstiminglib doocs-watchdog-server libchimeratk-deviceaccess-dev libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev libarmadillo-dev libboost-filesystem-dev libboost-log-dev libboost-test-dev python3-mako nlohmann-json3-dev libmath-utils-dev
 
 Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-eod-config#epochdashversion#
 
