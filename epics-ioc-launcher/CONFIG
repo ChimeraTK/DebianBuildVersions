@@ -1,0 +1,14 @@
+SourceURI: git@gitlab.desy.de:msk-sw/utilities/epics-ioc-launcher.git
+Maintainer: Patrick Nonn <patrick.nonn@desy.de>
+Section: utils
+License: lgpl3
+Target-repositories: intern pub
+
+Has-packages: bin
+
+Package-name-bin: epics-ioc-launcher
+Wanted-on: noble
+
+Dependencies-bin: screen, python3
+
+Description-bin: Provides the epics-launcher script to daemonize an EPICS IOC using screen. Additionally the script can maintain a PID-file and provide logs of itself.
