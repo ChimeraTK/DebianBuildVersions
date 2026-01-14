@@ -1,16 +1,26 @@
 #!/bin/sh
-# post remove script for the Debian 
+# post remove script
 
-if [ "purge" = "$1" -o "remove" = "$1" ] ; then
-   /export/doocs/server/doocs stop logm-generic-server || true
+if [[ $(hostname) == "xfelcpullah1i1.desy.de" ]]; then
+   INST=('logm_generic_server' 'logm39_generic_server')
+else;
+   INST=('logm_generic_server')
+fi
+
+if [ "purge" == "$1" -o "remove" == "$1" ]; then
+   for i in "${INST[@]}"; do
+      /export/doocs/server/doocs stop "$i" || true
+   done
 fi
 
 if [ "purge" = "$1" ] ; then
-   # check if this server is in the watchdog
-   INWD=`grep "/server/logm-generic-server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
-   if [ -n "${INWD}" ] ; then
-      /export/doocs/server/doocs delete logm-generic-server || true
-   fi
-   # remove entire server directory
-   rm -rf /export/doocs/server/logm-generic-server
+   for i in "${INST[@]}"; do
+      # check if this server is in the watchdog
+      INWD=`grep "/server/$i/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+      if [ -n "${INWD}" ]; then
+         /export/doocs/server/doocs delete "$i" || true
+      fi
+      # remove entire server directory
+      rm -rf /export/doocs/server/"$i"
+   done
 fi

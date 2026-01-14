@@ -1,5 +1,5 @@
 #!/bin/bash -e
-# post install script 
+# post install script
 set -e
 
 case "$1" in
@@ -15,13 +15,16 @@ case "$1" in
   ;;
 esac
 
-# 
 # install the new server
 # create dir if it doesn't exists.
-mkdir -p foo /export/doocs/server/logm-generic-server
+mkdir -p foo /export/doocs/server/logm_generic_server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm_generic_server/logm_generic_server
 
-
-ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm-generic-server/logm-generic-server
+# create dir and link for 3.9 GHz LOGM instance on xfelcpullah1i1
+if [[ $(hostname) == "xfelcpullah1i1.desy.de" ]]; then
+  mkdir -p /export/doocs/server/logm39_generic_server
+  ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm39_generic_server/logm39_generic_server
+fi
 
 # generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
 /usr/share/ConfigGenerator-doocs-logm-generic-server-config-#epochdashversion#/configureThisHost.sh logm-generic-server
