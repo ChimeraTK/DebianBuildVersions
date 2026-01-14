@@ -18,7 +18,7 @@ esac
 # 
 # install the new server
 # create dir if it doesn't exists.
-mkdir -p foo /export/doocs/server/lam-frontend_server
+mkdir -p /export/doocs/server/lam-frontend_server
 
 
 ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/lam-frontend_server/lam-frontend_server
