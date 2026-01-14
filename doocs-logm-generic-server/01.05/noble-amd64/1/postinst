@@ -1,0 +1,30 @@
+#!/bin/bash -e
+# post install script
+set -e
+
+case "$1" in
+  configure)
+    # continue as normal
+    ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+    exit 0;
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2;
+    exit 0;
+  ;;
+esac
+
+# install the new server
+# create dir if it doesn't exists.
+mkdir -p foo /export/doocs/server/logm_generic_server
+ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm_generic_server/logm_generic_server
+
+# create dir and link for 3.9 GHz LOGM instance on xfelcpullah1i1
+if [[ $(hostname) == "xfelcpullah1i1.desy.de" ]]; then
+  mkdir -p /export/doocs/server/logm39_generic_server
+  ln -sfn /usr/bin/doocs-generic-chimeratk-server02 /export/doocs/server/logm39_generic_server/logm39_generic_server
+fi
+
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-doocs-logm-generic-server-config-01-05/configureThisHost.sh logm-generic-server
