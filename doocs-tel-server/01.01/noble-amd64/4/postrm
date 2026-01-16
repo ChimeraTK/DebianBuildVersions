@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-tel-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop trip_event_logger || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete trip_event_logger || true
+   rm -rf /export/doocs/server/trip_event_logger
+fi
