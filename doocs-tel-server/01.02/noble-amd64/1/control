@@ -1,0 +1,21 @@
+Source: doocs-tel-server
+Priority: optional
+Maintainer: N Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-applicationcore-dev (= 04.06noble1.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.14noble7.00-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.11noble7.02-0), libmath-utils-dev (= 03.02noble1.00-0), dev-doocs-libgul14 (= 25.10.0-noble1), doocs-tel-config01-02 (= 01.02noble1.00-0), config-generator-scripts03-04 (= 03.04noble1.01-0), libyaml-cpp-dev (>= 0.8.0+dfsg-6build1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/tel.git
+
+Package: doocs-tel-server01-02-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-tel-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-tel-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend01-11-noble7, doocs-tel-config01-02, python3-mtca4upy
+Description: Doocs server for the trip event logging.
+
