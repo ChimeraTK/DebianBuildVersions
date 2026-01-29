@@ -1,0 +1,29 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-bcm-server package
+
+set -e
+
+case "$1" in
+    configure)
+        # continue as normal
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0;
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
+esac
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-bcm-config-02-06/configureThisHost.sh bcm
+
+
+# make the template-generated scripts executable
+DIR=/export/doocs/server/bcm_server
+shopt -s nullglob
+for a in $DIR/*.sh $DIR/*.py; do
+	chmod +x "$a"
+done
