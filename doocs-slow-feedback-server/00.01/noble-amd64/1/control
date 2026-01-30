@@ -1,0 +1,21 @@
+Source: doocs-slow-feedback-server
+Priority: optional
+Maintainer: Maximilian Schütte <maximilian.schuette@desy.de>
+Build-Depends: debhelper | debhelper-compat, config-generator-scripts03-04 (= 03.04noble1.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/slow-feedback-server-config.git
+
+Package: doocs-slow-feedback-server00-01-noble1
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-04, doocs-generic-chimeratk-server02, doocs-watchdog-server
+Description: Configuration for DOOCS ChimeraTK generic middle-layer server which implements slow automatic feedback (e.g. PID).
+
