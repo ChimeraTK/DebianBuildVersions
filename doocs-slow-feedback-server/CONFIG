@@ -1,0 +1,15 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/slow-feedback-server-config.git
+Maintainer: Maximilian Schütte <maximilian.schuette@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02, doocs-watchdog-server
+
+Package-name-extra: doocs-slow-feedback-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Description-extra: Configuration for DOOCS ChimeraTK generic middle-layer server which implements slow automatic feedback (e.g. PID).
