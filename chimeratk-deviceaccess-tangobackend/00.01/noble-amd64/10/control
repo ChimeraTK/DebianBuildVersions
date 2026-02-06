@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-tangobackend
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), libchimeratk-deviceaccess-dev (= 03.26noble1.00-0), libtango-dev (>= 9.5.0+dfsg1-1.1build1), libboost-test-dev (>= 1.83.0.1ubuntu2), libxml++2.6-dev (>= 2.42.3-1build2), pkg-config (>= 1.8.1-2build1), nlohmann-json3-dev (>= 3.11.3-1), cppzmq-dev (>= 4.10.0-1build1), libchimeratk-deviceaccess (= 03.26noble1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-TangoBackend
+
+Package: libchimeratk-deviceaccess-tangobackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-tangobackend (= 00.01noble10.02), libchimeratk-deviceaccess-dev (>= 03.26noble1), libchimeratk-deviceaccess-dev (<< 03.26noble2), libtango-dev (>= 9.5.0+dfsg1-1.1build1)
+Description: Header and cmake files for the Tango Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-tangobackend.
+
+Package: libchimeratk-deviceaccess-tangobackend00-01-noble10
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-tangobackend provides the Tango controls backend for the ChimeraTK DeviceAccess library, which allows accessing Tango Device servers as devices through the DeviceAccess interface.
+
+Package: libchimeratk-deviceaccess-tangobackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-tangobackend00-01-noble10, libchimeratk-deviceaccess (>= 03.26noble1), libchimeratk-deviceaccess (<< 03.26noble2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+

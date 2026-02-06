@@ -2,7 +2,7 @@ Format: http://dep.debian.net/deps/dep5
 Source: https://github.com/ChimeraTK/cppext
 
 Files: *
-Copyright: 2025 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
+Copyright: 2026 Deutsches Elektronen-Synchrotron DESY, Hamburg, MSK
 License: LGPL-3+
 
 License: LGPL-3+
