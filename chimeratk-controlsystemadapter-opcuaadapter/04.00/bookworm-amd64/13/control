@@ -1,0 +1,47 @@
+Source: libchimeratk-controlsystemadapter-opcuaadapter
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-controlsystemadapter-dev (= 02.13bookworm7.02-0), libopen62541-dev (= 1.4bookworm1.6-0-0), python3-dev (>= 3.11.2-1+b1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-OPC-UA-Adapter
+
+Package: libchimeratk-controlsystemadapter-opcuaadapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-opcuaadapter04-00-bookworm13, libchimeratk-controlsystemadapter-dev (>= 02.13bookworm7), libchimeratk-controlsystemadapter-dev (<< 02.13bookworm8), libopen62541-dev (>= 1.4bookworm1), libopen62541-dev (<< 1.4bookworm2)
+Description: Header and cmake files for the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-opcuaadapter.
+
+Package: libchimeratk-controlsystemadapter-opcuaadapter04-00-bookworm13
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: chimeratk-opc-ua-mapfile-generator
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-opcuaadapter provides the OPC UA Adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make a OPC UA server out of any control application built against the ChimeraTK ControlSystemAdapter.
+
+Package: chimeratk-opc-ua-mapfile-generator
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: libchimeratk-controlsystemadapter-opcuaadapter04-00-bookworm13
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-lxml , python3-pyqt5
+Description: Tool to generate and edit map files required by the ControlSystemAdapter-OPC-UA-Adapter.
+

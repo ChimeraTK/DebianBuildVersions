@@ -1,0 +1,21 @@
+Source: opcua-generic-chimeratk-server02
+Priority: optional
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-applicationcore-dev (= 04.07bookworm2.01-0), libchimeratk-controlsystemadapter-opcuaadapter-dev (= 04.00bookworm13.05-0), libchimeratk-deviceaccess (= 03.26bookworm1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/GenericDeviceServer.git
+
+Package: opcua-generic-chimeratk-server02
+Section: net
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libchimeratk-deviceaccess (>= 03.26bookworm1), libchimeratk-deviceaccess (<< 03.26bookworm2)
+Description: ChimeraTK-based OPC UA device server, to expose registers of any firmware directly to the control system.
+

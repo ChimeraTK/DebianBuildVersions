@@ -1,0 +1,34 @@
+Source: libchimeratk-motordrivercard-applicationmodule
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libmtca4u-motordrivercard-dev (= 01.15bookworm10.00-0), libchimeratk-applicationcore-dev (= 04.07bookworm2.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/MotorDriverCard-ApplicationModule
+
+Package: libchimeratk-motordrivercard-applicationmodule-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-motordrivercard-applicationmodule00-08-bookworm19, libmtca4u-motordrivercard-dev (>= 01.15bookworm10), libmtca4u-motordrivercard-dev (<< 01.15bookworm11), libchimeratk-applicationcore-dev (>= 04.07bookworm2), libchimeratk-applicationcore-dev (<< 04.07bookworm3)
+Description: Header and cmake files for ChimeraTK MotorDriverCard-ApplicationModule. The files you need to compile against this library.
+
+Package: libchimeratk-motordrivercard-applicationmodule00-08-bookworm19
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChimeraTK MotorDriverCard-ApplicationModule provides an ApplicationCore interface to the MotorDriverCard library.
+

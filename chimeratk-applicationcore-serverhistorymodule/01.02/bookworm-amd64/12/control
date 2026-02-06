@@ -1,0 +1,34 @@
+Source: libchimeratk-applicationcore-serverhistorymodule
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-deviceaccess-dev (= 03.26bookworm1.00-0), libchimeratk-applicationcore-dev (= 04.07bookworm2.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ApplicationCore-ServerHistoryModule
+
+Package: libchimeratk-applicationcore-serverhistorymodule-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-applicationcore-serverhistorymodule01-02-bookworm12, libchimeratk-deviceaccess-dev (>= 03.26bookworm1), libchimeratk-deviceaccess-dev (<< 03.26bookworm2)
+Description: Header and cmake files for the ApplicationCore server based history module.
+
+Package: libchimeratk-applicationcore-serverhistorymodule01-02-bookworm12
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Provides the server based ApplicaitonCore history module.
+

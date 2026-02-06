@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-epics-backend
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, debhelper (>= 13.11.4), cmake (>= 3.25.1-1), pkg-config (>= 1.8.1-1), doxygen (>= 1.9.4-4), libchimeratk-deviceaccess-dev (= 03.26bookworm1.00-0), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libchimeratk-epics-dev (= 01.01bookworm1.01-0), libchimeratk-deviceaccess (= 03.26bookworm1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-EpicsBackend
+
+Package: libchimeratk-deviceaccess-epics-backend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-epics-backend (= 01.00bookworm8.02), libchimeratk-deviceaccess-dev (>= 03.26bookworm1), libchimeratk-deviceaccess-dev (<< 03.26bookworm2), libchimeratk-epics-dev (>= 01.01bookworm1), libchimeratk-epics-dev (<< 01.01bookworm2)
+Description: Cmake files for the EPICS Backend for the ChimeraTK DeviceAccess library. The files you need to link against libchimeratk-deviceaccess-epicsbackend.
+
+Package: libchimeratk-deviceaccess-epics-backend01-00-bookworm8
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-epicsbackend provides the EPICS backend for the ChimeraTK DeviceAccess library, which allows accessing network data distributed via EPICS channel access.
+
+Package: libchimeratk-deviceaccess-epics-backend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-epics-backend01-00-bookworm8, libchimeratk-deviceaccess (>= 03.26bookworm1), libchimeratk-deviceaccess (<< 03.26bookworm2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+

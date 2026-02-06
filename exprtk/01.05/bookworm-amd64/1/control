@@ -1,0 +1,21 @@
+Source: libexprtk
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/exprtk-interface
+
+Package: libexprtk-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: 
+Description: C++ Mathematical Expression Toolkit Library ExprTk. See http://www.partow.net/programming/exprtk/index.html
+

@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-piezoserialbackend
+Priority: optional
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-deviceaccess-dev (= 03.26bookworm1.00-0), libboost1.81-dev (>= 1.81.0-5+deb12u1), libboost-system1.81-dev (>= 1.81.0-5+deb12u1), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libchimeratk-deviceaccess (= 03.26bookworm1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/piezo-serial-backend.git
+
+Package: libchimeratk-deviceaccess-piezoserialbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-piezoserialbackend (= 01.01bookworm10.00), libchimeratk-deviceaccess-dev (>= 03.26bookworm1), libchimeratk-deviceaccess-dev (<< 03.26bookworm2)
+Description: Header and cmake files for the PiezoSerial Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-piezoserialbackend.
+
+Package: libchimeratk-deviceaccess-piezoserialbackend01-01-bookworm10
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-piezoserialbackend provides the PiezoSerial backend for the ChimeraTK DeviceAccess library, which allows accessing PZ16M via USB diagnostic port  as devices through the DeviceAccess interface.
+
+Package: libchimeratk-deviceaccess-piezoserialbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-piezoserialbackend01-01-bookworm10, libchimeratk-deviceaccess (>= 03.26bookworm1), libchimeratk-deviceaccess (<< 03.26bookworm2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+

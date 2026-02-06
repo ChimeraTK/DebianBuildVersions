@@ -1,0 +1,34 @@
+Source: libchimeratk-applicationcore-microdaq
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-applicationcore-dev (= 04.07bookworm2.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ApplicationCore-MicroDAQ
+
+Package: libchimeratk-applicationcore-microdaq-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-applicationcore-microdaq03-03-bookworm18, libchimeratk-applicationcore-dev (>= 04.07bookworm2), libchimeratk-applicationcore-dev (<< 04.07bookworm3)
+Description: Header and cmake files for the ApplicationCore MicroDAQ module.
+
+Package: libchimeratk-applicationcore-microdaq03-03-bookworm18
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Provides ApplicaitonCore MicroDAQ modules. Supported MicroDAQ backend is HDF5.
+

@@ -1,0 +1,34 @@
+Source: libchimeratk-controlsystemadapter-epics-ioc-adapter
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-controlsystemadapter-dev (= 02.13bookworm7.02-0), libreadline-dev (>= 8.2-1.3), libyajl-dev (>= 2.1.0-3+deb12u2), libchimeratk-epics-dev (= 01.01bookworm1.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/ControlSystemAdapter-EPICS-IOC-Adapter
+
+Package: libchimeratk-controlsystemadapter-epics-ioc-adapter-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-controlsystemadapter-epics-ioc-adapter02-02-bookworm8, libchimeratk-controlsystemadapter-dev (>= 02.13bookworm7), libchimeratk-controlsystemadapter-dev (<< 02.13bookworm8), libyajl-dev (>= 2.1.0-3+deb12u2), libchimeratk-epics-dev (>= 01.01bookworm1), libchimeratk-epics-dev (<< 01.01bookworm2)
+Description: Header and cmake files for the EPICS R7.0 IOC Adapter for the ChimeraTK ControlSystemAdapter. The files you need to compile against libchimeratk-controlsystemadaper-epics-ioc-adapter.
+
+Package: libchimeratk-controlsystemadapter-epics-ioc-adapter02-02-bookworm8
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-controlsystemadapter-epics-ioc-adapter provides the EPICS R7.0 IOC adapter for the ChimeraTK ControlSystemAdapter. Linking against this library will make an EPICS R7.0 IOC out of any control application built against the ChimeraTK ControlSystemAdapter.
+

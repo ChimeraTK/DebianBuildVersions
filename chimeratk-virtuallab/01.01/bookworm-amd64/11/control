@@ -1,0 +1,34 @@
+Source: libchimeratk-virtuallab
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-deviceaccess-dev (= 03.26bookworm1.00-0), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libboost-system1.81-dev (>= 1.81.0-5+deb12u1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/VirtualLab
+
+Package: libchimeratk-virtuallab-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-virtuallab01-01-bookworm11, libchimeratk-deviceaccess-dev (>= 03.26bookworm1), libchimeratk-deviceaccess-dev (<< 03.26bookworm2)
+Description: Header and cmake files for libchimeratk-virtuallab. The files you need to compile against libchimeratk-virtuallab.
+
+Package: libchimeratk-virtuallab01-01-bookworm11
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Framework for creating virtual devices connected to modelled hardware components. VirtualLab is part of the ChimeraTK tool kit.
+

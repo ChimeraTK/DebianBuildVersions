@@ -1,0 +1,47 @@
+Source: libchimeratk-deviceaccess-modbusbackend
+Priority: optional
+Maintainer: Klaus Zenker <k.zenker@hzdr.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.4-4), libchimeratk-deviceaccess-dev (= 03.26bookworm1.00-0), libboost-test1.81-dev (>= 1.81.0-5+deb12u1), libmodbus-dev (>= 3.1.6-2.1), libchimeratk-deviceaccess (= 03.26bookworm1.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/DeviceAccess-ModbusBackend.git
+
+Package: libchimeratk-deviceaccess-modbusbackend-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-modbusbackend (= 01.06bookworm2.01), libchimeratk-deviceaccess-dev (>= 03.26bookworm1), libchimeratk-deviceaccess-dev (<< 03.26bookworm2), libmodbus-dev (>= 3.1.6-2.1)
+Description: Header and cmake files for the Modbus Backend for the ChimeraTK DeviceAccess library. The files you need to compile against libchimeratk-deviceaccess-modbusbackend.
+
+Package: libchimeratk-deviceaccess-modbusbackend01-06-bookworm2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: libchimeratk-deviceaccess-modbusbackend provides the modbus backend for the ChimeraTK DeviceAccess library, which allows accessing modbus devices via tcp.
+
+Package: libchimeratk-deviceaccess-modbusbackend
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libchimeratk-deviceaccess-modbusbackend01-06-bookworm2, libchimeratk-deviceaccess (>= 03.26bookworm1), libchimeratk-deviceaccess (<< 03.26bookworm2)
+Description: "Provides the so-file symlink without version number for runtime loading without bringing all the dev package dependencies."
+
