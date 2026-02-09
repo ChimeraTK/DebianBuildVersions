@@ -1,0 +1,34 @@
+Source: libcavitysectionlocation
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, doxygen (>= 1.9.8+ds-2build5), dev-doocs-clientlib (= 26.2.0-noble1), dev-doocs-serverlib (= 26.2.0-noble1), dev-doocs-doocsdapilib (= 26.2.0-noble1), dev-doocs-libgul14 (= 26.2.0-noble1), pkg-config (>= 1.8.1-2build1), libzmq3-dev (>= 4.3.5-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/amtf/cavity-section-location.git
+
+Package: libcavitysectionlocation-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libcavitysectionlocation00-01-noble6, dev-doocs-clientlib (= 26.2.0-noble1), dev-doocs-serverlib (= 26.2.0-noble1), dev-doocs-doocsdapilib (= 26.2.0-noble1)
+Description: Header and cmake files for the CavitySectionLocation Library.
+
+Package: libcavitysectionlocation00-01-noble6
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Cavity section location library.
+

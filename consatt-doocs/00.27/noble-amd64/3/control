@@ -1,0 +1,34 @@
+Source: libconsatt-doocs
+Priority: optional
+Maintainer: Tomasz Kozak <tomasz.kozak@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (>= 1.8.1-2build1), libtirpc-dev (>= 1.3.4+ds-1.1build1), doxygen (>= 1.9.8+ds-2build5), libconsatt-dev (= 00.29noble1.00-0), libboost-dev (>= 1.83.0.1ubuntu2), dev-doocs-clientlib (= 26.2.0-noble1), dev-doocs-serverlib (= 26.2.0-noble1), libboost-test-dev (>= 1.83.0.1ubuntu2), dev-doocs-libgul14 (= 26.2.0-noble1), libzmq3-dev (>= 4.3.5-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/consatt-based-libraries/consatt-doocs.git
+
+Package: libconsatt-doocs-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libconsatt-doocs00-27-noble3, libconsatt-dev (>= 00.29noble1), libconsatt-dev (<< 00.29noble2), libboost-dev (>= 1.83.0.1ubuntu2), dev-doocs-clientlib (= 26.2.0-noble1), dev-doocs-serverlib (= 26.2.0-noble1)
+Description: Header and cmake files for the Consatt-Doocs Library.
+
+Package: libconsatt-doocs00-27-noble3
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Consatt (control system attacher) library.
+
