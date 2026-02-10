@@ -1,7 +1,7 @@
 Source: doocs-klm-config
 Priority: optional
 Maintainer: Christian Willner <Christian.Willner@desy.de>
-Build-Depends: debhelper | debhelper-compat, debhelper (= 13.14.1ubuntu5), cmake (= 3.28.3-1build7), python3 (= 3.12.3-0ubuntu2.1), python3-mako (= 1.3.2-1), config-generator-scripts03-04 (= 03.04noble1.01-0) 
+Build-Depends: debhelper | debhelper-compat, debhelper (>= 13.14.1ubuntu5), cmake (>= 3.28.3-1build7), python3 (>= 3.12.3-0ubuntu2.1), python3-mako (>= 1.3.2-1), config-generator-scripts03-04 (= 03.04noble1.01-0) 
 Standards-Version: 3.8.3
 Section: libs
 Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/klm/klm-config.git
