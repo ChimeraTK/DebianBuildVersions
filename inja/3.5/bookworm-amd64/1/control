@@ -1,0 +1,20 @@
+Source: libinja
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, cmake (>= 3.25.1-1), nlohmann-json3-dev (>= 3.11.2-2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/pantor/inja
+
+Package: libinja-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: cmake (>= 3.25.1-1), nlohmann-json3-dev (>= 3.11.2-2)
+Description: Inja is a template engine for modern C++, loosely inspired by jinja for python.
