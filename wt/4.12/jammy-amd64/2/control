@@ -1,0 +1,47 @@
+Source: libwt
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, cmake (>= 3.22.1-1ubuntu1.22.04.2), libboost-dev (>= 1.74.0.3ubuntu7), libboost-system-dev (>= 1.74.0.3ubuntu7), libboost-filesystem-dev (>= 1.74.0.3ubuntu7), libboost-thread-dev (>= 1.74.0.3ubuntu7), libboost-program-options-dev (>= 1.74.0.3ubuntu7), zlib1g-dev (>= 1:1.2.11.dfsg-2ubuntu9.2), libmysqlclient-dev (>= 8.0.45-0ubuntu0.22.04.1), libssl-dev (>= 3.0.2-0ubuntu1.21), libsqlite3-dev (>= 3.37.2-2ubuntu0.5), libhpdf-dev (>= 2.3.0+dfsg-1build1), libpango1.0-dev (>= 1.50.6+ds-2ubuntu1), libgraphicsmagick++1-dev (>= 1.4+really1.3.38-1ubuntu0.1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/emweb/wt
+
+Package: libwt-dev
+Section: libdevel
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: libwt4-12-jammy2, libboost-dev (>= 1.74.0.3ubuntu7), libboost-system-dev (>= 1.74.0.3ubuntu7), libboost-filesystem-dev (>= 1.74.0.3ubuntu7), libboost-thread-dev (>= 1.74.0.3ubuntu7), libboost-program-options-dev (>= 1.74.0.3ubuntu7)
+Description: Header and cmake files for the webtoolkit library libwt.
+
+Package: libwt4-12-jammy2
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The webtoolkit library libwt.
+
+Package: libwt-resources
+Section: libs
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Resources for the webtoolkit library libwt. Might be needed by applications using libwt.
+
