@@ -1,0 +1,21 @@
+Source: epics-llrfctrl-server
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, libllrflibrary-dev (= 05.05noble11.01-0), libchimeratk-applicationcore-dev (= 04.07noble2.01-0), libchimeratk-controlsystemadapter-epics-ioc-adapter-dev (= 02.02noble13.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.12noble2.00-0), libchimeratk-virtuallab-dev (= 01.01noble14.04-0), libhdf5-dev (>= 1.10.10+repack-3.1ubuntu4), libmath-utils-dev (= 03.02noble1.01-0), libchimeratk-applicationcore-microdaq-dev (= 03.03noble19.02-0), libarmadillo-dev (>= 1:12.6.7+dfsg-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrfctrl-server.git
+
+Package: epics-llrfctrl-server08-13-noble1
+Section: net
+Architecture: amd64
+Conflicts: epics-llrfctrl-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: epics-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcieuni-dkms, libchimeratk-deviceaccess-doocsbackend01-12-noble2, python3-mtca4upy
+Description: Low-level RF control server for EPICS based control systems
+
