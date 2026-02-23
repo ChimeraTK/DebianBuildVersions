@@ -1,0 +1,21 @@
+Source: doocs-llrfctrl-server
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, libllrflibrary-dev (= 05.05noble11.01-0), libchimeratk-applicationcore-dev (= 04.07noble2.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.15noble3.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.12noble2.00-0), libchimeratk-virtuallab-dev (= 01.01noble14.04-0), libchimeratk-applicationcore-microdaq-dev (= 03.03noble19.02-0), libhdf5-dev (>= 1.10.10+repack-3.1ubuntu4), libmath-utils-dev (= 03.02noble1.01-0), doocs-llrfctrl-config08-13 (= 08.13noble1.00-0), config-generator-scripts03-04 (= 03.04noble1.01-0), dev-doocs-libgul14 (= 26.2.0-noble1), libarmadillo-dev (>= 1:12.6.7+dfsg-1build2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrfctrl-server.git
+
+Package: doocs-llrfctrl-server08-13-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-llrfctrl-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, xdma-dkms, libchimeratk-deviceaccess-doocsbackend01-12-noble2, doocs-llrfctrl-config08-13, python3-mtca4upy
+Description: Low-level RF control server usable for multiple accelerators and facilities.
+

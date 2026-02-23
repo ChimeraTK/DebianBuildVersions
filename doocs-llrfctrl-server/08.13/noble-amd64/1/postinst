@@ -1,0 +1,32 @@
+#!/bin/bash -e
+# post install script for the Debian GNU/Linux doocs-llrfctrl-server package
+
+set -e
+
+case "$1" in
+	configure)
+		# continue as normal
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0;
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2;
+		exit 0;
+	;;
+esac
+
+#
+# install the new server
+if [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl-server ]; then
+  ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl-server /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+elif [ -f /export/doocs/server/llrfCtrl_server/bin/llrfctrl ]; then
+  ln -sfn /export/doocs/server/llrfCtrl_server/bin/llrfctrl /export/doocs/server/llrfCtrl_server/llrfCtrl_server
+else
+  echo "Cannot find executable from package."
+	exit 1
+fi
+
+#
+# generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-llrfctrl-config-08-13/configureThisHost.sh llrfctrl6
