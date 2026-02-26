@@ -1,0 +1,21 @@
+Source: doocs-bcm-server
+Priority: optional
+Maintainer: Dietrich Rothe <dietrich.rothe@desy.de>
+Build-Depends: debhelper | debhelper-compat, pkg-config (>= 1.8.1-2build1), dev-doocs-clientlib (= 26.2.0-noble1), dev-doocs-serverlib (= 26.2.0-noble1), dev-doocs-doocstiminglib (= 26.2.0-noble1), doocs-watchdog-server (= 26.2.0-noble2), libchimeratk-deviceaccess-dev (= 03.26noble1.00-0), libchimeratk-applicationcore-dev (= 04.07noble2.01-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.15noble3.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.12noble2.00-0), libmath-utils-dev (= 03.02noble1.01-0), libboost-filesystem-dev (>= 1.83.0.1ubuntu2), libboost-log-dev (>= 1.83.0.1ubuntu2), libboost-test-dev (>= 1.83.0.1ubuntu2) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/special-diagnostics/bcm/bcm-server.git
+
+Package: doocs-bcm-server02-06-noble2
+Section: net
+Architecture: amd64
+Conflicts: doocs-bcm-server
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-bcm-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dkms, doocs-bcm-config02-06
+Description: DOOCS server for Bunch Compression Monitor at XFEL and FLASH, based on ChimeraTK
+
