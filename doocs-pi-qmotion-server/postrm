@@ -2,15 +2,15 @@
 # post remove script for the Debian 
 
 if [ "purge" = "$1" -o "remove" = "$1" ] ; then
-   /export/doocs/server/doocs stop PI_QMotion_server || true
+   /export/doocs/server/doocs stop pi_qmotion_server || true
 fi
 
 if [ "purge" = "$1" ] ; then
    # check if this server is in the watchdog
-   INWD=`grep "/server/PI_QMotion_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   INWD=`grep "/server/pi_qmotion_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
    if [ -n "${INWD}" ] ; then
-      /export/doocs/server/doocs delete PI_QMotion_server || true
+      /export/doocs/server/doocs delete pi_qmotion_server || true
    fi
    # remove entire server directory
-   rm -rf /export/doocs/server/PI_QMotion_server
+   rm -rf /export/doocs/server/pi_qmotion_server
 fi

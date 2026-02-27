@@ -15,4 +15,4 @@ Package-name-extra: doocs-pi-qmotion-config#debversion#
 
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
 
-Description-extra: Configuration generator for the PI_QMotion_server.
+Description-extra: Configuration generator for the pi_qmotion_server.
