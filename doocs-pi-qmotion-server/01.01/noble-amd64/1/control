@@ -1,0 +1,21 @@
+Source: doocs-pi-qmotion-server
+Priority: optional
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-deviceaccess-commandbasedbackend-dev (= 00.01noble10.04-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.15noble3.01-0), libchimeratk-applicationcore-dev (= 04.07noble2.01-0), doocs-pi-qmotion-config01-01 (= 01.01noble1.00-0), config-generator-scripts03-04 (= 03.04noble1.01-0), libchimeratk-deviceaccess-doocsbackend-dev (= 01.12noble2.00-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/infrastructure-and-support/pi-qmotion/pi-qmotion-server.git
+
+Package: doocs-pi-qmotion-server01-01-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-qmotion-server, doocs-lam-actuator-server
+Replaces: doocs-lam-actuator-server
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-qmotion-server, lam-actuator-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-pi-qmotion-config01-01
+Description: DOOCS server for the PI Q-Motion stages.
+
