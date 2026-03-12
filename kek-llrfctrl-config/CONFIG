@@ -1,4 +1,4 @@
-SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/kek-llrfctrl-config.git
+SourceURI: git@gitlab.desy.de:msk-sw/low-level-radio-frequency/llrfctrl/llrf-controller-server-configuration/mesa-llrfctrl-config.git
 Maintainer: Patrick Nonn <patrick.nonn@desy.de>
 Section: net
 License: lgpl3

@@ -1,0 +1,23 @@
+#!/bin/bash
+# post install script
+set -e
+
+case "$1" in
+configure)
+# continue as normal
+;;
+abort-upgrade|abort-remove|abort-deconfigure)
+exit 0;
+;;
+*)
+echo "postinst called with unknown argument \`$1'" >&2;
+exit 1;
+;;
+esac
+
+# install the new server
+## create dir if it doesn't exists.
+mkdir -p /opt/epics-servers/
+
+## generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
+/usr/share/ConfigGenerator-kek-llrfctrl-config-#epochdashversion#/configureThisHost.sh llrfctrl-mesa-epics
