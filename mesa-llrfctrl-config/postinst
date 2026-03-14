@@ -20,4 +20,4 @@ esac
 mkdir -p /opt/epics-servers/
 
 ## generate and/or update configuration files. Server will be stopped, added to watchdog and started again inside this script
-/usr/share/ConfigGenerator-kek-llrfctrl-config-#epochdashversion#/configureThisHost.sh llrfctrl-epics
+/usr/share/ConfigGenerator-llrfctrl_server-mesa-config-#epochdashversion#/configureThisHost.sh llrfctrl-mesa-epics

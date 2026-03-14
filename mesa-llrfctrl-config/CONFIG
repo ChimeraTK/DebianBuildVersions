@@ -17,6 +17,6 @@ Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#
 
 Description-extra: Configuration for the llrfctrl-servers for the MESA accelerator at Johannes Gutenberg Universität, Mainz, Germany
 
-Provides-extra: doocs-llrfctrl-config#debversion#
-Conflicts-extra: doocs-llrfctrl-config#debversion#
-Replaces-extra: doocs-llrfctrl-config#debversion#
+Provides-extra: mesa-llrfctrl-config#debversion#
+Conflicts-extra: mesa-llrfctrl-config#debversion#
+Replaces-extra: mesa-llrfctrl-config#debversion#
