@@ -1,0 +1,16 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-llrfctrl-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop llrfCtrl_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   # check if this server is in the watchdog
+   INWD=`grep "/server/llrfCtrl_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete llrfCtrl_server || true
+   fi
+   # remove entire server directory
+   rm -rf /export/doocs/server/llrfCtrl_server
+fi
