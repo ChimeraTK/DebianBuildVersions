@@ -2,7 +2,7 @@ SourceURI: git@gitlab.desy.de:msk-sw/low-level-radio-frequency/amtf/sel-controll
 Maintainer: Patrick Nonn <patrick.nonn@desy.de>
 Section: net
 License: lgpl3
-Target-repositories: pub
+Target-repositories: intern pub
 
 Has-packages: extra
 
