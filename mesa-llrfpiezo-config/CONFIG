@@ -1,4 +1,4 @@
-SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/piezo/tarla-piezo-server-configuration.git
+SourceURI: git@gitlab.desy.de:msk-sw/low-level-radio-frequency/piezo/llrfpiezo-mesa.git
 Maintainer: Patrick Nonn <patrick.nonn@desy.de>
 Section: net
 License: lgpl3

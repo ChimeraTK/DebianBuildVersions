@@ -1,5 +1,5 @@
 #!/bin/bash -e
-# post install script for the Debian GNU/Linux tarla-llrfctrl-server package
+# post install script for the Debian GNU/Linux mesa-piezoctrl-config package
 
 set -e
 
