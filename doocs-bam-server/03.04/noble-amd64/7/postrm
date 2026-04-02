@@ -1,0 +1,14 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-bam-server package
+
+#FIXME: This only works for single instance hosts. It has to be
+#done by the config generator if there are multiple stations or the server
+#has a different name
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop bam_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete bam_server || true
+   rm -rf /export/doocs/server/bam_server
+fi
