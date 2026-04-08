@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-steppermotor-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop steppermotorserver || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete steppermotorserver || true
+   rm -rf /export/doocs/server/steppermotorserver
+fi
