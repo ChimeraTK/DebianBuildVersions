@@ -14,6 +14,8 @@ Dependencies: cmake make dkms gpcieuni-dkms
 Dependencies-dkms: udev, gpcieuni-dkms
 Description-dkms: Universal PCIexpress device driver for MicroTCA and other hot-plug capable architectures.
 
+Dkms-override-conf: dkms.conf
+
 Install-pattern-dkms: <<<EOF
 /etc/udev/rules.d/*
 /lib/udev/*
