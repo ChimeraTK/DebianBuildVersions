@@ -1,0 +1,5 @@
+@LIBDIR@/lib*.so
+@LIBDIR@/cmake/*
+usr/include/*
+usr/share/pkgconfig
+/usr/lib/python*/dist-packages/PyApplicationCore.pyi
