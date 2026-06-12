@@ -1,0 +1,4 @@
+@LIBDIR@/lib*.so
+@LIBDIR@/cmake/*
+usr/share/pkgconfig
+
