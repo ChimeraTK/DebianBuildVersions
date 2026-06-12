@@ -1,0 +1,17 @@
+SourceURI: https://gitlab.desy.de/msk-sw/laser-based-synchronisation/laser-pulse-arrival-time-monitor/lam-frontend-server.git
+Maintainer: Nadeem Shehzad <nadeem.shehzad@desy.de>
+Section: net
+License: desy_internal
+Target-repositories: intern
+
+Has-packages: doocs-bin
+
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev dev-doocs-libgul14 doocs-lam-frontend-config#epochdashversion# config-generator-scripts
+Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, libchimeratk-deviceaccess-doocsbackend#dependency-debversion-libchimeratk-deviceaccess-doocsbackend-dev#, doocs-lam-frontend-config#epochdashversion#
+
+Override-auto-configure-flags: -DADAPTER=DOOCS
+
+Provides-bin: doocs-lam-frontend-server
+Conflicts-bin: doocs-lam-frontend-server
+
+Description-bin: Doocs server for the lam frontend.
