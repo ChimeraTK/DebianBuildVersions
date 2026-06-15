@@ -14,7 +14,7 @@ Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Provides-bin: doocs-bam-server
 Conflicts-bin: doocs-bam-server,doocs-optical-switch-server,bam-init-scripts
-Recommends-bin: pcieuni-dkms
+Recommends-bin: pcieuni-dkms,xdma-dkms
 
 Description-bin: DOOCS server for Beam Arrival time Monitor for XFEL and FLASH
 
