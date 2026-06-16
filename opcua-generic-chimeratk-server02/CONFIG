@@ -9,7 +9,7 @@ Use-dynload: bin
 
 Package-name-bin: opcua-generic-chimeratk-server02
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-opcuaadapter-dev libchimeratk-deviceaccess-opc-ua-backend-dev
 
 Override-auto-configure-flags: -DADAPTER=OPCUA
 

@@ -9,7 +9,7 @@ Use-dynload: bin
 
 Package-name-bin: doocs-generic-chimeratk-server02
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-doocsadapter-dev libchimeratk-deviceaccess-doocsbackend-dev
 
 Override-auto-configure-flags: -DADAPTER=DOOCS
 

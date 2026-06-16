@@ -9,7 +9,7 @@ Use-dynload: bin
 
 Package-name-bin: tango-generic-chimeratk-server02
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-tangoadapter-dev
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-tangoadapter-dev libchimeratk-deviceaccess-tangobackend-dev
 
 Override-auto-configure-flags: -DADAPTER=TANGO
 

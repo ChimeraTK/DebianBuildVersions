@@ -9,7 +9,7 @@ Use-dynload: bin
 
 Package-name-bin: epics-generic-chimeratk-server02
 
-Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev
+Dependencies: libchimeratk-applicationcore-dev libchimeratk-controlsystemadapter-epics-ioc-adapter-dev libchimeratk-deviceaccess-epics-backend-dev
 
 Override-auto-configure-flags: -DADAPTER=EPICSIOC
 
