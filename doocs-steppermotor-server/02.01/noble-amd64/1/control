@@ -1,0 +1,21 @@
+Source: doocs-steppermotor-server
+Priority: optional
+Maintainer: Jens Georg <jens.georg@desy.de>
+Build-Depends: debhelper | debhelper-compat, libchimeratk-motordrivercard-applicationmodule-dev (= 00.09noble1.00-0), libchimeratk-applicationcore-dev (= 04.08noble2.00-0), libchimeratk-controlsystemadapter-doocsadapter-dev (= 01.16noble3.00-0), doocs-watchdog-server (= 26.5.0-noble1), doocs-steppermotor-config02-01 (= 02.01noble1.00-0), config-generator-scripts03-05 (= 03.05noble2.01-0), python3-mtca4upy (= 04.02noble2.01-0) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://github.com/ChimeraTK/StepperMotorServer.git
+
+Package: doocs-steppermotor-server02-01-noble1
+Section: net
+Architecture: amd64
+Conflicts: doocs-steppermotor-server
+Replaces: doocs-steppermotor-server
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: doocs-steppermotor-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, doocs-dirs | doocs-dirs-min, doocs-watchdog-server, doocs-steppermotor-config02-01, python3-mtca4upy
+Description: DOOCS steppermotor server. A server to control steppermotors driven by the MD22 motor driver card.
+
