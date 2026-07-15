@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux psm_ctrl_server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop psm_ctrl_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete psm_ctrl_server || true
+   rm -rf /export/doocs/server/psm_ctrl_server
+fi
