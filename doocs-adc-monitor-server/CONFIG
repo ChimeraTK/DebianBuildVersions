@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/adc-monitor-server-config.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: LGPL-3+
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02 (>= 02.03), doocs-watchdog-server
+
+Package-name-extra: doocs-adc-monitor-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Provides-bin:  doocs-adc-monitor-server
+Conflicts-bin: doocs-adc-monitor-server
+
+Description-extra: Configuration generator for the adc monitor server.
