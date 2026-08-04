@@ -1,7 +1,7 @@
 SourceURI: https://gitlab.desy.de/msk-sw/infrastructure-and-support/adc-monitor-server-config.git
 Maintainer: Martin Killenberg <martin.killenberg@desy.de>
 Section: net
-License: LGPL-3+
+License: lgpl3
 Target-repositories: intern
 
 Has-packages: extra
