@@ -9,7 +9,7 @@ Wanted-on: noble
 
 Package-name-bin: deploy-tool
 
-Dependencies: libwt-dev libpam0g-dev libinja-dev
-Dependencies-bin: libwt-resources, ansible, sshpass
+Dependencies: libwt-dev libpam0g-dev libinja-dev libboost-test-dev tzdata
+Dependencies-bin: libwt-resources, ansible, sshpass, tzdata
 
 Description-bin: Web application for deployment of control system servers and firmware
