@@ -1,0 +1,21 @@
+Source: deploy-tool
+Priority: optional
+Maintainer: Martin Hierholzer <martin.hierholzer@desy.de>
+Build-Depends: debhelper | debhelper-compat, libwt-dev (= 4.14noble1.1-0), libpam0g-dev (>= 1.5.3-5ubuntu5.6), libinja-dev (= 3.5noble1.0-0), libboost-test-dev (>= 1.83.0.1ubuntu2), tzdata (>= 2026c-0ubuntu0.24.04.1) 
+Standards-Version: 3.8.3
+Section: libs
+Homepage: https://gitlab.desy.de/msk-sw/utilities/deploytool/deploy-tool.git
+
+Package: deploy-tool
+Section: utils
+Architecture: amd64
+Conflicts: 
+Replaces: 
+Breaks: 
+Recommends: 
+Suggests: 
+Enhances: 
+Provides: 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libwt-resources, ansible, sshpass, tzdata
+Description: Web application for deployment of control system servers and firmware
+
