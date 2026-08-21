@@ -1,0 +1,18 @@
+SourceURI: https://gitlab.desy.de/msk-sw/low-level-radio-frequency/refm-bpm/refm-bpm-server-config.git
+Maintainer: Martin Killenberg <martin.killenberg@desy.de>
+Section: net
+License: lgpl3
+Target-repositories: intern
+
+Has-packages: extra
+
+Dependencies: config-generator-scripts
+Dependencies-extra: git, python3, python3-mako, config-generator-scripts#dependency-epochdashversion-config-generator-scripts#, doocs-generic-chimeratk-server02 (>= 02.03), doocs-watchdog-server
+
+Package-name-extra: doocs-refm-bpm-server#debversion#
+Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
+
+Provides-bin:  doocs-refm-bpm-server
+Conflicts-bin: doocs-refm-bpm-server
+
+Description-extra: Configuration generator for the RefM-BPM server.
