@@ -1,0 +1,3 @@
+@LIBDIR@/cmake/*
+usr/share/pkgconfig
+usr/share/pkgconfig/*
