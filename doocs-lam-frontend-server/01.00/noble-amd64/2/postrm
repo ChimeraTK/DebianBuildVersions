@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-lam-frontend-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop lam_frontend_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete lam_frontend_server || true
+   rm -rf /export/doocs/server/lam_frontend_server
+fi
