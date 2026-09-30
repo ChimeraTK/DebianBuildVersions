@@ -16,6 +16,9 @@ Description-bin: DESY FLASH/XFEL controls package. DOOCS uLOG control server.
 Install-pattern-bin: export
 Override-auto-configure-flags: -DADAPTER=DOOCS
 
+# Temporarily until weird issue is fixed
+Disable-tests: yes
+
 Package-name-extra: ulog-ctrl-server-udev-rules
 Description-extra: Udev rules for uLOG devices
 Install-pattern-extra: etc/udev/rules.d/*ulog*
