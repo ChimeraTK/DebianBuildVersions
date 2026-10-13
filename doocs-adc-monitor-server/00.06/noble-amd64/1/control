@@ -16,6 +16,6 @@ Recommends:
 Suggests: 
 Enhances: 
 Provides: 
-Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-05, doocs-generic-chimeratk-server02 (>= 02.03), doocs-watchdog-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, git, python3, python3-mako, config-generator-scripts03-05, doocs-generic-chimeratk-server02 (>= 02.03), doocs-watchdog-server, python3-mtca4upy
 Description: Configuration generator for the adc monitor server.
 
