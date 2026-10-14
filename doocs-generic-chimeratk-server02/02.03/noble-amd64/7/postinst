@@ -1,0 +1,25 @@
+#!/bin/bash -e
+
+set -e
+
+case "$1" in
+    configure)
+        # continue as normal
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0;
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2;
+        exit 0;
+        ;;
+esac
+
+# check existence of /usr/bin/XXX-generic-chimeratk-serverYY to make sure we build tag of major version YY only with 
+# build-config for version YY and not later.
+# This can especially happen if you build the 01 generic-chimeratk-server with version latest; then we let validation step fail.
+if [ ! -f /usr/bin/doocs-generic-chimeratk-server02 ] ; then
+    echo "looks like you built wrong version of generic-chimeratk-server!"
+    echo "please build e.g. version 01 tags only with build config for version 01!"
+    exit 1
+fi
