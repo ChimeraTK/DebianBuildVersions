@@ -17,6 +17,6 @@ Package-name-extra: doocs-llrfctrl-config#debversion#
 Override-auto-configure-flags: -DConfigGenerator_DIR=/usr/share/ConfigGenerator#dependency-epochversion-config-generator-scripts#
 
 Provides-extra: doocs-llrfctrl-config
-Conflicts-extra: doocs-llrfctrl-config doocs-llrfctrl-config08-14
+Conflicts-extra: doocs-llrfctrl-config, doocs-llrfctrl-config08-14
 
 Description-extra: Configuration generator for the LLRF controller server.
