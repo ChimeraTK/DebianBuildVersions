@@ -13,7 +13,7 @@ Dependencies-bin: doocs-dirs | doocs-dirs-min, doocs-watchdog-server, pcieuni-dk
 Override-auto-configure-flags: -DADAPTER=DOOCS
 
 Provides-bin: doocs-llrfctrl-server
-Conflicts-bin: doocs-llrfctrl-server, doocs-llrfctrlsrf-server, doocs-llrfctrlnrf-server
+Conflicts-bin: doocs-llrfctrl-server
 
 Description-bin: Low-level RF control server usable for multiple accelerators and facilities.
 
