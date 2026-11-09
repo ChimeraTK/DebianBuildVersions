@@ -1,0 +1,22 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-refmopt-server package
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Script used by ChimeraTK debian package building script
+# https://github.com/ChimeraTK/DebianBuildVersions/tree/master/doocs-refmopt-server/postrm
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   # check if this server is already in the watchdog
+   INWD=`grep "/server/refmopt_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+   if [ -n "${INWD}" ] ; then
+      /export/doocs/server/doocs delete refmopt_server || true
+   fi
+   /export/doocs/server/doocs stop refmopt_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   rm -rf /export/doocs/server/refmopt_server
+fi
+
