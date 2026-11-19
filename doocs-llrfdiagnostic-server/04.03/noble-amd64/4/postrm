@@ -1,0 +1,11 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-llrf-diagnostic-server package
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+   /export/doocs/server/doocs stop llrf_diagnostic_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+   /export/doocs/server/doocs delete llrf_diagnostic_server || true
+   rm -rf /export/doocs/server/llrf_diagnostic_server
+fi
